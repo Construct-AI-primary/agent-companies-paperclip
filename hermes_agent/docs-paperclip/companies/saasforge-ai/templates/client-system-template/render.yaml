@@ -1,0 +1,116 @@
+# render.yaml - Client System Template
+# SaaSForge AI White-Label Multi-Tenant Platform
+
+# ============================================
+# PRODUCTION SERVICE
+# ============================================
+services:
+  - type: web
+    name: ${CLIENT_NAME}-app
+    env: node
+    region: oregon
+    branch: main
+    repo: ${GIT_REPO_URL}
+    plan: ${PLAN}
+    
+    # Build Configuration
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    
+    # Health Check
+    healthCheckPath: /health
+    
+    # Auto-deploy on main branch push
+    autoDeploy: true
+    
+    # Scaling
+    numInstances: 1
+    
+    # Environment Variables (sync'd)
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_NAME
+        value: ${CLIENT_NAME}
+      - key: CLIENT_SUBDOMAIN
+        value: ${CLIENT_SUBDOMAIN}
+      - key: CLIENT_PLAN
+        value: ${CLIENT_PLAN}
+      - key: BRAND_LOGO_URL
+        value: ${BRAND_LOGO_URL}
+      - key: BRAND_PRIMARY_COLOR
+        value: ${BRAND_PRIMARY_COLOR}
+    
+    # Secrets (not synced)
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ${CLIENT_NAME}-db
+          property: connectionString
+        sync: false
+      
+      - key: REDIS_URL
+        sync: false
+      
+      - key: SESSION_SECRET
+        sync: false
+
+# ============================================
+# DEVELOPMENT SERVICE  
+# ============================================
+  - type: web
+    name: ${CLIENT_NAME}-dev
+    env: node
+    region: oregon
+    branch: dev
+    repo: ${GIT_REPO_URL}
+    plan: starter
+    
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    numInstances: 1
+    
+    envVars:
+      - key: NODE_ENV
+        value: development
+      - key: CLIENT_NAME
+        value: ${CLIENT_NAME}
+      - key: CLIENT_SUBDOMAIN
+        value: ${CLIENT_SUBDOMAIN}-dev
+
+# ============================================
+# DATABASES
+# ============================================
+databases:
+  - name: ${CLIENT_NAME}-db
+    databaseName: ${CLIENT_SUBDOMAIN}_db
+    plan: starter
+    color: blue
+    ipAllowList: []
+
+# ============================================
+# BACKGROUNDS WORKERS (optional)
+# ============================================
+backgroundWorkers:
+  - name: ${CLIENT_NAME}-worker
+    branch: main
+    repo: ${GIT_REPO_URL}
+    buildCommand: pip install -r requirements.txt
+    startCommand: python worker.py
+    numInstances: 1
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ${CLIENT_NAME}-db
+          property: connectionString
+
+# ============================================
+# CUSTOM DOMAINS
+# ============================================
+domains:
+  - alias: www.${CLIENT_DOMAIN}
+    type: redirect
+  - alias: ${CLIENT_DOMAIN}
+    type: primary

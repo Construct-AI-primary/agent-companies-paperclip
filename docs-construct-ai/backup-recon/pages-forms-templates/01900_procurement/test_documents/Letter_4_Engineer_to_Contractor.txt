@@ -1,0 +1,63 @@
+Letter 4: Engineer to Contractor
+
+Reference: UIC/DHBEP/E002
+Date: November 16, 2023
+
+To:
+Project Manager
+BridgeBuilders Inc.
+[Contractor's Address]
+Durban
+
+From:
+The Engineer
+Urban Infrastructure Consultants
+[Engineer's Address]
+Durban
+
+Subject: RE: Durban Highway Bridge Repair & Associated Works – Claim for Under-Measurement of
+Concrete Works (IPC No. 5) - Your Ref: BB/DHBEP/C002 & Our Previous Ref: UIC/DHBEP/
+E001
+
+Dear Sir/Madam,
+
+We acknowledge receipt of your letter Ref: BB/DHBEP/C002 dated November 9, 2023, along with
+Appendices B, C, and D, further to your initial claim (Ref: BB/DHBEP/C001) regarding concrete
+quantities.
+
+We have reviewed your submitted calculations and records. With respect to the increased pile
+depths (your Appendix B and SoW 2.1.1 findings), we draw your attention to Variation
+Instruction No. VI-003 (Deeper Foundation Piles), issued on [Insert Date, e.g., July 15, 2023].
+This instruction acknowledged the necessity for increased pile depths based on the final
+geotechnical data and approved design revision DWG-STR-FD-012 Rev B. VI-003 specifically
+provides for the additional concrete volume directly attributable to the increased depth beyond
+the original BoQ assumption, at agreed-upon rates for that specific varied work.
+
+Therefore, any additional concrete volume related to the increased depth of piled foundations
+only should be claimed under the provisions and remeasurement process outlined in VI-003.
+Please ensure your claim for these specific volumes is submitted separately, or clearly itemized as
+such, referencing VI-003, for our assessment under the terms of that Variation. The quantities
+certified in IPC No. 5 for the standard BoQ item for foundations reflect the original design intent,
+with the variance to be handled via VI-003.
+
+Regarding your Appendix C (Deck Profile Analysis), we maintain that the minor adjustments to
+deck thickness and camber, as per DWG-STR-BD-105 Rev C, represent design development
+within the parameters of SoW 2.1.2 "Design and Engineering" and SoW 2.2.4 "Bridge Widening."
+These are not considered to constitute a variation necessitating additional payment beyond the
+BoQ rates unless a specific instruction altering the overall design envelope beyond reasonable
+development was issued. Your "Detailed design drawings and calculations" (SoW Clause 5) were
+indeed approved, but this approval does not automatically trigger additional payment for refined
+quantities unless they fall outside the scope of the original BoQ items or are instructed as a Variation
+under SoW Clause 6.3.
+
+We are prepared to conduct a joint records review focusing on the application of VI-003 to the
+foundation concrete. However, for the deck concrete, please provide further justification as to why
+
+these design refinements should be considered a separately compensable change rather than a
+standard evolution of the detailed design.
+
+Yours faithfully,
+
+[Engineer's Representative Name]
+The Engineer
+Urban Infrastructure Consultants

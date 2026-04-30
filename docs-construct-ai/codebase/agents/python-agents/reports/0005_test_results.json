@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-01-05T09:43:30.986341",
+  "tests": {
+    "feature_flags_init": {
+      "status": "PASS",
+      "message": "Feature flag manager initialized successfully",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.986932"
+    },
+    "feature_flags_defaults": {
+      "status": "PASS",
+      "message": "All default flags present (11 total)",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.986966"
+    },
+    "feature_flags_evaluation": {
+      "status": "PASS",
+      "message": "Feature flag evaluation working",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.986977"
+    },
+    "cache_init": {
+      "status": "PASS",
+      "message": "All cache systems initialized successfully",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.986997"
+    },
+    "cache_operations": {
+      "status": "PASS",
+      "message": "Basic cache operations working",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.987236"
+    },
+    "cache_stats": {
+      "status": "PASS",
+      "message": "Cache stats available: 1 entries",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.987264"
+    },
+    "memory_monitoring": {
+      "status": "PASS",
+      "message": "Memory monitoring active: 40.1 MB used",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.987470"
+    },
+    "workflow_state_creation": {
+      "status": "PASS",
+      "message": "Workflow state created successfully",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.987552"
+    },
+    "workflow_state_updates": {
+      "status": "PASS",
+      "message": "Workflow state updates working",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.987588"
+    },
+    "confidence_calculation": {
+      "status": "PASS",
+      "message": "Confidence calculation working: 0.50",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.987598"
+    },
+    "specialist_imports": {
+      "status": "WARN",
+      "message": "Only 0/11 specialist agents imported",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.996053"
+    },
+    "specialist_import_issues": {
+      "status": "INFO",
+      "message": "Import issues: CivilEngineeringSpecialistAgent: invalid decimal literal (00435_civil_specialist_agent.py, line 13), StructuralEngineeringSpecialistAgent: invalid decimal literal (00435_structural_specialist_agent.py, line 13), MechanicalEngineeringSpecialistAgent: invalid decimal literal (00435_mechanical_specialist_agent.py, line 13)",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.996067"
+    },
+    "supervisor_agent": {
+      "status": "FAIL",
+      "message": "Supervisor agent test failed: invalid decimal literal (00435_construction_correspondence_deep_agent.py, line 13)",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.996830"
+    },
+    "fastapi_service": {
+      "status": "FAIL",
+      "message": "FastAPI service test failed: invalid decimal literal (2000_deep_agents_fastapi_service.py, line 17)",
+      "details": {},
+      "timestamp": "2026-01-05T09:43:30.997151"
+    }
+  },
+  "summary": {
+    "total_tests": 14,
+    "passed_tests": 10,
+    "failed_tests": 2,
+    "warning_tests": 1,
+    "success_rate": 71.42857142857143,
+    "overall_status": "FAIL"
+  }
+}

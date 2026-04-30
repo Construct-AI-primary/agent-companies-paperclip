@@ -1,0 +1,2081 @@
+{
+  "team": "qualityforge",
+  "team_name": "QualityForge AI",
+  "description": "Testing, debugging, coding excellence, and quality assurance",
+  "total_agents": 36,
+  "divisions": {
+    "testing": {
+      "name": "Testing Division",
+      "count": 10,
+      "agents": [
+        {
+          "agent_id": "qualityforge-unittest",
+          "name": "unittest",
+          "division": "testing",
+          "role": "Unit Testing Specialist",
+          "description": "Unit testing architecture and implementation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Unit test development and implementation",
+            "Test-driven development (TDD) practices",
+            "Unit test framework selection and optimization",
+            "Code coverage analysis and improvement"
+          ],
+          "expertise": [
+            "unit-testing",
+            "tdd",
+            "coverage",
+            "testing-frameworks"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-integration",
+              "qualityforge-standards"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "unit-test",
+              "tdd",
+              "coverage",
+              "testing"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-integration",
+          "name": "integration",
+          "division": "testing",
+          "role": "Integration Testing Expert",
+          "description": "Integration testing and system interoperability",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Integration test design and execution",
+            "API testing and validation",
+            "System interoperability testing",
+            "Integration test automation"
+          ],
+          "expertise": [
+            "integration-testing",
+            "api-testing",
+            "interoperability",
+            "automation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-unittest",
+              "qualityforge-e2e"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "integration-test",
+              "api-test",
+              "interoperability"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-e2e",
+          "name": "e2e",
+          "division": "testing",
+          "role": "End-to-End Testing Coordinator",
+          "description": "End-to-end testing and user journey validation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "End-to-end test scenario development",
+            "User journey testing and validation",
+            "Cross-browser and cross-platform testing",
+            "E2E test automation and maintenance"
+          ],
+          "expertise": [
+            "e2e-testing",
+            "user-journeys",
+            "cross-browser",
+            "automation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-integration",
+              "qualityforge-compatibility"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "e2e",
+              "end-to-end",
+              "user-journey",
+              "testing"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-performance",
+          "name": "performance",
+          "division": "testing",
+          "role": "Performance Testing Engineer",
+          "description": "Performance testing and optimization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Performance test design and execution",
+            "Load testing and stress testing",
+            "Performance bottleneck identification",
+            "Performance optimization recommendations"
+          ],
+          "expertise": [
+            "performance-testing",
+            "load-testing",
+            "stress-testing",
+            "optimization"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-load",
+              "qualityforge-profiler"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "performance",
+              "load-test",
+              "stress-test",
+              "optimization"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-security-test",
+          "name": "security-test",
+          "division": "testing",
+          "role": "Security Testing Specialist",
+          "description": "Security testing and vulnerability assessment",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Security vulnerability scanning and testing",
+            "Penetration testing and security validation",
+            "Security compliance testing",
+            "Security test automation"
+          ],
+          "expertise": [
+            "security-testing",
+            "penetration-testing",
+            "vulnerability",
+            "compliance"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-guardian",
+              "qualityforge-auditor"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "security-test",
+              "penetration",
+              "vulnerability",
+              "security"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-accessibility",
+          "name": "accessibility",
+          "division": "testing",
+          "role": "Accessibility Testing Expert",
+          "description": "Accessibility compliance and inclusive design testing",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "WCAG compliance testing and validation",
+            "Accessibility audit and assessment",
+            "Inclusive design testing",
+            "Accessibility test automation"
+          ],
+          "expertise": [
+            "accessibility",
+            "wcag",
+            "inclusive-design",
+            "audit"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-e2e",
+              "qualityforge-validator"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "accessibility",
+              "wcag",
+              "inclusive",
+              "a11y"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-compatibility",
+          "name": "compatibility",
+          "division": "testing",
+          "role": "Cross-Platform Compatibility Testing",
+          "description": "Cross-platform and cross-browser compatibility",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Cross-platform compatibility testing",
+            "Cross-browser testing and validation",
+            "Device compatibility testing",
+            "Compatibility test automation"
+          ],
+          "expertise": [
+            "compatibility",
+            "cross-browser",
+            "cross-platform",
+            "device-testing"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-e2e",
+              "qualityforge-load"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "compatibility",
+              "cross-browser",
+              "cross-platform",
+              "device"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-load",
+          "name": "load",
+          "division": "testing",
+          "role": "Load and Stress Testing Engineer",
+          "description": "Load testing and system capacity validation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Load test scenario development",
+            "System capacity testing and validation",
+            "Stress testing and failure point identification",
+            "Load test automation and monitoring"
+          ],
+          "expertise": [
+            "load-testing",
+            "capacity",
+            "stress-testing",
+            "monitoring"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-performance",
+              "qualityforge-compatibility"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "load",
+              "stress",
+              "capacity",
+              "testing"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-automation",
+          "name": "automation",
+          "division": "testing",
+          "role": "Test Automation Architect",
+          "description": "Test automation framework and strategy",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Test automation framework design and implementation",
+            "Test script development and maintenance",
+            "CI/CD integration for automated testing",
+            "Test automation best practices and standards"
+          ],
+          "expertise": [
+            "test-automation",
+            "frameworks",
+            "ci-cd",
+            "best-practices"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-unittest",
+              "qualityforge-e2e"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "automation",
+              "framework",
+              "ci-cd",
+              "test-automation"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-coverage",
+          "name": "coverage",
+          "division": "testing",
+          "role": "Code Coverage and Quality Metrics Analyst",
+          "description": "Code coverage analysis and quality metrics",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Code coverage measurement and analysis",
+            "Quality metrics definition and tracking",
+            "Test effectiveness analysis",
+            "Quality reporting and dashboards"
+          ],
+          "expertise": [
+            "coverage",
+            "metrics",
+            "quality-analysis",
+            "reporting"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-unittest",
+              "qualityforge-reporter"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "coverage",
+              "metrics",
+              "quality",
+              "analysis"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "debugging": {
+      "name": "Debugging Division",
+      "count": 8,
+      "agents": [
+        {
+          "agent_id": "qualityforge-diagnostics",
+          "name": "diagnostics",
+          "division": "debugging",
+          "role": "Error Diagnostics and Root Cause Analysis",
+          "description": "Comprehensive error analysis and root cause identification",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Error pattern analysis and diagnosis",
+            "Root cause analysis and investigation",
+            "Error categorization and prioritization",
+            "Diagnostic tool development and optimization"
+          ],
+          "expertise": [
+            "diagnostics",
+            "root-cause",
+            "error-analysis",
+            "troubleshooting"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-tracer",
+              "qualityforge-analyzer"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "diagnostics",
+              "root-cause",
+              "error",
+              "analysis"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-tracer",
+          "name": "tracer",
+          "division": "debugging",
+          "role": "Code Tracing and Debugging Specialist",
+          "description": "Code execution tracing and debugging support",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Code execution path tracing",
+            "Debug logging and instrumentation",
+            "Performance tracing and analysis",
+            "Debug tool integration and optimization"
+          ],
+          "expertise": [
+            "tracing",
+            "debugging",
+            "instrumentation",
+            "logging"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-diagnostics",
+              "qualityforge-profiler"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "tracing",
+              "debugging",
+              "logging",
+              "instrumentation"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-fixer",
+          "name": "fixer",
+          "division": "debugging",
+          "role": "Bug Fixing and Patch Development",
+          "description": "Bug resolution and patch development",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Bug identification and classification",
+            "Fix development and implementation",
+            "Patch testing and validation",
+            "Bug resolution tracking and reporting"
+          ],
+          "expertise": [
+            "bug-fixing",
+            "patches",
+            "resolution",
+            "tracking"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-diagnostics",
+              "qualityforge-resolver"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "bug",
+              "fix",
+              "patch",
+              "resolution"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-analyzer",
+          "name": "analyzer",
+          "division": "debugging",
+          "role": "Code Analysis and Vulnerability Detection",
+          "description": "Static code analysis and vulnerability detection",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Static code analysis and review",
+            "Vulnerability detection and assessment",
+            "Code quality analysis and metrics",
+            "Security analysis and recommendations"
+          ],
+          "expertise": [
+            "static-analysis",
+            "vulnerability",
+            "code-quality",
+            "security"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-diagnostics",
+              "qualityforge-security-test"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "analysis",
+              "vulnerability",
+              "static",
+              "security"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-profiler",
+          "name": "profiler",
+          "division": "debugging",
+          "role": "Performance Profiling and Optimization",
+          "description": "Performance profiling and system optimization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Performance profiling and analysis",
+            "Bottleneck identification and resolution",
+            "Performance optimization recommendations",
+            "Profiling tool development and integration"
+          ],
+          "expertise": [
+            "profiling",
+            "performance",
+            "bottleneck",
+            "optimization"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-performance",
+              "qualityforge-tracer"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "profiling",
+              "performance",
+              "bottleneck",
+              "optimization"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-debugger",
+          "name": "debugger",
+          "division": "debugging",
+          "role": "Advanced Debugging Tools Specialist",
+          "description": "Advanced debugging tool development and support",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Advanced debugging tool development",
+            "Debugging workflow optimization",
+            "Debugging best practices and standards",
+            "Debugging tool integration and maintenance"
+          ],
+          "expertise": [
+            "debugging-tools",
+            "workflows",
+            "best-practices",
+            "integration"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-tracer",
+              "qualityforge-diagnostics"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "debugging",
+              "tools",
+              "workflows",
+              "standards"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-inspector",
+          "name": "inspector",
+          "division": "debugging",
+          "role": "Code Inspection and Review Debugging",
+          "description": "Code inspection and review-based debugging",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Code inspection and review processes",
+            "Code quality assessment and improvement",
+            "Review-based bug detection",
+            "Code inspection tool development"
+          ],
+          "expertise": [
+            "inspection",
+            "review",
+            "quality",
+            "bug-detection"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-analyzer",
+              "qualityforge-reviewer"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "inspection",
+              "review",
+              "code-review",
+              "quality"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-resolver",
+          "name": "resolver",
+          "division": "debugging",
+          "role": "Issue Resolution and Conflict Management",
+          "description": "Complex issue resolution and conflict management",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Complex issue investigation and resolution",
+            "Conflict resolution and mediation",
+            "Escalation management and coordination",
+            "Resolution tracking and documentation"
+          ],
+          "expertise": [
+            "resolution",
+            "conflict",
+            "escalation",
+            "coordination"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-fixer",
+              "qualityforge-diagnostics"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "resolution",
+              "conflict",
+              "escalation",
+              "issue"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "coding": {
+      "name": "Coding Division",
+      "count": 10,
+      "agents": [
+        {
+          "agent_id": "qualityforge-codesmith",
+          "name": "codesmith",
+          "division": "coding",
+          "role": "Code Generation and Implementation",
+          "description": "High-quality code generation and implementation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Clean code implementation",
+            "Code generation and optimization",
+            "Best practices enforcement",
+            "Code quality standards compliance"
+          ],
+          "expertise": [
+            "code-generation",
+            "clean-code",
+            "best-practices",
+            "standards"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-refactor",
+              "qualityforge-standards"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "code",
+              "generation",
+              "implementation",
+              "clean-code"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-refactor",
+          "name": "refactor",
+          "division": "coding",
+          "role": "Code Refactoring and Optimization",
+          "description": "Code refactoring and performance optimization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Code refactoring and improvement",
+            "Performance optimization and tuning",
+            "Code maintainability enhancement",
+            "Technical debt reduction"
+          ],
+          "expertise": [
+            "refactoring",
+            "optimization",
+            "maintainability",
+            "technical-debt"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-codesmith",
+              "qualityforge-optimizer"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "refactor",
+              "optimization",
+              "improvement",
+              "cleanup"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-architect",
+          "name": "architect",
+          "division": "coding",
+          "role": "System Architecture and Design",
+          "description": "System architecture and design quality assurance",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Architecture review and validation",
+            "Design pattern implementation",
+            "System design quality assessment",
+            "Architecture documentation and standards"
+          ],
+          "expertise": [
+            "architecture",
+            "design-patterns",
+            "quality",
+            "documentation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-codesmith",
+              "qualityforge-standards"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "architecture",
+              "design",
+              "patterns",
+              "quality"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-optimizer",
+          "name": "optimizer",
+          "division": "coding",
+          "role": "Performance Optimization Specialist",
+          "description": "System performance optimization and tuning",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Performance analysis and optimization",
+            "System tuning and enhancement",
+            "Resource optimization and efficiency",
+            "Performance monitoring and metrics"
+          ],
+          "expertise": [
+            "performance",
+            "tuning",
+            "efficiency",
+            "monitoring"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-refactor",
+              "qualityforge-profiler"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "optimization",
+              "performance",
+              "tuning",
+              "efficiency"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-maintainer",
+          "name": "maintainer",
+          "division": "coding",
+          "role": "Code Maintenance and Updates",
+          "description": "Code maintenance and continuous improvement",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Code maintenance and updates",
+            "Dependency management and updates",
+            "Code cleanup and organization",
+            "Maintenance documentation and tracking"
+          ],
+          "expertise": [
+            "maintenance",
+            "dependencies",
+            "cleanup",
+            "documentation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-codesmith",
+              "qualityforge-migrator"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "maintenance",
+              "updates",
+              "dependencies",
+              "cleanup"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-integrator",
+          "name": "integrator",
+          "division": "coding",
+          "role": "System Integration and API Development",
+          "description": "System integration and API quality assurance",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Integration testing and validation",
+            "API design and quality assurance",
+            "System interoperability validation",
+            "Integration documentation and standards"
+          ],
+          "expertise": [
+            "integration",
+            "api",
+            "interoperability",
+            "documentation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-integration",
+              "qualityforge-standards"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "integration",
+              "api",
+              "interoperability",
+              "quality"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-reviewer",
+          "name": "reviewer",
+          "division": "coding",
+          "role": "Code Review and Quality Assurance",
+          "description": "Code review and quality gate management",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Code review and quality assessment",
+            "Quality gate implementation and management",
+            "Best practices enforcement",
+            "Review process optimization"
+          ],
+          "expertise": [
+            "code-review",
+            "quality-gates",
+            "best-practices",
+            "process"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-inspector",
+              "qualityforge-guardian"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "review",
+              "quality",
+              "gates",
+              "best-practices"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-standards",
+          "name": "standards",
+          "division": "coding",
+          "role": "Coding Standards Enforcement",
+          "description": "Coding standards and best practices enforcement",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Coding standards definition and enforcement",
+            "Best practices development and implementation",
+            "Standards compliance monitoring",
+            "Standards documentation and training"
+          ],
+          "expertise": [
+            "standards",
+            "best-practices",
+            "compliance",
+            "training"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-reviewer",
+              "qualityforge-guardian"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "standards",
+              "best-practices",
+              "compliance",
+              "enforcement"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-documenter",
+          "name": "documenter",
+          "division": "coding",
+          "role": "Code Documentation Specialist",
+          "description": "Code documentation and technical writing",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Code documentation and comments",
+            "Technical documentation development",
+            "API documentation and specifications",
+            "Documentation quality and standards"
+          ],
+          "expertise": [
+            "documentation",
+            "technical-writing",
+            "api-docs",
+            "standards"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-codesmith",
+              "qualityforge-standards"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "documentation",
+              "technical-writing",
+              "api-docs",
+              "specs"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-migrator",
+          "name": "migrator",
+          "division": "coding",
+          "role": "Code Migration and Modernization",
+          "description": "Code migration and system modernization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Legacy code migration and modernization",
+            "Technology stack updates and migration",
+            "Migration planning and execution",
+            "Migration testing and validation"
+          ],
+          "expertise": [
+            "migration",
+            "modernization",
+            "legacy",
+            "technology-updates"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-maintainer",
+              "qualityforge-architect"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "migration",
+              "modernization",
+              "legacy",
+              "upgrade"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "quality": {
+      "name": "Quality Division",
+      "count": 8,
+      "agents": [
+        {
+          "agent_id": "qualityforge-guardian",
+          "name": "guardian",
+          "division": "quality",
+          "role": "Quality Gatekeeper and Standards Enforcement",
+          "description": "Quality gate management and standards enforcement",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Quality gate implementation and management",
+            "Standards compliance monitoring",
+            "Quality assurance process management",
+            "Quality metrics and reporting"
+          ],
+          "expertise": [
+            "quality-gates",
+            "compliance",
+            "process",
+            "metrics"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-auditor",
+              "qualityforge-validator"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 10,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "quality",
+              "gates",
+              "compliance",
+              "standards"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-auditor",
+          "name": "auditor",
+          "division": "quality",
+          "role": "Code Audit and Compliance Specialist",
+          "description": "Code auditing and compliance validation",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Code audit and compliance assessment",
+            "Regulatory compliance validation",
+            "Security compliance auditing",
+            "Audit reporting and recommendations"
+          ],
+          "expertise": [
+            "audit",
+            "compliance",
+            "regulatory",
+            "security"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-guardian",
+              "qualityforge-security-test"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "audit",
+              "compliance",
+              "regulatory",
+              "security"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-validator",
+          "name": "validator",
+          "division": "quality",
+          "role": "Validation and Verification Expert",
+          "description": "Validation and verification processes",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Validation process design and implementation",
+            "Verification testing and validation",
+            "Quality validation standards",
+            "Validation documentation and reporting"
+          ],
+          "expertise": [
+            "validation",
+            "verification",
+            "standards",
+            "documentation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-guardian",
+              "qualityforge-accessibility"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "validation",
+              "verification",
+              "standards",
+              "quality"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-monitor",
+          "name": "monitor",
+          "division": "quality",
+          "role": "Continuous Monitoring and Alerting",
+          "description": "Continuous quality monitoring and alerting",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Quality monitoring and alerting systems",
+            "Real-time quality metrics tracking",
+            "Quality alert management and response",
+            "Monitoring system optimization"
+          ],
+          "expertise": [
+            "monitoring",
+            "alerting",
+            "metrics",
+            "real-time"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-reporter",
+              "qualityforge-guardian"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "monitoring",
+              "alerting",
+              "metrics",
+              "real-time"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-reporter",
+          "name": "reporter",
+          "division": "quality",
+          "role": "Quality Reporting and Metrics",
+          "description": "Quality reporting and metrics management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Quality metrics collection and analysis",
+            "Quality reporting and dashboards",
+            "Quality trend analysis and insights",
+            "Quality improvement recommendations"
+          ],
+          "expertise": [
+            "reporting",
+            "metrics",
+            "analysis",
+            "dashboards"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-coverage",
+              "qualityforge-monitor"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "reporting",
+              "metrics",
+              "dashboards",
+              "analysis"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-trainer",
+          "name": "trainer",
+          "division": "quality",
+          "role": "Quality Training and Best Practices",
+          "description": "Quality training and best practices development",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Quality training program development",
+            "Best practices documentation and training",
+            "Quality awareness and education",
+            "Training effectiveness measurement"
+          ],
+          "expertise": [
+            "training",
+            "best-practices",
+            "education",
+            "awareness"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-standards",
+              "qualityforge-guardian"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "training",
+              "best-practices",
+              "education",
+              "quality"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "qualityforge-governor",
+          "name": "governor",
+          "division": "quality",
+          "role": "Quality Governance and Policy Management",
+          "description": "Quality governance and policy management",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Quality policy development and management",
+            "Quality governance framework implementation",
+            "Quality strategy and objectives",
+            "Quality compliance and oversight"
+          ],
+          "expertise": [
+            "governance",
+            "policy",
+            "strategy",
+            "oversight"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "qualityforge-guardian",
+              "qualityforge-auditor"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 10,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "governance",
+              "policy",
+              "strategy",
+              "oversight"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    }
+  }
+}

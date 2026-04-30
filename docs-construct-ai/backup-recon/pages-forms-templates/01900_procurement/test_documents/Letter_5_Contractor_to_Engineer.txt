@@ -1,0 +1,25 @@
+Letter 5: Contractor to Engineer
+Reference: BB/DHBEP/C003
+Date: November 23, 2023
+To:
+The Engineer
+Urban Infrastructure Consultants
+[Engineer's Address]
+Durban
+From:
+Project Manager
+BridgeBuilders Inc.
+[Contractor's Address]
+Durban
+Subject: RE: Durban Highway Bridge Repair & Associated Works – Claim for Under-Measurement of Concrete Works (IPC No. 5) - Your Ref: UIC/DHBEP/E002 & Our Previous Refs: BB/DHBEP/C001, BB/DHBEP/C002
+Dear Sir/Madam,
+We refer to your letter Ref: UIC/DHBEP/E002 dated November 16, 2023, regarding our ongoing claim for under-measurement of concrete works (Refs: BB/DHBEP/C001, BB/DHBEP/C002).
+We acknowledge Variation Instruction No. VI-003 concerning the deeper foundation piles. While VI-003 authorized the execution of deeper piles, the remeasurement and rates applied thereunder are still subject to final agreement and do not fully encompass the total additional volume (185 m³) we have identified across both foundation and deck elements. We will submit a separate detailed claim under VI-003 for the foundation portion as requested, but this does not resolve the full discrepancy.
+Regarding the deck concrete, we contend that the "minor adjustments" resulted in a quantifiable increase in material placed, crucial for achieving the structural integrity and design life specified. To further support our position that all claimed concrete represents necessary, high-quality structural work, we refer you to our Concrete Cube Test Register (Ref: CCTR-DHBEP-Phase1, excerpts attached as Appendix E), which is part of our "Material test reports and quality control records" (SoW Clause 5).
+Appendix E demonstrates that for all pours related to the repaired deck sections (as per DWG-STR-BD-105 Rev C), the 28-day characteristic compressive strengths consistently met and often exceeded the specified C40/50 requirements. This adherence to, and surpassing of, stringent quality parameters (SoW Clause 3.1) underscores that the concrete volumes placed were not due to wastage or poor workmanship, but were essential to form the sound structural elements as per the approved, albeit refined, design. The very nature of achieving these consistent high strengths in complex deck profiles, ensuring full compaction around reinforcement, often necessitates marginal but real increases in placed volume beyond neat-line theoretical calculations based on earlier, less detailed, BoQ assumptions.
+The high quality achieved, verified by these independent test results, supports our assertion that the full volume of concrete was diligently and necessarily placed to meet the project's stringent engineering requirements. This is not merely "design development" but the actualization of a robust structure.
+We therefore maintain that the full 185 m³ (less any portion agreed under VI-003 for foundations alone) represents compensable work. We urge you to reconsider your position on the deck concrete in light of this quality assurance data and agree to a comprehensive joint re-measurement and reconciliation meeting covering all disputed volumes at the earliest opportunity.
+Yours faithfully,
+[Contractor's Project Manager Name]
+Project Manager
+BridgeBuilders Inc.

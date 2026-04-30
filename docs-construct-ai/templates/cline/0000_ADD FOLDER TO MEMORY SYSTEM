@@ -1,0 +1,18 @@
+MEMORY ADD FOLDER: Process ALL FILES from /Users/_General/superpowers/docs_construct_ai/disciplines/01700_logistics to memory system:
+
+PARA Navigation:
+- Access docs_construct_ai/para/pages/disciplines/01700_logistics/ (already symlinked)
+- Reference docs_construct_ai/para/pages/codebase/docs/ for documentation standards
+- Source directory: docs_construct_ai/disciplines/01700_logistics/
+
+Gigabrain Search:
+- Search gigabrain tags for "disciplines, 01700_logistics, logistics-practices"
+- Filter by tags: "knowledge-management", "para-integration", "discipline-integration"
+
+Memory Context:
+- Include memory headers for ALL FILES in the directory and subdirectories
+- Establish cross-references between ALL documents and related disciplines (00435_contracts, 01700_logistics, 01200_finance)
+- Process EVERY file without exception - every document, subdirectory, and file type
+- Update para-index.md with comprehensive cross-references for all files
+
+Process ALL FILES following memory system conventions - every .md file, every subdirectory, every document type. Ensure 100% coverage of all discipline documentation without prioritization or filtering.

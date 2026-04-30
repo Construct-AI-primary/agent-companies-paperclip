@@ -1,0 +1,457 @@
+---
+title: Procurement Order Workflow Review & Testing Prompt
+description: Comprehensive prompt for reviewing the 01900 Create Procurement Order workflow, including data collection (43 cards), document generation, agent wiring, and logistics integration
+version: 1.0
+memory_layer: durable_knowledge
+para_section: docs/memory-stack/templates/disciplines/01900_procurement/prompts
+gigabrain_tags: disciplines, 01900_procurement, procurement-workflows, order-creation, data-collection, agent-wiring, document-generation, logistics-integration
+openstinger_context: procurement-workflow-review, agent-coordination, document-automation, logistics-workflow
+last_updated: 2026-03-23
+related_docs:
+  - docs_construct_ai/codebase/workflows/procurement/01900_PROCUREMENT_ORDER_WORKFLOW.md
+  - docs_construct_ai/codebase/workflows/procurement/01900_PROCUREMENT_INPUT_AGENT_WORKFLOW.md
+  - docs_construct_ai/codebase/workflows/procurement/01900_INTERACTIVE_WORKFLOW_GUIDE.md
+  - docs_construct_ai/disciplines/01700_logistics/
+  - docs/memory-stack/templates/disciplines/01900_procurement/cline-prompt-template-01900-procurement.md
+  - docs/memory-stack/templates/disciplines/01900_procurement/gigabrain-tags-01900-procurement.md
+---
+
+# Procurement Order Workflow Review & Testing Prompt
+
+## Overview
+
+This specialized prompt enables comprehensive review and testing of the 01900 Create Procurement Order workflow, focusing on data collection integrity, agent coordination, document generation accuracy, and logistics integration. Use this prompt for validating the complete procurement order lifecycle from user input through document generation and logistics processing.
+
+## Review Scope
+
+### Primary Review Areas
+
+#### 1. Data Collection System (43 Cards)
+The procurement order workflow collects data through 43 interactive cards covering various data points. Review must validate:
+
+- **Card Presentation Consistency**: Verify all 43 cards follow a consistent UI pattern with individual card-based selection
+- **Data Point Coverage**: Ensure all required procurement data points are captured across the card collection:
+  - Group, Category, Item, and Goods specifications
+  - Technical specifications and requirements
+  - Quantity and unit of measure
+  - Delivery requirements and timelines
+  - Budget and cost information
+  - Supplier preferences and qualifications
+  - Compliance and regulatory requirements
+  - Safety and environmental considerations
+- **Selection Logic**: Validate card selection mechanisms (single/multi-select) work correctly
+- **Data Persistence**: Verify selected card data persists correctly through the workflow
+- **Validation Rules**: Confirm proper validation at card level and across card combinations
+- **Autofill Function**: Test the autofill function that provides mock data for testing order creation
+
+#### 2. Document Generation System
+Validate that user selections correctly populate generated documents:
+
+**Scope of Work (SOW) Generation:**
+- Verify SOW sections populate from card selections
+- Validate template selection based on order type and complexity
+- Confirm technical specifications transfer correctly
+- Check that requirements and constraints are properly documented
+
+**Appendices A-F Generation:**
+- **Appendix A - Product Specifications**: Validate technical specs, quality standards, packaging requirements
+- **Appendix B - Safety Data Sheets**: Verify SDS 16-section compliance, hazard identification, PPE requirements
+- **Appendix C - Delivery Schedule**: Confirm timeline data populates correctly, validate Gantt chart data generation
+- **Appendix D - Training Materials**: Verify equipment/material training requirements are captured
+- **Appendix E - Logistics Documents**: Check transport and documentation requirements
+- **Appendix F - Packing/Marking Specifications**: Validate packaging standards and labeling requirements
+
+**Procurement Order Document:**
+- Verify order header information (PO/WO/SO numbers)
+- Validate line items match card selections
+- Confirm pricing and budget alignment
+- Check approval routing configuration
+- Verify supplier information completeness
+
+#### 3. Agent Wiring & Coordination
+Review the agent orchestration system for proper wiring:
+
+**Agent Assignment:**
+- Validate agents are correctly assigned based on discipline requirements
+- Verify capability matching for document processing tasks
+- Confirm workload balancing across available agents
+- Check agent status monitoring and real-time updates
+
+**Agent Communication:**
+- Verify inter-agent messaging for multi-discipline workflows
+- Validate context passing between agents (Group/Category/Item/Goods specs)
+- Confirm error handling and fallback mechanisms
+- Check agent completion notifications and status updates
+
+**Agent Prompts:**
+- Review agent-specific prompts stored in the prompts management system
+- Validate prompt retrieval for each agent type
+- Confirm prompt versioning and performance tracking
+- Test A/B testing integration for prompt optimization
+
+#### 4. Context Usage (Deep-Agents with MD Docs)
+Validate proper context management using markdown documentation:
+
+**Context Transfer:**
+- Verify order details (Group, Category, Item, Goods) are properly transferred as context
+- Validate technical specifications are maintained across agent handoffs
+- Confirm supplier requirements persist through workflow stages
+- Check that compliance requirements are accessible to all relevant agents
+
+**MD Document Integration:**
+- Review how markdown docs transfer context between workflow stages
+- Validate PARA navigation paths are correctly referenced
+- Confirm gigabrain tags are properly used for knowledge discovery
+- Check cross-referencing between related documents
+
+**Context Preservation:**
+- Verify context survives HITL handoffs
+- Validate context is maintained during parallel processing
+- Confirm context integrity across document compilation
+- Check context accessibility for audit trails
+
+#### 5. Logistics Workflow Integration (01700 Logistics)
+Review the handoff to logistics discipline:
+
+**Logistics Document Generation:**
+- Validate automatic export/import document generation for international shipments
+- Verify customs data preparation for CDC submission
+- Confirm transport documentation completeness
+- Check compliance with international shipping regulations
+
+**Logistics Agent Coordination:**
+- Review agent handoff from procurement (01900) to logistics (01700)
+- Validate context transfer includes all required order details
+- Confirm logistics agent receives complete specifications
+- Check status synchronization between disciplines
+
+**CDC Submission:**
+- Validate customs data preparation accuracy
+- Verify regulatory compliance for international shipments
+- Confirm submission workflow triggers correctly
+- Check audit trail for customs documentation
+
+## Review Execution Framework
+
+### Step 1: Data Collection Validation
+```
+Using the Construct AI memory system with Gigabrain for 01900 Procurement discipline:
+
+**PARA Navigation:**
+- Access docs_construct_ai/para/pages/disciplines/01900_procurement/
+- Reference order creation workflow: docs_construct_ai/disciplines/01900_procurement/workflow_docs/
+- Check UI implementation: client/src/pages/01900-procurement/
+
+**Gigabrain Search:**
+- Search gigabrain tags for "disciplines, 01900_procurement", "order-creation", "data-collection"
+- Filter by tags: "card-selection", "ui-consistency", "validation-rules"
+
+**Review Checklist:**
+- [ ] All 43 cards render with consistent UI (card-based selection pattern)
+- [ ] Card selection logic works correctly (single/multi-select as appropriate)
+- [ ] Data validation occurs at card level and across card combinations
+- [ ] Selected data persists correctly through workflow stages
+- [ ] Autofill function populates mock data for testing
+- [ ] Group/Category/Item/Goods hierarchy is properly structured
+- [ ] Technical specifications capture all required fields
+- [ ] Budget and cost data validates against thresholds
+- [ ] Supplier qualification requirements are enforced
+- [ ] Compliance and regulatory flags are properly set
+```
+
+### Step 2: Document Generation Verification
+```
+**PARA Navigation:**
+- Access docs_construct_ai/para/pages/disciplines/01900_procurement/
+- Reference SOW templates: docs_construct_ai/disciplines/01900_procurement/templates/
+- Check document compilation: docs_construct_ai/codebase/workflows/procurement/
+
+**Gigabrain Search:**
+- Search gigabrain tags for "disciplines, 01900_procurement", "scope-of-work", "document-generation"
+- Filter by tags: "appendix-generation", "template-selection", "document-compilation"
+
+**Review Checklist:**
+- [ ] SOW sections populate correctly from card selections
+- [ ] Appendix A captures all product specifications
+- [ ] Appendix B SDS meets 16-section requirements
+- [ ] Appendix C delivery schedule data is complete
+- [ ] Appendix D training requirements are specified
+- [ ] Appendix E logistics documents are generated
+- [ ] Appendix F packing/marking specs are documented
+- [ ] Procurement order document includes all line items
+- [ ] Pricing aligns with card selections
+- [ ] Approval routing is configured correctly
+```
+
+### Step 3: Agent Wiring Inspection
+```
+**PARA Navigation:**
+- Access docs_construct_ai/para/pages/codebase/agents/
+- Reference agent data: docs_construct_ai/disciplines/01900_procurement/agent-data/
+- Check agent orchestration: server/src/services/agentOrchestrationService.js
+
+**Gigabrain Search:**
+- Search gigabrain tags for "disciplines, 01900_procurement", "ai-agents", "agent-wiring"
+- Filter by tags: "agent-coordination", "capability-matching", "task-dispatch"
+
+**Review Checklist:**
+- [ ] Agents assigned based on correct discipline mappings
+- [ ] Capability matching considers document type and complexity
+- [ ] Workload balancing distributes tasks appropriately
+- [ ] Agent status monitoring provides real-time updates
+- [ ] Inter-agent messaging passes complete context
+- [ ] Error handling includes fallback mechanisms
+- [ ] Completion notifications trigger next workflow steps
+- [ ] Agent prompts retrieved correctly from management system
+```
+
+### Step 4: Context Transfer Validation
+```
+**PARA Navigation:**
+- Access docs_construct_ai/para/pages/disciplines/01900_procurement/
+- Reference context management: docs_construct_ai/codebase/workflows/procurement/
+- Check deep-agents integration: docs_construct_ai/codebase/agents/
+
+**Gigabrain Search:**
+- Search gigabrain tags for "disciplines, 01900_procurement", "context-management", "deep-agents"
+- Filter by tags: "context-transfer", "md-documents", "knowledge-preservation"
+
+**Review Checklist:**
+- [ ] Group/Category/Item/Goods data transfers correctly as context
+- [ ] Technical specs maintained across all agent handoffs
+- [ ] Supplier requirements persist through workflow stages
+- [ ] Compliance requirements accessible to relevant agents
+- [ ] MD docs properly reference order context
+- [ ] PARA navigation paths correctly linked
+- [ ] Gigabrain tags enable proper knowledge discovery
+- [ ] Context survives HITL handoffs intact
+```
+
+### Step 5: Logistics Integration Check
+```
+**PARA Navigation:**
+- Access docs_construct_ai/para/pages/disciplines/01700_logistics/
+- Reference logistics workflows: docs_construct_ai/disciplines/01700_logistics/workflow_docs/
+- Check integration points: docs_construct_ai/disciplines/01900_procurement/agent-data/
+
+**Gigabrain Search:**
+- Search gigabrain tags for "disciplines, 01700_logistics", "procurement-integration", "customs"
+- Filter by tags: "export-import", "cdc-submission", "international-shipments"
+
+**Review Checklist:**
+- [ ] Export/import documents generate automatically
+- [ ] Customs data prepared accurately for CDC submission
+- [ ] Transport documentation complete
+- [ ] International shipping regulations compliance
+- [ ] Agent handoff from 01900 to 01700 seamless
+- [ ] Context transfer includes all order details
+- [ ] Logistics agent receives complete specifications
+- [ ] Status synchronization between disciplines
+```
+
+## Testing Scenarios
+
+### Scenario 1: Simple Procurement Order (Office Supplies)
+```
+Test Data (Autofill):
+- Group: Office Supplies
+- Category: Stationery
+- Item: Paper Products
+- Goods: A4 Copy Paper (80gsm)
+- Quantity: 100 reams
+- Budget: $2,500
+
+Expected Outcomes:
+- [ ] 43 cards present with consistent UI
+- [ ] Basic cards selected (no complex technical specs needed)
+- [ ] SOW generates with standard template
+- [ ] Appendices A and C generated (basic specs and delivery)
+- [ ] Agent assignment: Procurement only (01900)
+- [ ] Context transfer: Basic order details
+- [ ] No logistics workflow triggered (domestic delivery)
+```
+
+### Scenario 2: Complex Equipment Procurement
+```
+Test Data (Autofill):
+- Group: Heavy Equipment
+- Category: Earthmoving
+- Item: Excavator
+- Goods: CAT 320 Excavator with attachments
+- Specifications: Technical specs, safety requirements, training needs
+- Budget: $250,000
+- International: Yes (customs required)
+
+Expected Outcomes:
+- [ ] All 43 cards available with complex technical options
+- [ ] Multiple cards selected across categories
+- [ ] SOW generates with technical template
+- [ ] All appendices A-F generated
+- [ ] Agent assignment: Multi-discipline (01900, 00800-00872, 02400, 01700)
+- [ ] Context transfer: Complete technical specifications
+- [ ] Logistics workflow triggered (international shipment)
+- [ ] CDC submission prepared
+```
+
+### Scenario 3: Service Order with Training Requirements
+```
+Test Data (Autofill):
+- Group: Professional Services
+- Category: Technical Consulting
+- Item: Equipment Training
+- Goods: Crane Operation Certification
+- Duration: 2 weeks
+- Budget: $15,000
+- Compliance: Safety certification required
+
+Expected Outcomes:
+- [ ] Service-specific cards selected
+- [ ] Training requirements captured in cards
+- [ ] SOW generates with service template
+- [ ] Appendices A, B, D generated (specs, safety, training)
+- [ ] Agent assignment: Procurement, Safety, HR (01900, 02400, 01500)
+- [ ] Context transfer: Training specifications
+- [ ] HITL task for safety compliance review
+```
+
+## Issue Identification Framework
+
+### Data Collection Issues
+```
+Common Issues:
+- Inconsistent card UI rendering
+- Missing validation on card selections
+- Data not persisting across workflow stages
+- Autofill function not working
+- Group/Category/Item/Goods hierarchy broken
+
+Resolution Approach:
+- Review card component implementation
+- Check validation logic in order creation service
+- Verify data persistence in database schema
+- Test autofill function with mock data
+- Validate hierarchy relationships in data model
+```
+
+### Document Generation Issues
+```
+Common Issues:
+- SOW sections not populating from cards
+- Appendix content incomplete or incorrect
+- Template selection not matching order type
+- Document compilation failing
+
+Resolution Approach:
+- Review SOW generation service logic
+- Check appendix-specific generation functions
+- Validate template selection algorithm
+- Test document compilation pipeline
+```
+
+### Agent Wiring Issues
+```
+Common Issues:
+- Agents not assigned to correct disciplines
+- Capability matching failing
+- Context not passing between agents
+- Agent prompts not retrieving correctly
+
+Resolution Approach:
+- Review discipline assignment logic
+- Check capability assessment algorithms
+- Validate context transfer mechanisms
+- Test agent prompt retrieval from management system
+```
+
+### Context Transfer Issues
+```
+Common Issues:
+- Order details lost during handoffs
+- Technical specs not maintained
+- Compliance requirements not accessible
+- MD docs not referencing context correctly
+
+Resolution Approach:
+- Review context management service
+- Check data serialization for handoffs
+- Validate context preservation in HITL workflows
+- Test MD document integration
+```
+
+### Logistics Integration Issues
+```
+Common Issues:
+- Export documents not generating
+- Customs data incomplete
+- Agent handoff failing
+- Status sync broken
+
+Resolution Approach:
+- Review logistics document generation service
+- Check customs data preparation logic
+- Validate agent handoff mechanisms
+- Test status synchronization
+```
+
+## Success Criteria
+
+### Data Collection
+- [ ] All 43 cards render with consistent card-based UI
+- [ ] Card selection logic works for single and multi-select
+- [ ] Validation rules enforce data quality
+- [ ] Autofill function provides accurate mock data
+- [ ] Data persists correctly through all workflow stages
+
+### Document Generation
+- [ ] SOW generates with correct content from card selections
+- [ ] All appendices A-F populate accurately
+- [ ] Template selection matches order type and complexity
+- [ ] Document compilation completes without errors
+- [ ] Generated documents are complete and accurate
+
+### Agent Wiring
+- [ ] Agents assigned to correct disciplines based on order requirements
+- [ ] Capability matching selects appropriate agents
+- [ ] Workload balancing distributes tasks efficiently
+- [ ] Agent communication passes complete context
+- [ ] Agent prompts retrieve and perform correctly
+
+### Context Transfer
+- [ ] Order details (Group/Category/Item/Goods) transfer intact
+- [ ] Technical specifications maintained across handoffs
+- [ ] Compliance requirements accessible to all relevant agents
+- [ ] MD docs properly reference and transfer context
+- [ ] Context preserved through HITL handoffs
+
+### Logistics Integration
+- [ ] Export/import documents generate automatically
+- [ ] Customs data complete and accurate for CDC submission
+- [ ] Agent handoff from procurement to logistics seamless
+- [ ] Status synchronization between disciplines works
+- [ ] Audit trail maintained for customs documentation
+
+## Related Resources
+
+- [Procurement Order Workflow](docs_construct_ai/codebase/workflows/procurement/01900_PROCUREMENT_ORDER_WORKFLOW.md)
+- [Procurement Input Agent Workflow](docs_construct_ai/codebase/workflows/procurement/01900_PROCUREMENT_INPUT_AGENT_WORKFLOW.md)
+- [Interactive Workflow Guide](docs_construct_ai/codebase/workflows/procurement/01900_INTERACTIVE_WORKFLOW_GUIDE.md)
+- [Logistics Discipline](docs_construct_ai/disciplines/01700_logistics/)
+- [01900 Procurement Prompt Template](docs/memory-stack/templates/disciplines/01900_procurement/cline-prompt-template-01900-procurement.md)
+- [01900 Procurement Gigabrain Tags](docs/memory-stack/templates/disciplines/01900_procurement/gigabrain-tags-01900-procurement.md)
+- [Agent Orchestration Service](server/src/services/agentOrchestrationService.js)
+- [Prompts Management System](server/src/controllers/promptsController.js)
+
+## Version History
+
+- **v1.0** (2026-03-23): Initial procurement order workflow review prompt
+  - Comprehensive data collection validation (43 cards)
+  - Document generation verification (SOW, Appendices A-F)
+  - Agent wiring inspection framework
+  - Context transfer validation (deep-agents with MD docs)
+  - Logistics integration review (01700 Logistics)
+  - Testing scenarios with autofill function
+  - Issue identification and resolution framework
+
+---
+
+*This prompt is designed for comprehensive review of the 01900 Create Procurement Order workflow. Use the review execution framework systematically to validate all workflow components.*

@@ -1,0 +1,16 @@
+{
+  "deployment_result": {
+    "deployment_id": "4daa0be3-aa98-4d77-8546-f4fcf9c9358d",
+    "status": "failed",
+    "policies_attempted": 3,
+    "policies_successful": 0,
+    "policies_failed": 3,
+    "duration": 0.000276,
+    "performance_impact": 0.05,
+    "errors": [
+      "Failed policies: financial_reports_dev_access, financial_reports_service_access, financial_reports_org_access"
+    ],
+    "rollback_available": false
+  },
+  "generated_at": "2026-01-13T06:24:53.769871"
+}

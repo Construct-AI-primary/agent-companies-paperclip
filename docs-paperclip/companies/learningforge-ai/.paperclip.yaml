@@ -1,0 +1,423 @@
+schema: paperclip/v1
+
+# Learning Forge AI - Agent Configuration
+# All agents use Hermes local adapter with DeepSeek Chat V3
+
+agents:
+  # Executive Division
+  learningforge-ai-ceo:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+
+  # Learning & Curriculum Division
+  learningforge-ai-learning-division-lead:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+
+  learningforge-ai-user-behavior-analyst:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-interaction-pattern-coach:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-feedback-synthesis:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-curriculum-planner:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-micro-lesson-generator:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-assessment-mastery:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  # Safety & Quality Division
+  learningforge-ai-safety-quality-division-lead:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-field-safety-inspector:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-hazard-pattern-analyst:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-safety-training-compliance:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-equipment-inspection:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-material-defect-tracker:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-quality-learning:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  # Knowledge-Flow & Docs Division
+  learningforge-ai-knowledge-flow-division-lead:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-vfs-markdown-tracker:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-knowledge-provenance:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-doc-usage-analyzer:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-from-doc-to-lesson-generator:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-doc-gap-detector:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-workflow-coach:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-knowledge-transparency:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-knowledge-hygiene:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-audit-by-path:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  # Research & Compliance Division
+  learningforge-ai-research-compliance-division-lead:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-hermes-research:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-construction-law-research:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-safety-regulation-research:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-equipment-innovation-research:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-defect-pattern-research:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-autoresearch-skills-enhancer:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-autoresearch-literature-scanner:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-autoresearch-gap-analyzer:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-goal-alignment-budget:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-audit-explainability:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-compliance-guard:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-research-scheduler:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-vfs-watcher:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-knowledge-flow-agent:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-langchain-runner:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  # Priority Disciplines Division
+  learningforge-ai-priority-disciplines-lead:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-contracts-agent:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-procurement-agent:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-logistics-agent:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-safety-workflow-agent:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+  learningforge-ai-electrical-engineering-agent:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/deepseek/deepseek-chat-v3-0324
+        maxIterations: 50
+        persistSession: true
+
+# Recurring task routines
+routines:
+  weekly-learning-analysis:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 9 * * 1"
+        timezone: UTC
+
+  weekly-safety-research:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 9 * * 1"
+        timezone: UTC
+
+  weekly-autoresearch-cycle:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 2 * * 0"
+        timezone: UTC
+
+  daily-knowledge-hygiene:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 1 * * *"
+        timezone: UTC

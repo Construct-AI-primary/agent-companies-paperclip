@@ -1,0 +1,48 @@
+---
+# MeasureForge AI Company Configuration
+company:
+  name: "MeasureForge AI"
+  slug: "measureforge-ai"
+  type: "measurement_intelligence"
+  status: "active"
+  founded: "2026-04-21"
+  headquarters: "Johannesburg, South Africa"
+
+mission: "To revolutionize construction measurement through AI-powered intelligence, enabling accurate, compliant, and efficient quantification across all engineering disciplines."
+
+vision: "A world where construction measurement is automated, intelligent, and seamlessly integrated with procurement and project management systems."
+
+capabilities:
+  - ai_powered_measurement: "Machine learning-driven element detection and classification"
+  - standards_compliance: "Automated validation against AAQS, SANS, and international standards"
+  - multi_cad_integration: "Native support for 7+ CAD platforms with real-time synchronization"
+  - procurement_pipeline: "End-to-end integration from measurement to contract execution"
+  - visual_intelligence: "Non-destructive audit trails and measurement overlays"
+  - scalable_processing: "Handle thousands of building elements without exponential agent growth"
+
+agent_swarm:
+  total_agents: 27
+  coordinator_agents: 1
+  specialist_agents: 20
+  validator_agents: 4
+  procurement_agents: 2
+
+integration_points:
+  - knowledgeforge_ai: "Institutional memory and QA automation"
+  - learningforge_ai: "Continuous improvement and analytics"
+  - domainforge_ai: "Technical documentation and architecture"
+  - integrateforge_ai: "Multi-CAD system integration"
+  - ada_app: "Autodesk AI assistant integration"
+
+key_metrics:
+  accuracy_target: "99.5%"
+  processing_speed: "<30 seconds for 50MB CAD files"
+  scalability_target: "10,000+ building elements per project"
+  compliance_coverage: "100% AAQS/SANS validation"
+
+development_priorities:
+  - ada_app_integration: "Research-driven AutoCAD enhancement"
+  - swarm_intelligence: "27-agent measurement orchestration"
+  - element_processing: "Intelligent classification of thousands of building elements"
+  - procurement_pipeline: "Complete measurement-to-contract workflow"
+  - global_standards: "Multi-jurisdictional compliance framework"

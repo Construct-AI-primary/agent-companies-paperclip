@@ -1,0 +1,59 @@
+{
+  "name": "construct_ai_docs",
+  "version": "1.0.0",
+  "description": "Construct AI Documentation Repository",
+  "main": "index.js",
+  "scripts": {
+    "lint": "markdownlint docs/**/*.md README.md CONTRIBUTING.md",
+    "lint:fix": "markdownlint --fix docs/**/*.md README.md CONTRIBUTING.md",
+    "validate": "npm run lint && npm run check-links && npm run validate-structure",
+    "check-links": "node tools/check-links.js",
+    "validate-structure": "node tools/validate-structure.js",
+    "generate-indexes": "node tools/generate-indexes.js",
+    "build": "npm run generate-indexes && npm run validate",
+    "test": "npm run validate",
+    "pre-commit": "npm run lint",
+    "docs:serve": "npx docsify serve docs",
+    "docs:build": "npx docsify build docs"
+  },
+  "keywords": [
+    "documentation",
+    "construct-ai",
+    "markdown",
+    "engineering"
+  ],
+  "author": "Construct AI Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Construct-AI-primary/construct_ai_docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Construct-AI-primary/construct_ai_docs/issues"
+  },
+  "homepage": "https://construct-ai-primary.github.io/construct_ai_docs",
+  "devDependencies": {
+    "markdownlint": "^0.31.1",
+    "markdownlint-cli": "^0.37.0",
+    "prettier": "^3.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0"
+  },
+  "dependencies": {
+    "docsify": "^4.13.0",
+    "fs-extra": "^11.1.0",
+    "glob": "^10.0.0",
+    "path": "^0.12.7"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

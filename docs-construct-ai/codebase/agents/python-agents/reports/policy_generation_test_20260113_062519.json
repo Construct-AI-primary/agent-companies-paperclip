@@ -1,0 +1,58 @@
+{
+  "generation_result": {
+    "request_id": "800e1fa0-5ca1-42a2-b484-7fa89b3de3ea",
+    "table_name": "financial_reports",
+    "policies_generated": 3,
+    "deployment_ready": true,
+    "generation_duration": 0.000205,
+    "success": true,
+    "error_message": null
+  },
+  "policies": [
+    {
+      "table_name": "financial_reports",
+      "policy_name": "financial_reports_dev_access",
+      "policy_sql": "CREATE POLICY \"financial_reports_dev_access\" ON financial_reports FOR ALL USING (is_dev_mode() OR organization_id = '90cd635a-380f-4586-a3b7-a09103b6df94');",
+      "pattern": "development_bypass",
+      "risk_level": "critical",
+      "performance_impact": 0.01,
+      "requires_testing": true,
+      "organization_id": "90cd635a-380f-4586-a3b7-a09103b6df94",
+      "dependencies": [],
+      "test_queries": [
+        "SELECT COUNT(*) FROM financial_reports LIMIT 1",
+        "INSERT INTO financial_reports (id, created_at) VALUES (gen_random_uuid(), NOW()) ON CONFLICT DO NOTHING"
+      ]
+    },
+    {
+      "table_name": "financial_reports",
+      "policy_name": "financial_reports_service_access",
+      "policy_sql": "CREATE POLICY \"financial_reports_service_access\" ON financial_reports FOR ALL USING (auth.role() = 'service_role'::text);",
+      "pattern": "service_role_override",
+      "risk_level": "critical",
+      "performance_impact": 0.01,
+      "requires_testing": false,
+      "organization_id": null,
+      "dependencies": [],
+      "test_queries": [
+        "SELECT COUNT(*) FROM financial_reports LIMIT 1"
+      ]
+    },
+    {
+      "table_name": "financial_reports",
+      "policy_name": "financial_reports_org_access",
+      "policy_sql": "CREATE POLICY \"financial_reports_org_access\" ON financial_reports FOR ALL USING (organization_id IN (SELECT organization_id FROM user_management WHERE user_id = auth.uid()));",
+      "pattern": "organization_isolation",
+      "risk_level": "critical",
+      "performance_impact": 0.03,
+      "requires_testing": false,
+      "organization_id": null,
+      "dependencies": [
+        "user_management"
+      ],
+      "test_queries": [
+        "SELECT COUNT(*) FROM financial_reports WHERE organization_id IS NOT NULL LIMIT 1"
+      ]
+    }
+  ]
+}

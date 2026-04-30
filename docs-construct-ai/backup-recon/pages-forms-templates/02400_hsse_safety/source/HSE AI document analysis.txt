@@ -1,0 +1,330 @@
+/**
+* Real Document Content Analyzer for HSSE Evaluation Auto-Fill
+*
+* @param {string} documentContent - The full text content of the uploaded document
+* @param {Array} questions - Array of question objects with id, section, question, keyword
+* @returns {Array} Array of answer objects with confidence scores
+*/
+const getTimestamp = () => new Date().toISOString().replace('T', ' ').slice(0, -5);
+const log = (message, ...args) => console.log([${getTimestamp()}] ${message}, ...args);
+
+export async function analyzeDocument(documentContent, questions) {
+log(🔍 Analyzing document content: ${documentContent.length} characters);
+
+// Analysis delay for processing (shorter than mock)
+await new Promise(resolve => setTimeout(resolve, 500));
+
+const answers = [];
+const lowerContent = documentContent.toLowerCase();
+
+for (const question of questions) {
+let answer = '';
+let confidence = 0;
+
+// Extract answer based on keyword matching and content analysis
+const keywordLower = question.keyword ? question.keyword.toLowerCase() : '';
+const questionLower = question.question ? question.question.toLowerCase() : '';
+
+log(📋 Analyzing Q${question.id}: "${question.question.substring(0, 50)}...");
+
+// More sophisticated content matching based on question keywords
+if (keywordLower.includes('policy')) {
+answer = findPolicyContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['policy', 'policies', 'procedure', 'procedures', 'standard', 'standards']);
+} else if (keywordLower.includes('training')) {
+answer = findTrainingContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['training', 'train', 'education', 'course', 'program', 'certification']);
+} else if (keywordLower.includes('audit')) {
+answer = findAuditContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['audit', 'audits', 'inspection', 'review', 'assessment', 'evaluation']);
+} else if (keywordLower.includes('equipment') || keywordLower.includes('infrastructure')) {
+answer = findEquipmentContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['equipment', 'machinery', 'vehicle', 'tool', 'maintenance', 'certification', 'qualified']);
+} else if (keywordLower.includes('risk')) {
+answer = findRiskContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['risk', 'hazard', 'assessment', 'mitigation', 'control', 'safety']);
+} else if (keywordLower.includes('monitoring') || keywordLower.includes('performance')) {
+answer = findMonitoringContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['monitor', 'tracking', 'incident', 'near miss', 'report', 'record', 'metric', 'performance']);
+} else if (keywordLower.includes('responsibility') || keywordLower.includes('organisational')) {
+answer = findOrganizationalContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['responsibility', 'team', 'department', 'manager', 'supervisor', 'organisational']);
+} else if (keywordLower.includes('emergency') || keywordLower.includes('emergency response')) {
+answer = findEmergencyContent(lowerContent);
+if (answer) confidence = calculateConfidence(lowerContent, ['emergency', 'response', 'plan', 'evacuation', 'drill', 'incident']);
+} else {
+// Generic content search based on question keywords
+answer = extractGenericAnswer(lowerContent, questionLower, keywordLower);
+if (answer) confidence = 0.6; // Lower confidence for generic extraction
+}
+
+// If no specific content found, try to extract sentences containing question keywords
+if (!answer && (keywordLower || questionLower)) {
+const keywords = (questionLower + ' ' + keywordLower).split(' ').filter(w => w.length > 3).slice(0, 5);
+answer = findRelevantSentences(documentContent, keywords, 150);
+if (answer) confidence = 0.4; // Lower confidence for sentence extraction
+}
+
+// Minimum confidence threshold - don't provide answers below 30%
+if (confidence < 0.3) {
+answer = '';
+confidence = 0;
+}
+
+log( → ${answer ? Found (${(confidence * 100).toFixed(0)}% confidence) : 'No answer found'});
+
+answers.push({
+id: question.id,
+answer: answer,
+confidence: confidence,
+section: question.section,
+question: question.question,
+keyword: question.keyword
+});
+}
+
+log(✅ Content analysis complete: ${answers.filter(a => a.answer).length}/${answers.length} questions answered);
+return answers;
+}
+
+// Helper functions for specific content extraction
+function findPolicyContent(content) {
+const policies = [];
+
+// Look for policy statements
+const policyPatterns = [
+/hs[se]|hse.*policy|health.*safety.*environment.*policy|company.*policy/gi,
+/we.*maintain.*policy|policy.*states|policy.*requires/gi,
+/according.*to.*policy|complies.*with.*policy/gi
+];
+
+policyPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+// Extract surrounding context
+const index = content.search(pattern);
+const start = Math.max(0, index - 100);
+const end = Math.min(content.length, index + 200);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+policies.push(snippet);
+}
+});
+
+return policies.length > 0
+? policies[0] + (policies.length > 1 ? ' (Multiple policy references found)' : '')
+: '';
+}
+
+function findTrainingContent(content) {
+const trainingRefs = [];
+
+const trainingPatterns = [
+/training|train.*session|course|education|certification|competenc/gi,
+/annual.*training|quarterly.*training|regular.*training/gi,
+/employee.*training|staff.*training|hse.*training|safety.*training/gi
+];
+
+trainingPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 80);
+const end = Math.min(content.length, index + 120);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+trainingRefs.push(snippet);
+}
+});
+
+return trainingRefs.length > 0 ? trainingRefs[0] : '';
+}
+
+function findAuditContent(content) {
+const auditRefs = [];
+
+const auditPatterns = [
+/audit|audits|inspection|review|assessment/gi,
+/quarterly|annual.*audit|regular.*audit/gi,
+/internal.*audit|external.*audit|third.*party/gi
+];
+
+auditPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 60);
+const end = Math.min(content.length, index + 100);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+auditRefs.push(snippet);
+}
+});
+
+return auditRefs.length > 0 ? auditRefs[0] : '';
+}
+
+function findEquipmentContent(content) {
+const equipmentRefs = [];
+
+const equipmentPatterns = [
+/equipment|machinery|vehicle|tool/gi,
+/maintenance|certification|qualified|tested/gi,
+/regular.*maintenance|certified.*equipment/gi
+];
+
+equipmentPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 70);
+const end = Math.min(content.length, index + 90);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+equipmentRefs.push(snippet);
+}
+});
+
+return equipmentRefs.length > 0 ? equipmentRefs[0] : '';
+}
+
+function findRiskContent(content) {
+const riskRefs = [];
+
+const riskPatterns = [
+/risk|hazard|assessment|mitigation|control/gi,
+/identified.*risk|assessed.*risk|controlled.*risk/gi,
+/risk.*assessment.*conducted|regular.*assessment/gi
+];
+
+riskPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 80);
+const end = Math.min(content.length, index + 100);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+riskRefs.push(snippet);
+}
+});
+
+return riskRefs.length > 0 ? riskRefs[0] : '';
+}
+
+function findMonitoringContent(content) {
+const monitoringRefs = [];
+
+const monitoringPatterns = [
+/monitor|tracking|incident|near.miss|report/gi,
+/performance.*monitoring|kpi|metric/gi,
+/reporting.*system|incident.*reporting/gi
+];
+
+monitoringPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 70);
+const end = Math.min(content.length, index + 90);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+monitoringRefs.push(snippet);
+}
+});
+
+return monitoringRefs.length > 0 ? monitoringRefs[0] : '';
+}
+
+function findOrganizationalContent(content) {
+const orgRefs = [];
+
+const orgPatterns = [
+/responsibility|team|department|manager|supervisor/gi,
+/organisational.*structure|reporting.*line/gi,
+/hsse.*responsibility|accountability/gi
+];
+
+orgPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 80);
+const end = Math.min(content.length, index + 100);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+orgRefs.push(snippet);
+}
+});
+
+return orgRefs.length > 0 ? orgRefs[0] : '';
+}
+
+function findEmergencyContent(content) {
+const emergencyRefs = [];
+
+const emergencyPatterns = [
+/emergency|response|plan|evacuation|drill/gi,
+/incident.*response|emergency.*preparedness/gi,
+/training.*drill|response.*team/gi
+];
+
+emergencyPatterns.forEach(pattern => {
+const matches = content.match(pattern);
+if (matches) {
+const index = content.search(pattern);
+const start = Math.max(0, index - 70);
+const end = Math.min(content.length, index + 90);
+const snippet = content.substring(start, end).replace(/\s+/g, ' ').trim();
+emergencyRefs.push(snippet);
+}
+});
+
+return emergencyRefs.length > 0 ? emergencyRefs[0] : '';
+}
+
+function extractGenericAnswer(content, questionWords, keywords) {
+const searchTerms = [];
+if (keywords) searchTerms.push(...keywords.split('|'));
+searchTerms.push(...questionWords.split(' ').filter(w => w.length > 4));
+
+// Find sentences containing search terms
+const sentences = content.split(/[.!?]+/);
+const matchingSentences = sentences.filter(sentence => {
+const lowerSentence = sentence.toLowerCase();
+return searchTerms.some(term => lowerSentence.includes(term));
+});
+
+return matchingSentences.length > 0 ? matchingSentences[0].trim() : '';
+}
+
+function findRelevantSentences(content, keywords, maxLength) {
+const sentences = content.split(/[.!?]+/);
+const relevantSentences = sentences.filter(sentence => {
+const lowerSentence = sentence.toLowerCase();
+return keywords.some(keyword => lowerSentence.includes(keyword));
+});
+
+if (relevantSentences.length === 0) return '';
+
+// Take first relevant sentence, truncated to maxLength
+const result = relevantSentences[0].trim();
+return result.length <= maxLength ? result : result.substring(0, maxLength) + '...';
+}
+
+function calculateConfidence(content, relevantTerms) {
+let score = 0;
+const totalTerms = relevantTerms.length;
+const lowerContent = content.toLowerCase();
+
+relevantTerms.forEach(term => {
+if (lowerContent.includes(term)) {
+score += 1 / totalTerms;
+}
+});
+
+// Base confidence between 0.4-0.9 based on term matches
+const baseConfidence = Math.min(0.9, Math.max(0.4, score));
+
+// Boost confidence slightly if multiple terms are found
+const termCount = relevantTerms.filter(term => lowerContent.includes(term)).length;
+return baseConfidence + (termCount > 1 ? termCount * 0.05 : 0);
+}
+
+// Legacy function name compatibility
+export async function analyzeDocumentWithAI(content, questions) {
+return analyzeDocument(content, questions);
+}

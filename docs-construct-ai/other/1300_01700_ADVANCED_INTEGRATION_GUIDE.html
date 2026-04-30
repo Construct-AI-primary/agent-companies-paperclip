@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Tracking System - Advanced Integration Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #000;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        h1 {
+            font-size: 2em;
+            border-bottom: 3px solid #000;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #666;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #000;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        .phase {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        .security {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #0dcaf0;
+            margin: 15px 0;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                padding: 10px;
+                max-width: 100%;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            pre, table, .phase, .security {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Logistics Tracking System - Advanced Integration Guide</h1>
+
+    <h2>Overview</h2>
+    <p>This guide covers the advanced features and full integration capabilities of the logistics tracking system. Use this after your MVP is operational to enhance functionality.</p>
+
+    <h2>1. Full API Integration</h2>
+    
+    <h3>Advanced Vessel Tracking</h3>
+    <p><strong>Enhanced VesselFinder Integration:</strong></p>
+    <ul>
+        <li>Real-time position updates every 15 minutes</li>
+        <li>Detailed vessel specifications and history</li>
+        <li>Advanced filtering and search capabilities</li>
+        <li>AIS data integration for precise tracking</li>
+    </ul>
+    
+    <h3>Multiple Container Tracking APIs</h3>
+    <p><strong>Supported Providers:</strong></p>
+    <ul>
+        <li><strong>Shipping Line APIs</strong>: Direct integration with major carriers</li>
+        <li><strong>Third-party Tracking</strong>: Platforms like Track-trace, Container Tracking Ltd</li>
+        <li><strong>Custom Systems</strong>: Client proprietary tracking systems</li>
+    </ul>
+    
+    <p><strong>Advanced API Features:</strong></p>
+    <ul>
+        <li>Rate limit management and optimization</li>
+        <li>Fallback mechanisms for API failures</li>
+        <li>Data caching for improved performance</li>
+        <li>Historical data retrieval</li>
+    </ul>
+
+    <h2>2. Comprehensive Data Structures</h2>
+    
+    <h3>Extended Shipment Data</h3>
+    <p><strong>Additional Fields:</strong></p>
+    <ul>
+        <li><strong>Shipment Type</strong>: IMPORT, EXPORT, TRANSSHIPMENT</li>
+        <li><strong>Commercial Terms</strong>: Incoterms (FOB, CIF, CFR, etc.)</li>
+        <li><strong>Payment Terms</strong>: Credit terms and conditions</li>
+        <li><strong>Insurance Details</strong>: Policy numbers and coverage</li>
+        <li><strong>Special Instructions</strong>: Handling requirements</li>
+        <li><strong>Documentation Status</strong>: Completion tracking</li>
+    </ul>
+    
+    <h3>Detailed Container Specifications</h3>
+    <p><strong>Full Container Data:</strong></p>
+    <ul>
+        <li><strong>ISO Code</strong>: Complete container type classification</li>
+        <li><strong>Tare Weight</strong>: Empty container weight</li>
+        <li><strong>Max Payload</strong>: Maximum cargo capacity</li>
+        <li><strong>Reefer Settings</strong>: Temperature and ventilation (for refrigerated containers)</li>
+        <li><strong>Dangerous Goods</strong>: Hazard class and UN numbers</li>
+        <li><strong>Seal Information</strong>: Security seal details</li>
+    </ul>
+    
+    <h3>Advanced Vessel Information</h3>
+    <p><strong>Complete Vessel Profile:</strong></p>
+    <ul>
+        <li><strong>Call Sign</strong>: Radio identification</li>
+        <li><strong>Vessel Class</strong>: Classification society rating</li>
+        <li><strong>Built Year</strong>: Construction date</li>
+        <li><strong>Current Status</strong>: Detailed operational status</li>
+        <li><strong>Destination ETA</strong>: Estimated Time of Arrival</li>
+        <li><strong>Last Position Update</strong>: Timestamp of last data refresh</li>
+    </ul>
+
+    <h2>3. Enhanced Port and Terminal Data</h2>
+    
+    <h3>Detailed Port Information</h3>
+    <p><strong>Extended Port Data:</strong></p>
+    <ul>
+        <li><strong>UN/LOCODE</strong>: Standard port identifier</li>
+        <li><strong>Coordinates</strong>: Precise latitude and longitude</li>
+        <li><strong>Time Zone</strong>: Local time zone information</li>
+        <li><strong>Facilities</strong>: Available port services</li>
+        <li><strong>Working Hours</strong>: Operational schedule</li>
+        <li><strong>Customs Information</strong>: Clearance procedures</li>
+        <li><strong>Maximum Vessel Size</strong>: Port capacity limits</li>
+    </ul>
+    
+    <h3>Terminal-Specific Data</h3>
+    <p><strong>Terminal Details:</strong></p>
+    <ul>
+        <li><strong>Terminal Name</strong>: Specific facility name</li>
+        <li><strong>Operator</strong>: Terminal operating company</li>
+        <li><strong>Services</strong>: Available handling services</li>
+        <li><strong>Equipment</strong>: Crane and handling equipment</li>
+        <li><strong>Capacity</strong>: Throughput capabilities</li>
+    </ul>
+
+    <h2>4. Advanced Integration Process</h2>
+    
+    <div class="phase">
+        <h3>Phase 1: Enhanced API Setup</h3>
+        <ol>
+            <li><strong>Multi-API Configuration</strong>
+                <ul>
+                    <li>Set up credentials for all required APIs</li>
+                    <li>Configure rate limiting and throttling</li>
+                    <li>Implement fallback mechanisms</li>
+                    <li>Set up monitoring and alerting</li>
+                </ul>
+            </li>
+            <li><strong>Data Synchronization</strong>
+                <ul>
+                    <li>Configure real-time data feeds</li>
+                    <li>Set up historical data import</li>
+                    <li>Implement data validation rules</li>
+                    <li>Establish data quality monitoring</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    
+    <div class="phase">
+        <h3>Phase 2: Advanced Data Loading</h3>
+        <ol>
+            <li><strong>Complex Data Mapping</strong>
+                <ul>
+                    <li>Map client-specific data formats</li>
+                    <li>Handle data transformation rules</li>
+                    <li>Implement data enrichment processes</li>
+                    <li>Set up automated data validation</li>
+                </ul>
+            </li>
+            <li><strong>Relationship Management</strong>
+                <ul>
+                    <li>Complex shipment-container relationships</li>
+                    <li>Multi-leg shipment tracking</li>
+                    <li>Vessel-hierarchy management</li>
+                    <li>Intermodal transportation linking</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    
+    <div class="phase">
+        <h3>Phase 3: Advanced Features</h3>
+        <ol>
+            <li><strong>Alerting System</strong>
+                <ul>
+                    <li>Custom alert rules and triggers</li>
+                    <li>Escalation procedures</li>
+                    <li>Notification preferences</li>
+                    <li>Integration with communication channels</li>
+                </ul>
+            </li>
+            <li><strong>Analytics and Reporting</strong>
+                <ul>
+                    <li>Performance metrics dashboard</li>
+                    <li>Trend analysis and forecasting</li>
+                    <li>Custom report generation</li>
+                    <li>Data export capabilities</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h2>5. Security and Compliance</h2>
+    
+    <div class="security">
+        <h3>Advanced Security Features</h3>
+        <p><strong>Data Protection:</strong></p>
+        <ul>
+            <li>End-to-end encryption for data transmission</li>
+            <li>Role-based access control (RBAC)</li>
+            <li>Audit logging for all system activities</li>
+            <li>Compliance with international data protection regulations</li>
+        </ul>
+        
+        <p><strong>API Security:</strong></p>
+        <ul>
+            <li>Token-based authentication</li>
+            <li>IP whitelisting</li>
+            <li>Request signing and validation</li>
+            <li>Rate limiting and abuse prevention</li>
+        </ul>
+    </div>
+    
+    <div class="security">
+        <h3>Regulatory Compliance</h3>
+        <p><strong>International Standards:</strong></p>
+        <ul>
+            <li>GDPR compliance for European operations</li>
+            <li>Local data protection regulations</li>
+            <li>Maritime industry standards compliance</li>
+            <li>Customs and trade regulation adherence</li>
+        </ul>
+    </div>
+
+    <h2>6. Performance Optimization</h2>
+    
+    <h3>Data Management</h3>
+    <p><strong>Large Scale Operations:</strong></p>
+    <ul>
+        <li>Database partitioning strategies</li>
+        <li>Index optimization for performance</li>
+        <li>Caching mechanisms for frequently accessed data</li>
+        <li>Archiving old data for performance</li>
+    </ul>
+    
+    <h3>System Scalability</h3>
+    <p><strong>Growth Planning:</strong></p>
+    <ul>
+        <li>Horizontal scaling capabilities</li>
+        <li>Load balancing configurations</li>
+        <li>Database replication strategies</li>
+        <li>Cloud infrastructure integration</li>
+    </ul>
+
+    <h2>7. Advanced Troubleshooting</h2>
+    
+    <h3>Complex Issue Resolution</h3>
+    <p><strong>Diagnostic Tools:</strong></p>
+    <ul>
+        <li>Advanced API monitoring dashboards</li>
+        <li>Data lineage tracking</li>
+        <li>Performance bottleneck analysis</li>
+        <li>Integration failure root cause analysis</li>
+    </ul>
+    
+    <h3>Maintenance Procedures</h3>
+    <p><strong>System Health:</strong></p>
+    <ul>
+        <li>Automated health checks</li>
+        <li>Predictive maintenance alerts</li>
+        <li>Backup and recovery procedures</li>
+        <li>Disaster recovery planning</li>
+    </ul>
+
+    <h2>8. Training and Support</h2>
+    
+    <h3>Advanced User Training</h3>
+    <p><strong>Specialized Training Modules:</strong></p>
+    <ul>
+        <li>API integration workshops</li>
+        <li>Advanced reporting and analytics</li>
+        <li>Custom workflow configuration</li>
+        <li>System administration training</li>
+    </ul>
+    
+    <h3>Ongoing Support</h3>
+    <p><strong>Professional Services:</strong></p>
+    <ul>
+        <li>24/7 technical support options</li>
+        <li>Dedicated account management</li>
+        <li>Regular system health reviews</li>
+        <li>Continuous improvement planning</li>
+    </ul>
+
+    <h2>Getting Started with Advanced Features</h2>
+    <ol>
+        <li><strong>Assess Current System</strong>: Evaluate your MVP implementation</li>
+        <li><strong>Prioritize Enhancements</strong>: Identify most valuable advanced features</li>
+        <li><strong>Plan Implementation</strong>: Create phased rollout schedule</li>
+        <li><strong>Execute and Monitor</strong>: Implement with proper testing</li>
+        <li><strong>Optimize and Scale</strong>: Continuously improve based on usage</li>
+    </ol>
+    
+    <p>This advanced integration guide builds upon your MVP foundation to create a comprehensive logistics tracking solution with enterprise-level capabilities.</p>
+    
+    <div class="footer">
+        <p><em>For basic setup and MVP deployment, see <code>docs/logistics-mvp-quick-start.md</code></em></p>
+        <p>Document generated for printing - Logistics Tracking System Advanced Integration Guide</p>
+    </div>
+</body>
+</html>

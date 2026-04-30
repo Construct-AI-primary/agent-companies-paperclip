@@ -1,0 +1,394 @@
+# Paperclip Agent Orchestration Configuration
+# This file defines the agent metadata for Paperclip orchestration
+# Source of truth: agents/migration/agents-*.json files
+
+version: "1.0.0"
+updated_at: "2026-03-24T16:30:00Z"
+
+# OpenClaw Gateway Configuration
+openclaw_gateway:
+  base_url: "https://openclaw.constructai.com"
+  health_endpoint: "/health"
+  agents_endpoint: "/agents"
+  tasks_endpoint: "/tasks"
+
+# Team Configurations
+teams:
+  devforge:
+    name: "DevForge AI"
+    description: "Enterprise development, orchestration, and system architecture"
+    total_agents: 51
+    adapter_url: "https://openclaw.constructai.com/teams/devforge"
+    health_check: "/teams/devforge/health"
+    
+    # Division routing rules
+    divisions:
+      executive:
+        name: "Executive Leadership"
+        priority: 1
+        routing_keywords:
+          - orchestrate
+          - coordinate
+          - workflow
+          - monitor
+          - govern
+          - strategy
+          - policy
+          - finance
+        agents:
+          - devforge-orion
+          - devforge-strategos
+          - devforge-insight
+          - devforge-council
+          - devforge-ledger
+      
+      engineering:
+        name: "Engineering Division"
+        priority: 4
+        routing_keywords:
+          - backend
+          - api
+          - database
+          - ai
+          - ml
+          - architecture
+          - automation
+          - code
+          - development
+        agents:
+          - devforge-codesmith
+          - devforge-cortex
+          - devforge-devcore
+          - devforge-automata
+          - devforge-vector
+          - devforge-interface
+          - devforge-promptsmith
+          - devforge-reviewer
+          - devforge-synth
+          - devforge-fixer
+          - devforge-forge
+      
+      data:
+        name: "Data Division"
+        priority: 5
+        routing_keywords:
+          - data
+          - etl
+          - pipeline
+          - streaming
+          - cloud
+          - schema
+          - quality
+        agents:
+          - devforge-dataforge
+          - devforge-navigator
+          - devforge-pulse
+          - devforge-schema
+          - devforge-sentinel
+          - devforge-stream
+          - devforge-cloudops
+          - devforge-ledgerai
+      
+      security:
+        name: "Security Division"
+        priority: 3
+        routing_keywords:
+          - security
+          - threat
+          - access
+          - compliance
+          - audit
+          - encryption
+        agents:
+          - devforge-guardian
+          - devforge-gatekeeper
+          - devforge-auditor
+          - devforge-sentinelx
+          - devforge-watchtower
+          - devforge-archivist
+      
+      product:
+        name: "Product Division"
+        priority: 5
+        routing_keywords:
+          - product
+          - roadmap
+          - innovation
+          - customer
+          - launch
+          - brand
+        agents:
+          - devforge-atlas
+          - devforge-brandforge
+          - devforge-cartographer
+          - devforge-catalyst
+          - devforge-concierge
+          - devforge-nova
+          - devforge-storycraft
+      
+      growth:
+        name: "Growth Division"
+        priority: 5
+        routing_keywords:
+          - marketing
+          - sales
+          - partnership
+          - ecommerce
+          - expansion
+        agents:
+          - devforge-ambassador
+          - devforge-ally
+          - devforge-amplifier
+          - devforge-catalystx
+          - devforge-dealmaker
+          - devforge-merchant
+          - devforge-voyager
+      
+      strategy:
+        name: "Strategy Division"
+        priority: 5
+        routing_keywords:
+          - analysis
+          - market
+          - competitive
+          - research
+          - forecasting
+          - knowledge
+        agents:
+          - devforge-analyst
+          - devforge-compass
+          - devforge-librarian
+          - devforge-mentor
+          - devforge-oracle
+          - devforge-pathfinder
+          - devforge-scout
+
+  loopy:
+    name: "Loopy AI"
+    description: "Creative AI, content generation, and artistic applications"
+    total_agents: 25
+    adapter_url: "https://openclaw.constructai.com/teams/loopy"
+    health_check: "/teams/loopy/health"
+    
+    divisions:
+      creative:
+        name: "Creative Division"
+        priority: 4
+        routing_keywords:
+          - research
+          - content
+          - marketing
+          - social-media
+          - creative
+          - innovation
+        agents:
+          - loopy-alex
+          - loopy-maya
+          - loopy-jordan
+          - loopy-sam
+          - loopy-dev
+          - loopy-creative-1
+          - loopy-creative-2
+          - loopy-creative-3
+          - loopy-creative-4
+          - loopy-creative-5
+      
+      technical:
+        name: "Technical Division"
+        priority: 5
+        routing_keywords:
+          - platform
+          - development
+          - integration
+          - performance
+          - security
+          - devops
+        agents:
+          - loopy-tech-1
+          - loopy-tech-2
+          - loopy-tech-3
+          - loopy-tech-4
+          - loopy-tech-5
+          - loopy-tech-6
+          - loopy-tech-7
+          - loopy-tech-8
+      
+      design:
+        name: "Design Division"
+        priority: 5
+        routing_keywords:
+          - visual-design
+          - ui
+          - design-research
+          - accessibility
+        agents:
+          - loopy-design-1
+          - loopy-design-2
+          - loopy-design-3
+          - loopy-design-4
+      
+      content:
+        name: "Content Division"
+        priority: 5
+        routing_keywords:
+          - content
+          - cms
+          - content-strategy
+        agents:
+          - loopy-content-1
+          - loopy-content-2
+          - loopy-content-3
+
+  qualityforge:
+    name: "QualityForge AI"
+    description: "Testing, debugging, coding excellence, and quality assurance"
+    total_agents: 36
+    adapter_url: "https://openclaw.constructai.com/teams/qualityforge"
+    health_check: "/teams/qualityforge/health"
+    
+    divisions:
+      testing:
+        name: "Testing Division"
+        priority: 5
+        routing_keywords:
+          - unit-test
+          - integration-test
+          - e2e
+          - performance
+          - security-test
+          - accessibility
+          - automation
+        agents:
+          - qualityforge-unittest
+          - qualityforge-integration
+          - qualityforge-e2e
+          - qualityforge-performance
+          - qualityforge-security-test
+          - qualityforge-accessibility
+          - qualityforge-compatibility
+          - qualityforge-load
+          - qualityforge-automation
+          - qualityforge-coverage
+      
+      debugging:
+        name: "Debugging Division"
+        priority: 4
+        routing_keywords:
+          - diagnostics
+          - tracing
+          - bug
+          - analysis
+          - profiling
+          - debugging
+        agents:
+          - qualityforge-diagnostics
+          - qualityforge-tracer
+          - qualityforge-fixer
+          - qualityforge-analyzer
+          - qualityforge-profiler
+          - qualityforge-debugger
+          - qualityforge-inspector
+          - qualityforge-resolver
+      
+      coding:
+        name: "Coding Division"
+        priority: 5
+        routing_keywords:
+          - code
+          - refactor
+          - architecture
+          - optimization
+          - maintenance
+          - integration
+          - review
+          - standards
+        agents:
+          - qualityforge-codesmith
+          - qualityforge-refactor
+          - qualityforge-architect
+          - qualityforge-optimizer
+          - qualityforge-maintainer
+          - qualityforge-integrator
+          - qualityforge-reviewer
+          - qualityforge-standards
+          - qualityforge-documenter
+          - qualityforge-migrator
+      
+      quality:
+        name: "Quality Division"
+        priority: 3
+        routing_keywords:
+          - quality
+          - audit
+          - validation
+          - monitoring
+          - reporting
+          - governance
+        agents:
+          - qualityforge-guardian
+          - qualityforge-auditor
+          - qualityforge-validator
+          - qualityforge-monitor
+          - qualityforge-reporter
+          - qualityforge-trainer
+          - qualityforge-governor
+
+# Cross-Team Collaboration Rules
+collaboration:
+  # Development workflow: Loopy designs → DevForge implements → QualityForge validates
+  development_workflow:
+    - team: loopy
+      role: design
+      next: devforge
+    - team: devforge
+      role: implement
+      next: qualityforge
+    - team: qualityforge
+      role: validate
+      next: complete
+
+  # Security workflow: QualityForge tests → DevForge fixes → QualityForge validates
+  security_workflow:
+    - team: qualityforge
+      role: security-test
+      next: devforge
+    - team: devforge
+      role: security-fix
+      next: qualityforge
+    - team: qualityforge
+      role: security-validate
+      next: complete
+
+# Task Routing Rules
+routing:
+  # Default routing based on keywords
+  keyword_matching: true
+  
+  # Fallback team if no keyword match
+  default_team: devforge
+  
+  # Priority override for critical tasks
+  priority_overrides:
+    - keywords: ["security", "vulnerability", "incident"]
+      team: devforge
+      division: security
+      priority: 1
+    
+    - keywords: ["production", "outage", "critical"]
+      team: devforge
+      division: executive
+      priority: 1
+
+# Health Check Configuration
+health_checks:
+  interval_seconds: 60
+  timeout_seconds: 10
+  unhealthy_threshold: 3
+  healthy_threshold: 2
+
+# Monitoring Configuration
+monitoring:
+  metrics_enabled: true
+  logging_enabled: true
+  alerting_enabled: true
+  retention_days: 30

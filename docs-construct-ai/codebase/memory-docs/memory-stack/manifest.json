@@ -1,0 +1,45 @@
+{
+  "name": "openclaw-memory-stack-giveaway",
+  "version": "0.2.0",
+  "kind": "installer-kit",
+  "description": "Reusable, non-destructive installer kit for a layered OpenClaw memory stack.",
+  "artifact": "dist/openclaw-memory-stack-giveaway.zip",
+  "installModes": [
+    "core",
+    "core-plus-guidance",
+    "core-plus-openstinger"
+  ],
+  "creates": [
+    "memory/",
+    "MEMORY.md",
+    "PARA.md",
+    "WORKSPACE_MEMORY_SYSTEM.md",
+    "docs/memory-stack-local-notes.md",
+    ".memory-stack-backups/"
+  ],
+  "patches": [
+    "AGENTS.md",
+    "MEMORY.md",
+    "PARA.md"
+  ],
+  "optionalIntegrations": [
+    "gigabrain",
+    "lossless-claw",
+    "openstinger"
+  ],
+  "durableTruth": "PARA",
+  "sessionMemory": "lossless-claw",
+  "automaticRecall": "gigabrain",
+  "crossSessionRecall": "openstinger",
+  "safety": {
+    "overwriteBootstrapFiles": false,
+    "requireBackups": true,
+    "appendManagedBlocks": true,
+    "reviewConfigBeforeApply": true
+  },
+  "verification": {
+    "requiresManagedBlocks": true,
+    "requiresBackupsForTouchedFiles": true,
+    "requiresGatewayRestartAfterPluginConfigChanges": true
+  }
+}

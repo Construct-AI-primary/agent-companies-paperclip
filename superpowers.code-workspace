@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "name": "superpowers",
+      "path": "."
+    },
+    {
+      "name": "docs_construct_ai",
+      "path": "docs_construct_ai"
+    }
+  ],
+  "settings": {
+    "git.detectSubmodules": true,
+    "git.detectSubmodulesLimit": 100,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "explorer.fileNesting.enabled": false,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.git": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-json",
+      "ms-vscode.vscode-typescript-next",
+      "GitHub.copilot",
+      "ms-vscode.vscode-git-graph"
+    ]
+  }
+}

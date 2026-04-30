@@ -1,0 +1,66 @@
+{
+  "analysis_summary": {
+    "total_tables_analyzed": 12,
+    "successful_analyses": 12,
+    "failed_analyses": 0,
+    "success_rate": 1.0,
+    "total_analysis_time_seconds": 0.012709,
+    "average_analysis_time_seconds": 0.000912
+  },
+  "risk_assessment": {
+    "risk_distribution": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "none": 12
+    },
+    "high_risk_tables": [],
+    "unsecured_tables": [
+      "financial_reports",
+      "contractor_vetting",
+      "procurement_orders",
+      "safety_incidents",
+      "emails",
+      "document_embeddings",
+      "chat_sessions",
+      "organizations",
+      "projects",
+      "templates"
+    ],
+    "extreme_risk_tables": []
+  },
+  "data_sensitivity": {
+    "classification_summary": {
+      "extreme": 0,
+      "high": 1,
+      "medium": 0,
+      "low": 11
+    },
+    "highly_sensitive_tables": [
+      "user_management"
+    ]
+  },
+  "security_gaps": [],
+  "recommendations": [
+    "\ud83d\udcca Implement automated security monitoring and alerting",
+    "\ud83d\udd04 Schedule regular security audits and policy reviews",
+    "\ud83d\udcda Provide security training for development teams",
+    "\ud83d\udee1\ufe0f Establish incident response procedures for security breaches"
+  ],
+  "performance_metrics": {
+    "agent_performance": {
+      "tables_analyzed": 12,
+      "average_analysis_time": 0.000912,
+      "success_rate": 1.0
+    },
+    "analysis_performance": {
+      "fastest_analysis_seconds": 0.000521,
+      "slowest_analysis_seconds": 0.003804,
+      "total_analysis_time_seconds": 0.010944
+    }
+  },
+  "failed_analyses": [],
+  "generated_at": "2026-01-13T06:15:57.449362",
+  "generated_by": "security_analyzer_test"
+}

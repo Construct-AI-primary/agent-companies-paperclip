@@ -1,0 +1,11 @@
+{
+  "database": {
+    "mode": "postgres"
+  },
+  "storage": {
+    "mode": "s3"
+  },
+  "secrets": {
+    "mode": "env"
+  }
+}

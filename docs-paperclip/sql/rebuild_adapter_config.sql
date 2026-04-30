@@ -1,0 +1,1 @@
+UPDATE agents SET adapter_config = '{"url": "http://srv-d7h2col7vvec738ujfag:3100/api/execute", "method": "POST", "timeoutMs": 300000, "payloadTemplate": {"task": "{{context}}", "model": "openrouter/qwen/qwen-3-6-plus"}}'::jsonb WHERE adapter_type = 'http';

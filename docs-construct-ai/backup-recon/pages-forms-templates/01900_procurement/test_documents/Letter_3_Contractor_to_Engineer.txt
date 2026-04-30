@@ -1,0 +1,69 @@
+Letter 3: Contractor to Engineer
+
+Reference: BB/DHBEP/C002
+Date: November 9, 2023
+
+To:
+The Engineer
+Urban Infrastructure Consultants
+[Engineer's Address]
+Durban
+
+From:
+Project Manager
+BridgeBuilders Inc.
+[Contractor's Address]
+Durban
+
+Subject: RE: Durban Highway Bridge Repair & Associated Works – Claim for Under-Measurement of
+Concrete Works (IPC No. 5) - Your Ref: UIC/DHBEP/E001 & Our Ref: BB/DHBEP/C001
+
+Dear Sir/Madam,
+
+We refer to your letter Ref: UIC/DHBEP/E001 dated November 2, 2023, regarding our claim for
+under-measurement of concrete works as initially detailed in our letter Ref: BB/DHBEP/C001.
+
+We appreciate your prompt response. Please find attached the following documentation in
+support of our claim:
+
+1.Appendix B: Detailed Volumetric Calculations: These calculations clearly demonstrate
+that the as-built volumes for the repaired piled foundations (SoW 2.2.4) significantly exceeded
+the BoQ estimates. This was due to actual pile depths being greater than anticipated in the
+initial BoQ, a necessity confirmed by the "Geotechnical investigations" (SoW 2.1.1)
+undertaken post-tender but pre-construction, and reflected in the approved design
+revision DWG-STR-FD-012 Rev B. The BoQ appears not to have been fully updated to
+reflect these final design parameters.
+
+2.Appendix C: Deck Profile Analysis: This analysis compares the original design profiles
+used for BoQ preparation with the finalized profiles in DWG-STR-BD-105 Rev C. Minor but
+cumulative increases in deck thickness and camber, necessary for achieving specified
+drainage and structural performance, account for a portion of the disputed volume.
+
+3.Appendix D: Pour Logs & QA/QC Records: These records, maintained as per SoW 3.1
+"Quality Control," demonstrate that the concrete placement was executed within specified
+tolerances and negate any suggestion of significant over-pour or wastage beyond industry
+norms. The concrete was placed to achieve the required lines and levels as per the
+approved detailed design.
+
+The issue is not one of unauthorized changes or excessive wastage, but rather that the interim
+valuations have not fully captured the true in-situ quantities necessitated by the finalized,
+approved designs that evolved from the initial tender information. The "Detailed design drawings
+and calculations" (SoW Clause 5) provided by us and subsequently approved by your office form
+the basis of the works executed.
+
+The cumulative under-measurement of 185 m³ directly impacts our cash flow and contravenes the
+spirit of "Payment will be made based on monthly progress payments" (SoW Clause 6.2)
+reflecting work duly completed.
+
+We reiterate our request for an urgent joint site re-measurement focused on the specific
+foundation elements and deck sections detailed in our appendices. Alternatively, we propose a
+meeting with your quantity surveying team to reconcile these figures based on the provided
+documentation and as-built survey data.
+
+We trust this detailed submission clarifies our position and facilitates a swift resolution.
+
+Yours faithfully,
+
+[Contractor's Project Manager Name]
+Project Manager
+BridgeBuilders Inc.

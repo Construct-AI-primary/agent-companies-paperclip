@@ -1,0 +1,923 @@
+{
+  "team": "domainforge",
+  "team_name": "DomainForge AI",
+  "description": "Civil Engineering domain expertise and project management",
+  "total_agents": 17,
+  "divisions": {
+    "executive": {
+      "name": "Executive Leadership",
+      "count": 3,
+      "agents": [
+        {
+          "agent_id": "domainforge-orion",
+          "name": "Orion",
+          "division": "executive",
+          "role": "Chief Civil Engineering Orchestrator",
+          "description": "Central nervous system for civil engineering project orchestration and coordination",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Civil engineering project coordination and global queue management",
+            "Multi-disciplinary engineering workflow orchestration",
+            "Dependency management and conflict resolution in construction projects",
+            "Performance monitoring and emergency response for infrastructure projects",
+            "Cross-functional team coordination and real-time monitoring",
+            "Engineering quality assurance and integration coordination"
+          ],
+          "expertise": [
+            "civil-engineering-orchestration",
+            "construction-coordination",
+            "project-management",
+            "infrastructure-governance",
+            "engineering-standards"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-strategos",
+              "domainforge-insight",
+              "domainforge-council"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "global",
+            "max_concurrent_requests": 10,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "civil-orchestrate",
+              "construction-coordinate",
+              "engineering-workflow",
+              "infrastructure-monitor",
+              "project-govern"
+            ],
+            "priority": 1,
+            "adapter_url": "https://openclaw.constructai.com/agents/domainforge-orion"
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-strategos",
+          "name": "Strategos",
+          "division": "executive",
+          "role": "Civil Engineering Strategic Planning",
+          "description": "Long-term strategic direction for civil engineering and infrastructure development",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Infrastructure market analysis and competitive intelligence",
+            "Strategic planning for civil engineering projects",
+            "Risk assessment for large-scale construction projects",
+            "Infrastructure development strategy and growth planning"
+          ],
+          "expertise": [
+            "infrastructure-strategy",
+            "construction-planning",
+            "civil-engineering-market-analysis",
+            "infrastructure-risk-assessment"
+          ],
+          "integration": {
+            "reports_to": "domainforge-orion",
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "infrastructure-strategy",
+              "construction-plan",
+              "civil-engineering-roadmap",
+              "infrastructure-market"
+            ],
+            "priority": 2
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-council",
+          "name": "Council",
+          "division": "executive",
+          "role": "Civil Engineering Governance",
+          "description": "Collective strategic governance and policy development for civil engineering",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Civil engineering policy development and governance",
+            "Strategic decision making for infrastructure projects",
+            "Cross-disciplinary coordination in construction",
+            "Engineering standards enforcement and compliance"
+          ],
+          "expertise": [
+            "civil-engineering-governance",
+            "infrastructure-policy",
+            "construction-decision-making",
+            "engineering-standards"
+          ],
+          "integration": {
+            "reports_to": "domainforge-orion",
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "civil-governance",
+              "infrastructure-policy",
+              "construction-decision",
+              "engineering-standards"
+            ],
+            "priority": 2
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "engineering": {
+      "name": "Civil Engineering Division",
+      "count": 12,
+      "agents": [
+        {
+          "agent_id": "domainforge-structural",
+          "name": "Structural",
+          "division": "engineering",
+          "role": "Structural Engineering Specialist",
+          "description": "Structural analysis, design, and integrity assessment",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Structural analysis and design calculations",
+            "Load analysis and structural integrity verification",
+            "Foundation design and soil-structure interaction",
+            "Structural safety and compliance assessment",
+            "Construction documentation and specifications"
+          ],
+          "expertise": [
+            "structural-analysis",
+            "load-calculations",
+            "foundation-design",
+            "structural-integrity",
+            "construction-specs"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-geotechnical",
+              "domainforge-materials"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "structural-analysis",
+              "load-calculations",
+              "foundation-design",
+              "structural-integrity"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-geotechnical",
+          "name": "Geotechnical",
+          "division": "engineering",
+          "role": "Geotechnical Engineering Specialist",
+          "description": "Soil mechanics, foundation engineering, and ground investigation",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Soil investigation and characterization",
+            "Foundation design and bearing capacity analysis",
+            "Slope stability and retaining wall design",
+            "Groundwater and seepage analysis",
+            "Earthquake engineering and liquefaction assessment"
+          ],
+          "expertise": [
+            "soil-mechanics",
+            "foundation-engineering",
+            "slope-stability",
+            "groundwater-analysis",
+            "earthquake-engineering"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-structural",
+              "domainforge-environmental"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "geotechnical-analysis",
+              "soil-investigation",
+              "foundation-design",
+              "slope-stability"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-transportation",
+          "name": "Transportation",
+          "division": "engineering",
+          "role": "Transportation Engineering Specialist",
+          "description": "Highway, railway, and transportation infrastructure design",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Highway and roadway geometric design",
+            "Traffic engineering and capacity analysis",
+            "Railway alignment and track design",
+            "Intersection and interchange design",
+            "Transportation safety and accessibility"
+          ],
+          "expertise": [
+            "highway-design",
+            "traffic-engineering",
+            "railway-design",
+            "intersection-design",
+            "transportation-safety"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-surveying",
+              "domainforge-environmental"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "transportation-design",
+              "highway-engineering",
+              "traffic-analysis",
+              "railway-design"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-water-resources",
+          "name": "Water Resources",
+          "division": "engineering",
+          "role": "Water Resources Engineering Specialist",
+          "description": "Water supply, wastewater, and hydraulic engineering",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Water distribution and wastewater collection design",
+            "Hydraulic analysis and pump station design",
+            "Stormwater management and flood control",
+            "Water treatment facility design",
+            "Hydraulic modeling and analysis"
+          ],
+          "expertise": [
+            "water-distribution",
+            "wastewater-engineering",
+            "hydraulic-analysis",
+            "stormwater-management",
+            "flood-control"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-environmental",
+              "domainforge-surveying"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "water-engineering",
+              "hydraulic-design",
+              "wastewater-systems",
+              "stormwater-management"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+
+        {
+          "agent_id": "domainforge-environmental",
+          "name": "Environmental",
+          "division": "engineering",
+          "role": "Environmental Engineering Specialist",
+          "description": "Environmental impact assessment and sustainable engineering",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Environmental impact assessment and mitigation",
+            "Sustainable design and green infrastructure",
+            "Air and water quality analysis",
+            "Environmental permitting and compliance",
+            "Ecosystem protection and restoration"
+          ],
+          "expertise": [
+            "environmental-impact",
+            "sustainable-design",
+            "air-quality",
+            "water-quality",
+            "environmental-permitting"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-water",
+              "domainforge-geotechnical"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "environmental-engineering",
+              "sustainable-design",
+              "impact-assessment",
+              "environmental-permitting"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-surveying",
+          "name": "Surveying",
+          "division": "engineering",
+          "role": "Surveying and Geomatics Specialist",
+          "description": "Land surveying, mapping, and geospatial analysis",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Land surveying and boundary determination",
+            "Topographic mapping and GIS analysis",
+            "Construction staking and layout",
+            "Remote sensing and aerial survey analysis",
+            "Geodetic control and coordinate systems"
+          ],
+          "expertise": [
+            "land-surveying",
+            "gis-mapping",
+            "construction-staking",
+            "remote-sensing",
+            "geodetic-control"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-transportation",
+              "domainforge-water"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "surveying",
+              "gis-mapping",
+              "construction-staking",
+              "geospatial-analysis"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-materials",
+          "name": "Materials",
+          "division": "engineering",
+          "role": "Materials Engineering Specialist",
+          "description": "Construction materials testing, specification, and quality control",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Construction materials testing and analysis",
+            "Material specifications and quality standards",
+            "Concrete mix design and testing",
+            "Asphalt and pavement materials",
+            "Material durability and lifecycle analysis"
+          ],
+          "expertise": [
+            "materials-testing",
+            "concrete-design",
+            "asphalt-materials",
+            "quality-control",
+            "material-durability"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-structural",
+              "domainforge-transportation"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "materials-testing",
+              "concrete-design",
+              "quality-control",
+              "material-specs"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-construction",
+          "name": "Construction",
+          "division": "engineering",
+          "role": "Construction Engineering Specialist",
+          "description": "Construction methods, sequencing, and project management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Construction sequencing and methodology",
+            "Project scheduling and critical path analysis",
+            "Construction safety and risk management",
+            "Quality assurance and quality control",
+            "Contract administration and documentation"
+          ],
+          "expertise": [
+            "construction-sequencing",
+            "project-scheduling",
+            "construction-safety",
+            "quality-assurance",
+            "contract-administration"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-project",
+              "domainforge-safety"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "construction-sequencing",
+              "project-scheduling",
+              "construction-safety",
+              "quality-control"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-project",
+          "name": "Project",
+          "division": "engineering",
+          "role": "Project Management Specialist",
+          "description": "Civil engineering project management and coordination",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Project planning and scope definition",
+            "Cost estimation and budget management",
+            "Stakeholder communication and coordination",
+            "Risk management and mitigation planning",
+            "Project documentation and reporting"
+          ],
+          "expertise": [
+            "project-planning",
+            "cost-estimation",
+            "stakeholder-management",
+            "risk-management",
+            "project-documentation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-construction",
+              "domainforge-procurement"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "project-management",
+              "cost-estimation",
+              "stakeholder-coordination",
+              "risk-management"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-procurement",
+          "name": "Procurement",
+          "division": "engineering",
+          "role": "Procurement and Contracts Specialist",
+          "description": "Procurement management and contract administration",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Procurement planning and strategy",
+            "Contract preparation and administration",
+            "Vendor qualification and selection",
+            "Subcontractor management",
+            "Procurement documentation and compliance"
+          ],
+          "expertise": [
+            "procurement-planning",
+            "contract-administration",
+            "vendor-management",
+            "subcontractor-coordination",
+            "procurement-compliance"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-project",
+              "domainforge-legal"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "procurement",
+              "contract-administration",
+              "vendor-management",
+              "subcontractor-coordination"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-safety",
+          "name": "Safety",
+          "division": "engineering",
+          "role": "Safety and Risk Management Specialist",
+          "description": "Construction safety, occupational health, and risk management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Construction safety planning and procedures",
+            "Occupational health and hazard assessment",
+            "Safety training and compliance monitoring",
+            "Incident investigation and prevention",
+            "Risk assessment and mitigation strategies"
+          ],
+          "expertise": [
+            "construction-safety",
+            "occupational-health",
+            "hazard-assessment",
+            "safety-training",
+            "risk-mitigation"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-construction",
+              "domainforge-project"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "construction-safety",
+              "occupational-health",
+              "hazard-assessment",
+              "safety-compliance"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "domainforge-legal",
+          "name": "Legal",
+          "division": "engineering",
+          "role": "Legal and Regulatory Compliance Specialist",
+          "description": "Legal compliance, permitting, and regulatory affairs",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Regulatory compliance and permitting",
+            "Legal contract review and analysis",
+            "Environmental compliance monitoring",
+            "Right-of-way and easement acquisition",
+            "Legal documentation and record keeping"
+          ],
+          "expertise": [
+            "regulatory-compliance",
+            "permitting",
+            "contract-law",
+            "environmental-compliance",
+            "right-of-way"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "domainforge-environmental",
+              "domainforge-procurement"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "regulatory-compliance",
+              "permitting",
+              "contract-review",
+              "environmental-law"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    }
+  }
+}

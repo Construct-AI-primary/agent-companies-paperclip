@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00100 - Simandou AI Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .welcome-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        .welcome-card h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .welcome-card p {
+            color: #666;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .page-info {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .page-info h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Logout Button Styles */
+        .logout-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .logout-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .welcome-card {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .welcome-card h2 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>CONSTRUCT.AI</h1>
+    </header>
+    
+    <main class="main-content">
+        <div class="welcome-card">
+            <h2>Welcome to Simandou AI</h2>
+            <p>Your intelligent construction and mining project management platform. Streamline operations, enhance productivity, and make data-driven decisions with our comprehensive AI-powered tools.</p>
+            <a href="#features" class="btn">Explore Features</a>
+            <a href="#" class="btn" onclick="alert('Login functionality would be implemented here')">Login</a>
+        </div>
+        
+        <div class="page-info">
+            <h3>Page Information</h3>
+            <p><strong>Page ID:</strong> 00100</p>
+            <p><strong>Page Type:</strong> Home/Landing Page</p>
+            <p><strong>Status:</strong> Active and Accessible</p>
+            <p><strong>Last Updated:</strong> January 22, 2025</p>
+        </div>
+        
+        <div class="features" id="features">
+            <div class="feature-card">
+                <h4>🏗️ Project Management</h4>
+                <p>Comprehensive project tracking, resource allocation, and timeline management for construction and mining operations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>📊 AI Analytics</h4>
+                <p>Advanced analytics and reporting powered by artificial intelligence to provide insights and optimize operations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>📋 Document Control</h4>
+                <p>Centralized document management system with version control, approval workflows, and secure access.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>👥 Team Collaboration</h4>
+                <p>Real-time collaboration tools, communication channels, and task assignment for distributed teams.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>🔒 Security & Compliance</h4>
+                <p>Enterprise-grade security with role-based access control and compliance with industry standards.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>📱 Mobile Access</h4>
+                <p>Full mobile compatibility for field operations and remote access to critical project information.</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Simandou AI Platform. All rights reserved. | Page 00100 - Home</p>
+    </footer>
+    
+    <!-- Logout Button -->
+    <button id="logout-button" class="logout-button">Logout</button>
+    
+    <script>
+        // Add some interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to feature cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Initially hide feature cards for animation
+            document.querySelectorAll('.feature-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+            
+            // Add logout functionality
+            const logoutButton = document.getElementById('logout-button');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function() {
+                    // Simple alert for now - in a real application this would handle actual logout
+                    alert('Logout functionality would be implemented here');
+                    // Example of what a real logout might do:
+                    // window.location.href = '/login';
+                });
+            }
+            
+            console.log('00100 Home Page loaded successfully');
+            console.log('Page features initialized');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+schema: paperclip/v1
+
+# KnowledgeForge AI - Adapter Configuration
+# All agents use the hermes_local adapter type for running via the Hermes agent runtime.
+
+agents:
+  # ============================================
+  # Knowledge Engineering Team Agents
+  # ============================================
+
+  knowledgeforge-doc-analyzer:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools"]
+
+  knowledgeforge-qa-strategist:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools", "code_execution"]
+
+  knowledgeforge-arch-refactorer:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools", "code_execution"]
+
+  knowledgeforge-failure-learner:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools"]
+
+  knowledgeforge-clinet-integrator:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools", "code_execution"]
+
+  knowledgeforge-app-guardian:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools", "code_execution"]
+
+  # ============================================
+  # Discipline Operations Team Agents
+  # ============================================
+
+  knowledgeforge-discipline-strategist:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools"]
+
+  knowledgeforge-cross-discipline-guardian:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools"]
+
+  knowledgeforge-workflow-guardian:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools", "code_execution"]
+
+  # ============================================
+  # Sector Analysis Team Agents
+  # ============================================
+
+  knowledgeforge-sector-analyst:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools"]
+
+  knowledgeforge-sector-qa-lead:
+    adapter:
+      type: hermes_local
+      config:
+        model: openrouter/qwen/qwen-3-6-plus
+        maxIterations: 50
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    settings:
+      persistSession: true
+      enabledToolsets: ["file_tools", "terminal_tools", "code_execution"]
+
+# ============================================
+# Routines (Recurring Tasks)
+# ============================================
+
+routines:
+  # Daily knowledge sync
+  knowledge-sync:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 2 * * *"  # 2 AM daily
+        timezone: UTC
+    task: tasks/knowledge-sync/TASK.md
+
+  # QA review loop - triggered on PR events
+  qa-review:
+    triggers:
+      - kind: webhook
+        event: pull_request
+        actions: ["opened", "synchronize", "reopened"]
+    task: tasks/qa-review/TASK.md
+
+# ============================================
+# Knowledge Base Configuration
+# ============================================
+
+knowledge:
+  # Source of truth for discipline/sector knowledge
+  source:
+    type: git
+    repository: ../docs-construct-ai
+    branch: main
+
+  # Tag schema for document classification
+  tagSchema:
+    - prefix: "discipline"
+      description: "Engineering/construction disciplines"
+      examples: ["procurement", "finance", "civil-engineering"]
+    - prefix: "wf"
+      description: "Workflows"
+      examples: ["po-materials", "safety-inspection"]
+    - prefix: "sec"
+      description: "Construction sectors"
+      examples: ["oil-gas", "infrastructure", "commercial"]
+    - prefix: "codebase"
+      description: "Codebase documentation"
+      examples: ["architecture", "security", "audits"]
+    - prefix: "testing"
+      description: "Testing strategies and results"
+      examples: ["tier1", "integration", "e2e"]
+    - prefix: "standards"
+      description: "Coding and quality standards"
+      examples: ["coding", "security", "accessibility"]
+    - prefix: "error-tracking"
+      description: "Error logs and failure analysis"
+      examples: ["ui-settings", "api-errors"]
+
+  # Export script for knowledge portability
+  export:
+    script: scripts/export_knowledgeforge.sh
+    output: ./knowledge-export
+    archive: true

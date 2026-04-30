@@ -1,0 +1,50 @@
+Letter 1: Contractor to Engineer
+
+Reference: BB/DHBEP/C001
+Date: October 26, 2023
+
+To:
+The Engineer
+Urban Infrastructure Consultants
+[Engineer's Address]
+Durban
+
+From:
+Project Manager
+BridgeBuilders Inc.
+[Contractor's Address]
+Durban
+
+Subject: Durban Highway Bridge Repair & Associated Works – Claim for Under-Measurement of
+Concrete Works (IPC No. 5)
+
+Dear Sir/Madam,
+
+We are writing to formally register a concern regarding the measurement of concrete works
+certified in Interim Payment Certificate No. 5, dated October 20, 2023, for the Durban Highway
+Bridge Repair & Associated Works.
+
+Our internal quantity assessments, cross-referenced with our concrete delivery dockets and pour
+records for the period covered by IPC No. 5, indicate a significant discrepancy in the measured
+quantities for structural concrete placed in the repaired foundations and support structures (as per
+SoW Clause 2.2.4 "Bridge Widening") and the extended bridge deck elements (SoW Clause
+2.2.4).
+
+Specifically, our records show an additional 185 m³ of C40/50 concrete placed in these elements
+beyond what has been certified. We believe this discrepancy arises from an under-measurement
+of the actual in-situ volumes, potentially due to variations in foundation depths encountered and
+design refinements to deck profiles which were executed as per site instructions and approved
+drawing revisions (Ref: DWG-STR-BD-105 Rev C & DWG-STR-FD-012 Rev B).
+
+We kindly request a joint site re-measurement and a review of the measurement records at your
+earliest convenience to rectify this. We have attached our detailed reconciliation (Appendix A) for
+your review.
+
+We trust that this matter can be resolved amicably and expeditiously to ensure fair compensation
+as per the contract terms and the "Payment Schedule" (SoW Clause 6.2).
+
+Yours faithfully,
+
+[Contractor's Project Manager Name]
+Project Manager
+BridgeBuilders Inc.

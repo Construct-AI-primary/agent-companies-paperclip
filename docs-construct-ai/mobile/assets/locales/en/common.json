@@ -1,0 +1,64 @@
+{
+  "app": {
+    "name": "ConstructAI Mobile",
+    "version": "1.0.0",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "safety": "Safety",
+    "equipment": "Equipment",
+    "stock": "Stock",
+    "logistics": "Logistics",
+    "procurement": "Procurement",
+    "documents": "Documents",
+    "settings": "Settings"
+  },
+  "forms": {
+    "required": "Required",
+    "optional": "Optional",
+    "submit": "Submit",
+    "reset": "Reset",
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email",
+      "minLength": "Minimum length is {{count}} characters",
+      "maxLength": "Maximum length is {{count}} characters"
+    }
+  },
+  "messages": {
+    "noData": "No data available",
+    "loading": "Loading data...",
+    "error": "An error occurred",
+    "success": "Operation completed successfully",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "unsavedChanges": "You have unsaved changes"
+  },
+  "ai": {
+    "processing": "AI Processing...",
+    "analyzing": "Analyzing document...",
+    "generating": "Generating content...",
+    "offline": "Offline mode - limited AI features available"
+  },
+  "location": {
+    "currentLocation": "Current Location",
+    "gpsRequired": "GPS access required",
+    "locationTagged": "Location tagged successfully"
+  }
+}

@@ -1,0 +1,24 @@
+# Hermes Agent - Cline Rules
+
+## Hermes Run Command
+When the user types "hermes run" followed by a task description, execute:
+
+```bash
+/Users/_Hermes/hermes-agent/run.sh "task description here"
+```
+
+Examples:
+- User: `hermes run summarize this file`
+  → Run: `/Users/_Hermes/hermes-agent/run.sh "Summarize this file"`
+
+- User: `hermes run review the code in src/`
+  → Run: `/Users/_Hermes/hermes-agent/run.sh "Review the code in src/"`
+
+- User: `hermes run --model "anthropic/claude-opus-4.6" --task "deep analysis of auth module"`
+  → Run: `/Users/_Hermes/hermes-agent/run.sh --model "anthropic/claude-opus-4.6" --task "deep analysis of auth module"`
+
+## Setup Required
+Before running Hermes, ensure:
+1. API key is set in `/Users/_Hermes/hermes-agent/.env` — uncomment `OPENROUTER_API_KEY=` and add your key
+2. Virtual environment exists at `venv/`
+3. Run script is at `run.sh`

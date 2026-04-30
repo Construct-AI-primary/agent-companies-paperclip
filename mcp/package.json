@@ -1,0 +1,43 @@
+{
+  "name": "@alantennant/paperclip-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for interacting with Paperclip instances — list companies, agents, skills, issues, and tasks programmatically.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "paperclip-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "paperclip",
+    "ai-agents",
+    "agent-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Construct-AI/paperclip-mcp.git"
+  },
+  "license": "MIT"
+}

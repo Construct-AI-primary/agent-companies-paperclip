@@ -1,0 +1,3084 @@
+{
+  "team": "devforge",
+  "team_name": "DevForge AI",
+  "description": "Enterprise development, orchestration, and system architecture",
+  "total_agents": 51,
+  "divisions": {
+    "executive": {
+      "name": "Executive Leadership",
+      "count": 5,
+      "agents": [
+        {
+          "agent_id": "devforge-orion",
+          "name": "Orion",
+          "division": "executive",
+          "role": "Chief Orchestrator & Workflow Review Coordinator",
+          "description": "Central nervous system of the autonomous enterprise and workflow review coordination",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Task coordination and global queue management",
+            "Workflow orchestration and review coordination",
+            "Dependency management and conflict resolution",
+            "Performance monitoring and emergency response",
+            "Multi-agent orchestration and real-time monitoring",
+            "Workflow quality assurance and integration coordination"
+          ],
+          "expertise": [
+            "orchestration",
+            "workflow",
+            "coordination",
+            "monitoring",
+            "governance"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "devforge-strategos",
+              "devforge-insight",
+              "devforge-council",
+              "devforge-ledger"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "global",
+            "max_concurrent_requests": 10,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "orchestrate",
+              "coordinate",
+              "workflow",
+              "monitor",
+              "govern"
+            ],
+            "priority": 1,
+            "adapter_url": "https://openclaw.constructai.com/agents/devforge-orion"
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-strategos",
+          "name": "Strategos",
+          "division": "executive",
+          "role": "Strategic Planning",
+          "description": "Long-term strategic direction and roadmap development",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Market analysis and competitive intelligence",
+            "Strategic planning and objective alignment",
+            "Risk assessment and opportunity identification",
+            "Enterprise growth strategy"
+          ],
+          "expertise": [
+            "strategy",
+            "planning",
+            "market-analysis",
+            "risk-assessment"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "strategy",
+              "plan",
+              "roadmap",
+              "market"
+            ],
+            "priority": 2
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-insight",
+          "name": "Insight",
+          "division": "executive",
+          "role": "Business Intelligence",
+          "description": "Data-driven decision support and analytics",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Business intelligence and KPI monitoring",
+            "Market trend analysis and forecasting",
+            "Performance metrics and reporting",
+            "Data visualization and insights"
+          ],
+          "expertise": [
+            "analytics",
+            "bi",
+            "metrics",
+            "forecasting"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "read",
+              "write",
+              "search",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "analytics",
+              "insights",
+              "metrics",
+              "reporting"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-council",
+          "name": "Council",
+          "division": "executive",
+          "role": "Strategic Decision Making",
+          "description": "Collective strategic governance and policy development",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Policy development and governance",
+            "Strategic decision making and approval",
+            "Cross-divisional coordination",
+            "Enterprise standards enforcement"
+          ],
+          "expertise": [
+            "governance",
+            "policy",
+            "decision-making",
+            "standards"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "governance",
+              "policy",
+              "decision",
+              "standards"
+            ],
+            "priority": 2
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-ledger",
+          "name": "Ledger",
+          "division": "executive",
+          "role": "Financial Oversight",
+          "description": "Financial management and resource allocation",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Budget management and financial planning",
+            "Resource allocation and cost optimization",
+            "Financial reporting and compliance",
+            "ROI analysis and investment decisions"
+          ],
+          "expertise": [
+            "finance",
+            "budget",
+            "cost-optimization",
+            "compliance"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "finance",
+              "budget",
+              "cost",
+              "roi"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "engineering": {
+      "name": "Engineering Division",
+      "count": 11,
+      "agents": [
+        {
+          "agent_id": "devforge-forge",
+          "name": "Forge",
+          "division": "engineering",
+          "role": "Engineering Director",
+          "description": "Enterprise system architecture and design",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "System architecture design and planning",
+            "Technology stack evaluation and selection",
+            "Scalability and performance architecture",
+            "Enterprise integration patterns"
+          ],
+          "expertise": [
+            "architecture",
+            "scalability",
+            "enterprise",
+            "patterns"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "coordinates_with": [
+              "devforge-devcore",
+              "devforge-codesmith"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "architecture",
+              "design",
+              "scalability",
+              "enterprise"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-codesmith",
+          "name": "Codesmith",
+          "division": "engineering",
+          "role": "Backend Engineer",
+          "description": "Server-side development and API design",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "RESTful and GraphQL API development",
+            "Database design and optimization",
+            "Microservices architecture implementation",
+            "Security implementation and authentication"
+          ],
+          "expertise": [
+            "backend",
+            "api",
+            "database",
+            "microservices",
+            "security"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-devcore",
+              "devforge-interface"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "backend",
+              "api",
+              "database",
+              "server"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-cortex",
+          "name": "Cortex",
+          "division": "engineering",
+          "role": "AI Reasoning Specialist",
+          "description": "AI system architecture and reasoning frameworks",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "AI model integration and optimization",
+            "Reasoning framework development",
+            "Machine learning pipeline implementation",
+            "AI system performance optimization"
+          ],
+          "expertise": [
+            "ai",
+            "ml",
+            "reasoning",
+            "neural-networks",
+            "optimization"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-vector",
+              "devforge-synth"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "ai",
+              "ml",
+              "reasoning",
+              "model"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-devcore",
+          "name": "Devcore",
+          "division": "engineering",
+          "role": "Core Development",
+          "description": "Core system development and framework architecture",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Core system architecture and design",
+            "Framework development and maintenance",
+            "System integration and API development",
+            "Code quality and standards enforcement"
+          ],
+          "expertise": [
+            "architecture",
+            "frameworks",
+            "integration",
+            "standards"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-codesmith",
+              "devforge-forge"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "core",
+              "framework",
+              "architecture",
+              "development"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-automata",
+          "name": "Automata",
+          "division": "engineering",
+          "role": "Automation Systems",
+          "description": "Process automation and workflow optimization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "CI/CD pipeline development",
+            "Automated testing and deployment",
+            "Workflow automation and optimization",
+            "DevOps tooling and infrastructure"
+          ],
+          "expertise": [
+            "automation",
+            "ci-cd",
+            "devops",
+            "workflows"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-cloudops"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "automation",
+              "ci-cd",
+              "pipeline",
+              "devops"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-vector",
+          "name": "Vector",
+          "division": "engineering",
+          "role": "Vector Processing",
+          "description": "Vector database management and semantic search",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Vector database architecture and optimization",
+            "Semantic search implementation",
+            "Embedding generation and management",
+            "AI model vector operations"
+          ],
+          "expertise": [
+            "vectors",
+            "embeddings",
+            "semantic-search",
+            "databases"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-cortex",
+              "devforge-navigator"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "vector",
+              "embedding",
+              "semantic",
+              "search"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-interface",
+          "name": "Interface",
+          "division": "engineering",
+          "role": "API and Integration",
+          "description": "System integration and API gateway management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "API gateway development and management",
+            "Third-party integration coordination",
+            "System interoperability and communication",
+            "Integration testing and monitoring"
+          ],
+          "expertise": [
+            "api-gateway",
+            "integration",
+            "interoperability",
+            "testing"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-codesmith",
+              "devforge-devcore"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "api",
+              "integration",
+              "gateway",
+              "interoperability"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-promptsmith",
+          "name": "Promptsmith",
+          "division": "engineering",
+          "role": "Prompt Engineering & Workflow Review",
+          "description": "AI prompt optimization, LLM integration, and workflow validation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Prompt engineering and optimization",
+            "LLM integration and fine-tuning",
+            "AI model performance optimization",
+            "Prompt library development and management",
+            "Workflow review and validation",
+            "Workflow testing and A/B testing"
+          ],
+          "expertise": [
+            "prompt-engineering",
+            "llm",
+            "optimization",
+            "workflow-review"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-cortex",
+              "devforge-reviewer"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "prompt",
+              "llm",
+              "workflow-review",
+              "optimization"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-reviewer",
+          "name": "Reviewer",
+          "division": "engineering",
+          "role": "Code Review & Quality Assurance",
+          "description": "Code quality assurance, peer review, and workflow quality validation",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Code review and quality assessment",
+            "Best practices enforcement",
+            "Security vulnerability detection",
+            "Performance optimization recommendations",
+            "Workflow quality assurance and validation",
+            "Quality gate management and enforcement"
+          ],
+          "expertise": [
+            "code-review",
+            "quality",
+            "security",
+            "best-practices"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-promptsmith",
+              "devforge-fixer"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "review",
+              "quality",
+              "code-review",
+              "validation"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-synth",
+          "name": "Synth",
+          "division": "engineering",
+          "role": "Synthetic Data Generation",
+          "description": "Synthetic data creation and data augmentation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Synthetic dataset generation",
+            "Data augmentation techniques",
+            "Privacy-preserving data generation",
+            "Training data optimization"
+          ],
+          "expertise": [
+            "synthetic-data",
+            "data-augmentation",
+            "privacy",
+            "training-data"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-cortex",
+              "devforge-dataforge"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "synthetic",
+              "data-generation",
+              "augmentation"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-fixer",
+          "name": "Fixer",
+          "division": "engineering",
+          "role": "Bug Fixing and Optimization",
+          "description": "System debugging and performance optimization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Bug identification and resolution",
+            "Performance optimization and tuning",
+            "System debugging and troubleshooting",
+            "Code refactoring and improvement"
+          ],
+          "expertise": [
+            "debugging",
+            "optimization",
+            "refactoring",
+            "troubleshooting"
+          ],
+          "integration": {
+            "reports_to": "devforge-forge",
+            "coordinates_with": [
+              "devforge-reviewer",
+              "devforge-devcore"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "bug",
+              "fix",
+              "debug",
+              "optimize"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "data": {
+      "name": "Data Division",
+      "count": 8,
+      "agents": [
+        {
+          "agent_id": "devforge-dataforge",
+          "name": "Dataforge",
+          "division": "data",
+          "role": "Data Director",
+          "description": "Data processing and transformation pipelines",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "ETL pipeline development and management",
+            "Data transformation and cleaning",
+            "Data quality assurance and validation",
+            "Data pipeline optimization"
+          ],
+          "expertise": [
+            "etl",
+            "data-transformation",
+            "pipelines",
+            "data-quality"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "coordinates_with": [
+              "devforge-navigator",
+              "devforge-sentinel"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "data",
+              "etl",
+              "transformation",
+              "pipeline"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-navigator",
+          "name": "Navigator",
+          "division": "data",
+          "role": "Data Discovery",
+          "description": "Data exploration and discovery systems",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Data catalog development and maintenance",
+            "Data lineage tracking and management",
+            "Data discovery and exploration tools",
+            "Metadata management and governance"
+          ],
+          "expertise": [
+            "data-catalog",
+            "lineage",
+            "discovery",
+            "metadata"
+          ],
+          "integration": {
+            "reports_to": "devforge-dataforge",
+            "coordinates_with": [
+              "devforge-dataforge",
+              "devforge-vector"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "data-discovery",
+              "catalog",
+              "lineage",
+              "metadata"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-pulse",
+          "name": "Pulse",
+          "division": "data",
+          "role": "Real-time Data Monitoring",
+          "description": "Real-time data monitoring and alerting",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Real-time data stream monitoring",
+            "Alert system development and management",
+            "Data quality monitoring and reporting",
+            "Performance metrics tracking"
+          ],
+          "expertise": [
+            "real-time",
+            "monitoring",
+            "alerting",
+            "streaming"
+          ],
+          "integration": {
+            "reports_to": "devforge-dataforge",
+            "coordinates_with": [
+              "devforge-sentinel",
+              "devforge-cloudops"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "monitoring",
+              "real-time",
+              "alerts",
+              "streaming"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-schema",
+          "name": "Schema",
+          "division": "data",
+          "role": "Data Schema Management",
+          "description": "Database schema design and management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Database schema design and optimization",
+            "Data modeling and normalization",
+            "Schema versioning and migration",
+            "Data integrity and consistency"
+          ],
+          "expertise": [
+            "schema",
+            "data-modeling",
+            "normalization",
+            "migration"
+          ],
+          "integration": {
+            "reports_to": "devforge-dataforge",
+            "coordinates_with": [
+              "devforge-dataforge",
+              "devforge-codesmith"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "schema",
+              "database",
+              "modeling",
+              "migration"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-sentinel",
+          "name": "Sentinel",
+          "division": "data",
+          "role": "Data Quality Monitoring",
+          "description": "Data quality assurance and monitoring",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Data quality monitoring and validation",
+            "Data profiling and analysis",
+            "Data quality metrics and reporting",
+            "Data cleansing and correction"
+          ],
+          "expertise": [
+            "data-quality",
+            "profiling",
+            "cleansing",
+            "validation"
+          ],
+          "integration": {
+            "reports_to": "devforge-dataforge",
+            "coordinates_with": [
+              "devforge-dataforge",
+              "devforge-pulse"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "data-quality",
+              "validation",
+              "profiling",
+              "cleansing"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-stream",
+          "name": "Stream",
+          "division": "data",
+          "role": "Data Streaming",
+          "description": "Real-time data streaming and processing",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Real-time data streaming architecture",
+            "Stream processing pipeline development",
+            "Event-driven architecture implementation",
+            "Data stream monitoring and optimization"
+          ],
+          "expertise": [
+            "streaming",
+            "event-driven",
+            "real-time",
+            "kafka"
+          ],
+          "integration": {
+            "reports_to": "devforge-dataforge",
+            "coordinates_with": [
+              "devforge-pulse",
+              "devforge-cloudops"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "streaming",
+              "event",
+              "real-time",
+              "kafka"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-cloudops",
+          "name": "Cloudops",
+          "division": "data",
+          "role": "Cloud Operations",
+          "description": "Cloud infrastructure and operations management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Cloud infrastructure management",
+            "DevOps and infrastructure automation",
+            "Cloud security and compliance",
+            "Performance monitoring and optimization"
+          ],
+          "expertise": [
+            "cloud",
+            "infrastructure",
+            "devops",
+            "security"
+          ],
+          "integration": {
+            "reports_to": "devforge-dataforge",
+            "coordinates_with": [
+              "devforge-automata",
+              "devforge-stream"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "cloud",
+              "infrastructure",
+              "devops",
+              "operations"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-ledgerai",
+          "name": "Ledgerai",
+          "division": "data",
+          "role": "Financial Data Processing",
+          "description": "Financial data management and analysis",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Financial data processing and analysis",
+            "Accounting system integration",
+            "Financial reporting and compliance",
+            "Budget tracking and analysis"
+          ],
+          "expertise": [
+            "financial-data",
+            "accounting",
+            "reporting",
+            "compliance"
+          ],
+          "integration": {
+            "reports_to": "devforge-ledger",
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "financial",
+              "accounting",
+              "budget",
+              "reporting"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "security": {
+      "name": "Security Division",
+      "count": 6,
+      "agents": [
+        {
+          "agent_id": "devforge-guardian",
+          "name": "Guardian",
+          "division": "security",
+          "role": "Security Director",
+          "description": "Comprehensive security monitoring and protection",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Security monitoring and threat detection",
+            "Incident response and management",
+            "Security policy enforcement",
+            "Vulnerability assessment and management"
+          ],
+          "expertise": [
+            "security",
+            "threat-detection",
+            "incident-response",
+            "vulnerability"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "coordinates_with": [
+              "devforge-sentinelx",
+              "devforge-gatekeeper"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "security",
+              "threat",
+              "protection",
+              "incident"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-gatekeeper",
+          "name": "Gatekeeper",
+          "division": "security",
+          "role": "Access Control",
+          "description": "Identity and access management",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Authentication and authorization systems",
+            "Access control policy management",
+            "User identity management",
+            "Privilege escalation prevention"
+          ],
+          "expertise": [
+            "access-control",
+            "authentication",
+            "authorization",
+            "identity"
+          ],
+          "integration": {
+            "reports_to": "devforge-guardian",
+            "coordinates_with": [
+              "devforge-guardian",
+              "devforge-auditor"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "access",
+              "authentication",
+              "authorization",
+              "identity"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-auditor",
+          "name": "Auditor",
+          "division": "security",
+          "role": "Security Compliance",
+          "description": "Security compliance and audit management",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Security compliance monitoring",
+            "Audit preparation and execution",
+            "Regulatory compliance validation",
+            "Security policy review and updates"
+          ],
+          "expertise": [
+            "compliance",
+            "audit",
+            "regulatory",
+            "policy"
+          ],
+          "integration": {
+            "reports_to": "devforge-guardian",
+            "coordinates_with": [
+              "devforge-guardian",
+              "devforge-watchtower"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "compliance",
+              "audit",
+              "regulatory",
+              "policy"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-sentinelx",
+          "name": "Sentinelx",
+          "division": "security",
+          "role": "Advanced Monitoring",
+          "description": "Advanced security monitoring and analytics",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Advanced threat detection and analysis",
+            "Security analytics and intelligence",
+            "Behavioral analysis and anomaly detection",
+            "Security dashboard development"
+          ],
+          "expertise": [
+            "threat-analytics",
+            "behavioral-analysis",
+            "anomaly-detection",
+            "intelligence"
+          ],
+          "integration": {
+            "reports_to": "devforge-guardian",
+            "coordinates_with": [
+              "devforge-guardian",
+              "devforge-pulse"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "security-analytics",
+              "threat-detection",
+              "anomaly",
+              "intelligence"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-watchtower",
+          "name": "Watchtower",
+          "division": "security",
+          "role": "Security Oversight",
+          "description": "Security governance and oversight",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Security governance and policy development",
+            "Risk assessment and management",
+            "Security architecture review",
+            "Security training and awareness"
+          ],
+          "expertise": [
+            "governance",
+            "risk-management",
+            "architecture",
+            "training"
+          ],
+          "integration": {
+            "reports_to": "devforge-guardian",
+            "coordinates_with": [
+              "devforge-guardian",
+              "devforge-auditor"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "governance",
+              "risk",
+              "oversight",
+              "security-policy"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-archivist",
+          "name": "Archivist",
+          "division": "security",
+          "role": "Knowledge Security",
+          "description": "Knowledge security and information protection",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Knowledge base security management",
+            "Information classification and protection",
+            "Data encryption and security",
+            "Access control for knowledge systems"
+          ],
+          "expertise": [
+            "knowledge-security",
+            "classification",
+            "encryption",
+            "data-protection"
+          ],
+          "integration": {
+            "reports_to": "devforge-guardian",
+            "coordinates_with": [
+              "devforge-guardian",
+              "devforge-librarian"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "knowledge-security",
+              "encryption",
+              "classification",
+              "protection"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "product": {
+      "name": "Product Division",
+      "count": 7,
+      "agents": [
+        {
+          "agent_id": "devforge-atlas",
+          "name": "Atlas",
+          "division": "product",
+          "role": "Product Director",
+          "description": "Product architecture and system mapping",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Product architecture design and documentation",
+            "System mapping and integration planning",
+            "Product roadmap development",
+            "Feature prioritization and planning"
+          ],
+          "expertise": [
+            "product-architecture",
+            "mapping",
+            "roadmap",
+            "prioritization"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "coordinates_with": [
+              "devforge-cartographer",
+              "devforge-catalyst"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "product",
+              "architecture",
+              "mapping",
+              "roadmap"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-4.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-brandforge",
+          "name": "Brandforge",
+          "division": "product",
+          "role": "Brand Development",
+          "description": "Brand strategy and market positioning",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Brand strategy development and implementation",
+            "Market positioning and messaging",
+            "Brand consistency and guidelines",
+            "Marketing campaign coordination"
+          ],
+          "expertise": [
+            "branding",
+            "positioning",
+            "messaging",
+            "marketing"
+          ],
+          "integration": {
+            "reports_to": "devforge-atlas",
+            "coordinates_with": [
+              "devforge-amplifier",
+              "devforge-storycraft"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "brand",
+              "positioning",
+              "marketing",
+              "messaging"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-cartographer",
+          "name": "Cartographer",
+          "division": "product",
+          "role": "Product Roadmapping",
+          "description": "Product roadmap development and management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Product roadmap creation and maintenance",
+            "Feature planning and prioritization",
+            "Market research and analysis",
+            "Stakeholder communication and alignment"
+          ],
+          "expertise": [
+            "roadmap",
+            "planning",
+            "market-research",
+            "stakeholder"
+          ],
+          "integration": {
+            "reports_to": "devforge-atlas",
+            "coordinates_with": [
+              "devforge-atlas",
+              "devforge-catalyst"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "roadmap",
+              "planning",
+              "features",
+              "prioritization"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-4.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-catalyst",
+          "name": "Catalyst",
+          "division": "product",
+          "role": "Product Innovation",
+          "description": "Product innovation and feature development",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Product innovation and ideation",
+            "Feature development and enhancement",
+            "User experience optimization",
+            "Market trend analysis and adaptation"
+          ],
+          "expertise": [
+            "innovation",
+            "features",
+            "ux",
+            "trends"
+          ],
+          "integration": {
+            "reports_to": "devforge-atlas",
+            "coordinates_with": [
+              "devforge-atlas",
+              "devforge-concierge"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "innovation",
+              "features",
+              "product-development",
+              "ux"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-4.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-concierge",
+          "name": "Concierge",
+          "division": "product",
+          "role": "Customer Experience",
+          "description": "Customer experience management and support",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Customer experience design and optimization",
+            "User support and assistance",
+            "Feedback collection and analysis",
+            "Customer satisfaction monitoring"
+          ],
+          "expertise": [
+            "customer-experience",
+            "support",
+            "feedback",
+            "satisfaction"
+          ],
+          "integration": {
+            "reports_to": "devforge-atlas",
+            "coordinates_with": [
+              "devforge-catalyst",
+              "devforge-merchant"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "customer",
+              "experience",
+              "support",
+              "feedback"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-flash-02-23",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-nova",
+          "name": "Nova",
+          "division": "product",
+          "role": "Product Launches",
+          "description": "Product launch coordination and execution",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Product launch planning and execution",
+            "Marketing campaign coordination",
+            "Launch metrics and KPIs",
+            "Post-launch analysis and optimization"
+          ],
+          "expertise": [
+            "launches",
+            "campaigns",
+            "metrics",
+            "execution"
+          ],
+          "integration": {
+            "reports_to": "devforge-atlas",
+            "coordinates_with": [
+              "devforge-brandforge",
+              "devforge-amplifier"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "launch",
+              "product-release",
+              "campaign",
+              "go-to-market"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-4.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-storycraft",
+          "name": "Storycraft",
+          "division": "product",
+          "role": "Product Storytelling",
+          "description": "Product narrative and communication",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Product storytelling and messaging",
+            "Communication strategy development",
+            "Content creation and management",
+            "Stakeholder communication"
+          ],
+          "expertise": [
+            "storytelling",
+            "communication",
+            "content",
+            "narrative"
+          ],
+          "integration": {
+            "reports_to": "devforge-atlas",
+            "coordinates_with": [
+              "devforge-brandforge",
+              "devforge-amplifier"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "storytelling",
+              "narrative",
+              "communication",
+              "content"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "growth": {
+      "name": "Growth Division",
+      "count": 7,
+      "agents": [
+        {
+          "agent_id": "devforge-merchant",
+          "name": "Merchant",
+          "division": "growth",
+          "role": "Growth Director",
+          "description": "E-commerce and commercial operations",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "E-commerce platform management",
+            "Commercial operations optimization",
+            "Revenue optimization and pricing strategy",
+            "Customer acquisition and retention"
+          ],
+          "expertise": [
+            "ecommerce",
+            "commerce",
+            "pricing",
+            "acquisition"
+          ],
+          "integration": {
+            "reports_to": "devforge-orion",
+            "coordinates_with": [
+              "devforge-dealmaker",
+              "devforge-concierge"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "ecommerce",
+              "commerce",
+              "pricing",
+              "retail"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "minimax/minimax-m2.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-ambassador",
+          "name": "Ambassador",
+          "division": "growth",
+          "role": "Brand Representation",
+          "description": "Brand ambassador and public relations",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Public relations and media relations",
+            "Brand representation and advocacy",
+            "Industry event participation",
+            "Thought leadership content creation"
+          ],
+          "expertise": [
+            "pr",
+            "media",
+            "advocacy",
+            "thought-leadership"
+          ],
+          "integration": {
+            "reports_to": "devforge-merchant",
+            "coordinates_with": [
+              "devforge-brandforge",
+              "devforge-amplifier"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "pr",
+              "media",
+              "brand",
+              "advocacy"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "minimax/minimax-m2.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-ally",
+          "name": "Ally",
+          "division": "growth",
+          "role": "Partnership Management",
+          "description": "Strategic partnerships and alliance management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Partnership identification and development",
+            "Alliance relationship management",
+            "Partnership strategy and execution",
+            "Joint venture coordination"
+          ],
+          "expertise": [
+            "partnerships",
+            "alliances",
+            "strategy",
+            "collaboration"
+          ],
+          "integration": {
+            "reports_to": "devforge-merchant",
+            "coordinates_with": [
+              "devforge-strategos",
+              "devforge-dealmaker"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "partnership",
+              "alliance",
+              "collaboration",
+              "joint-venture"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "minimax/minimax-m2.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-amplifier",
+          "name": "Amplifier",
+          "division": "growth",
+          "role": "Marketing and Promotion",
+          "description": "Marketing strategy and promotional campaigns",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Marketing strategy development",
+            "Promotional campaign execution",
+            "Digital marketing and social media",
+            "Brand awareness initiatives"
+          ],
+          "expertise": [
+            "marketing",
+            "campaigns",
+            "digital",
+            "social-media"
+          ],
+          "integration": {
+            "reports_to": "devforge-merchant",
+            "coordinates_with": [
+              "devforge-brandforge",
+              "devforge-ambassador"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "marketing",
+              "campaigns",
+              "promotion",
+              "digital"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-catalystx",
+          "name": "Catalystx",
+          "division": "growth",
+          "role": "Market Disruption",
+          "description": "Market innovation and disruption strategy",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Market disruption strategy development",
+            "Innovation opportunity identification",
+            "Competitive analysis and strategy",
+            "Market trend analysis and adaptation"
+          ],
+          "expertise": [
+            "disruption",
+            "innovation",
+            "competitive-analysis",
+            "trends"
+          ],
+          "integration": {
+            "reports_to": "devforge-merchant",
+            "coordinates_with": [
+              "devforge-strategos",
+              "devforge-analyst"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "disruption",
+              "innovation",
+              "competitive",
+              "market"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "minimax/minimax-m2.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-dealmaker",
+          "name": "Dealmaker",
+          "division": "growth",
+          "role": "Sales and Negotiation",
+          "description": "Sales strategy and business negotiations",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Sales strategy development and execution",
+            "Business negotiation and contract management",
+            "Revenue growth and pipeline management",
+            "Customer relationship management"
+          ],
+          "expertise": [
+            "sales",
+            "negotiation",
+            "revenue",
+            "crm"
+          ],
+          "integration": {
+            "reports_to": "devforge-merchant",
+            "coordinates_with": [
+              "devforge-merchant",
+              "devforge-ally"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "sales",
+              "negotiation",
+              "revenue",
+              "deals"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "minimax/minimax-m2.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-voyager",
+          "name": "Voyager",
+          "division": "growth",
+          "role": "Market Exploration",
+          "description": "Market research and expansion opportunities",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Market research and analysis",
+            "Expansion opportunity identification",
+            "Competitive landscape analysis",
+            "Market entry strategy development"
+          ],
+          "expertise": [
+            "market-research",
+            "expansion",
+            "competitive-landscape",
+            "entry-strategy"
+          ],
+          "integration": {
+            "reports_to": "devforge-merchant",
+            "coordinates_with": [
+              "devforge-strategos",
+              "devforge-analyst"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "market-research",
+              "expansion",
+              "exploration",
+              "entry"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "minimax/minimax-m2.7",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "strategy": {
+      "name": "Strategy Division",
+      "count": 7,
+      "agents": [
+        {
+          "agent_id": "devforge-analyst",
+          "name": "Analyst",
+          "division": "strategy",
+          "role": "Market Analysis",
+          "description": "Market research and competitive analysis",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Market research and trend analysis",
+            "Competitive intelligence gathering",
+            "Industry analysis and forecasting",
+            "Strategic opportunity identification"
+          ],
+          "expertise": [
+            "market-analysis",
+            "competitive-intelligence",
+            "forecasting",
+            "research"
+          ],
+          "integration": {
+            "reports_to": "devforge-council",
+            "coordinates_with": [
+              "devforge-strategos",
+              "devforge-scout"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "analysis",
+              "market",
+              "competitive",
+              "research"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-compass",
+          "name": "Compass",
+          "division": "strategy",
+          "role": "Direction Setting",
+          "description": "Strategic direction and objective setting",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Strategic objective definition",
+            "Direction setting and alignment",
+            "Goal tracking and measurement",
+            "Strategic planning and execution"
+          ],
+          "expertise": [
+            "direction",
+            "objectives",
+            "goals",
+            "alignment"
+          ],
+          "integration": {
+            "reports_to": "devforge-strategos",
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "direction",
+              "objectives",
+              "goals",
+              "strategy"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-librarian",
+          "name": "Librarian",
+          "division": "strategy",
+          "role": "Knowledge Management & Workflow Documentation",
+          "description": "Knowledge organization, information management, and workflow documentation",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Knowledge base development and maintenance",
+            "Information organization and classification",
+            "Documentation management",
+            "Knowledge sharing and collaboration",
+            "Workflow documentation management",
+            "Integration pattern documentation"
+          ],
+          "expertise": [
+            "knowledge-management",
+            "documentation",
+            "classification",
+            "workflows"
+          ],
+          "integration": {
+            "reports_to": "devforge-council",
+            "coordinates_with": [
+              "devforge-archivist",
+              "devforge-mentor"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "knowledge",
+              "documentation",
+              "information",
+              "workflows"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-mentor",
+          "name": "Mentor",
+          "division": "strategy",
+          "role": "Team Development",
+          "description": "Team development and capability building",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Team training and development",
+            "Skill assessment and improvement",
+            "Performance coaching and mentoring",
+            "Professional development planning"
+          ],
+          "expertise": [
+            "training",
+            "development",
+            "coaching",
+            "mentoring"
+          ],
+          "integration": {
+            "reports_to": "devforge-council",
+            "coordinates_with": [
+              "devforge-librarian",
+              "devforge-compass"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "training",
+              "development",
+              "coaching",
+              "mentoring"
+            ],
+            "priority": 6
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-flash-02-23",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-oracle",
+          "name": "Oracle",
+          "division": "strategy",
+          "role": "Predictive Analytics",
+          "description": "Predictive modeling and forecasting",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Predictive modeling and analysis",
+            "Business forecasting and trend prediction",
+            "Risk assessment and mitigation",
+            "Strategic scenario planning"
+          ],
+          "expertise": [
+            "predictive-analytics",
+            "forecasting",
+            "modeling",
+            "scenarios"
+          ],
+          "integration": {
+            "reports_to": "devforge-council",
+            "coordinates_with": [
+              "devforge-analyst",
+              "devforge-insight"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "predictive",
+              "forecasting",
+              "modeling",
+              "scenarios"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-pathfinder",
+          "name": "Pathfinder",
+          "division": "strategy",
+          "role": "Opportunity Identification",
+          "description": "Opportunity discovery and strategic positioning",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Strategic opportunity identification",
+            "Market positioning analysis",
+            "Competitive advantage development",
+            "Growth opportunity assessment"
+          ],
+          "expertise": [
+            "opportunities",
+            "positioning",
+            "competitive-advantage",
+            "growth"
+          ],
+          "integration": {
+            "reports_to": "devforge-council",
+            "coordinates_with": [
+              "devforge-strategos",
+              "devforge-voyager"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "opportunities",
+              "positioning",
+              "growth",
+              "advantage"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "devforge-scout",
+          "name": "Scout",
+          "division": "strategy",
+          "role": "Competitive Intelligence",
+          "description": "Competitive analysis and market surveillance",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Competitive intelligence gathering",
+            "Market surveillance and monitoring",
+            "Industry trend analysis",
+            "Strategic threat identification"
+          ],
+          "expertise": [
+            "competitive-intelligence",
+            "surveillance",
+            "trends",
+            "threats"
+          ],
+          "integration": {
+            "reports_to": "devforge-council",
+            "coordinates_with": [
+              "devforge-analyst",
+              "devforge-pathfinder"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "competitive",
+              "intelligence",
+              "surveillance",
+              "monitoring"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    }
+  }
+}

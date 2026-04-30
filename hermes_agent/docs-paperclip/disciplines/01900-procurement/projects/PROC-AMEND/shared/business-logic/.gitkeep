@@ -1,0 +1,15 @@
+# Shared Business Logic
+
+This directory contains shared business logic components for the PROC-AMEND project.
+
+## Contents
+
+- Amendment request processing logic
+- Impact assessment algorithms
+- Approval routing rules
+- Document update logic
+- Validation rules
+
+## Usage
+
+Import shared business logic into platform-specific implementations as needed.

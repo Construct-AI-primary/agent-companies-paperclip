@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-01-15T10:26:10.682475",
+  "total_agents_processed": 17,
+  "enhanced_count": 15,
+  "skipped_count": 2,
+  "failed_count": 0,
+  "average_quality_score": 0.95,
+  "enhancement_details": [
+    {
+      "agent": "architectural",
+      "specialty": "architectural",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/architectural/00435_architectural_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:08.896566",
+      "message": "Successfully enhanced architectural specialist agent"
+    },
+    {
+      "agent": "commercial",
+      "specialty": "commercial",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/commercial/00435_commercial_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 0.25,
+      "enhancement_timestamp": "2026-01-15T10:26:09.047217",
+      "message": "Successfully enhanced commercial specialist agent"
+    },
+    {
+      "agent": "construction",
+      "specialty": "construction",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/construction/00435_construction_specialist_agent.py",
+      "status": "already_enhanced",
+      "error": null,
+      "quality_score": 0.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.148530",
+      "message": "Agent already has accuracy enhancements applied"
+    },
+    {
+      "agent": "electrical",
+      "specialty": "electrical",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/electrical/00435_electrical_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.249959",
+      "message": "Successfully enhanced electrical specialist agent"
+    },
+    {
+      "agent": "environmental",
+      "specialty": "environmental",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/environmental/00435_environmental_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.352485",
+      "message": "Successfully enhanced environmental specialist agent"
+    },
+    {
+      "agent": "geotechnical",
+      "specialty": "geotechnical",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/geotechnical/00435_geotechnical_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.454668",
+      "message": "Successfully enhanced geotechnical specialist agent"
+    },
+    {
+      "agent": "health",
+      "specialty": "health",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/health/00435_health_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.557150",
+      "message": "Successfully enhanced health specialist agent"
+    },
+    {
+      "agent": "inspection",
+      "specialty": "inspection",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/inspection/00435_inspection_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.659643",
+      "message": "Successfully enhanced inspection specialist agent"
+    },
+    {
+      "agent": "instrumentation",
+      "specialty": "instrumentation",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/instrumentation/00435_instrumentation_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.762182",
+      "message": "Successfully enhanced instrumentation specialist agent"
+    },
+    {
+      "agent": "logistics",
+      "specialty": "logistics",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/logistics/00435_logistics_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.864718",
+      "message": "Successfully enhanced logistics specialist agent"
+    },
+    {
+      "agent": "mechanical",
+      "specialty": "mechanical",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/mechanical/00435_mechanical_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:09.967259",
+      "message": "Successfully enhanced mechanical specialist agent"
+    },
+    {
+      "agent": "process",
+      "specialty": "process",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/process/00435_process_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:10.069712",
+      "message": "Successfully enhanced process specialist agent"
+    },
+    {
+      "agent": "quality_control",
+      "specialty": "quality_control",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/quality_control/00435_quality_control_specialist_agent.py",
+      "status": "already_enhanced",
+      "error": null,
+      "quality_score": 0.0,
+      "enhancement_timestamp": "2026-01-15T10:26:10.172218",
+      "message": "Agent already has accuracy enhancements applied"
+    },
+    {
+      "agent": "quantity_surveying",
+      "specialty": "quantity_surveying",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/quantity_surveying/00435_quantity_surveying_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:10.273653",
+      "message": "Successfully enhanced quantity_surveying specialist agent"
+    },
+    {
+      "agent": "safety",
+      "specialty": "safety",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/safety/00435_safety_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:10.375228",
+      "message": "Successfully enhanced safety specialist agent"
+    },
+    {
+      "agent": "scheduling",
+      "specialty": "scheduling",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/scheduling/00435_scheduling_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:10.477730",
+      "message": "Successfully enhanced scheduling specialist agent"
+    },
+    {
+      "agent": "structural",
+      "specialty": "structural",
+      "file": "/Users/_PropAI/construct_ai/deep-agents/deep_agents/agents/pages/00435_contracts_post_award/specialist_agents/structural/00435_structural_specialist_agent.py",
+      "status": "enhanced",
+      "error": null,
+      "quality_score": 1.0,
+      "enhancement_timestamp": "2026-01-15T10:26:10.580033",
+      "message": "Successfully enhanced structural specialist agent"
+    }
+  ],
+  "overall_success_rate": 1.0
+}

@@ -1,0 +1,508 @@
+{
+  "team": "infraforge",
+  "team_name": "InfraForge AI",
+  "description": "Infrastructure services and system orchestration for civil engineering operations",
+  "total_agents": 8,
+  "divisions": {
+    "infrastructure": {
+      "name": "Infrastructure Services Division",
+      "count": 8,
+      "agents": [
+        {
+          "agent_id": "infraforge-orchestrator",
+          "name": "Orchestrator",
+          "division": "infrastructure",
+          "role": "Infrastructure Orchestration Specialist",
+          "description": "Central orchestration of infrastructure services and system integration",
+          "status": "active",
+          "authority_level": "executive",
+          "responsibilities": [
+            "Infrastructure service orchestration and coordination",
+            "System integration and API management",
+            "Service dependency management and monitoring",
+            "Infrastructure performance optimization",
+            "Cross-service communication and data flow"
+          ],
+          "expertise": [
+            "infrastructure-orchestration",
+            "system-integration",
+            "api-management",
+            "service-monitoring",
+            "performance-optimization"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-database",
+              "infraforge-compute",
+              "infraforge-networking"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "global",
+            "max_concurrent_requests": 10,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "infrastructure-orchestrate",
+              "system-integration",
+              "service-coordination",
+              "infrastructure-monitor",
+              "performance-optimize"
+            ],
+            "priority": 1,
+            "adapter_url": "https://openclaw.constructai.com/agents/infraforge-orchestrator"
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-database",
+          "name": "Database",
+          "division": "infrastructure",
+          "role": "Database Infrastructure Specialist",
+          "description": "Database design, optimization, and management for civil engineering data",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Database architecture and schema design",
+            "Performance optimization and query tuning",
+            "Data backup and recovery management",
+            "Database security and access control",
+            "Data migration and ETL processes"
+          ],
+          "expertise": [
+            "database-architecture",
+            "performance-tuning",
+            "data-backup",
+            "database-security",
+            "data-migration"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-orchestrator",
+              "infraforge-storage"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "database-architecture",
+              "performance-tuning",
+              "data-backup",
+              "database-security"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-compute",
+          "name": "Compute",
+          "division": "infrastructure",
+          "role": "Compute Infrastructure Specialist",
+          "description": "Compute resources management and optimization for engineering workloads",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Compute resource provisioning and scaling",
+            "Container orchestration and management",
+            "Serverless computing and function deployment",
+            "Compute cost optimization and monitoring",
+            "High-performance computing for engineering simulations"
+          ],
+          "expertise": [
+            "compute-provisioning",
+            "container-orchestration",
+            "serverless-computing",
+            "cost-optimization",
+            "hpc-engineering"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-orchestrator",
+              "infraforge-networking"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "compute-provisioning",
+              "container-orchestration",
+              "serverless-computing",
+              "hpc-management"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-networking",
+          "name": "Networking",
+          "division": "infrastructure",
+          "role": "Network Infrastructure Specialist",
+          "description": "Network design, security, and performance optimization",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Network architecture and design",
+            "Network security and firewall management",
+            "Load balancing and traffic optimization",
+            "VPN and secure connectivity setup",
+            "Network monitoring and troubleshooting"
+          ],
+          "expertise": [
+            "network-architecture",
+            "network-security",
+            "load-balancing",
+            "vpn-management",
+            "network-monitoring"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-orchestrator",
+              "infraforge-security"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "network-architecture",
+              "network-security",
+              "load-balancing",
+              "network-monitoring"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-storage",
+          "name": "Storage",
+          "division": "infrastructure",
+          "role": "Storage Infrastructure Specialist",
+          "description": "Data storage solutions and management for engineering data",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Storage architecture and capacity planning",
+            "Data backup and disaster recovery",
+            "File system management and optimization",
+            "Object storage and data lake management",
+            "Storage security and compliance"
+          ],
+          "expertise": [
+            "storage-architecture",
+            "data-backup",
+            "file-system-management",
+            "object-storage",
+            "storage-security"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-database",
+              "infraforge-security"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "submodule_only",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "storage-architecture",
+              "data-backup",
+              "file-system-management",
+              "object-storage"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-security",
+          "name": "Security",
+          "division": "infrastructure",
+          "role": "Infrastructure Security Specialist",
+          "description": "Infrastructure security, compliance, and threat protection",
+          "status": "active",
+          "authority_level": "senior",
+          "responsibilities": [
+            "Infrastructure security architecture",
+            "Threat detection and incident response",
+            "Compliance monitoring and reporting",
+            "Access control and identity management",
+            "Security auditing and vulnerability management"
+          ],
+          "expertise": [
+            "infrastructure-security",
+            "threat-detection",
+            "compliance-monitoring",
+            "access-control",
+            "vulnerability-management"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-orchestrator",
+              "infraforge-networking"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "infrastructure-security",
+              "threat-detection",
+              "compliance-monitoring",
+              "access-control"
+            ],
+            "priority": 3
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "z-ai/glm-5-turbo",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-monitoring",
+          "name": "Monitoring",
+          "division": "infrastructure",
+          "role": "Infrastructure Monitoring Specialist",
+          "description": "System monitoring, alerting, and performance analytics",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "System monitoring and alerting setup",
+            "Performance metrics collection and analysis",
+            "Log aggregation and analysis",
+            "Incident detection and automated response",
+            "Capacity planning and resource forecasting"
+          ],
+          "expertise": [
+            "system-monitoring",
+            "performance-metrics",
+            "log-aggregation",
+            "incident-detection",
+            "capacity-planning"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-orchestrator",
+              "infraforge-database"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "lcm"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "system-monitoring",
+              "performance-metrics",
+              "log-aggregation",
+              "incident-detection"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "qwen/qwen3.5-122b-a10b",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "infraforge-automation",
+          "name": "Automation",
+          "division": "infrastructure",
+          "role": "Infrastructure Automation Specialist",
+          "description": "Infrastructure automation, DevOps, and configuration management",
+          "status": "active",
+          "authority_level": "standard",
+          "responsibilities": [
+            "Infrastructure as Code implementation",
+            "Configuration management and automation",
+            "CI/CD pipeline development and management",
+            "Automated deployment and scaling",
+            "Infrastructure testing and validation"
+          ],
+          "expertise": [
+            "infrastructure-as-code",
+            "configuration-management",
+            "ci-cd-pipelines",
+            "automated-deployment",
+            "infrastructure-testing"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "infraforge-orchestrator",
+              "infraforge-compute"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "infrastructure-automation",
+              "configuration-management",
+              "ci-cd-pipelines",
+              "automated-deployment"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-chat",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    }
+  }
+}

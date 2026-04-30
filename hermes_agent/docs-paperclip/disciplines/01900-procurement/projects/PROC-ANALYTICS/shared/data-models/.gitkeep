@@ -1,0 +1,11 @@
+# Shared Data Models
+
+This directory contains shared data models for PROC-ANALYTICS.
+
+## Contents
+
+Placeholder for shared data models:
+- KPI definition schemas
+- Analytics event schemas
+- Dashboard widget schemas
+- Report templates

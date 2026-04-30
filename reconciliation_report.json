@@ -1,0 +1,6245 @@
+{
+  "companies_in_filesystem": [
+    "contentforge-ai",
+    "devforge-ai",
+    "domainforge-ai",
+    "execforge-ai",
+    "infraforge-ai",
+    "integrateforge-ai",
+    "knowledgeforge-ai",
+    "learningforge-ai",
+    "loopy-ai",
+    "measureforge-ai",
+    "mobileforge-ai",
+    "paperclipforge-ai",
+    "promptforge-ai",
+    "qualityforge-ai",
+    "saasforge-ai",
+    "voiceforge-ai"
+  ],
+  "companies_in_database": [
+    "Learning Forge AI",
+    "IntegrateForge AI",
+    "MeasureForge AI",
+    "PromptForge AI",
+    "QualityForge AI",
+    "PaperclipForge AI",
+    "MobileForge AI",
+    "ExecForge AI",
+    "SaaSForge AI",
+    "VoiceForge AI",
+    "DomainForge AI",
+    "InfraForge AI",
+    "ContentForge AI",
+    "KnowledgeForge AI",
+    "Loopy AI",
+    "DevForge AI"
+  ],
+  "missing_companies": [],
+  "missing_agents": [
+    {
+      "name": "",
+      "slug": "",
+      "company": "ContentForge AI",
+      "file_path": "docs-paperclip/companies/contentforge-ai/agents/contentforge-ai-BlogArchitect/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ContentForge AI",
+      "file_path": "docs-paperclip/companies/contentforge-ai/agents/contentforge-ai-TechnicalSEO/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ContentForge AI",
+      "file_path": "docs-paperclip/companies/contentforge-ai/agents/contentforge-ai-ContentMaestro/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ContentForge AI",
+      "file_path": "docs-paperclip/companies/contentforge-ai/agents/contentforge-ai-CommunicationOrchestr/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ContentForge AI",
+      "file_path": "docs-paperclip/companies/contentforge-ai/agents/contentforge-ai-SocialStrategist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "ally-devforge-partnership-management",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Ally/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "interface-devforge-api-integration",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Interface/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "vector-Vector-processing",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Vector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "voyager-devforge-market-exploration",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Voyager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "librarian-devforge-knowledge-management",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Librarian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "fixer-devforge-bug-fixing",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Troubleshooter/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "forge-devforge-system-architecture",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Forge/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "nexus-devforge-ceo",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Nexus/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "synth-Synthetic-data",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Synth/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "archivist-devforge-knowledge-security",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Archivist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "insight-devforge-business-intelligence",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Insight/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "sentinel-devforge-data-quality-monitoring",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Sentinel/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "merchant-devforge-commerce-operations",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Merchant/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "devcore-devforge-core-development",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Devcore/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "cloudops-devforge-cloud-operations",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Cloudops/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "concierge-devforge-customer-experience",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Concierge/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "sentinelx-devforge-advanced-monitoring",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Sentinelx/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "sql-query-devforge",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-SqlQueryDevforge/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "schema-devforge-data-schema-management",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Schema/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "council-devforge-strategic-decision-making",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Council/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "mentor-devforge-team-development",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Mentor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "dealmaker-devforge-sales-negotiation",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Dealmaker/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-WorkflowLearningCoor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "atlas-devforge-product-mapping",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Atlas/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "strategos-devforge-strategic-planning",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Strategos/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "guardian-devforge-threat-protection",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Guardian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "amplifier-devforge-marketing-promotion",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Amplifier/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "nova-devforge-product-launches",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Nova/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "analyst-devforge-market-analysis",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Analyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "brandforge-devforge-brand-development",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Brandforge/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "pathfinder-devforge-opportunity-identification",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Pathfinder/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "catalyst-devforge-product-innovation",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Catalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "codesmith-devforge-backend-engineer",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Codesmith/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "automata-devforge-automation-systems",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Automata/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "storycraft-devforge-product-storytelling",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Storycraft/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "promptsmith-devforge-prompt-engineering",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Promptsmith/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "compass-devforge-direction-setting",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Compass/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "navigator-devforge-data-discovery",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Navigator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "reviewer-devforge-code-review-qa",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Reviewer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "ambassador-devforge-brand-representation",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Ambassador/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "gatekeeper-devforge-access-control",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Gatekeeper/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-WorkflowComplexityAn/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "watchtower-devforge-security-oversight",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Watchtower/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "oracle-devforge-predictive-analytics",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Oracle/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "auditor-devforge-security-compliance",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Auditor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "stream-devforge-data-streaming",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Stream/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "dataforge-devforge-data-transformation",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Dataforge/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "catalystx-devforge-market-disruption",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Catalystx/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "scout-devforge-competitive-intelligence",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Scout/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "cartographer-devforge-product-roadmapping",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Cartographer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "ledgerai-devforge-financial-data",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Ledgerai/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "pulse-devforge-realtime-monitoring",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Pulse/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "orion-devforge-orchestrator",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Orion/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "ledger-devforge-financial-oversight",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Ledger/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "cortex-devforge-ai-reasoning",
+      "company": "DevForge AI",
+      "file_path": "docs-paperclip/companies/devforge-ai/agents/devforge-ai-Cortex/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ConstructionDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "procurement-domainforge-procurement-contracts",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-procurement/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "council-domainforge-governance-standards",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-CouncilCouncil/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "strategos-domainforge-strategic-planning",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-strategos/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-PublicRelations/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-design/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-FinancialCompliance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "contract-administration-domainforge-contract-administration",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ContractAdministratio/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-SalesDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-security/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-LocalContent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-environmental/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "orion-domainforge-ceo",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-orion/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-landscaping/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-CounselSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "procurement-strategy-domainforge-procurement-strategy",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ProcurementStrategy/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "contract-administration-domainforge-contract-administration",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ContractAdmin/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-OtherParties/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "structural-domainforge-structural-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiStructu/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-HseDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-MobileWorkflowDesign/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "finance-domainforge-finance-cost-management",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-FinanceFinance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "civil-domainforge-civil-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-civil/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-sales/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-BuyerSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ContractsDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "civil-domainforge-civil-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiCivil/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ProjectControls/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-inspection/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "safety-domainforge-safety-risk-management",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-SafetySafety/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-sundry/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-health/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-transportation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "quality-assurance-domainforge-quality-assurance",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-QualityAssuranceQual/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "quality-control-domainforge-quality-control",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-QualityControlQualit/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "procurement-analytics-domainforge-procurement-analytics",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ProcurementAnalytics/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-evaluator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-EngineeringDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "strategos-domainforge-strategic-planning",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiStrateg/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ChemicalEngineering/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ArchitecturalIntegrat/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "council-domainforge-governance-standards",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-council/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ContractsPreAward/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-Guardian2/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-LogisticsDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ProcessEngineering/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "finance-domainforge-finance-cost-management",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-finance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "logistics-domainforge-supply-chain",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-logistics/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-FinanceDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "structural-domainforge-structural-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-StructuralEngineer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "procurement-domainforge-procurement-contracts",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiProcure/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ethics/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-InspectorSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-directors/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-scrutineer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ContractsPostAward/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "construction-engineering-domainforge-construction-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ConstructionEng/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-commercial/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-Treasurer2/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "legal-domainforge-legal-regulatory-compliance",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-legal/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-MobileTesting/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "orion-domainforge-ceo",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiOriondo/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-DispatcherSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "quality-assurance-domainforge-quality-assurance",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-QualityAssurance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "safety-domainforge-safety-risk-management",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-SafetyOfficer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-MechanicalEngineering/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "geotechnical-domainforge-geotechnical-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-geotechnical/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-DirectorProject/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "quality-control-domainforge-quality-control",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-QualityControl/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-architectural/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-DocumentControl/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ElectricalEngineering/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-InformationTechnology/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-SupplierManagement/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-QuantitySurveying/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-scheduling/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ProcurementDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "geotechnical-domainforge-geotechnical-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-geotechnical/domainforge-ai-GeotechnicalGeotechni/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "legal-domainforge-legal-regulatory-compliance",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-legal/domainforge-ai-LegalLegal/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "construction-engineering-domainforge-construction-engineering",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-ConstructionEng/domainforge-ai-ConstructionEng/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "procurement-strategy-domainforge-procurement-strategy",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiProcure/domainforge-ai-ProcurementStrategy/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "procurement-analytics-domainforge-procurement-analytics",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-domainforgeaiProcure/domainforge-ai-ProcurementAnalytics/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "logistics-domainforge-supply-chain",
+      "company": "DomainForge AI",
+      "file_path": "docs-paperclip/companies/domainforge-ai/agents/domainforge-ai-logistics/domainforge-ai-LogisticsLogistics/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-TaskCoordinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-SecuritySpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "maya-loopy-content-strategist",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-MayaLoopyContentStr/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "vision-loopy-ceo",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-VisionLoopyCeo/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-PresentationSpecialis/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-IntelligenceAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-SystemsIntegrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-DataManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-PerformanceAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-AutomationEngineer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-CommunicationsManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-KnowledgeCurator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-StrategicAdvisor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-ResearchAssistant/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-WorkflowOptimizer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-Scheduler/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-PersonalAssistant/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "ExecForge AI",
+      "file_path": "docs-paperclip/companies/execforge-ai/agents/execforge-ai-ChiefofStaff/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-NimbusSupabase/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "render-deployment-specialist",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-RenderDeployment/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "database-infraforge-database-infrastructure",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-DatabaseInfrastructur/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "orchestrator-infraforge-ceo",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-orchestrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "supply-chain-integration-infraforge-supply-chain",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-SupplyChain/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "postgres-infraforge",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-postgres/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "mobile-api-infraforge-mobile-api-integration",
+      "company": "InfraForge AI",
+      "file_path": "docs-paperclip/companies/infraforge-ai/agents/infraforge-ai-MobileApiIntegration/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-CocoCandy/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-HazelHecras/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-AstroAsta/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-WileyProjectwise/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-AceAconex/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-TerraCivil3d/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-NovaNavisworks/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-StormSwmm/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-BlakeBuildsoft/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-EliEtabs/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-RexRevit/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-SashaSharepoint/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-PhoenixP6/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-StanStaad/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-CoreyProcore/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-CashCostx/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-AdaAutocad/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-PixelBim360/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-ZiggyOrchestrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-TrixTrimble/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "IntegrateForge AI",
+      "file_path": "docs-paperclip/companies/integrateforge-ai/agents/integrateforge-ai-MaxMsproject/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-administrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-controller/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-buyer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-CoOrdinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-ArchitectRefactor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-UserManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-DevelopmentManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-CommunicationManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-SystemAdministrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-AiManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-OperationsCoordinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-CoordinatorGuardian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-InterfaceSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "KnowledgeForge AI",
+      "file_path": "docs-paperclip/companies/knowledgeforge-ai/agents/knowledgeforge-ai-treasurer/knowledgeforge-ai-AdministratorPreAwar/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-assessment-mastery",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-AssessmentMastery/AGENTS.md"
+    },
+    {
+      "name": "learningforge-ai-error-pattern-monitor",
+      "slug": "learningforge-ai-error-pattern-monitor",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ErrorPatternMonitor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-user-behavior-analyst",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-UserBehaviorAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-research-compliance-division-lead",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ResearchComplianceDi/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-equipment-inspection",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-EquipmentInspection/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-autoresearch-gap-analyzer",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-AutoresearchGapAnaly/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-doc-usage-analyzer",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-DocUsageAnalyzer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-SafetyResearchAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-electrical-engineering-agent",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ElectricalEngineering/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-hazard-pattern-analyst",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-HazardPatternAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-knowledge-provenance",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-KnowledgeProvenance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-from-doc-to-lesson-generator",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-FromDocToLessonGen/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-interaction-pattern-coach",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-InteractionPatternCo/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-vfs-watcher",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-VfsWatcher/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-quality-learning",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-QualityLearning/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-compliance-guard",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ComplianceGuard/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-research-scheduler",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ResearchScheduler/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-safety-regulation-research",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-SafetyRegulationRese/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-MobilePatternsAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-LearningIntegration/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-material-defect-tracker",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-MaterialDefectTracke/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-safety-training-compliance",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-SafetyTrainingCompli/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-procurement-agent",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ProcurementAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-safety-workflow-agent",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-SafetyWorkflowAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-doc-gap-detector",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-DocGapDetector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-hermes-research",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-HermesResearch/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-equipment-innovation-research",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-EquipmentInnovation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-learning-division-lead",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-LearningDivisionLead/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-goal-alignment-budget",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-GoalAlignmentBudget/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-knowledge-hygiene",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-KnowledgeHygiene/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-audit-by-path",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-AuditByPath/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-langchain-runner",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-LangchainRunner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-defect-pattern-research",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-DefectPatternResearc/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-safety-quality-division-lead",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-SafetyQualityDivisio/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-logistics-agent",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-LogisticsAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-feedback-synthesis",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-FeedbackSynthesis/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-workflow-coach",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-WorkflowCoach/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-autoresearch-skills-enhancer",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-LiteratureScanner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-knowledge-flow-division-lead",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-KnowledgeFlowDivisio/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-autoresearch-literature-scanner",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-AutoresearchLiteratur/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-vfs-markdown-tracker",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-VfsMarkdownTracker/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-priority-disciplines-lead",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-PriorityDisciplinesL/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-curriculum-planner",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-CurriculumPlanner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-micro-lesson-generator",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-MicroLessonGenerator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-audit-explainability",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-AuditExplainability/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-knowledge-flow-agent",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-KnowledgeFlowAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-field-safety-inspector",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-FieldSafetyInspector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-construction-law-research",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ConstructionLawResea/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-knowledge-transparency",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-KnowledgeTransparency/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "learningforge-ai-contracts-agent",
+      "company": "Learning Forge AI",
+      "file_path": "docs-paperclip/companies/learningforge-ai/agents/learningforge-ai-ContractsAgent/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "jordan-loopy-marketing-specialist",
+      "company": "Loopy AI",
+      "file_path": "docs-paperclip/companies/loopy-ai/agents/loopy-ai-JordanLoopyMarketing/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "alex-loopy-deep-research",
+      "company": "Loopy AI",
+      "file_path": "docs-paperclip/companies/loopy-ai/agents/loopy-ai-AlexLoopyDeepResear/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "sam-loopy-social-media-coordinator",
+      "company": "Loopy AI",
+      "file_path": "docs-paperclip/companies/loopy-ai/agents/loopy-ai-SamLoopySocialMedia/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "vision-loopy-ceo",
+      "company": "Loopy AI",
+      "file_path": "docs-paperclip/companies/loopy-ai/agents/loopy-ai-VisionLoopyCeo/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "maya-loopy-content-strategist",
+      "company": "Loopy AI",
+      "file_path": "docs-paperclip/companies/loopy-ai/agents/loopy-ai-MayaLoopyContentStr/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "dev-loopy-technical-creative",
+      "company": "Loopy AI",
+      "file_path": "docs-paperclip/companies/loopy-ai/agents/loopy-ai-DevLoopyTechnicalCr/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/validators/measureforge-ai-MeasurementValidation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/validators/measureforge-ai-VisualOverlaySpecial/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/validators/measureforge-ai-ElectricalQA/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/standards/measureforge-ai-SansStandardsSpecial/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/standards/measureforge-ai-AsaqsStandards/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/procurement/measureforge-ai-ContractTender/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/procurement/measureforge-ai-OrderGeneration/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-ElectricalMeasurement/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-ContourAnalysis/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-MepElementSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-TrafficSignalComplia/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-TrafficSignalMeasure/AGENTS.md"
+    },
+    {
+      "name": "measureforge-ai-architectural-element-specialist",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-ArchitecturalElement/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-ElectricalCompliance/AGENTS.md"
+    },
+    {
+      "name": "measureforge-ai-cost-estimation-specialist",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-CostEstimation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-StructuralElement/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-QuantitySurveyorSpec/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/element/measureforge-ai-EarthworkCalculation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/specialists/integration/measureforge-ai-AutocadIntegrationSp/AGENTS.md"
+    },
+    {
+      "name": "measureforge-ai-measurement-coordination-specialist",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/coordinators/measureforge-ai-MeasurementCoord/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MeasureForge AI",
+      "file_path": "docs-paperclip/companies/measureforge-ai/agents/coordinators/measureforge-ai-CadMeasurement/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-UIUXSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-AppManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-CloudConnector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-APISpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-PerformanceOptimizer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-DeviceController/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-MobileMaestro/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-MobileDeveloper/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-TestingCoordinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "MobileForge AI",
+      "file_path": "docs-paperclip/companies/mobileforge-ai/agents/mobileforge-ai-SecurityGuardian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-DataIntegrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-IssueGenerator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-MonitorMaven/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-OperationsDirector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-AssignmentSpecialist/AGENTS.md"
+    },
+    {
+      "name": "paperclipforge-ai-database-crud-orchestrator",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-DatabaseCrudOrchestrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-MeasurementValidation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-EngineeringUiSpecial/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ConfigCurator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-BridgeBuilderExtraor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-documentarian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-MeasurementCoordSpec/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ApiManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-TicketTinkerer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ResourceManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-WisdomWeaver/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-NetworkNavigator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-QualityController/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "paperclipforge-ai-agent-reconciler",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-AgentReconciler/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-WorkflowAutomator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-DatabaseDruid/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "maya-loopy-content-strategist",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-MayaLoopyContentStr/AGENTS.md"
+    },
+    {
+      "name": "org-research-folder-creator",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-OrgResearchFolderCr/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-AdvancedEngineering/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-IntegrationArchitect/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-DataArchitect/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "issue-batch-importer-paperclipforge",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-IssueBatchImporter/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-TaskTangoDancer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-TestCommander/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-CodeSage/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ProjectCoordinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-LogAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "vision-loopy-ceo",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-VisionLoopyCeo/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-MeasurementStandards/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-CrossDisciplineCoord/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-PerformanceProfiler/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ModelAssignmentSpeci/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-EndpointEnchantress/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-PerformanceMonitor/AGENTS.md"
+    },
+    {
+      "name": "paperclipforge-ai-atlas-agent-creator",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-AtlasAgentCreator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ProjectMaestro/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-KnowledgeIntegrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-CacheKeeper/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-IntegrationIllusionis/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ReportingAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-deployer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-UserExperienceCoordi/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ChainlinkCharmer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-ProgressTracker/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-PredictiveModeler/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-RiskAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-SecurityGuardian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-AuthAdministrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "PaperclipForge AI",
+      "file_path": "docs-paperclip/companies/paperclipforge-ai/agents/paperclipforge-ai-DependencyManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "tuner-promptforge-ab-testing",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-tuner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "cascade-promptforge-workflow-designer",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-cascade/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "quantifier-promptforge-benchmarking",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-quantifier/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "analyzer-promptforge-prompt-analytics",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-analyzer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "compliance-promptforge-regulatory-compliance",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-compliance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "scholar-promptforge-academic-research",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-scholar/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "validator-promptforge-syntax-logic-validation",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-validator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "integration-promptforge-cross-agent-compatibility",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-integration/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "sage-promptforge-chief-architect",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-sage/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "archivist-promptforge-knowledge-management",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-archivist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "flowdesigner-promptforge-agent-handoff",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-flowdesigner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "predictor-promptforge-outcome-prediction",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-predictor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "enhancer-promptforge-advanced-innovation",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-enhancer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "statemaster-promptforge-state-management",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-statemaster/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "blueprint-promptforge-template-designer",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-blueprint/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "refiner-promptforge-version-control",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-refiner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "explorer-promptforge-new-techniques",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-explorer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "experimenter-promptforge-hypothesis-testing",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-experimenter/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "harmonic-promptforge-orchestration-strategy",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-harmonic/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "collaborator-promptforge-cross-company-knowledge-sharing",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-collaborator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "clarity-promptforge-performance-optimization",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-clarity/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "integrity-promptforge-ethical-ai",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-integrity/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "specialist-promptforge-domain-adaptation",
+      "company": "PromptForge AI",
+      "file_path": "docs-paperclip/companies/promptforge-ai/agents/promptforge-ai-specialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "monitor-qualityforge-quality-monitor",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Monitor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "tracer-qualityforge-execution-tracer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Tracer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "integrator-Integration-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Integrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "guardian-qualityforge-quality-guardian",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Guardian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "integration-Integration-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Integration/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "profiler-Performance-profiler",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Profiler/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "apex-qualityforge-ceo",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Apex/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "resolver-qualityforge-issue-resolver",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Resolver/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "fixer-qualityforge-bug-fixing-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Fixer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "refactor-Refactoring-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Refactor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "loadtester-qualityforge-scalability-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Loadtester/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "coverage-qualityforge-test-coverage-analyst",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Coverage/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "dbat-testing-qualityforge",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-DbatTesting/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "maintainer-qualityforge-code-maintainer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Maintainer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "documenter-qualityforge-documentation-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Documenter/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "code-analyzer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-CodeAnalyzer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "validator-Validator",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Validator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "debugger-Debugger-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Debugger/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "inspector-qualityforge-code-inspector",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Inspector/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "optimizer-qualityforge-code-optimizer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Optimizer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "performance-Performance-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Performance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "accessibility-Accessibility-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-accessibility/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-DecisionSupport/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "reporter-qualityforge-quality-reporter",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Reporter/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "load-Load-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Load/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-AssessmentCriteria/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "standards-Standards-enforcer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Standards/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "reviewer-qualityforge-code-reviewer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-CodeReviewer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "automation-qualityforge-test-automation",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Automation/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "e2e-qualityforge-end-to-end-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-E2E/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "probe-qualityforge-prompt-testing",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Probe/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "codesmith-qualityforge-code-architect",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Codesmith/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "migrator-qualityforge-migration-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Migrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "simulator-qualityforge-workflow-simulation",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Simulator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "trainer-qualityforge-quality-trainer",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Trainer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "architect-qualityforge-system-architect",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Architect/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "diagnostics-Diagnostics-specialist",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Diagnostics/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "governor-qualityforge-quality-director",
+      "company": "QualityForge AI",
+      "file_path": "docs-paperclip/companies/qualityforge-ai/agents/qualityforge-ai-Governor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-SuccessManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-ClientConfigManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-RenderServiceManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-OnboardMaster/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-DataGuardian/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-GitHubBranchManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-AccessController/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-OnboardingCoordinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-SupportIntegrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-SecuritySpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-AnalyticsSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-TenantManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-DevOpsEngineer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-ResourceOptimizer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-DeploymentOrchestrato/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "SaaSForge AI",
+      "file_path": "docs-paperclip/companies/saasforge-ai/agents/saasforge-ai-PlatformArchitect/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-ContextCoordinator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-IntentAnalyst/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-PersonalityDesigner/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-PlatformIntegrator/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-SpeechProcessor/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-LanguageSpecialist/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-AudioEngineer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-QualityAssurance/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-ConversationManager/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-APIArchitect/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-VoiceSynthesizer/AGENTS.md"
+    },
+    {
+      "name": "",
+      "slug": "",
+      "company": "VoiceForge AI",
+      "file_path": "docs-paperclip/companies/voiceforge-ai/agents/voiceforge-ai-VoiceMaestro/AGENTS.md"
+    }
+  ],
+  "extra_agents_in_database": [
+    {
+      "id": "d8475f0a-ec21-4779-b988-36d49b22fdd6",
+      "name": "Maya",
+      "title": "Chief Operations Officer"
+    },
+    {
+      "id": "815fdc22-97fe-4bf7-bd0d-06f070f84ae8",
+      "name": "Atlas Sync",
+      "title": "Supabase-SQLite Sync Specialist"
+    },
+    {
+      "id": "3d8ea615-db5d-4e0c-996c-cd1f7b738cb1",
+      "name": "Governor",
+      "title": "Quality Director"
+    },
+    {
+      "id": "90ec6c91-6faf-47c4-bdd8-03228a5a1eaa",
+      "name": "Andy",
+      "title": "Quality Controller"
+    },
+    {
+      "id": "2d5df17e-668e-428b-b5c2-3002f693f260",
+      "name": "Dancer",
+      "title": "Task Tango Dancer"
+    },
+    {
+      "id": "d189caba-dba1-41d1-935e-d2a51aebfd61",
+      "name": "Charlie",
+      "title": "Coordination Charlie"
+    },
+    {
+      "id": "7d2184df-ca56-4990-9674-fb0f710b5acd",
+      "name": "Atlas Sync",
+      "title": "Supabase-SQLite Sync Specialist"
+    },
+    {
+      "id": "d9ab69e1-ef1c-45b4-8c7d-87d58cd4e797",
+      "name": "Forge",
+      "title": "System Architecture"
+    },
+    {
+      "id": "c655d0e4-a346-4ebd-9e2a-280b29f27f05",
+      "name": "Brandforge",
+      "title": "Brand Development"
+    },
+    {
+      "id": "dca18039-e007-453f-aedf-2111147925a6",
+      "name": "CRUD Commander\n",
+      "title": "Database CRUD Orchestrator"
+    },
+    {
+      "id": "83bfb91a-e4b6-484f-84e9-b026f1d45c4b",
+      "name": "paperclipforge-ai-model-assignment-specialist",
+      "title": "SparkAssign - Model Assignment Specialist"
+    },
+    {
+      "id": "0b090177-121b-4bcc-8615-93d43386c157",
+      "name": "Database Operations Specialist",
+      "title": "Database Operations Specialist"
+    },
+    {
+      "id": "ded562f9-ec5f-413f-802d-00db6d5bde85",
+      "name": "Catalystx",
+      "title": "Market Disruption"
+    },
+    {
+      "id": "0817a0f6-7758-4d9b-b40f-1d7ff2c2c5eb",
+      "name": "sqlite-atlas-agent-creator",
+      "title": "SQLite Agent Creator and Manager"
+    },
+    {
+      "id": "66d8a902-ba8d-48ca-8cec-e9d73271fa7f",
+      "name": "Scheduler",
+      "title": "Scheduler"
+    },
+    {
+      "id": "c453d28a-65cf-4700-b5ea-d8a450036a97",
+      "name": "Luna",
+      "title": "Design Collaboration Platform Specialist"
+    },
+    {
+      "id": "97c94b57-14f4-4ebd-9a4c-72a0fe3ed248",
+      "name": "Devcore",
+      "title": "Core Development"
+    },
+    {
+      "id": "ebdbe26f-7a25-4b7b-bb0b-53f3ff89f50a",
+      "name": "sqlite-druid",
+      "title": "SQLite Database Management and Optimization Specialist"
+    },
+    {
+      "id": "2444cfb6-b2a3-4f12-82f2-5eea5fb70c7c",
+      "name": "Standards",
+      "title": "Standards Enforcer"
+    },
+    {
+      "id": "9806152d-bc55-4ee2-804e-3ff47f0e5bff",
+      "name": "Profiler",
+      "title": "Performance Profiler"
+    },
+    {
+      "id": "0e2b4bc5-4bca-4fba-a349-2dbf79202e87",
+      "name": "Jordan",
+      "title": "Marketing Specialist"
+    },
+    {
+      "id": "93dac56f-82a3-4531-ad8f-ab7e4ff18353",
+      "name": "Deployer",
+      "title": "Deployer"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000027",
+      "name": "Morgan",
+      "title": "Mechanical Engineering Domain Specialist"
+    },
+    {
+      "id": "fbaadceb-b723-491a-a8d3-53cc6133031c",
+      "name": "Cartographer",
+      "title": "Product Roadmapping"
+    },
+    {
+      "id": "75036acb-6067-4d8e-a585-d3bd9a7d52b0",
+      "name": "Assessment Manager",
+      "title": "Assessment Criteria Manager"
+    },
+    {
+      "id": "87e87922-9b62-4b38-9593-1cff6133522f",
+      "name": "DBAT Testing",
+      "title": "Database Acceptance Testing Specialist"
+    },
+    {
+      "id": "d33a5050-2762-403b-bf68-28281a5fe771",
+      "name": "Probe",
+      "title": "Prompt Testing Specialist"
+    },
+    {
+      "id": "987e56b9-5760-4cca-9052-a2c3f655ca60",
+      "name": "Simulator",
+      "title": "Workflow Simulation Specialist"
+    },
+    {
+      "id": "04ea7d06-360b-4932-b0c9-8f8c3b6bdf16",
+      "name": "Trainer",
+      "title": "Quality Trainer"
+    },
+    {
+      "id": "7986d9d4-30b8-43f1-be67-21b74fc3cdcd",
+      "name": "Documenter",
+      "title": "Documentation Specialist"
+    },
+    {
+      "id": "b9eef4f4-9178-4cfc-8398-d9b66dd673f6",
+      "name": "Resolver",
+      "title": "Issue Resolver"
+    },
+    {
+      "id": "d97f1810-2874-4f35-b66b-a2d942140766",
+      "name": "Debugger",
+      "title": "Debugger Specialist"
+    },
+    {
+      "id": "e954beec-906a-426d-92a7-5858b8d86edf",
+      "name": "Sentinel",
+      "title": "Compliance Validator"
+    },
+    {
+      "id": "5a452968-acd4-48f5-ba88-61e26e56d965",
+      "name": "Coverage",
+      "title": "Test Coverage Analyst"
+    },
+    {
+      "id": "accd2b6e-fa74-4068-b42d-8569736e0f36",
+      "name": "Loadtester",
+      "title": "Load Testing Specialist"
+    },
+    {
+      "id": "0bd13e3f-5382-4e78-a184-b69bc5a1e3dd",
+      "name": "Catalyst",
+      "title": "Product Innovation"
+    },
+    {
+      "id": "6ba4f1f9-90aa-44d4-bb3b-6dafc7c7e0ae",
+      "name": "Sentinel",
+      "title": "Data Quality Monitoring"
+    },
+    {
+      "id": "eb122591-6cf8-4943-982c-61d8c1b86685",
+      "name": "Codesmith",
+      "title": "Backend Engineer"
+    },
+    {
+      "id": "3535d5ba-6fa0-4122-beaf-05a9f5cefc1b",
+      "name": "Analyzer",
+      "title": "Prompt Analytics & Success Metrics"
+    },
+    {
+      "id": "0acb547a-2a1f-4115-923e-6cff1cfb3fa5",
+      "name": "Reporter",
+      "title": "Quality Reporter"
+    },
+    {
+      "id": "b0732375-d40c-44f6-b891-4f2ae8e29078",
+      "name": "Refactor",
+      "title": "Refactoring Specialist"
+    },
+    {
+      "id": "9a3e445f-0f61-4f5c-9c2f-d69ff3904d7a",
+      "name": "Performance",
+      "title": "Performance Testing Specialist"
+    },
+    {
+      "id": "110a637e-eb76-433e-87a3-3f4210aa3965",
+      "name": "Controller",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-4789-a0b1-c2d3e4f5a6b7",
+      "name": "Civil",
+      "title": "Civil Engineering Specialist"
+    },
+    {
+      "id": "703cccd1-b698-4717-8ff8-6425d59b1c69",
+      "name": "Apex",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "a06af450-4471-40d0-9dfb-b2387fbeb617",
+      "name": "Documenter",
+      "title": "Documentation Specialist"
+    },
+    {
+      "id": "933f3d5e-5992-454e-848b-2c8cb39b1134",
+      "name": "Decision Advisor",
+      "title": "Decision Support Specialist"
+    },
+    {
+      "id": "dea187af-4e61-4698-966a-e2eb36ba5b48",
+      "name": "OpenClaw Gateway",
+      "title": "OpenClaw Gateway Agent"
+    },
+    {
+      "id": "86fd7fad-beeb-4560-83ae-41bf5968f9d5",
+      "name": "Architect",
+      "title": "System Architect"
+    },
+    {
+      "id": "5fbf088d-698a-4980-81ef-5c7cb37b8286",
+      "name": "Maven",
+      "title": "Monitor Maven"
+    },
+    {
+      "id": "cc8ae7fb-65ea-4e32-ade4-03438025d9d4",
+      "name": "Migrator",
+      "title": "Migration Specialist"
+    },
+    {
+      "id": "23b3ef31-2896-43b3-922a-cfe9ae3b60aa",
+      "name": "Ally",
+      "title": "Partnership Management"
+    },
+    {
+      "id": "c1d25a53-0124-46de-8aea-4d1f86e00368",
+      "name": "Gatekeeper",
+      "title": "Access Control"
+    },
+    {
+      "id": "76db5ec5-abdd-4c7f-a559-4e5b7d535b8b",
+      "name": "Sage",
+      "title": "Domain Knowledge Agent"
+    },
+    {
+      "id": "92746d00-aaaa-4abd-9b86-ecf289956e78",
+      "name": "Sage",
+      "title": "Workflow Learning Coordinator"
+    },
+    {
+      "id": "891d3171-bee6-48ad-b2e8-b5950223a87b",
+      "name": "Workflow Complexity Analyzer",
+      "title": "Workflow Analysis"
+    },
+    {
+      "id": "244a5fc2-ac00-4346-95de-c26c1e1d58cc",
+      "name": "Workflow Learning Coordinator",
+      "title": "Workflow Learning"
+    },
+    {
+      "id": "a6b6791c-f781-4960-a3e8-935403d3b009",
+      "name": "Charlie",
+      "title": null
+    },
+    {
+      "id": "701681c4-9b54-4797-9f92-b77b12c6ebd3",
+      "name": "Stressor",
+      "title": "Scalability & Performance Testing"
+    },
+    {
+      "id": "cf0998bc-9b97-4339-9ab6-3af46dcaa5c0",
+      "name": "Blake",
+      "title": "Buildsoft Integration Specialist"
+    },
+    {
+      "id": "bdf5fb7b-5151-434b-9eaf-b2c0c408bbc5",
+      "name": "Orion",
+      "title": "Chief Orchestrator & Workflow Review Coordinator"
+    },
+    {
+      "id": "087b7381-036e-4a1c-a21f-8f71ad1cf032",
+      "name": "Oracle",
+      "title": "Predictive Analytics"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000053",
+      "name": "Casey",
+      "title": "Electrical Engineering Domain Specialist"
+    },
+    {
+      "id": "c9a67392-4f0c-4327-9568-261f68919411",
+      "name": "paperclipforge-ai-model-assignment-specialist",
+      "title": "SparkAssign - Model Assignment Specialist"
+    },
+    {
+      "id": "898a0395-e894-498b-a39c-2df635700e17",
+      "name": "Ace",
+      "title": "Aconex Integration Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440031",
+      "name": "Casey",
+      "title": "Content Platform Engineer"
+    },
+    {
+      "id": "ff622726-b5fd-4594-b61f-efa73182c5c0",
+      "name": "paperclipforge-ai-model-assignment-specialist",
+      "title": "SparkAssign - Model Assignment Specialist"
+    },
+    {
+      "id": "08aa763c-8d6f-4ca6-bef5-3b8d4f63809e",
+      "name": "Uma",
+      "title": "Ui Uma"
+    },
+    {
+      "id": "2604c5a4-3ca5-4f15-8f9c-6164fd359b13",
+      "name": "Dealmaker",
+      "title": "Sales And Negotiation"
+    },
+    {
+      "id": "2c99778d-f983-4f59-b05c-3158a25a2cb8",
+      "name": "Zara",
+      "title": "Architectural Integration Specialist"
+    },
+    {
+      "id": "d61348bd-e155-441e-b326-8e643d53ea4d",
+      "name": "Audit",
+      "title": "Financial Validator"
+    },
+    {
+      "id": "3b8e39b0-790d-47a4-a930-6d70497596e7",
+      "name": "Riley",
+      "title": "Access Controller"
+    },
+    {
+      "id": "c3fbfec4-9c57-45d2-ae4d-d612df3fe948",
+      "name": "Alex",
+      "title": "Deep Research Specialist"
+    },
+    {
+      "id": "ce3e56af-7613-4b41-b8ee-fd6329cd83fc",
+      "name": "Inspector",
+      "title": "Code Inspector"
+    },
+    {
+      "id": "2e2b4bf2-8cb3-40d9-a618-b9a3233d9b93",
+      "name": "Data Synchronization Manager",
+      "title": "Data Synchronization Manager"
+    },
+    {
+      "id": "31b877aa-b395-49c1-b3b2-98db9665e30c",
+      "name": "Amplifier",
+      "title": "Marketing And Promotion"
+    },
+    {
+      "id": "24c468ef-7fe7-4590-a4e1-d09d1cfcf575",
+      "name": "Harmonic",
+      "title": "Orchestration Strategy & Multi Agent Coordination"
+    },
+    {
+      "id": "4576b7c0-4ab9-4d81-bdff-fbe0f1e0386a",
+      "name": "Interface",
+      "title": "Api And Integration"
+    },
+    {
+      "id": "4fb09148-b2a9-40fd-b1f2-f237494edf71",
+      "name": "Bridge",
+      "title": "Multi Discipline Coordinator"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000010",
+      "name": "Taylor",
+      "title": "Strategos Domainforge Strategic Planning"
+    },
+    {
+      "id": "e066647c-b506-4dfd-bfdb-675e8f8ca474",
+      "name": "Enhancer",
+      "title": "Advanced Techniques & Innovation"
+    },
+    {
+      "id": "6c0c0258-26bf-4e41-8680-a13a9fe04a27",
+      "name": "Concierge",
+      "title": null
+    },
+    {
+      "id": "60f2161d-0fd5-412d-a531-9ae551a985c3",
+      "name": "Scribe",
+      "title": "Document Generation Specialist"
+    },
+    {
+      "id": "4513f1f3-c358-497c-b78a-68da507f76ce",
+      "name": "Cortex",
+      "title": "Ai Reasoning Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440029",
+      "name": "Liam",
+      "title": "Content Trend Forecaster"
+    },
+    {
+      "id": "78901234-7890-7890-7890-789012345012",
+      "name": "Scrutineer",
+      "title": "Quality Assurance Specialist"
+    },
+    {
+      "id": "7713c85e-870d-431e-b3aa-c4fe331d1c16",
+      "name": "Classy",
+      "title": "Classification Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000000e",
+      "name": "Morgan",
+      "title": "Quality Control Domainforge Quality Control"
+    },
+    {
+      "id": "ce969146-93ee-4170-897d-3ddca22a4b5a",
+      "name": "Validator",
+      "title": null
+    },
+    {
+      "id": "77369297-a61e-4de0-a6fb-fd3ef12dda5a",
+      "name": "Auditor",
+      "title": "Security Compliance"
+    },
+    {
+      "id": "17c19312-82ef-4ad3-8f05-34d6a67d6648",
+      "name": "Experimenter",
+      "title": "Hypothesis Testing & Innovation"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440026",
+      "name": "Morgan",
+      "title": "Content Performance Optimizer"
+    },
+    {
+      "id": "e7b943ea-c145-455f-b7a9-c97c327533d4",
+      "name": "Hazel",
+      "title": "Hec Ras Integration Specialist"
+    },
+    {
+      "id": "1eef1e81-b846-4473-9ad3-9badcc71388c",
+      "name": "Ada",
+      "title": "Autocad Integration Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000011",
+      "name": "Avery",
+      "title": "Structural Domainforge Structural Engineering Specialist"
+    },
+    {
+      "id": "6346b48c-29b6-416d-b2d3-e42cde7e6c47",
+      "name": "Storm",
+      "title": "Swmm Integration Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440037",
+      "name": "Alex",
+      "title": "Mobile Ux Director"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000015",
+      "name": "Riley",
+      "title": "Postgres Infraforge"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440044",
+      "name": "Charlie",
+      "title": "Mobile Accessibility Specialist"
+    },
+    {
+      "id": "70f8e642-5b2a-4730-85c3-da7a0d1e88a2",
+      "name": "Collaborator",
+      "title": "Cross Company Knowledge Sharing"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440038",
+      "name": "Sophia",
+      "title": "Ios Development Specialist"
+    },
+    {
+      "id": "03b50581-4e47-422b-ae0b-e62980f85cb3",
+      "name": "Guardian",
+      "title": "Quality Guardian"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440040",
+      "name": "Ryan",
+      "title": "Cross Platform Development Specialist"
+    },
+    {
+      "id": "8c1ec405-9b13-4969-a2ab-9f72f31b03c3",
+      "name": "Kendall",
+      "title": null
+    },
+    {
+      "id": "62bbb46e-cdf5-4771-b85f-ffb1288d1e0b",
+      "name": "Drew",
+      "title": "Multi Instance Deployment Coordinator"
+    },
+    {
+      "id": "ffd8ddb0-b80f-402c-8a63-5232c81146a5",
+      "name": "Max",
+      "title": "Microsoft Project Integration Specialist"
+    },
+    {
+      "id": "1d0da579-935e-49b4-a8d8-a4e1524ee8ad",
+      "name": "Cash",
+      "title": "Costx Integration Specialist"
+    },
+    {
+      "id": "b7d72eb6-dbe6-4346-8321-3d6142e2a87c",
+      "name": "Security and Compliance Monitor",
+      "title": "Security and Compliance Monitor"
+    },
+    {
+      "id": "e5e5e5e5-5555-5555-5555-555555555555",
+      "name": "Mobile workflow designer",
+      "title": "Mobile Workflow Design Specialist"
+    },
+    {
+      "id": "f5b665bd-03f5-4a1c-97b4-2723ffb45f78",
+      "name": "Diagnostics",
+      "title": "Diagnostics Specialist"
+    },
+    {
+      "id": "3b2b4db0-ddc4-4970-92f4-2772e43a76ce",
+      "name": "Corey",
+      "title": "Procore Integration Specialist"
+    },
+    {
+      "id": "5739ecd7-14d8-4933-a313-218aae3fbc2e",
+      "name": "Xander",
+      "title": null
+    },
+    {
+      "id": "0f2da3d5-60a6-4f23-8bbd-34b7e77214c6",
+      "name": "Violet",
+      "title": null
+    },
+    {
+      "id": "bdf0d559-11f8-41fe-b6ef-bdd168d15cf5",
+      "name": "Cloudops",
+      "title": "Cloud Operations"
+    },
+    {
+      "id": "ca3a1271-479e-4a33-a70f-aab2d4ff4676",
+      "name": "Gia",
+      "title": null
+    },
+    {
+      "id": "0762934f-3e28-41d3-94f9-64781a211798",
+      "name": "Amara",
+      "title": null
+    },
+    {
+      "id": "77f119ed-f2db-4c45-828f-eaa783c8a435",
+      "name": "Administrator",
+      "title": null
+    },
+    {
+      "id": "ac830381-fd8a-402e-aff1-05bbe550ebd3",
+      "name": "Decider",
+      "title": "Decision Support Specialist"
+    },
+    {
+      "id": "a51d78f8-34ee-4bcd-89dd-9cef6268dfba",
+      "name": "Echo",
+      "title": "Communication Orchestrator"
+    },
+    {
+      "id": "98877c49-7995-48b6-aa6f-8be5ec468804",
+      "name": "Fixer",
+      "title": "Bug Fixing Specialist"
+    },
+    {
+      "id": "ca9d088e-2715-493e-a9c2-f9ed5d278e3f",
+      "name": "Nova",
+      "title": "Product Launches"
+    },
+    {
+      "id": "47e09c7c-ca13-470e-855a-8c1561ddf81c",
+      "name": "Optimizer",
+      "title": "Code Optimizer"
+    },
+    {
+      "id": "ef7565d1-f4dc-4958-9911-f9f700e338c2",
+      "name": "Terra",
+      "title": "Civil 3d Integration Specialist"
+    },
+    {
+      "id": "7f806c10-b459-4237-84ba-4abb1b582d02",
+      "name": "Quinn",
+      "title": null
+    },
+    {
+      "id": "b60ee92e-bd46-4c8a-8c2d-f4fd1e838e2f",
+      "name": "Validator",
+      "title": "Prompt Syntax & Logic Validation"
+    },
+    {
+      "id": "45c97946-2bdc-44f9-8d05-f3a19d15ea4c",
+      "name": "Database",
+      "title": "Database Infrastructure Specialist"
+    },
+    {
+      "id": "23b611d9-4cca-4e5e-a6ff-ddabd5da3e12",
+      "name": "Piper",
+      "title": null
+    },
+    {
+      "id": "16d3a4d1-5ebb-44ac-b8ee-cad7e3bee408",
+      "name": "Tester",
+      "title": "Browser Ui & Navigation Testing Specialist"
+    },
+    {
+      "id": "bd1c4e1f-db7b-4635-8a0a-c5d1ec7b79c6",
+      "name": "Skyler",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000016",
+      "name": "Jordan",
+      "title": "Supply Chain Integration Infraforge Supply Chain"
+    },
+    {
+      "id": "a63b683f-2d29-46e5-aa48-d968a0bec1f9",
+      "name": "Chatter",
+      "title": "Channel Integration Specialist"
+    },
+    {
+      "id": "7ed575fd-be87-42be-96da-167311953f60",
+      "name": "Integrator",
+      "title": "Integration Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440042",
+      "name": "Jesse",
+      "title": "Mobile Ui Designer"
+    },
+    {
+      "id": "10fb2ac0-7a8a-4255-a61a-3c636087acf3",
+      "name": "Communications manager",
+      "title": "Communications Manager"
+    },
+    {
+      "id": "96d2763a-2f5b-4aeb-833f-a408ec904a05",
+      "name": "Load",
+      "title": "Load Testing Specialist"
+    },
+    {
+      "id": "f5f526db-a90a-46d3-9ac6-6c2fc17728ae",
+      "name": "Pulse",
+      "title": "Real Time Data Monitoring"
+    },
+    {
+      "id": "5ac36dda-f594-41a2-b0fa-3c02356929cb",
+      "name": "Finn",
+      "title": "Bim Clash Detection & Resolution Specialist"
+    },
+    {
+      "id": "45678901-4567-4567-4567-456789012def",
+      "name": "Treasurer 2",
+      "title": "Finance And Cost Management Specialist"
+    },
+    {
+      "id": "5ab0500f-3126-4502-8f61-931c442f03f6",
+      "name": "Sage 2",
+      "title": "Api Architect"
+    },
+    {
+      "id": "f52a8cee-c9b3-4fe9-80cf-a62c8780cc14",
+      "name": "Specialist",
+      "title": "Measurement Standards Specialist"
+    },
+    {
+      "id": "cd89b10d-1a52-4915-aeae-e5e99619d81b",
+      "name": "Echo",
+      "title": "Learning Integration Agent"
+    },
+    {
+      "id": "ea86dbbe-ea1d-4a45-8517-d508492f40e1",
+      "name": "Specialist",
+      "title": "Measurement Validation Specialist"
+    },
+    {
+      "id": "753f185f-dfff-4b8c-9abb-24c63592c787",
+      "name": "Code Analyzer",
+      "title": "Code Analyzer"
+    },
+    {
+      "id": "7e285d59-ea6c-4e57-a2b1-e9fbbe336400",
+      "name": "Phoenix",
+      "title": "Primavera P6 Integration Specialist"
+    },
+    {
+      "id": "2e725d90-0d99-47be-9d3c-5ce3d20a09da",
+      "name": "Specialist",
+      "title": "Ranking Algorithm Specialist"
+    },
+    {
+      "id": "46cd170f-5a63-4d83-8b0d-8aa9f1556ad2",
+      "name": "Specialist",
+      "title": "Agent Reconciliation Specialist"
+    },
+    {
+      "id": "333baf29-aa32-4239-8f5c-4a6a31125076",
+      "name": "Nova",
+      "title": "Navisworks Integration Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000004b",
+      "name": "Riley",
+      "title": "Contracts Post Award Domain Specialist"
+    },
+    {
+      "id": "0e71ba9f-fe02-4d76-b223-02964e069f29",
+      "name": "Manager",
+      "title": "Resource Manager"
+    },
+    {
+      "id": "e52a5174-5abc-4a87-9d82-b9353b5c832a",
+      "name": "Archivist",
+      "title": null
+    },
+    {
+      "id": "bdf9fd04-73c4-4ac8-9f49-f3b4cb22ee4d",
+      "name": "Specialist",
+      "title": "Assignment Specialist"
+    },
+    {
+      "id": "1409d6bc-7fa0-4a4b-8d69-c400584cf41a",
+      "name": "Scout",
+      "title": "Competitive Intelligence"
+    },
+    {
+      "id": "372a4a1a-a3f1-4d9e-ad56-78d8ec106828",
+      "name": "Errorhandler",
+      "title": "Error Recovery & Fallback Strategies"
+    },
+    {
+      "id": "eafe7299-ab0a-4cb8-b220-0065115213d8",
+      "name": "Documentarian",
+      "title": "Documentarian"
+    },
+    {
+      "id": "11afbdd2-2c17-4dbb-8c0d-6224ca4a2756",
+      "name": "Archivist",
+      "title": "Knowledge Security"
+    },
+    {
+      "id": "7300cb4c-180b-4dcf-8c22-da53cb81e87f",
+      "name": "Gabby",
+      "title": null
+    },
+    {
+      "id": "770aa6b5-96b5-4958-8cf0-c013a13d9a81",
+      "name": "Designer",
+      "title": null
+    },
+    {
+      "id": "3b761838-89a6-45da-be06-18ece3ff97d8",
+      "name": "Ambassador",
+      "title": "Brand Representation"
+    },
+    {
+      "id": "a91246c1-8840-4029-bbdd-c22ffbd20e4d",
+      "name": "Zane",
+      "title": null
+    },
+    {
+      "id": "caeb7c93-9fb0-47a0-aa22-2034ca629530",
+      "name": "Architect",
+      "title": "Integration Architect"
+    },
+    {
+      "id": "a87cb8f4-f4ed-4893-8c85-27295f4c7dd7",
+      "name": "Generator",
+      "title": "Issue Generator"
+    },
+    {
+      "id": "7cabb985-11bc-43c0-b91e-41a4c101829c",
+      "name": "Rowan",
+      "title": null
+    },
+    {
+      "id": "a5f7c967-8761-43b3-9d82-2a7372488c30",
+      "name": "Creator",
+      "title": "Atlas   Agent Creator"
+    },
+    {
+      "id": "73b02951-e5fe-47c5-b545-0e6c2dabf5f3",
+      "name": "Strategos",
+      "title": "Strategic Planning"
+    },
+    {
+      "id": "b997ff0c-5379-4298-ae6f-c2824427c01c",
+      "name": "Jamie",
+      "title": null
+    },
+    {
+      "id": "a78d9ed8-7ee5-4df0-9f35-da5fc6a0c137",
+      "name": "Extractor",
+      "title": "Content Extractor"
+    },
+    {
+      "id": "b4d03825-c984-48cc-b916-96d828783e5c",
+      "name": "Specialist",
+      "title": "Measurement Coordination Specialist"
+    },
+    {
+      "id": "eb4612c9-8a80-4147-80e7-c9eac9db9c9c",
+      "name": "Specialist",
+      "title": "Engineering Ui Specialist"
+    },
+    {
+      "id": "0f25b318-c126-47dc-aac7-c053f952d06d",
+      "name": "Flowdesigner",
+      "title": "Agent Handoff & Orchestration Logic"
+    },
+    {
+      "id": "23b3d033-258b-4966-8fb5-170f723459f6",
+      "name": "Atlas",
+      "title": "Product Mapping"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000000",
+      "name": "Riley",
+      "title": "Architectural Domain Specialist"
+    },
+    {
+      "id": "933c5223-0540-48ea-8476-5632b9916939",
+      "name": "Quantum",
+      "title": "Workflow Complexity Analyzer"
+    },
+    {
+      "id": "41319aa2-41d3-4b39-8651-6198df9e95be",
+      "name": "Predictor",
+      "title": "Outcome Prediction & Risk Assessment"
+    },
+    {
+      "id": "f2736032-c67b-4aeb-9f37-a1a39626b865",
+      "name": "Folder creator",
+      "title": "Org Research Folder Creator"
+    },
+    {
+      "id": "bdd2bee8-bbb8-4f76-8b75-bdf65cab3bc8",
+      "name": "Bridge builder extraordinaire",
+      "title": "Bridge Builder Extraordinaire"
+    },
+    {
+      "id": "2c9845d0-d777-4baf-b9b4-7161cb93964b",
+      "name": "Pipes the plumbing pro",
+      "title": "Pipes The Plumbing Pro"
+    },
+    {
+      "id": "35196fb6-8d58-41f6-bdb5-98cdb91276f9",
+      "name": "Workflow orchestrator",
+      "title": "Cross Company Workflow Coordinator"
+    },
+    {
+      "id": "4c61fbb6-1ad1-4396-8625-be8cc6bda38f",
+      "name": "Coordination hub",
+      "title": "Central Coordination Hub"
+    },
+    {
+      "id": "eb92c0ad-0b32-47a7-8d43-672d5e77635d",
+      "name": "Orchestration engine",
+      "title": "Core Orchestration Engine"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440022",
+      "name": "Alex",
+      "title": "Content Architecture Director"
+    },
+    {
+      "id": "bf651478-ade4-47c4-803c-5257b97d85e1",
+      "name": "Ginny",
+      "title": "Version Control Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440002",
+      "name": "Nimbus",
+      "title": "Supabase Database Specialist"
+    },
+    {
+      "id": "1dc20397-61eb-44d0-8d30-056cd6ecf777",
+      "name": "Compliance",
+      "title": "Regulatory Compliance & Standards"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000022",
+      "name": "Landscaping domain specialist",
+      "title": "Landscaping Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000002a",
+      "name": "Other parties domain specialist",
+      "title": "Other Parties Domain Specialist"
+    },
+    {
+      "id": "1c93700e-1a56-4338-b44a-28aafaf8548c",
+      "name": "Sam",
+      "title": "Social Media Coordinator"
+    },
+    {
+      "id": "73e8b756-f623-471d-afc2-6c60f8e95faa",
+      "name": "Structural",
+      "title": "Structural Engineering Specialist"
+    },
+    {
+      "id": "3228fe69-428b-43e4-81a4-0672066e5f5d",
+      "name": "Weaver",
+      "title": "Wisdom Weaver"
+    },
+    {
+      "id": "3dd8926d-ee84-4b09-b218-e90cae9795c4",
+      "name": "Tinkerer",
+      "title": "Ticket Tinkerer"
+    },
+    {
+      "id": "bbe3cb5f-e53a-4730-9539-f01497546897",
+      "name": "Enchantress",
+      "title": "Endpoint Enchantress"
+    },
+    {
+      "id": "57ac67bf-1e2b-46b1-91cb-8f1c6dd58799",
+      "name": "Illusionist",
+      "title": "Integration Illusionist"
+    },
+    {
+      "id": "7953a89f-089c-4f2a-a32f-030e26f54a92",
+      "name": "Butler",
+      "title": "Backup Butler"
+    },
+    {
+      "id": "09e6c3f4-37b5-4a0e-b534-c8ad7532b702",
+      "name": "Keeper",
+      "title": "Cache Keeper"
+    },
+    {
+      "id": "70705598-52ec-452d-a03b-264aaaa14028",
+      "name": "Ledger ai",
+      "title": "Financial Data Processing"
+    },
+    {
+      "id": "c2604601-c383-493d-9a72-4992bbc2a5a0",
+      "name": "Champion",
+      "title": "Chaos Champion"
+    },
+    {
+      "id": "dd805bef-50e5-431e-9f49-9e8fe01059f4",
+      "name": "Architect",
+      "title": "Data Architect"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000025",
+      "name": "Logistics director domain specialist",
+      "title": "Logistics Director Domain Specialist"
+    },
+    {
+      "id": "9d01001f-6e73-46b7-907d-43b463e747b1",
+      "name": "Integrator",
+      "title": "Data Integrator"
+    },
+    {
+      "id": "a3c222b3-ce84-4572-8d02-0247fdbf219c",
+      "name": "Druid",
+      "title": "Database Druid"
+    },
+    {
+      "id": "5c7d9376-a8af-4de7-9fe4-bd9e66e35656",
+      "name": "Manager",
+      "title": "Dependency Manager"
+    },
+    {
+      "id": "25afe9a5-e231-46db-aee6-e3cee078aaca",
+      "name": "Master",
+      "title": "Metric Master"
+    },
+    {
+      "id": "7e112179-1220-4440-bcb0-bb487201d2c2",
+      "name": "Navigator",
+      "title": "Network Navigator"
+    },
+    {
+      "id": "1f82ac56-815b-4687-9655-9122c9e40725",
+      "name": "Monitor",
+      "title": "Performance Monitor"
+    },
+    {
+      "id": "ee59972a-5877-4a02-9802-135487de2e0c",
+      "name": "Profiler",
+      "title": "Performance Profiler"
+    },
+    {
+      "id": "00f682cd-136e-4cf3-8473-129e715f9994",
+      "name": "Modeler",
+      "title": "Predictive Modeler"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000004c",
+      "name": "Jordan",
+      "title": "Contracts Pre Award Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000004f",
+      "name": "Director project domain specialist",
+      "title": "Director Project Domain Specialist"
+    },
+    {
+      "id": "b730cd92-f2ff-4d1a-903e-151367beeb86",
+      "name": "Tracker",
+      "title": "Progress Tracker"
+    },
+    {
+      "id": "e955d018-d895-4d4c-86b7-85b309135a3c",
+      "name": "Coordinator",
+      "title": "Project Coordinator"
+    },
+    {
+      "id": "65b66f28-6541-474f-964e-51f7845127f1",
+      "name": "Phoenix",
+      "title": "Mobile Patterns Agent"
+    },
+    {
+      "id": "027fae5d-070a-4118-9f10-da5b3a9db40e",
+      "name": "Maestro",
+      "title": "Project Maestro"
+    },
+    {
+      "id": "167acf8b-fe71-4eed-a3ac-7253d9c7e496",
+      "name": "Analyst",
+      "title": "Market Analysis"
+    },
+    {
+      "id": "b80886cb-ee26-4a2b-b9b3-db6bca500573",
+      "name": "Analyst",
+      "title": "Risk Analyst"
+    },
+    {
+      "id": "70b43268-6ab9-49ba-af27-d116778f79a4",
+      "name": "Blueprint",
+      "title": "Prompt Architecture & Template Design"
+    },
+    {
+      "id": "5d18545d-993a-496a-b1bd-76e2a9630525",
+      "name": "Sage 4",
+      "title": "Chief Prompt Architect & Quality Assurance Lead"
+    },
+    {
+      "id": "6fe1b14d-eea6-4d27-b39f-538954aff199",
+      "name": "Render rosy",
+      "title": "Render Deployment And Desktop Communication Specialist"
+    },
+    {
+      "id": "0458a8aa-751f-4b59-87d5-91450a530cee",
+      "name": "Luna the coordination queen",
+      "title": "Luna The Coordination Queen"
+    },
+    {
+      "id": "ecd9bba7-2e91-4ef9-b4f3-bd37a54b818f",
+      "name": "Voyager",
+      "title": "Market Exploration"
+    },
+    {
+      "id": "1047f49d-c381-4b42-a5b8-e15196b6a14d",
+      "name": "Raven shadow",
+      "title": "Security Specialist"
+    },
+    {
+      "id": "a9cb2742-0b0c-49b8-8a9c-7e2b8f5d37f9",
+      "name": "Storycraft",
+      "title": "Product Storytelling"
+    },
+    {
+      "id": "ee891841-6ea9-4083-a0d0-d6b03355535f",
+      "name": "Guardian",
+      "title": "Threat Protection"
+    },
+    {
+      "id": "ba7f956a-a28b-4ca4-ac58-9fd444562432",
+      "name": "Sage",
+      "title": "Code Sage"
+    },
+    {
+      "id": "cb15d2f9-2631-476c-a753-e591e28e3454",
+      "name": "Curator",
+      "title": "Config Curator"
+    },
+    {
+      "id": "b6970fb6-e98e-4d27-b165-7789ac495551",
+      "name": "Integrator",
+      "title": "Knowledge Integrator"
+    },
+    {
+      "id": "d651e87a-f02c-4165-b0d3-4f51144bd7dc",
+      "name": "Harmony",
+      "title": "Stakeholder Communication Specialist"
+    },
+    {
+      "id": "5ed80204-004f-4f91-90a3-c7c549bcdfbb",
+      "name": "Archie the building buddy",
+      "title": "Archie The Building Buddy"
+    },
+    {
+      "id": "4ee396f3-855f-42ad-9eca-8314c7f8563f",
+      "name": "Diggs the dirt dynamo",
+      "title": "Diggs The Dirt Dynamo"
+    },
+    {
+      "id": "01860905-de00-4f60-a523-659a5393c6e0",
+      "name": "Issue importer",
+      "title": "Issue Batch Import Specialist"
+    },
+    {
+      "id": "66a58395-a29e-4854-8822-cd93b4636733",
+      "name": "Agent monitor",
+      "title": "Agent Health & Performance Monitor"
+    },
+    {
+      "id": "4c054b60-50dd-4cb1-aad7-ea5676a75d64",
+      "name": "Lighty the signal sorcerer",
+      "title": "Lighty The Signal Sorcerer"
+    },
+    {
+      "id": "c5322b7f-43d4-4987-9640-721f03d68db1",
+      "name": "Flash the traffic flashmaster",
+      "title": "Flash The Traffic Flashmaster"
+    },
+    {
+      "id": "d3441725-636d-4f74-9b1a-e724e8803a2e",
+      "name": "Caddy the cad commander",
+      "title": "Caddy The Cad Commander"
+    },
+    {
+      "id": "d57ad724-02fd-4053-a8d8-e194644bf25f",
+      "name": "Zap the qa wizard",
+      "title": "Zap The Qa Wizard"
+    },
+    {
+      "id": "66306060-4104-41da-8c80-fa5bbcf3d45c",
+      "name": "Code Reviewer",
+      "title": "Code Reviewer"
+    },
+    {
+      "id": "43d265ee-1f8f-4e16-adfd-b842c33c05b4",
+      "name": "Analyst",
+      "title": "Log Analyst"
+    },
+    {
+      "id": "2d6831bf-753f-4b3b-82bf-8a64c8a9900b",
+      "name": "Maestro",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "0c3c1351-10a0-44f9-9024-fab45374ec30",
+      "name": "Pathfinder",
+      "title": "Opportunity Identification"
+    },
+    {
+      "id": "9792c792-e257-470e-98de-b47697766204",
+      "name": "Chainlink charmer",
+      "title": "Chainlink Charmer"
+    },
+    {
+      "id": "a27bb84a-dd38-4972-ab68-b9b96bb0f0d1",
+      "name": "Checky the validation chief",
+      "title": "Checky The Validation Chief"
+    },
+    {
+      "id": "dcc0fcc3-14f9-4132-81cd-c30a1bb39c10",
+      "name": "System integrator",
+      "title": "System Integration Manager"
+    },
+    {
+      "id": "26823be6-5a2c-4638-96b8-def1e14466b6",
+      "name": "Vizzy the visual virtuoso",
+      "title": "Vizzy The Visual Virtuoso"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000003a",
+      "name": "Security domain specialist",
+      "title": "Security Domain Specialist"
+    },
+    {
+      "id": "bf1d55c6-2f38-4027-86ee-8f404af52b8d",
+      "name": "Task coordinator",
+      "title": "Task Coordinator"
+    },
+    {
+      "id": "2876f20c-220c-4bf7-9baf-6ea668f85ef6",
+      "name": "Orchestrator",
+      "title": "Infrastructure Orchestration Specialist"
+    },
+    {
+      "id": "be1ddfbf-4d02-4ecc-83ff-1021be422548",
+      "name": "Finley",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000036",
+      "name": "Sales director domain specialist",
+      "title": "Sales Director Domain Specialist"
+    },
+    {
+      "id": "633d48cb-8f00-4549-854d-4673554c7a38",
+      "name": "Query",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000004d",
+      "name": "Counsel specialist",
+      "title": "Counsel Specialist"
+    },
+    {
+      "id": "66c09f31-7220-428e-a5b3-966e7fabeffb",
+      "name": "Sentinelx",
+      "title": "Advanced Monitoring"
+    },
+    {
+      "id": "acc04caf-490d-4e65-80fd-c7c2c2d17192",
+      "name": "Max the measurement maestro",
+      "title": "Max The Measurement Maestro"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000031",
+      "name": "Public relations domain specialist",
+      "title": "Public Relations Domain Specialist"
+    },
+    {
+      "id": "976cd168-221b-462b-bb67-a61dbdc10087",
+      "name": "Zara",
+      "title": "Architectural Integration Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000034",
+      "name": "Quantity surveying domain specialist",
+      "title": "Quantity Surveying Domain Specialist"
+    },
+    {
+      "id": "03463497-2fb0-4c8d-a11c-a3f52c610f41",
+      "name": "Biddo the tender titan",
+      "title": "Biddo The Tender Titan"
+    },
+    {
+      "id": "5c5597b4-5346-4332-b91c-dd2a4101b9d4",
+      "name": "Cascade",
+      "title": "Multi Agent Workflow Design"
+    },
+    {
+      "id": "6b844a0d-8d0c-45b2-b339-192d15c3f458",
+      "name": "Nexus",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "032fbc48-3fa4-4f95-a636-7c58fe2c7f40",
+      "name": "Navigator",
+      "title": "Data Discovery"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000000f",
+      "name": "Casey",
+      "title": "Safety Domainforge Safety Risk Management"
+    },
+    {
+      "id": "fc9135d1-1696-404b-8acb-4f18a81ca61e",
+      "name": "Accessibility",
+      "title": "Accessibility Testing Specialist"
+    },
+    {
+      "id": "3e0c1736-dd5a-4c6b-a491-4d67ee47ed83",
+      "name": "Councillor",
+      "title": "Strategic Decision Making"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000000d",
+      "name": "Alex",
+      "title": "Quality Assurance Domainforge Quality Assurance"
+    },
+    {
+      "id": "c5822e75-d890-4b99-9b0f-e1cc2b14fc3e",
+      "name": "Performance Optimization Specialist",
+      "title": "Performance Optimization Specialist"
+    },
+    {
+      "id": "d319e98e-ce30-450a-8901-cd34b468a03a",
+      "name": "Manager",
+      "title": "Api Manager"
+    },
+    {
+      "id": "e6a80c22-0be5-4ec0-bbc1-79f1542d6e28",
+      "name": "Clementine",
+      "title": null
+    },
+    {
+      "id": "9744a993-e294-4de9-9cdb-966975ac9e90",
+      "name": "API Integration Specialist",
+      "title": "API Integration Specialist"
+    },
+    {
+      "id": "1195e054-8d5d-490d-af07-56c9f318ca8b",
+      "name": "Trix",
+      "title": "Trimble Connect Integration Specialist"
+    },
+    {
+      "id": "bbbb91a5-8f73-42f8-999d-1b4283a70774",
+      "name": "Automation",
+      "title": "Test Automation Engineer"
+    },
+    {
+      "id": "c585d7bd-6c50-46ac-90c9-bb030d4749f4",
+      "name": "Sasha",
+      "title": "Sharepoint Integration Specialist"
+    },
+    {
+      "id": "f05371ae-e83f-4000-8453-f19183b8e3d5",
+      "name": "E2E",
+      "title": "End-to-End Testing Specialist"
+    },
+    {
+      "id": "ffc5ee5f-bdbe-4f28-a327-3a4f837f9380",
+      "name": "Tracer",
+      "title": "Execution Tracer"
+    },
+    {
+      "id": "ed45b9d1-a144-4a29-897c-39521b6c9619",
+      "name": "Observer",
+      "title": "Ux Research Testing Specialist"
+    },
+    {
+      "id": "f191cd58-7e87-4acc-860c-38415f8438ef",
+      "name": "Lee",
+      "title": null
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440015",
+      "name": "Reese",
+      "title": "Technical Seo Expert"
+    },
+    {
+      "id": "384dd5fa-eb7d-4d32-991e-e19e70500369",
+      "name": "Nexus",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "8dbfa150-c138-475b-863b-ff89d651dee6",
+      "name": "Coordination",
+      "title": "Cross Discipline Coordination Specialist"
+    },
+    {
+      "id": "2019e144-d198-4e42-aecf-e2b5ebfa8f42",
+      "name": "Monitor",
+      "title": null
+    },
+    {
+      "id": "d4249e15-1c8e-4377-a498-f2f6861fbf39",
+      "name": "Compass",
+      "title": "Direction Setting"
+    },
+    {
+      "id": "167667b8-ec8e-4009-940a-c53cdd3c1a3b",
+      "name": "Jax",
+      "title": "Research Coordinator   Safety Research Team Lead"
+    },
+    {
+      "id": "9153e058-eb64-40fe-8f64-200e0bfc0260",
+      "name": "Hal",
+      "title": "Hitl Task Manager"
+    },
+    {
+      "id": "b7a3f83e-ed6c-40d6-9d2e-66ecda83d7d9",
+      "name": "Nolan",
+      "title": "Automation Engineer"
+    },
+    {
+      "id": "248aba4e-72b9-4571-8260-2ccb6f81efab",
+      "name": "Drew",
+      "title": null
+    },
+    {
+      "id": "f5cb7532-6758-4880-ab1c-f5aad06d91e4",
+      "name": "Promptsmith",
+      "title": "Prompt Engineering & Workflow Review"
+    },
+    {
+      "id": "ec0ba9ed-e71c-481f-a556-de052823b56b",
+      "name": "Render ryan",
+      "title": "Render Platform Specialist"
+    },
+    {
+      "id": "616b84c4-6375-4a76-a916-1d0c1ad4f4ba",
+      "name": "Codesmith",
+      "title": "Code Architect"
+    },
+    {
+      "id": "4dc46ce4-10cf-4db9-92be-eff60ca52783",
+      "name": "Engine",
+      "title": "Analysis Engine"
+    },
+    {
+      "id": "f9e4dcab-bef2-407d-920a-9beab25d5aad",
+      "name": "Council",
+      "title": "Governance & Standards Director"
+    },
+    {
+      "id": "431c6ca0-f1d4-43e1-b29e-717154849e86",
+      "name": "Librarian",
+      "title": "Knowledge Management & Workflow Documentation"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440025",
+      "name": "Noah",
+      "title": "Multimedia Content Producer"
+    },
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "name": "Ziggy",
+      "title": "Chief Integration Orchestrator"
+    },
+    {
+      "id": "df06c135-f644-4b92-ab0f-aac5bbd511a7",
+      "name": "Zara",
+      "title": "Architectural Integration Specialist"
+    },
+    {
+      "id": "d436cb88-7994-4214-b2ee-5b7a5e15435a",
+      "name": "Kai",
+      "title": "Per Company Configuration Specialist"
+    },
+    {
+      "id": "8659cef0-2ebd-43a9-8305-ec7f81b6c30f",
+      "name": "Presentation specialist",
+      "title": "Presentation Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000020",
+      "name": "Inspection domain specialist",
+      "title": "Inspection Domain Specialist"
+    },
+    {
+      "id": "f404fb5b-9fa9-4457-a590-611c06cf0239",
+      "name": "Dev",
+      "title": "Technical Creative"
+    },
+    {
+      "id": "92aba436-5562-457f-8bd1-fa4ff89e4900",
+      "name": "Jordan",
+      "title": "Analytics Specialist"
+    },
+    {
+      "id": "14474a5d-64fb-4635-abba-966472d3f8b7",
+      "name": "Wren",
+      "title": null
+    },
+    {
+      "id": "76e5c870-94a2-4191-8845-94e266405b8c",
+      "name": "Coco",
+      "title": "Candy Integration Specialist"
+    },
+    {
+      "id": "b36b7200-4479-4966-8064-d2628b08b279",
+      "name": "Verifier",
+      "title": "Supabase Testing Specialist"
+    },
+    {
+      "id": "e750062b-700c-4b30-958b-14ee1cb9a234",
+      "name": "Rex",
+      "title": "Revit Integration Specialist"
+    },
+    {
+      "id": "ba59d5f6-1e10-4250-aba3-e103366a0755",
+      "name": "Insight",
+      "title": "Business Intelligence"
+    },
+    {
+      "id": "c3c3c3c3-3333-3333-3333-333333333333",
+      "name": "Contract administration",
+      "title": "Contract Administration Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000038",
+      "name": "Scheduling domain specialist",
+      "title": "Scheduling Domain Specialist"
+    },
+    {
+      "id": "b2b2b2b2-2222-2222-2222-222222222222",
+      "name": "Supplier management",
+      "title": "Supplier Management Specialist"
+    },
+    {
+      "id": "3eb0d122-bb9c-405b-aee5-5ed81021372f",
+      "name": "Cash the calculator king",
+      "title": "Cash The Calculator King"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000030",
+      "name": "Project controls domain specialist",
+      "title": "Project Controls Domain Specialist"
+    },
+    {
+      "id": "71a8a2d7-c9d7-4dc4-856d-112f3a5efd98",
+      "name": "Casey",
+      "title": null
+    },
+    {
+      "id": "24d37ff2-90b8-4d38-8afe-0101274a279c",
+      "name": "Riley",
+      "title": null
+    },
+    {
+      "id": "67890123-6789-6789-6789-678901234f01",
+      "name": "Guardian 2",
+      "title": "Safety And Risk Management Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000002b",
+      "name": "Process engineering domain specialist",
+      "title": "Process Engineering Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000037",
+      "name": "Sales domain specialist",
+      "title": "Sales Domain Specialist"
+    },
+    {
+      "id": "ef91a6f8-eddb-4e85-89e0-fcf43f288669",
+      "name": "Safetycheck",
+      "title": "Ethical Ai & Bias Testing"
+    },
+    {
+      "id": "ab9afd81-c143-49d5-9b54-726a57eb2de5",
+      "name": "Nova",
+      "title": "Safety Research Agent"
+    },
+    {
+      "id": "b085c92c-a1b4-460e-bee4-307f54e4253f",
+      "name": "Speech processor",
+      "title": "Speech Processor"
+    },
+    {
+      "id": "12f504f5-7839-450f-a9f9-d565ae782095",
+      "name": "Platform integrator",
+      "title": "Platform Integrator"
+    },
+    {
+      "id": "9e2c4bc3-17b9-4a2e-918f-f667dfc4584f",
+      "name": "Avery",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000001d",
+      "name": "Health domain specialist",
+      "title": "Health Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000056",
+      "name": "Ethics domain specialist",
+      "title": "Ethics Domain Specialist"
+    },
+    {
+      "id": "f898cd37-e3d7-4c72-befa-5fa59b3cbe5c",
+      "name": "Intelligence analyst",
+      "title": "Intelligence Analyst"
+    },
+    {
+      "id": "42b27b32-4fad-4618-9838-9c7b68475dd3",
+      "name": "Everly",
+      "title": null
+    },
+    {
+      "id": "64228540-f16d-4ac6-bf86-e878ed79fdc0",
+      "name": "Specialist",
+      "title": "Domain Specific Prompt Adaptation"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000004a",
+      "name": "Contracts director domain specialist",
+      "title": "Contracts Director Domain Specialist"
+    },
+    {
+      "id": "241c2581-7296-4d7f-b5bb-9fae8cb1c3cb",
+      "name": "Transportation",
+      "title": "Transportation Engineering Specialist"
+    },
+    {
+      "id": "1c559379-3127-449c-a0de-4602b994a135",
+      "name": "Sawyer",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000004e",
+      "name": "Design domain specialist",
+      "title": "Design Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000001e",
+      "name": "Hse director domain specialist",
+      "title": "Hse Director Domain Specialist"
+    },
+    {
+      "id": "8ef81524-7876-45de-95f9-ec82dfc132d2",
+      "name": "Sparky the safety sentinel",
+      "title": "Sparky The Safety Sentinel"
+    },
+    {
+      "id": "ac30185c-be45-4b43-b027-80347ea1c184",
+      "name": "Volty the voltage virtuoso",
+      "title": "Volty The Voltage Virtuoso"
+    },
+    {
+      "id": "6dfb86bd-ff13-4849-a70d-b8fef24b5f93",
+      "name": "Tuner",
+      "title": "Performance Optimization & A/B Testing"
+    },
+    {
+      "id": "e31a6bc9-4139-465f-bfda-83feaf3985c0",
+      "name": "Dakota",
+      "title": null
+    },
+    {
+      "id": "59aba91f-9c14-4a0b-b69a-3709b7dbc64b",
+      "name": "Refiner",
+      "title": "Iterative Improvement & Version Control"
+    },
+    {
+      "id": "eb16cef0-7e54-4752-a2d8-ccc52a4403af",
+      "name": "Jesse",
+      "title": null
+    },
+    {
+      "id": "1c3c3f0a-d3fb-4e80-b64e-8be1d3b9a831",
+      "name": "Quinn the quantity queen",
+      "title": "Quinn The Quantity Queen"
+    },
+    {
+      "id": "171bfca4-3416-4915-a477-d74176a97c99",
+      "name": "Steel the structure sultan",
+      "title": "Steel The Structure Sultan"
+    },
+    {
+      "id": "6bdc817c-1cf0-4567-8d23-aef474108d9f",
+      "name": "Integrity",
+      "title": "Ethical Ai & Safety Compliance"
+    },
+    {
+      "id": "2370065e-cbd4-4d18-a2bd-68b79dc8048e",
+      "name": "Orderly the order oracle",
+      "title": "Orderly The Order Oracle"
+    },
+    {
+      "id": "2372c684-046e-4110-b300-aa8aab0a05e7",
+      "name": "Explorer",
+      "title": "New Techniques & Methodologies"
+    },
+    {
+      "id": "646fb69a-aa0a-428c-8700-cb7c9f1d15b1",
+      "name": "Ruley the standards sultan",
+      "title": "Ruley The Standards Sultan"
+    },
+    {
+      "id": "3ce2a45d-707a-44f9-adb9-8e1ca4913153",
+      "name": "Codey the compliance king",
+      "title": "Codey The Compliance King"
+    },
+    {
+      "id": "eabef21d-b5a0-4b19-8c2a-5f13a27af92f",
+      "name": "Agent reconciliation specialist",
+      "title": "Agent Reconciliation Specialist"
+    },
+    {
+      "id": "1a13b045-0ad6-48ba-a984-42c5b6ff48ef",
+      "name": "Director finance",
+      "title": null
+    },
+    {
+      "id": "81b4b787-233a-4e25-9800-4ed050ccc200",
+      "name": "Nexus the visionary ceo",
+      "title": "Nexus The Visionary Ceo"
+    },
+    {
+      "id": "bfe52edf-7504-4b8c-81b9-b3bb93eb2a89",
+      "name": "Maya",
+      "title": "Content Strategist"
+    },
+    {
+      "id": "3cadd297-04ed-4299-825c-6e50a4d7a048",
+      "name": "Research assistant",
+      "title": "Research Assistant"
+    },
+    {
+      "id": "bea12d7c-a3f4-4896-af8f-706a181b152d",
+      "name": "Yara",
+      "title": null
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440032",
+      "name": "Riley",
+      "title": "Ai Content Generation Specialist"
+    },
+    {
+      "id": "63d990ca-f867-46bf-94be-7901d82baf0a",
+      "name": "Frankie",
+      "title": null
+    },
+    {
+      "id": "84c7cd47-b339-47e8-8004-2dbd4a17e7c7",
+      "name": "Terra the topo titan",
+      "title": "Terra The Topo Titan"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000052",
+      "name": "Document control domain specialist",
+      "title": "Document Control Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000050",
+      "name": "Directors domain specialist",
+      "title": "Directors Domain Specialist"
+    },
+    {
+      "id": "06996a56-153e-4a2f-a8b1-d1e8158eb00c",
+      "name": "Dakota",
+      "title": "Onboarding Coordinator"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000024",
+      "name": "Local content domain specialist",
+      "title": "Local Content Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000049",
+      "name": "Construction director domain specialist",
+      "title": "Construction Director Domain Specialist"
+    },
+    {
+      "id": "23456789-2345-2345-2345-234567890bcd",
+      "name": "Dispatcher specialist",
+      "title": "Logistics And Supply Chain Specialist"
+    },
+    {
+      "id": "5171c41d-e021-4565-a7cd-e572ddbb9d72",
+      "name": "Geotechnical",
+      "title": "Geotechnical Engineering Specialist"
+    },
+    {
+      "id": "58f7eea2-58b6-4612-b156-ab358fc96631",
+      "name": "River",
+      "title": "Audio Engineer"
+    },
+    {
+      "id": "93c36251-6237-487c-9a29-3394567033eb",
+      "name": "River",
+      "title": null
+    },
+    {
+      "id": "15c12398-4b1c-4999-a9e1-d900926e3e0e",
+      "name": "Probe",
+      "title": "Prompt Testing & Validation"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440020",
+      "name": "Jude",
+      "title": "Content Strategist"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "name": "Jordan",
+      "title": "Content Strategy Director"
+    },
+    {
+      "id": "e46a7138-9c9a-49da-a237-083a486524ff",
+      "name": "Luna spark",
+      "title": "Tenant Manager"
+    },
+    {
+      "id": "56789012-5678-5678-5678-567890123ef0",
+      "name": "Construction engineering",
+      "title": "Construction Engineering Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440024",
+      "name": "Uma",
+      "title": "Visual Content Creator"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440035",
+      "name": "Riley",
+      "title": "Chief Mobile Orchestrator"
+    },
+    {
+      "id": "1721e318-8480-4800-a543-f8f0f9d9f862",
+      "name": "Rex quantum",
+      "title": "Data Guardian"
+    },
+    {
+      "id": "b825b443-8b44-45f2-8260-1d27bf01234d",
+      "name": "Statemaster",
+      "title": "State Management & Context Preservation"
+    },
+    {
+      "id": "1a9f4f0e-c071-4429-b5fb-de9d5e61a8e5",
+      "name": "Task allocator",
+      "title": "Task Distribution Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440033",
+      "name": "Taylor",
+      "title": "Content Quality Assurance Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440030",
+      "name": "Avery",
+      "title": "Content Scheduling Coordinator"
+    },
+    {
+      "id": "97878995-3c95-4dc9-b6e6-29659b6a11c6",
+      "name": "Strategic advisor",
+      "title": "Strategic Advisor"
+    },
+    {
+      "id": "5c77f423-77d1-497f-aa3a-63a5b0af78c2",
+      "name": "Ledger luck",
+      "title": "Transaction Processor"
+    },
+    {
+      "id": "0a25f01b-f596-4890-815d-88e5520b4d79",
+      "name": "Vision",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "961b5f9f-1684-47a5-8284-f0e2d813bef2",
+      "name": "Kai nexus",
+      "title": "Support Integrator"
+    },
+    {
+      "id": "5dcd471c-e13e-48b3-acc5-e65d2af1f41e",
+      "name": "Oakley",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "cf4c175b-b349-44b7-8b45-663839bbfa42",
+      "name": "Parker",
+      "title": null
+    },
+    {
+      "id": "8c3f8a2f-52c3-48fe-93d7-2c550f97198c",
+      "name": "Hayden",
+      "title": null
+    },
+    {
+      "id": "1717ba0e-dd90-4c7a-9057-07b384f17ccf",
+      "name": "Reese",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000048",
+      "name": "Commercial domain specialist",
+      "title": "Commercial Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000001f",
+      "name": "Information technology domain specialist",
+      "title": "Information Technology Domain Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440043",
+      "name": "Kendall",
+      "title": "Mobile Ux Researcher"
+    },
+    {
+      "id": "2df81c8b-66dc-4060-9061-8aa97cc6a687",
+      "name": "Stream",
+      "title": "Data Streaming"
+    },
+    {
+      "id": "f19ccd4e-c3ab-4a79-ac7a-dcf8fed17440",
+      "name": "Vision loopy ceo",
+      "title": "Vision Strategist"
+    },
+    {
+      "id": "89012345-8901-8901-8901-890123456123",
+      "name": "Inspector specialist",
+      "title": "Quality Control Specialist"
+    },
+    {
+      "id": "2dca9954-6c2f-42c8-b345-a244f8cb2210",
+      "name": "Knowledge curator",
+      "title": "Knowledge Curator"
+    },
+    {
+      "id": "4a5e4262-c525-4561-8299-97987c1afa99",
+      "name": "Context coordinator",
+      "title": "Context Coordinator"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440023",
+      "name": "Ivy",
+      "title": "Narrative Design Specialist"
+    },
+    {
+      "id": "b558acfb-6a8b-4b65-8e6b-0d0d6ac7ad7f",
+      "name": "Jett harmony",
+      "title": "Customer Success Manager"
+    },
+    {
+      "id": "b3452944-b93e-4b52-8f95-4bd5a103e9f8",
+      "name": "Quantifier",
+      "title": "Performance Benchmarking & Kpis"
+    },
+    {
+      "id": "f6f6f6f6-6666-6666-6666-666666666666",
+      "name": "Mobile testing",
+      "title": "Mobile Testing Specialist"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440039",
+      "name": "Olivia",
+      "title": "Android Development Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000054",
+      "name": "Engineering director domain specialist",
+      "title": "Engineering Director Domain Specialist"
+    },
+    {
+      "id": "dc70fa92-7e13-46dc-9986-89173cb044e0",
+      "name": "Ellis",
+      "title": null
+    },
+    {
+      "id": "72d07f6d-aa3a-431a-a01e-42872374754e",
+      "name": "Logan",
+      "title": null
+    },
+    {
+      "id": "0184ce00-064b-4db0-87a9-c361e1c515de",
+      "name": "Nolan",
+      "title": null
+    },
+    {
+      "id": "c8e36f1f-1fc6-4a18-9796-6fb0ff5444be",
+      "name": "Wiley",
+      "title": "Projectwise Integration Specialist"
+    },
+    {
+      "id": "da54016b-efa3-4c2e-9794-e1f30e2f08b8",
+      "name": "Taylor",
+      "title": null
+    },
+    {
+      "id": "cb1de1e6-75f9-4f9f-8d6e-2185654cad2f",
+      "name": "Dashiell",
+      "title": null
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000055",
+      "name": "Environmental domain specialist",
+      "title": "Environmental Domain Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000002d",
+      "name": "Procurement director domain specialist",
+      "title": "Procurement Director Domain Specialist"
+    },
+    {
+      "id": "582731a5-a627-4d22-a155-40c0c725facb",
+      "name": "Loopy ceo (maya)",
+      "title": "Content Strategist"
+    },
+    {
+      "id": "e8a3d749-52ab-4e1d-bfc3-c36f3213a5ec",
+      "name": "Micah",
+      "title": null
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440034",
+      "name": "Jordan",
+      "title": "Content Analytics Engineer"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440036",
+      "name": "Hunter",
+      "title": "Mobile Architecture Director"
+    },
+    {
+      "id": "e1e87c55-dfa5-4f36-be33-464878cd889c",
+      "name": "Beckett",
+      "title": null
+    },
+    {
+      "id": "f7717f4e-78dd-4acc-9af4-a6a68d35f7a6",
+      "name": "Zara vortex",
+      "title": "Onboarding Specialist"
+    },
+    {
+      "id": "a179e58b-8458-460a-9cf6-8a2705a024b8",
+      "name": "Raven shadow",
+      "title": "Security Specialist"
+    },
+    {
+      "id": "822d4611-1f07-4dce-9a86-aea5c746e7e5",
+      "name": "Conversationalist",
+      "title": "Chatbot Integration Testing Specialist"
+    },
+    {
+      "id": "685f6f74-8526-4a54-a534-09dd2a68241b",
+      "name": "Oakley",
+      "title": null
+    },
+    {
+      "id": "f5f04024-5f4f-43c0-8129-09d6b5de9abb",
+      "name": "Personal assistant",
+      "title": "Personal Assistant"
+    },
+    {
+      "id": "22be5cf1-4940-4326-8216-6a9eb24ca504",
+      "name": "Language specialist",
+      "title": "Language Specialist"
+    },
+    {
+      "id": "7e22d6cc-d7d7-4be8-a811-d8e03b2a9587",
+      "name": "Aria forge",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "288fe0a1-a47e-4852-be6b-95918c653484",
+      "name": "Voice maesto",
+      "title": "Chief Executive Officer"
+    },
+    {
+      "id": "6a69f90e-310f-4ac6-8c9f-1a1bde4b80d2",
+      "name": "Finn turbo",
+      "title": "Resource Optimizer"
+    },
+    {
+      "id": "dfb96c46-f7aa-4895-89c5-5dd39e84d415",
+      "name": "Systems integrator",
+      "title": "Systems Integrator"
+    },
+    {
+      "id": "67b4c84c-c192-48bf-8369-c876b0306867",
+      "name": "Pixel",
+      "title": "Bim 360 Integration Specialist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000047",
+      "name": "Chemical engineering domain specialist",
+      "title": "Chemical Engineering Domain Specialist"
+    },
+    {
+      "id": "f2327b49-9417-4a98-bf44-4b4a09fb5bec",
+      "name": "Personality designer",
+      "title": "Personality Designer"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-000000000018",
+      "name": "Finance director domain specialist",
+      "title": "Finance Director Domain Specialist"
+    },
+    {
+      "id": "2f801fad-18e1-4cb9-bdcc-2b28d8728ab6",
+      "name": "Dash rocket",
+      "title": "Devops Engineer"
+    },
+    {
+      "id": "c5e43c66-71d7-4de8-839f-4f5651dd656d",
+      "name": "Jude",
+      "title": null
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440041",
+      "name": "Jordan",
+      "title": "Mobile Qa Engineer"
+    },
+    {
+      "id": "b03a9911-2a30-4c48-b501-35a42eb7e933",
+      "name": "Strategos",
+      "title": "Strategic Planning Director"
+    },
+    {
+      "id": "e1cb5941-d5bf-402e-840b-80b5636b382b",
+      "name": "Intent analyst",
+      "title": "Intent Analyst"
+    },
+    {
+      "id": "67b23a8c-10ab-4605-91de-e8502df8b39e",
+      "name": "Ledger asset",
+      "title": "Financial Oversight"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440027",
+      "name": "Kira",
+      "title": "Brand Strategy Specialist"
+    },
+    {
+      "id": "a1a1a1a1-1111-1111-1111-111111111111",
+      "name": "Procurement strategy",
+      "title": "Procurement Strategy Specialist"
+    },
+    {
+      "id": "a24c63f5-a48e-457b-8615-808bc061ec83",
+      "name": "Reagan",
+      "title": "Executive Assistant"
+    },
+    {
+      "id": "5a237698-687b-49df-8f12-10d34daa572b",
+      "name": "Felix",
+      "title": null
+    },
+    {
+      "id": "7d4999b5-cf87-4b36-8ae5-58004e72ba51",
+      "name": "Scholar",
+      "title": "Academic Research & Best Practices"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440021",
+      "name": "Hugo",
+      "title": "Creative Operations Director"
+    },
+    {
+      "id": "c9c9c9c9-9999-9999-9999-999999999999",
+      "name": "Financial compliance",
+      "title": "Procurement Financial Compliance Specialist"
+    },
+    {
+      "id": "356e23c9-f9d2-4b22-9287-65c508a75d2c",
+      "name": "Stan",
+      "title": "Staad Integration Specialist"
+    },
+    {
+      "id": "d4d4d4d4-4444-4444-4444-444444444444",
+      "name": "Procurement analytics",
+      "title": "Procurement Analytics Specialist"
+    },
+    {
+      "id": "11fd6a80-ec43-4f51-aa7b-1c63cc8cbeee",
+      "name": "Troubleshooter",
+      "title": "Bug Fixing And Optimization"
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440028",
+      "name": "Jasper",
+      "title": "Audience Insights Analyst"
+    },
+    {
+      "id": "fa5b9bc7-98fc-45a9-9ca9-4946e7b4f7b8",
+      "name": "Cameron",
+      "title": null
+    },
+    {
+      "id": "4603958d-b276-48d7-8243-a5d66ea0eeae",
+      "name": "Merchant",
+      "title": null
+    },
+    {
+      "id": "c00f441b-ba99-47af-8f5e-9f2b488bd987",
+      "name": "Victor",
+      "title": null
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440014",
+      "name": "Charlie",
+      "title": "Social Media Strategist"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-00000000003d",
+      "name": "Sundry domain specialist",
+      "title": "Sundry Domain Specialist"
+    },
+    {
+      "id": "11ba0254-1c67-4526-8130-c3dbcf81aba0",
+      "name": "Voice synthesizer",
+      "title": "Voice Synthesizer"
+    },
+    {
+      "id": "cb745504-c60b-4c61-a5ed-cc1eaf5acd3f",
+      "name": "Willa",
+      "title": null
+    },
+    {
+      "id": "12345678-1234-1234-1234-123456789abc",
+      "name": "Hayden",
+      "title": "Procurement And Contracts Specialist"
+    },
+    {
+      "id": "b61f4e41-9bdd-4421-a357-68ada9d4ae4d",
+      "name": "Tyler",
+      "title": null
+    },
+    {
+      "id": "2facef3d-868d-40c3-8dfe-cbafbca3edca",
+      "name": "Workflow optimizer",
+      "title": "Workflow Optimizer"
+    },
+    {
+      "id": "2b515df2-7391-47a3-a163-eab6689f36e0",
+      "name": "Data manager",
+      "title": "Data Manager"
+    },
+    {
+      "id": "db9526ce-48da-4651-b533-baecc4305a3b",
+      "name": "Emerson",
+      "title": null
+    },
+    {
+      "id": "16671886-9523-4894-aefa-965336de0a15",
+      "name": "Performance analyst",
+      "title": "Performance Analyst"
+    },
+    {
+      "id": "336a4d2c-6dd6-4dd3-bd97-198bf3a3fa73",
+      "name": "Astro",
+      "title": "Asta Powerproject Integration Specialist"
+    },
+    {
+      "id": "34ccc8a2-c65d-4b23-9ef4-98f07ac260df",
+      "name": "Authenticator",
+      "title": "Authentication & Hitl Workflow Testing Specialist"
+    },
+    {
+      "id": "7467abe1-a13e-4467-be01-7372c36bdb2a",
+      "name": "Evaluator",
+      "title": "Procurement Testing Specialist"
+    },
+    {
+      "id": "b4ad3bff-6a40-4e49-92c5-7ed9d515be5d",
+      "name": "Tanner",
+      "title": null
+    },
+    {
+      "id": "dbe3b1a3-d82a-4f63-a401-c8f530f2d0aa",
+      "name": "Eli",
+      "title": "Etabs Integration Specialist"
+    },
+    {
+      "id": "91223cfa-cf03-4f71-a5b0-c6afa1b02ac5",
+      "name": "Orion",
+      "title": "Chief Domain Orchestrator"
+    },
+    {
+      "id": "33c442ed-4ef7-4551-b961-285c83132589",
+      "name": "Automata",
+      "title": "Automation Systems"
+    },
+    {
+      "id": "12e657cf-678b-486f-a2aa-a71910103253",
+      "name": "Reviewer",
+      "title": "Code Review & Quality Assurance"
+    },
+    {
+      "id": "b2ba6fbe-0c37-4fb6-924a-529b60ea8f56",
+      "name": "Coordinator guardian",
+      "title": null
+    },
+    {
+      "id": "628acd31-39f3-4894-af59-8e379aa24161",
+      "name": "Integration",
+      "title": "Integration Testing Specialist"
+    },
+    {
+      "id": "8e829517-c212-4641-86a5-724b101c61e1",
+      "name": "Dataforge",
+      "title": "Data Transformation"
+    },
+    {
+      "id": "e78fb1fd-7af4-4ea1-bde6-be9da9197388",
+      "name": "Judge",
+      "title": "Assessment Criteria Manager"
+    },
+    {
+      "id": "8289c79b-b792-437d-a620-2c43a41a0ee1",
+      "name": "Conversation manager",
+      "title": "Conversation Manager"
+    },
+    {
+      "id": "3de9d650-a847-4797-bc76-11445fe26e61",
+      "name": "Schema",
+      "title": "Data Schema Management"
+    },
+    {
+      "id": "0f27daad-245e-4120-b056-88b2e2a67a67",
+      "name": "Hunter",
+      "title": null
+    },
+    {
+      "id": "7a9669d3-9c5f-4b0c-8d6c-aa2a8868e5a7",
+      "name": "Mentor",
+      "title": "Team Development"
+    },
+    {
+      "id": "9a4ff199-94c7-4942-8843-9b51224fd854",
+      "name": "Maintainer",
+      "title": "Code Maintainer"
+    },
+    {
+      "id": "559629ce-3afb-4e4e-8c05-672b17b608c2",
+      "name": "Simulator",
+      "title": "Workflow Simulation & Dry Runs"
+    },
+    {
+      "id": "3cb3c244-08dd-487a-a83f-503d3eea2615",
+      "name": "Integration",
+      "title": "Cross Agent Compatibility Testing"
+    },
+    {
+      "id": "5d80bc48-6475-4b62-8577-08b375436e95",
+      "name": "Clarity",
+      "title": "Prompt Optimization & Performance Analytics"
+    }
+  ],
+  "agents_without_api_keys": [
+    {
+      "id": "d8475f0a-ec21-4779-b988-36d49b22fdd6",
+      "name": "Maya"
+    },
+    {
+      "id": "815fdc22-97fe-4bf7-bd0d-06f070f84ae8",
+      "name": "Atlas Sync"
+    },
+    {
+      "id": "90ec6c91-6faf-47c4-bdd8-03228a5a1eaa",
+      "name": "Andy"
+    },
+    {
+      "id": "2d5df17e-668e-428b-b5c2-3002f693f260",
+      "name": "Dancer"
+    },
+    {
+      "id": "d189caba-dba1-41d1-935e-d2a51aebfd61",
+      "name": "Charlie"
+    },
+    {
+      "id": "dca18039-e007-453f-aedf-2111147925a6",
+      "name": "CRUD Commander\n"
+    },
+    {
+      "id": "0817a0f6-7758-4d9b-b40f-1d7ff2c2c5eb",
+      "name": "sqlite-atlas-agent-creator"
+    },
+    {
+      "id": "ebdbe26f-7a25-4b7b-bb0b-53f3ff89f50a",
+      "name": "sqlite-druid"
+    },
+    {
+      "id": "93dac56f-82a3-4531-ad8f-ab7e4ff18353",
+      "name": "Deployer"
+    },
+    {
+      "id": "75036acb-6067-4d8e-a585-d3bd9a7d52b0",
+      "name": "Assessment Manager"
+    },
+    {
+      "id": "aa64ee19-0af0-48a7-a9a3-495eda4dc835",
+      "name": "Compliance Validator"
+    },
+    {
+      "id": "87e87922-9b62-4b38-9593-1cff6133522f",
+      "name": "DBAT Testing"
+    },
+    {
+      "id": "d33a5050-2762-403b-bf68-28281a5fe771",
+      "name": "Probe"
+    },
+    {
+      "id": "987e56b9-5760-4cca-9052-a2c3f655ca60",
+      "name": "Simulator"
+    },
+    {
+      "id": "e954beec-906a-426d-92a7-5858b8d86edf",
+      "name": "Sentinel"
+    },
+    {
+      "id": "accd2b6e-fa74-4068-b42d-8569736e0f36",
+      "name": "Loadtester"
+    },
+    {
+      "id": "933f3d5e-5992-454e-848b-2c8cb39b1134",
+      "name": "Decision Advisor"
+    },
+    {
+      "id": "86fd7fad-beeb-4560-83ae-41bf5968f9d5",
+      "name": "Architect"
+    },
+    {
+      "id": "5fbf088d-698a-4980-81ef-5c7cb37b8286",
+      "name": "Maven"
+    },
+    {
+      "id": "7d4754d1-7c37-4582-aefe-978d09471033",
+      "name": "Documentation Processor"
+    },
+    {
+      "id": "23b3ef31-2896-43b3-922a-cfe9ae3b60aa",
+      "name": "Ally"
+    },
+    {
+      "id": "fa7f2ae8-0576-46c5-9c6b-2314a31f86be",
+      "name": "Document Generation Specialist"
+    },
+    {
+      "id": "1e85fd31-fef0-4454-997e-e4636b5a86b1",
+      "name": "Financial Validator"
+    },
+    {
+      "id": "84954dcd-207f-4bbd-9d9b-e743320397e2",
+      "name": "Multi-Discipline Coordinator"
+    },
+    {
+      "id": "f4d4862f-c5b0-4e71-9933-295bcb7fce08",
+      "name": "Transaction Processor"
+    },
+    {
+      "id": "92746d00-aaaa-4abd-9b86-ecf289956e78",
+      "name": "Sage"
+    },
+    {
+      "id": "891d3171-bee6-48ad-b2e8-b5950223a87b",
+      "name": "Workflow Complexity Analyzer"
+    },
+    {
+      "id": "244a5fc2-ac00-4346-95de-c26c1e1d58cc",
+      "name": "Workflow Learning Coordinator"
+    },
+    {
+      "id": "08aa763c-8d6f-4ca6-bef5-3b8d4f63809e",
+      "name": "Uma"
+    },
+    {
+      "id": "d61348bd-e155-441e-b326-8e643d53ea4d",
+      "name": "Audit"
+    },
+    {
+      "id": "2e2b4bf2-8cb3-40d9-a618-b9a3233d9b93",
+      "name": "Data Synchronization Manager"
+    },
+    {
+      "id": "4fb09148-b2a9-40fd-b1f2-f237494edf71",
+      "name": "Bridge"
+    },
+    {
+      "id": "60f2161d-0fd5-412d-a531-9ae551a985c3",
+      "name": "Scribe"
+    },
+    {
+      "id": "7713c85e-870d-431e-b3aa-c4fe331d1c16",
+      "name": "Classy"
+    },
+    {
+      "id": "b7d72eb6-dbe6-4346-8321-3d6142e2a87c",
+      "name": "Security and Compliance Monitor"
+    },
+    {
+      "id": "a51d78f8-34ee-4bcd-89dd-9cef6268dfba",
+      "name": "Echo"
+    },
+    {
+      "id": "a63b683f-2d29-46e5-aa48-d968a0bec1f9",
+      "name": "Chatter"
+    },
+    {
+      "id": "5ac36dda-f594-41a2-b0fa-3c02356929cb",
+      "name": "Finn"
+    },
+    {
+      "id": "f52a8cee-c9b3-4fe9-80cf-a62c8780cc14",
+      "name": "Specialist"
+    },
+    {
+      "id": "ea86dbbe-ea1d-4a45-8517-d508492f40e1",
+      "name": "Specialist"
+    },
+    {
+      "id": "2e725d90-0d99-47be-9d3c-5ce3d20a09da",
+      "name": "Specialist"
+    },
+    {
+      "id": "eafe7299-ab0a-4cb8-b220-0065115213d8",
+      "name": "Documentarian"
+    },
+    {
+      "id": "caeb7c93-9fb0-47a0-aa22-2034ca629530",
+      "name": "Architect"
+    },
+    {
+      "id": "a87cb8f4-f4ed-4893-8c85-27295f4c7dd7",
+      "name": "Generator"
+    },
+    {
+      "id": "a78d9ed8-7ee5-4df0-9f35-da5fc6a0c137",
+      "name": "Extractor"
+    },
+    {
+      "id": "b4d03825-c984-48cc-b916-96d828783e5c",
+      "name": "Specialist"
+    },
+    {
+      "id": "933c5223-0540-48ea-8476-5632b9916939",
+      "name": "Quantum"
+    },
+    {
+      "id": "f2736032-c67b-4aeb-9f37-a1a39626b865",
+      "name": "Folder creator"
+    },
+    {
+      "id": "bdd2bee8-bbb8-4f76-8b75-bdf65cab3bc8",
+      "name": "Bridge builder extraordinaire"
+    },
+    {
+      "id": "3228fe69-428b-43e4-81a4-0672066e5f5d",
+      "name": "Weaver"
+    },
+    {
+      "id": "3dd8926d-ee84-4b09-b218-e90cae9795c4",
+      "name": "Tinkerer"
+    },
+    {
+      "id": "bbe3cb5f-e53a-4730-9539-f01497546897",
+      "name": "Enchantress"
+    },
+    {
+      "id": "57ac67bf-1e2b-46b1-91cb-8f1c6dd58799",
+      "name": "Illusionist"
+    },
+    {
+      "id": "509e8975-c1cd-462a-a157-ea19bcf620cc",
+      "name": "Administrator"
+    },
+    {
+      "id": "7953a89f-089c-4f2a-a32f-030e26f54a92",
+      "name": "Butler"
+    },
+    {
+      "id": "09e6c3f4-37b5-4a0e-b534-c8ad7532b702",
+      "name": "Keeper"
+    },
+    {
+      "id": "c2604601-c383-493d-9a72-4992bbc2a5a0",
+      "name": "Champion"
+    },
+    {
+      "id": "dd805bef-50e5-431e-9f49-9e8fe01059f4",
+      "name": "Architect"
+    },
+    {
+      "id": "9d01001f-6e73-46b7-907d-43b463e747b1",
+      "name": "Integrator"
+    },
+    {
+      "id": "a3c222b3-ce84-4572-8d02-0247fdbf219c",
+      "name": "Druid"
+    },
+    {
+      "id": "5c7d9376-a8af-4de7-9fe4-bd9e66e35656",
+      "name": "Manager"
+    },
+    {
+      "id": "25afe9a5-e231-46db-aee6-e3cee078aaca",
+      "name": "Master"
+    },
+    {
+      "id": "7e112179-1220-4440-bcb0-bb487201d2c2",
+      "name": "Navigator"
+    },
+    {
+      "id": "1f82ac56-815b-4687-9655-9122c9e40725",
+      "name": "Monitor"
+    },
+    {
+      "id": "ee59972a-5877-4a02-9802-135487de2e0c",
+      "name": "Profiler"
+    },
+    {
+      "id": "00f682cd-136e-4cf3-8473-129e715f9994",
+      "name": "Modeler"
+    },
+    {
+      "id": "b730cd92-f2ff-4d1a-903e-151367beeb86",
+      "name": "Tracker"
+    },
+    {
+      "id": "e955d018-d895-4d4c-86b7-85b309135a3c",
+      "name": "Coordinator"
+    },
+    {
+      "id": "ff1c9528-d385-4f73-914f-42d39f29232e",
+      "name": "Designer"
+    },
+    {
+      "id": "ba7f956a-a28b-4ca4-ac58-9fd444562432",
+      "name": "Sage"
+    },
+    {
+      "id": "cb15d2f9-2631-476c-a753-e591e28e3454",
+      "name": "Curator"
+    },
+    {
+      "id": "b6970fb6-e98e-4d27-b165-7789ac495551",
+      "name": "Integrator"
+    },
+    {
+      "id": "d651e87a-f02c-4165-b0d3-4f51144bd7dc",
+      "name": "Harmony"
+    },
+    {
+      "id": "43d265ee-1f8f-4e16-adfd-b842c33c05b4",
+      "name": "Analyst"
+    },
+    {
+      "id": "2d6831bf-753f-4b3b-82bf-8a64c8a9900b",
+      "name": "Maestro"
+    },
+    {
+      "id": "9792c792-e257-470e-98de-b47697766204",
+      "name": "Chainlink charmer"
+    },
+    {
+      "id": "976cd168-221b-462b-bb67-a61dbdc10087",
+      "name": "Zara"
+    },
+    {
+      "id": "6b844a0d-8d0c-45b2-b339-192d15c3f458",
+      "name": "Nexus"
+    },
+    {
+      "id": "c5822e75-d890-4b99-9b0f-e1cc2b14fc3e",
+      "name": "Performance Optimization Specialist"
+    },
+    {
+      "id": "9744a993-e294-4de9-9cdb-966975ac9e90",
+      "name": "API Integration Specialist"
+    },
+    {
+      "id": "9153e058-eb64-40fe-8f64-200e0bfc0260",
+      "name": "Hal"
+    },
+    {
+      "id": "4dc46ce4-10cf-4db9-92be-eff60ca52783",
+      "name": "Engine"
+    },
+    {
+      "id": "df06c135-f644-4b92-ab0f-aac5bbd511a7",
+      "name": "Zara"
+    },
+    {
+      "id": "5c77f423-77d1-497f-aa3a-63a5b0af78c2",
+      "name": "Ledger luck"
+    },
+    {
+      "id": "e78fb1fd-7af4-4ea1-bde6-be9da9197388",
+      "name": "Judge"
+    }
+  ],
+  "agents_without_models": [
+    {
+      "id": "d8475f0a-ec21-4779-b988-36d49b22fdd6",
+      "name": "Maya"
+    },
+    {
+      "id": "815fdc22-97fe-4bf7-bd0d-06f070f84ae8",
+      "name": "Atlas Sync"
+    },
+    {
+      "id": "90ec6c91-6faf-47c4-bdd8-03228a5a1eaa",
+      "name": "Andy"
+    },
+    {
+      "id": "2d5df17e-668e-428b-b5c2-3002f693f260",
+      "name": "Dancer"
+    },
+    {
+      "id": "d189caba-dba1-41d1-935e-d2a51aebfd61",
+      "name": "Charlie"
+    },
+    {
+      "id": "7d2184df-ca56-4990-9674-fb0f710b5acd",
+      "name": "Atlas Sync"
+    },
+    {
+      "id": "dca18039-e007-453f-aedf-2111147925a6",
+      "name": "CRUD Commander\n"
+    },
+    {
+      "id": "83bfb91a-e4b6-484f-84e9-b026f1d45c4b",
+      "name": "paperclipforge-ai-model-assignment-specialist"
+    },
+    {
+      "id": "0b090177-121b-4bcc-8615-93d43386c157",
+      "name": "Database Operations Specialist"
+    },
+    {
+      "id": "0817a0f6-7758-4d9b-b40f-1d7ff2c2c5eb",
+      "name": "sqlite-atlas-agent-creator"
+    },
+    {
+      "id": "c453d28a-65cf-4700-b5ea-d8a450036a97",
+      "name": "Luna"
+    },
+    {
+      "id": "ebdbe26f-7a25-4b7b-bb0b-53f3ff89f50a",
+      "name": "sqlite-druid"
+    },
+    {
+      "id": "93dac56f-82a3-4531-ad8f-ab7e4ff18353",
+      "name": "Deployer"
+    },
+    {
+      "id": "75036acb-6067-4d8e-a585-d3bd9a7d52b0",
+      "name": "Assessment Manager"
+    },
+    {
+      "id": "aa64ee19-0af0-48a7-a9a3-495eda4dc835",
+      "name": "Compliance Validator"
+    },
+    {
+      "id": "87e87922-9b62-4b38-9593-1cff6133522f",
+      "name": "DBAT Testing"
+    },
+    {
+      "id": "d33a5050-2762-403b-bf68-28281a5fe771",
+      "name": "Probe"
+    },
+    {
+      "id": "987e56b9-5760-4cca-9052-a2c3f655ca60",
+      "name": "Simulator"
+    },
+    {
+      "id": "e954beec-906a-426d-92a7-5858b8d86edf",
+      "name": "Sentinel"
+    },
+    {
+      "id": "accd2b6e-fa74-4068-b42d-8569736e0f36",
+      "name": "Loadtester"
+    },
+    {
+      "id": "a06af450-4471-40d0-9dfb-b2387fbeb617",
+      "name": "Documenter"
+    },
+    {
+      "id": "933f3d5e-5992-454e-848b-2c8cb39b1134",
+      "name": "Decision Advisor"
+    },
+    {
+      "id": "86fd7fad-beeb-4560-83ae-41bf5968f9d5",
+      "name": "Architect"
+    },
+    {
+      "id": "5fbf088d-698a-4980-81ef-5c7cb37b8286",
+      "name": "Maven"
+    },
+    {
+      "id": "7d4754d1-7c37-4582-aefe-978d09471033",
+      "name": "Documentation Processor"
+    },
+    {
+      "id": "23b3ef31-2896-43b3-922a-cfe9ae3b60aa",
+      "name": "Ally"
+    },
+    {
+      "id": "fa7f2ae8-0576-46c5-9c6b-2314a31f86be",
+      "name": "Document Generation Specialist"
+    },
+    {
+      "id": "1e85fd31-fef0-4454-997e-e4636b5a86b1",
+      "name": "Financial Validator"
+    },
+    {
+      "id": "84954dcd-207f-4bbd-9d9b-e743320397e2",
+      "name": "Multi-Discipline Coordinator"
+    },
+    {
+      "id": "f4d4862f-c5b0-4e71-9933-295bcb7fce08",
+      "name": "Transaction Processor"
+    },
+    {
+      "id": "92746d00-aaaa-4abd-9b86-ecf289956e78",
+      "name": "Sage"
+    },
+    {
+      "id": "891d3171-bee6-48ad-b2e8-b5950223a87b",
+      "name": "Workflow Complexity Analyzer"
+    },
+    {
+      "id": "244a5fc2-ac00-4346-95de-c26c1e1d58cc",
+      "name": "Workflow Learning Coordinator"
+    },
+    {
+      "id": "cf0998bc-9b97-4339-9ab6-3af46dcaa5c0",
+      "name": "Blake"
+    },
+    {
+      "id": "c9a67392-4f0c-4327-9568-261f68919411",
+      "name": "paperclipforge-ai-model-assignment-specialist"
+    },
+    {
+      "id": "898a0395-e894-498b-a39c-2df635700e17",
+      "name": "Ace"
+    },
+    {
+      "id": "ff622726-b5fd-4594-b61f-efa73182c5c0",
+      "name": "paperclipforge-ai-model-assignment-specialist"
+    },
+    {
+      "id": "08aa763c-8d6f-4ca6-bef5-3b8d4f63809e",
+      "name": "Uma"
+    },
+    {
+      "id": "2c99778d-f983-4f59-b05c-3158a25a2cb8",
+      "name": "Zara"
+    },
+    {
+      "id": "d61348bd-e155-441e-b326-8e643d53ea4d",
+      "name": "Audit"
+    },
+    {
+      "id": "2e2b4bf2-8cb3-40d9-a618-b9a3233d9b93",
+      "name": "Data Synchronization Manager"
+    },
+    {
+      "id": "4fb09148-b2a9-40fd-b1f2-f237494edf71",
+      "name": "Bridge"
+    },
+    {
+      "id": "60f2161d-0fd5-412d-a531-9ae551a985c3",
+      "name": "Scribe"
+    },
+    {
+      "id": "7713c85e-870d-431e-b3aa-c4fe331d1c16",
+      "name": "Classy"
+    },
+    {
+      "id": "e7b943ea-c145-455f-b7a9-c97c327533d4",
+      "name": "Hazel"
+    },
+    {
+      "id": "1eef1e81-b846-4473-9ad3-9badcc71388c",
+      "name": "Ada"
+    },
+    {
+      "id": "6346b48c-29b6-416d-b2d3-e42cde7e6c47",
+      "name": "Storm"
+    },
+    {
+      "id": "62bbb46e-cdf5-4771-b85f-ffb1288d1e0b",
+      "name": "Drew"
+    },
+    {
+      "id": "ffd8ddb0-b80f-402c-8a63-5232c81146a5",
+      "name": "Max"
+    },
+    {
+      "id": "1d0da579-935e-49b4-a8d8-a4e1524ee8ad",
+      "name": "Cash"
+    },
+    {
+      "id": "b7d72eb6-dbe6-4346-8321-3d6142e2a87c",
+      "name": "Security and Compliance Monitor"
+    },
+    {
+      "id": "3b2b4db0-ddc4-4970-92f4-2772e43a76ce",
+      "name": "Corey"
+    },
+    {
+      "id": "ac830381-fd8a-402e-aff1-05bbe550ebd3",
+      "name": "Decider"
+    },
+    {
+      "id": "a51d78f8-34ee-4bcd-89dd-9cef6268dfba",
+      "name": "Echo"
+    },
+    {
+      "id": "ef7565d1-f4dc-4958-9911-f9f700e338c2",
+      "name": "Terra"
+    },
+    {
+      "id": "a63b683f-2d29-46e5-aa48-d968a0bec1f9",
+      "name": "Chatter"
+    },
+    {
+      "id": "5ac36dda-f594-41a2-b0fa-3c02356929cb",
+      "name": "Finn"
+    },
+    {
+      "id": "f52a8cee-c9b3-4fe9-80cf-a62c8780cc14",
+      "name": "Specialist"
+    },
+    {
+      "id": "ea86dbbe-ea1d-4a45-8517-d508492f40e1",
+      "name": "Specialist"
+    },
+    {
+      "id": "7e285d59-ea6c-4e57-a2b1-e9fbbe336400",
+      "name": "Phoenix"
+    },
+    {
+      "id": "2e725d90-0d99-47be-9d3c-5ce3d20a09da",
+      "name": "Specialist"
+    },
+    {
+      "id": "46cd170f-5a63-4d83-8b0d-8aa9f1556ad2",
+      "name": "Specialist"
+    },
+    {
+      "id": "333baf29-aa32-4239-8f5c-4a6a31125076",
+      "name": "Nova"
+    },
+    {
+      "id": "0e71ba9f-fe02-4d76-b223-02964e069f29",
+      "name": "Manager"
+    },
+    {
+      "id": "bdf9fd04-73c4-4ac8-9f49-f3b4cb22ee4d",
+      "name": "Specialist"
+    },
+    {
+      "id": "eafe7299-ab0a-4cb8-b220-0065115213d8",
+      "name": "Documentarian"
+    },
+    {
+      "id": "caeb7c93-9fb0-47a0-aa22-2034ca629530",
+      "name": "Architect"
+    },
+    {
+      "id": "a87cb8f4-f4ed-4893-8c85-27295f4c7dd7",
+      "name": "Generator"
+    },
+    {
+      "id": "a5f7c967-8761-43b3-9d82-2a7372488c30",
+      "name": "Creator"
+    },
+    {
+      "id": "a78d9ed8-7ee5-4df0-9f35-da5fc6a0c137",
+      "name": "Extractor"
+    },
+    {
+      "id": "b4d03825-c984-48cc-b916-96d828783e5c",
+      "name": "Specialist"
+    },
+    {
+      "id": "eb4612c9-8a80-4147-80e7-c9eac9db9c9c",
+      "name": "Specialist"
+    },
+    {
+      "id": "933c5223-0540-48ea-8476-5632b9916939",
+      "name": "Quantum"
+    },
+    {
+      "id": "f2736032-c67b-4aeb-9f37-a1a39626b865",
+      "name": "Folder creator"
+    },
+    {
+      "id": "bdd2bee8-bbb8-4f76-8b75-bdf65cab3bc8",
+      "name": "Bridge builder extraordinaire"
+    },
+    {
+      "id": "2c9845d0-d777-4baf-b9b4-7161cb93964b",
+      "name": "Pipes the plumbing pro"
+    },
+    {
+      "id": "312abbcb-f99d-42f4-9a07-00a285c3ea61",
+      "name": "Github operations specialist"
+    },
+    {
+      "id": "35196fb6-8d58-41f6-bdb5-98cdb91276f9",
+      "name": "Workflow orchestrator"
+    },
+    {
+      "id": "4c61fbb6-1ad1-4396-8625-be8cc6bda38f",
+      "name": "Coordination hub"
+    },
+    {
+      "id": "eb92c0ad-0b32-47a7-8d43-672d5e77635d",
+      "name": "Orchestration engine"
+    },
+    {
+      "id": "bf651478-ade4-47c4-803c-5257b97d85e1",
+      "name": "Ginny"
+    },
+    {
+      "id": "3228fe69-428b-43e4-81a4-0672066e5f5d",
+      "name": "Weaver"
+    },
+    {
+      "id": "3dd8926d-ee84-4b09-b218-e90cae9795c4",
+      "name": "Tinkerer"
+    },
+    {
+      "id": "bbe3cb5f-e53a-4730-9539-f01497546897",
+      "name": "Enchantress"
+    },
+    {
+      "id": "57ac67bf-1e2b-46b1-91cb-8f1c6dd58799",
+      "name": "Illusionist"
+    },
+    {
+      "id": "509e8975-c1cd-462a-a157-ea19bcf620cc",
+      "name": "Administrator"
+    },
+    {
+      "id": "7953a89f-089c-4f2a-a32f-030e26f54a92",
+      "name": "Butler"
+    },
+    {
+      "id": "09e6c3f4-37b5-4a0e-b534-c8ad7532b702",
+      "name": "Keeper"
+    },
+    {
+      "id": "c2604601-c383-493d-9a72-4992bbc2a5a0",
+      "name": "Champion"
+    },
+    {
+      "id": "dd805bef-50e5-431e-9f49-9e8fe01059f4",
+      "name": "Architect"
+    },
+    {
+      "id": "9d01001f-6e73-46b7-907d-43b463e747b1",
+      "name": "Integrator"
+    },
+    {
+      "id": "a3c222b3-ce84-4572-8d02-0247fdbf219c",
+      "name": "Druid"
+    },
+    {
+      "id": "5c7d9376-a8af-4de7-9fe4-bd9e66e35656",
+      "name": "Manager"
+    },
+    {
+      "id": "25afe9a5-e231-46db-aee6-e3cee078aaca",
+      "name": "Master"
+    },
+    {
+      "id": "7e112179-1220-4440-bcb0-bb487201d2c2",
+      "name": "Navigator"
+    },
+    {
+      "id": "1f82ac56-815b-4687-9655-9122c9e40725",
+      "name": "Monitor"
+    },
+    {
+      "id": "ee59972a-5877-4a02-9802-135487de2e0c",
+      "name": "Profiler"
+    },
+    {
+      "id": "00f682cd-136e-4cf3-8473-129e715f9994",
+      "name": "Modeler"
+    },
+    {
+      "id": "b730cd92-f2ff-4d1a-903e-151367beeb86",
+      "name": "Tracker"
+    },
+    {
+      "id": "e955d018-d895-4d4c-86b7-85b309135a3c",
+      "name": "Coordinator"
+    },
+    {
+      "id": "027fae5d-070a-4118-9f10-da5b3a9db40e",
+      "name": "Maestro"
+    },
+    {
+      "id": "b80886cb-ee26-4a2b-b9b3-db6bca500573",
+      "name": "Analyst"
+    },
+    {
+      "id": "6fe1b14d-eea6-4d27-b39f-538954aff199",
+      "name": "Render rosy"
+    },
+    {
+      "id": "0458a8aa-751f-4b59-87d5-91450a530cee",
+      "name": "Luna the coordination queen"
+    },
+    {
+      "id": "ff1c9528-d385-4f73-914f-42d39f29232e",
+      "name": "Designer"
+    },
+    {
+      "id": "ba7f956a-a28b-4ca4-ac58-9fd444562432",
+      "name": "Sage"
+    },
+    {
+      "id": "cb15d2f9-2631-476c-a753-e591e28e3454",
+      "name": "Curator"
+    },
+    {
+      "id": "b6970fb6-e98e-4d27-b165-7789ac495551",
+      "name": "Integrator"
+    },
+    {
+      "id": "d651e87a-f02c-4165-b0d3-4f51144bd7dc",
+      "name": "Harmony"
+    },
+    {
+      "id": "5ed80204-004f-4f91-90a3-c7c549bcdfbb",
+      "name": "Archie the building buddy"
+    },
+    {
+      "id": "4ee396f3-855f-42ad-9eca-8314c7f8563f",
+      "name": "Diggs the dirt dynamo"
+    },
+    {
+      "id": "01860905-de00-4f60-a523-659a5393c6e0",
+      "name": "Issue importer"
+    },
+    {
+      "id": "66a58395-a29e-4854-8822-cd93b4636733",
+      "name": "Agent monitor"
+    },
+    {
+      "id": "4c054b60-50dd-4cb1-aad7-ea5676a75d64",
+      "name": "Lighty the signal sorcerer"
+    },
+    {
+      "id": "c5322b7f-43d4-4987-9640-721f03d68db1",
+      "name": "Flash the traffic flashmaster"
+    },
+    {
+      "id": "d3441725-636d-4f74-9b1a-e724e8803a2e",
+      "name": "Caddy the cad commander"
+    },
+    {
+      "id": "d57ad724-02fd-4053-a8d8-e194644bf25f",
+      "name": "Zap the qa wizard"
+    },
+    {
+      "id": "43d265ee-1f8f-4e16-adfd-b842c33c05b4",
+      "name": "Analyst"
+    },
+    {
+      "id": "2d6831bf-753f-4b3b-82bf-8a64c8a9900b",
+      "name": "Maestro"
+    },
+    {
+      "id": "9792c792-e257-470e-98de-b47697766204",
+      "name": "Chainlink charmer"
+    },
+    {
+      "id": "a27bb84a-dd38-4972-ab68-b9b96bb0f0d1",
+      "name": "Checky the validation chief"
+    },
+    {
+      "id": "dcc0fcc3-14f9-4132-81cd-c30a1bb39c10",
+      "name": "System integrator"
+    },
+    {
+      "id": "26823be6-5a2c-4638-96b8-def1e14466b6",
+      "name": "Vizzy the visual virtuoso"
+    },
+    {
+      "id": "acc04caf-490d-4e65-80fd-c7c2c2d17192",
+      "name": "Max the measurement maestro"
+    },
+    {
+      "id": "976cd168-221b-462b-bb67-a61dbdc10087",
+      "name": "Zara"
+    },
+    {
+      "id": "03463497-2fb0-4c8d-a11c-a3f52c610f41",
+      "name": "Biddo the tender titan"
+    },
+    {
+      "id": "6b844a0d-8d0c-45b2-b339-192d15c3f458",
+      "name": "Nexus"
+    },
+    {
+      "id": "c5822e75-d890-4b99-9b0f-e1cc2b14fc3e",
+      "name": "Performance Optimization Specialist"
+    },
+    {
+      "id": "d319e98e-ce30-450a-8901-cd34b468a03a",
+      "name": "Manager"
+    },
+    {
+      "id": "9744a993-e294-4de9-9cdb-966975ac9e90",
+      "name": "API Integration Specialist"
+    },
+    {
+      "id": "1195e054-8d5d-490d-af07-56c9f318ca8b",
+      "name": "Trix"
+    },
+    {
+      "id": "c585d7bd-6c50-46ac-90c9-bb030d4749f4",
+      "name": "Sasha"
+    },
+    {
+      "id": "8dbfa150-c138-475b-863b-ff89d651dee6",
+      "name": "Coordination"
+    },
+    {
+      "id": "9153e058-eb64-40fe-8f64-200e0bfc0260",
+      "name": "Hal"
+    },
+    {
+      "id": "ec0ba9ed-e71c-481f-a556-de052823b56b",
+      "name": "Render ryan"
+    },
+    {
+      "id": "4dc46ce4-10cf-4db9-92be-eff60ca52783",
+      "name": "Engine"
+    },
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "name": "Ziggy"
+    },
+    {
+      "id": "df06c135-f644-4b92-ab0f-aac5bbd511a7",
+      "name": "Zara"
+    },
+    {
+      "id": "d436cb88-7994-4214-b2ee-5b7a5e15435a",
+      "name": "Kai"
+    },
+    {
+      "id": "76e5c870-94a2-4191-8845-94e266405b8c",
+      "name": "Coco"
+    },
+    {
+      "id": "e750062b-700c-4b30-958b-14ee1cb9a234",
+      "name": "Rex"
+    },
+    {
+      "id": "3eb0d122-bb9c-405b-aee5-5ed81021372f",
+      "name": "Cash the calculator king"
+    },
+    {
+      "id": "8ef81524-7876-45de-95f9-ec82dfc132d2",
+      "name": "Sparky the safety sentinel"
+    },
+    {
+      "id": "ac30185c-be45-4b43-b027-80347ea1c184",
+      "name": "Volty the voltage virtuoso"
+    },
+    {
+      "id": "1c3c3f0a-d3fb-4e80-b64e-8be1d3b9a831",
+      "name": "Quinn the quantity queen"
+    },
+    {
+      "id": "171bfca4-3416-4915-a477-d74176a97c99",
+      "name": "Steel the structure sultan"
+    },
+    {
+      "id": "2370065e-cbd4-4d18-a2bd-68b79dc8048e",
+      "name": "Orderly the order oracle"
+    },
+    {
+      "id": "646fb69a-aa0a-428c-8700-cb7c9f1d15b1",
+      "name": "Ruley the standards sultan"
+    },
+    {
+      "id": "3ce2a45d-707a-44f9-adb9-8e1ca4913153",
+      "name": "Codey the compliance king"
+    },
+    {
+      "id": "eabef21d-b5a0-4b19-8c2a-5f13a27af92f",
+      "name": "Agent reconciliation specialist"
+    },
+    {
+      "id": "81b4b787-233a-4e25-9800-4ed050ccc200",
+      "name": "Nexus the visionary ceo"
+    },
+    {
+      "id": "84c7cd47-b339-47e8-8004-2dbd4a17e7c7",
+      "name": "Terra the topo titan"
+    },
+    {
+      "id": "1a9f4f0e-c071-4429-b5fb-de9d5e61a8e5",
+      "name": "Task allocator"
+    },
+    {
+      "id": "5c77f423-77d1-497f-aa3a-63a5b0af78c2",
+      "name": "Ledger luck"
+    },
+    {
+      "id": "c8e36f1f-1fc6-4a18-9796-6fb0ff5444be",
+      "name": "Wiley"
+    },
+    {
+      "id": "67b4c84c-c192-48bf-8369-c876b0306867",
+      "name": "Pixel"
+    },
+    {
+      "id": "356e23c9-f9d2-4b22-9287-65c508a75d2c",
+      "name": "Stan"
+    },
+    {
+      "id": "336a4d2c-6dd6-4dd3-bd97-198bf3a3fa73",
+      "name": "Astro"
+    },
+    {
+      "id": "dbe3b1a3-d82a-4f63-a401-c8f530f2d0aa",
+      "name": "Eli"
+    },
+    {
+      "id": "e78fb1fd-7af4-4ea1-bde6-be9da9197388",
+      "name": "Judge"
+    }
+  ],
+  "broken_hierarchies": [],
+  "invalid_names": [
+    [
+      "paperclipforge-ai-model-assignment-specialist",
+      "Name >= 23 chars (45)"
+    ],
+    [
+      "Database Operations Specialist",
+      "Name >= 23 chars (30)"
+    ],
+    [
+      "sqlite-atlas-agent-creator",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Documentation Processor",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Document Generation Specialist",
+      "Name >= 23 chars (30)"
+    ],
+    [
+      "Multi-Discipline Coordinator",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Workflow Complexity Analyzer",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Workflow Learning Coordinator",
+      "Name >= 23 chars (29)"
+    ],
+    [
+      "paperclipforge-ai-model-assignment-specialist",
+      "Name >= 23 chars (45)"
+    ],
+    [
+      "paperclipforge-ai-model-assignment-specialist",
+      "Name >= 23 chars (45)"
+    ],
+    [
+      "Data Synchronization Manager",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Security and Compliance Monitor",
+      "Name >= 23 chars (31)"
+    ],
+    [
+      "Mobile workflow designer",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Bridge builder extraordinaire",
+      "Name >= 23 chars (29)"
+    ],
+    [
+      "Github operations specialist",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Landscaping domain specialist",
+      "Name >= 23 chars (29)"
+    ],
+    [
+      "Other parties domain specialist",
+      "Name >= 23 chars (31)"
+    ],
+    [
+      "Logistics director domain specialist",
+      "Name >= 23 chars (36)"
+    ],
+    [
+      "Director project domain specialist",
+      "Name >= 23 chars (34)"
+    ],
+    [
+      "Luna the coordination queen",
+      "Name >= 23 chars (27)"
+    ],
+    [
+      "Archie the building buddy",
+      "Name >= 23 chars (25)"
+    ],
+    [
+      "Lighty the signal sorcerer",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Flash the traffic flashmaster",
+      "Name >= 23 chars (29)"
+    ],
+    [
+      "Caddy the cad commander",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Checky the validation chief",
+      "Name >= 23 chars (27)"
+    ],
+    [
+      "Vizzy the visual virtuoso",
+      "Name >= 23 chars (25)"
+    ],
+    [
+      "Security domain specialist",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Sales director domain specialist",
+      "Name >= 23 chars (32)"
+    ],
+    [
+      "Max the measurement maestro",
+      "Name >= 23 chars (27)"
+    ],
+    [
+      "Public relations domain specialist",
+      "Name >= 23 chars (34)"
+    ],
+    [
+      "Quantity surveying domain specialist",
+      "Name >= 23 chars (36)"
+    ],
+    [
+      "Performance Optimization Specialist",
+      "Name >= 23 chars (35)"
+    ],
+    [
+      "API Integration Specialist",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Discipline automation agent",
+      "Name >= 23 chars (27)"
+    ],
+    [
+      "Presentation specialist",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Inspection domain specialist",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Contract administration",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Scheduling domain specialist",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Cash the calculator king",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Project controls domain specialist",
+      "Name >= 23 chars (34)"
+    ],
+    [
+      "Process engineering domain specialist",
+      "Name >= 23 chars (37)"
+    ],
+    [
+      "Sales domain specialist",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Health domain specialist",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Ethics domain specialist",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Contracts director domain specialist",
+      "Name >= 23 chars (36)"
+    ],
+    [
+      "Design domain specialist",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Hse director domain specialist",
+      "Name >= 23 chars (30)"
+    ],
+    [
+      "Sparky the safety sentinel",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Volty the voltage virtuoso",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Quinn the quantity queen",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Steel the structure sultan",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Orderly the order oracle",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Ruley the standards sultan",
+      "Name >= 23 chars (26)"
+    ],
+    [
+      "Codey the compliance king",
+      "Name >= 23 chars (25)"
+    ],
+    [
+      "Agent reconciliation specialist",
+      "Name >= 23 chars (31)"
+    ],
+    [
+      "Nexus the visionary ceo",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Learning strategy agent",
+      "Name >= 23 chars (23)"
+    ],
+    [
+      "Document control domain specialist",
+      "Name >= 23 chars (34)"
+    ],
+    [
+      "Directors domain specialist",
+      "Name >= 23 chars (27)"
+    ],
+    [
+      "Local content domain specialist",
+      "Name >= 23 chars (31)"
+    ],
+    [
+      "Construction director domain specialist",
+      "Name >= 23 chars (39)"
+    ],
+    [
+      "Construction engineering",
+      "Name >= 23 chars (24)"
+    ],
+    [
+      "Commercial domain specialist",
+      "Name >= 23 chars (28)"
+    ],
+    [
+      "Information technology domain specialist",
+      "Name >= 23 chars (40)"
+    ],
+    [
+      "Engineering director domain specialist",
+      "Name >= 23 chars (38)"
+    ],
+    [
+      "Environmental domain specialist",
+      "Name >= 23 chars (31)"
+    ],
+    [
+      "Procurement director domain specialist",
+      "Name >= 23 chars (38)"
+    ],
+    [
+      "Chemical engineering domain specialist",
+      "Name >= 23 chars (38)"
+    ],
+    [
+      "Finance director domain specialist",
+      "Name >= 23 chars (34)"
+    ],
+    [
+      "Sundry domain specialist",
+      "Name >= 23 chars (24)"
+    ]
+  ],
+  "naming_convention_issues": [],
+  "sql_count": 748
+}

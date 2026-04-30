@@ -1,0 +1,43 @@
+{
+  "title": "Dashboard",
+  "welcome": {
+    "greeting": "Welcome to ConstructAI Mobile",
+    "subtitle": "Your comprehensive construction management solution"
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "safetyReport": "Safety Report",
+    "equipmentCheck": "Equipment Check",
+    "stockCount": "Stock Count",
+    "logisticsUpdate": "Logistics Update",
+    "procurementOrder": "New Procurement Order",
+    "documentScan": "Scan Document"
+  },
+  "metrics": {
+    "title": "Key Metrics",
+    "activeProjects": "Active Projects",
+    "pendingTasks": "Pending Tasks",
+    "safetyIncidents": "Safety Incidents (30 days)",
+    "equipmentUtilization": "Equipment Utilization",
+    "stockAlerts": "Stock Alerts",
+    "logisticsDelays": "Logistics Delays"
+  },
+  "recentActivity": {
+    "title": "Recent Activity",
+    "noActivity": "No recent activity",
+    "viewAll": "View All Activity"
+  },
+  "alerts": {
+    "title": "Alerts & Notifications",
+    "noAlerts": "No active alerts",
+    "critical": "Critical",
+    "warning": "Warning",
+    "info": "Information"
+  },
+  "offline": {
+    "status": "Offline Mode",
+    "message": "Working offline - some features may be limited",
+    "sync": "Sync when online",
+    "lastSync": "Last sync: {{time}}"
+  }
+}

@@ -1,0 +1,691 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-04-21",
+    "description": "Cross-discipline measurement templates for engineering measurements"
+  },
+  "disciplines": {
+    "00850": {
+      "name": "Civil Engineering",
+      "code": "00850",
+      "templates": {
+        "earthworks": {
+          "name": "Earthworks Measurement Template",
+          "description": "Cut and fill calculations for civil engineering earthworks",
+          "category": "earthworks",
+          "parameters": [
+            {
+              "name": "site_area",
+              "label": "Site Area (m²)",
+              "type": "number",
+              "unit": "m²",
+              "required": true,
+              "validation": { "min": 0 }
+            },
+            {
+              "name": "existing_levels",
+              "label": "Existing Ground Levels",
+              "type": "array",
+              "unit": "m",
+              "required": true,
+              "description": "Array of elevation points"
+            },
+            {
+              "name": "proposed_levels",
+              "label": "Proposed Ground Levels",
+              "type": "array",
+              "unit": "m",
+              "required": true,
+              "description": "Array of proposed elevation points"
+            },
+            {
+              "name": "soil_type",
+              "label": "Soil Classification",
+              "type": "select",
+              "options": ["GW", "GP", "GM", "GC", "SW", "SP", "SM", "SC", "ML", "CL", "OL", "MH", "CH", "OH", "PT"],
+              "required": true
+            },
+            {
+              "name": "compaction_factor",
+              "label": "Compaction Factor",
+              "type": "number",
+              "unit": "decimal",
+              "default": 1.25,
+              "validation": { "min": 1.0, "max": 2.0 }
+            }
+          ],
+          "calculations": [
+            {
+              "name": "cut_volume",
+              "label": "Cut Volume",
+              "formula": "calculateCutVolume(existing_levels, proposed_levels, site_area)",
+              "unit": "m³"
+            },
+            {
+              "name": "fill_volume",
+              "label": "Fill Volume",
+              "formula": "calculateFillVolume(existing_levels, proposed_levels, site_area)",
+              "unit": "m³"
+            },
+            {
+              "name": "net_volume",
+              "label": "Net Volume (Cut - Fill)",
+              "formula": "cut_volume - fill_volume",
+              "unit": "m³"
+            },
+            {
+              "name": "haul_distance",
+              "label": "Average Haul Distance",
+              "formula": "calculateAverageHaulDistance(site_area)",
+              "unit": "km"
+            },
+            {
+              "name": "cost_estimation",
+              "label": "Estimated Cost",
+              "formula": "calculateEarthworksCost(cut_volume, fill_volume, haul_distance, soil_type)",
+              "unit": "ZAR"
+            }
+          ],
+          "standards": ["SANS-1200", "CIDB-BPG-CIVIL"],
+          "validation_rules": [
+            {
+              "rule": "volume_accuracy_±5%",
+              "description": "Volume calculations must be within ±5% accuracy",
+              "severity": "error"
+            },
+            {
+              "rule": "level_accuracy_±10mm",
+              "description": "Level measurements must be within ±10mm accuracy",
+              "severity": "warning"
+            },
+            {
+              "rule": "compaction_factors_applied",
+              "description": "Compaction factors must be applied to all volumes",
+              "severity": "error"
+            }
+          ],
+          "measurement_types": ["cut", "fill", "bulk", "haul"],
+          "default_tools": ["distance", "area", "volume"]
+        },
+        "concrete": {
+          "name": "Concrete Measurement Template",
+          "description": "Concrete volume and reinforcement calculations",
+          "category": "concrete",
+          "parameters": [
+            {
+              "name": "element_type",
+              "label": "Concrete Element Type",
+              "type": "select",
+              "options": ["foundation", "slab", "beam", "column", "wall", "stairs"],
+              "required": true
+            },
+            {
+              "name": "dimensions",
+              "label": "Element Dimensions",
+              "type": "object",
+              "properties": {
+                "length": { "type": "number", "unit": "m" },
+                "width": { "type": "number", "unit": "m" },
+                "height": { "type": "number", "unit": "m" },
+                "thickness": { "type": "number", "unit": "m" }
+              },
+              "required": true
+            },
+            {
+              "name": "concrete_grade",
+              "label": "Concrete Grade",
+              "type": "select",
+              "options": ["C10", "C15", "C20", "C25", "C30", "C35", "C40"],
+              "default": "C25",
+              "required": true
+            },
+            {
+              "name": "reinforcement_type",
+              "label": "Reinforcement Type",
+              "type": "select",
+              "options": ["B500B", "B500C", "B420B", "B420C"],
+              "default": "B500B",
+              "required": true
+            },
+            {
+              "name": "cover_requirements",
+              "label": "Cover Requirements (mm)",
+              "type": "object",
+              "properties": {
+                "bottom": { "type": "number", "default": 75 },
+                "top": { "type": "number", "default": 30 },
+                "sides": { "type": "number", "default": 40 }
+              },
+              "required": true
+            }
+          ],
+          "calculations": [
+            {
+              "name": "concrete_volume",
+              "label": "Concrete Volume",
+              "formula": "calculateConcreteVolume(dimensions, element_type)",
+              "unit": "m³"
+            },
+            {
+              "name": "reinforcement_weight",
+              "label": "Reinforcement Weight",
+              "formula": "calculateReinforcementWeight(dimensions, reinforcement_type, cover_requirements)",
+              "unit": "kg"
+            },
+            {
+              "name": "formwork_area",
+              "label": "Formwork Area",
+              "formula": "calculateFormworkArea(dimensions, element_type)",
+              "unit": "m²"
+            },
+            {
+              "name": "concrete_cost",
+              "label": "Concrete Cost",
+              "formula": "concrete_volume * getConcreteRate(concrete_grade)",
+              "unit": "ZAR"
+            },
+            {
+              "name": "reinforcement_cost",
+              "label": "Reinforcement Cost",
+              "formula": "reinforcement_weight * getReinforcementRate(reinforcement_type)",
+              "unit": "ZAR"
+            }
+          ],
+          "standards": ["SANS-10100", "CIDB-BPG-CONCRETE"],
+          "validation_rules": [
+            {
+              "rule": "volume_accuracy_±2%",
+              "description": "Volume calculations must be within ±2% accuracy",
+              "severity": "error"
+            },
+            {
+              "rule": "reinforcement_accuracy_±5%",
+              "description": "Reinforcement calculations must be within ±5% accuracy",
+              "severity": "error"
+            },
+            {
+              "rule": "cover_compliance_100%",
+              "description": "Cover requirements must be 100% compliant",
+              "severity": "critical"
+            }
+          ],
+          "measurement_types": ["volume", "weight", "area"],
+          "default_tools": ["distance", "area", "volume"]
+        }
+      }
+    },
+    "00860": {
+      "name": "Electrical Engineering",
+      "code": "00860",
+      "templates": {
+        "cable_scheduling": {
+          "name": "Cable Scheduling Template",
+          "description": "Electrical cable length calculations and scheduling",
+          "category": "cabling",
+          "parameters": [
+            {
+              "name": "cable_type",
+              "label": "Cable Type",
+              "type": "select",
+              "options": ["PVC", "XLPE", "SWA", "MICC", "FP200", "FP400"],
+              "required": true
+            },
+            {
+              "name": "cable_size",
+              "label": "Cable Size (mm²)",
+              "type": "select",
+              "options": ["1.5", "2.5", "4", "6", "10", "16", "25", "35", "50", "70", "95", "120", "150", "185", "240", "300"],
+              "required": true
+            },
+            {
+              "name": "voltage_rating",
+              "label": "Voltage Rating (V)",
+              "type": "select",
+              "options": ["230", "400", "1000", "11000", "33000"],
+              "required": true
+            },
+            {
+              "name": "route_points",
+              "label": "Cable Route Points",
+              "type": "array",
+              "description": "Array of 3D coordinates defining cable route",
+              "required": true
+            },
+            {
+              "name": "installation_method",
+              "label": "Installation Method",
+              "type": "select",
+              "options": ["surface", "conduit", "trunking", "buried", "cable_tray"],
+              "required": true
+            }
+          ],
+          "calculations": [
+            {
+              "name": "cable_length",
+              "label": "Cable Length",
+              "formula": "calculateCableLength(route_points)",
+              "unit": "m"
+            },
+            {
+              "name": "cable_weight",
+              "label": "Cable Weight per Meter",
+              "formula": "getCableWeight(cable_type, cable_size)",
+              "unit": "kg/m"
+            },
+            {
+              "name": "total_weight",
+              "label": "Total Cable Weight",
+              "formula": "cable_length * cable_weight",
+              "unit": "kg"
+            },
+            {
+              "name": "voltage_drop",
+              "label": "Voltage Drop",
+              "formula": "calculateVoltageDrop(cable_length, cable_size, voltage_rating, current)",
+              "unit": "V"
+            },
+            {
+              "name": "material_cost",
+              "label": "Material Cost",
+              "formula": "cable_length * getCableRate(cable_type, cable_size)",
+              "unit": "ZAR"
+            }
+          ],
+          "standards": ["SANS-10142", "IEC-60364"],
+          "validation_rules": [
+            {
+              "rule": "voltage_drop_compliance",
+              "description": "Voltage drop must not exceed 5% of nominal voltage",
+              "severity": "error"
+            },
+            {
+              "rule": "cable_size_minimum",
+              "description": "Cable size must meet minimum requirements for current carrying capacity",
+              "severity": "critical"
+            },
+            {
+              "rule": "installation_method_compatibility",
+              "description": "Installation method must be compatible with cable type",
+              "severity": "warning"
+            }
+          ],
+          "measurement_types": ["length", "weight", "voltage"],
+          "default_tools": ["distance", "path"]
+        },
+        "equipment_measurement": {
+          "name": "Electrical Equipment Measurement Template",
+          "description": "Electrical equipment and installation measurements",
+          "category": "equipment",
+          "parameters": [
+            {
+              "name": "equipment_type",
+              "label": "Equipment Type",
+              "type": "select",
+              "options": ["distribution_board", "switchgear", "transformer", "generator", "ups", "lighting_fixture"],
+              "required": true
+            },
+            {
+              "name": "rating",
+              "label": "Equipment Rating",
+              "type": "object",
+              "properties": {
+                "voltage": { "type": "number", "unit": "V" },
+                "current": { "type": "number", "unit": "A" },
+                "power": { "type": "number", "unit": "kVA" }
+              },
+              "required": true
+            },
+            {
+              "name": "dimensions",
+              "label": "Equipment Dimensions",
+              "type": "object",
+              "properties": {
+                "length": { "type": "number", "unit": "mm" },
+                "width": { "type": "number", "unit": "mm" },
+                "height": { "type": "number", "unit": "mm" },
+                "weight": { "type": "number", "unit": "kg" }
+              },
+              "required": true
+            },
+            {
+              "name": "installation_requirements",
+              "label": "Installation Requirements",
+              "type": "object",
+              "properties": {
+                "clearance_front": { "type": "number", "unit": "mm", "default": 1000 },
+                "clearance_rear": { "type": "number", "unit": "mm", "default": 300 },
+                "clearance_sides": { "type": "number", "unit": "mm", "default": 200 },
+                "ventilation": { "type": "boolean", "default": true }
+              },
+              "required": true
+            }
+          ],
+          "calculations": [
+            {
+              "name": "installation_area",
+              "label": "Installation Area Required",
+              "formula": "calculateInstallationArea(dimensions, installation_requirements)",
+              "unit": "m²"
+            },
+            {
+              "name": "cable_entry_points",
+              "label": "Cable Entry Points",
+              "formula": "calculateCableEntryPoints(equipment_type, rating)",
+              "unit": "count"
+            },
+            {
+              "name": "cooling_requirements",
+              "label": "Cooling Requirements",
+              "formula": "calculateCoolingRequirements(equipment_type, rating)",
+              "unit": "kW"
+            },
+            {
+              "name": "equipment_cost",
+              "label": "Equipment Cost",
+              "formula": "getEquipmentRate(equipment_type, rating)",
+              "unit": "ZAR"
+            }
+          ],
+          "standards": ["SANS-10142", "IEC-61439"],
+          "validation_rules": [
+            {
+              "rule": "clearance_compliance",
+              "description": "Installation clearances must meet safety requirements",
+              "severity": "critical"
+            },
+            {
+              "rule": "rating_compatibility",
+              "description": "Equipment rating must be compatible with system requirements",
+              "severity": "error"
+            },
+            {
+              "rule": "ventilation_requirements",
+              "description": "Ventilation requirements must be met",
+              "severity": "warning"
+            }
+          ],
+          "measurement_types": ["area", "count", "power"],
+          "default_tools": ["distance", "area", "count"]
+        }
+      }
+    },
+    "00870": {
+      "name": "Mechanical Engineering",
+      "code": "00870",
+      "templates": {
+        "hvac_ductwork": {
+          "name": "HVAC Ductwork Measurement Template",
+          "description": "HVAC ductwork length and area calculations",
+          "category": "hvac",
+          "parameters": [
+            {
+              "name": "duct_type",
+              "label": "Duct Type",
+              "type": "select",
+              "options": ["rectangular", "round", "flat_oval", "spiral"],
+              "required": true
+            },
+            {
+              "name": "duct_dimensions",
+              "label": "Duct Dimensions",
+              "type": "object",
+              "properties": {
+                "width": { "type": "number", "unit": "mm" },
+                "height": { "type": "number", "unit": "mm" },
+                "diameter": { "type": "number", "unit": "mm" }
+              },
+              "required": true
+            },
+            {
+              "name": "duct_material",
+              "label": "Duct Material",
+              "type": "select",
+              "options": ["galvanized_steel", "stainless_steel", "aluminum", "flexible"],
+              "required": true
+            },
+            {
+              "name": "duct_route",
+              "label": "Duct Route Points",
+              "type": "array",
+              "description": "Array of 3D coordinates defining duct route",
+              "required": true
+            },
+            {
+              "name": "fittings",
+              "label": "Duct Fittings",
+              "type": "array",
+              "description": "Array of fitting types and quantities",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": { "type": "string", "enum": ["elbow", "tee", "reducer", "damper", "grille"] },
+                  "quantity": { "type": "number" }
+                }
+              }
+            }
+          ],
+          "calculations": [
+            {
+              "name": "duct_length",
+              "label": "Total Duct Length",
+              "formula": "calculateDuctLength(duct_route)",
+              "unit": "m"
+            },
+            {
+              "name": "duct_surface_area",
+              "label": "Duct Surface Area",
+              "formula": "calculateDuctSurfaceArea(duct_dimensions, duct_length, duct_type)",
+              "unit": "m²"
+            },
+            {
+              "name": "duct_weight",
+              "label": "Duct Weight",
+              "formula": "calculateDuctWeight(duct_dimensions, duct_length, duct_material, duct_type)",
+              "unit": "kg"
+            },
+            {
+              "name": "fitting_count",
+              "label": "Total Fittings",
+              "formula": "sumFittingQuantities(fittings)",
+              "unit": "count"
+            },
+            {
+              "name": "material_cost",
+              "label": "Material Cost",
+              "formula": "calculateDuctCost(duct_dimensions, duct_length, duct_material, duct_type, fittings)",
+              "unit": "ZAR"
+            }
+          ],
+          "standards": ["SANS-204", "ASHRAE-90.1"],
+          "validation_rules": [
+            {
+              "rule": "duct_size_minimum",
+              "description": "Duct dimensions must meet minimum size requirements",
+              "severity": "error"
+            },
+            {
+              "rule": "airflow_velocity",
+              "description": "Duct sizing must accommodate design airflow velocity",
+              "severity": "warning"
+            },
+            {
+              "rule": "material_compatibility",
+              "description": "Duct material must be compatible with application",
+              "severity": "error"
+            }
+          ],
+          "measurement_types": ["length", "area", "weight"],
+          "default_tools": ["distance", "area", "path"]
+        }
+      }
+    },
+    "00872": {
+      "name": "Structural Engineering",
+      "code": "00872",
+      "templates": {
+        "reinforcement_measurement": {
+          "name": "Reinforcement Measurement Template",
+          "description": "Structural reinforcement calculations",
+          "category": "reinforcement",
+          "parameters": [
+            {
+              "name": "element_type",
+              "label": "Structural Element",
+              "type": "select",
+              "options": ["beam", "column", "slab", "wall", "foundation"],
+              "required": true
+            },
+            {
+              "name": "concrete_dimensions",
+              "label": "Concrete Element Dimensions",
+              "type": "object",
+              "properties": {
+                "length": { "type": "number", "unit": "mm" },
+                "width": { "type": "number", "unit": "mm" },
+                "depth": { "type": "number", "unit": "mm" }
+              },
+              "required": true
+            },
+            {
+              "name": "reinforcement_bars",
+              "label": "Reinforcement Bars",
+              "type": "array",
+              "description": "Array of reinforcement bar specifications",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "diameter": { "type": "number", "unit": "mm" },
+                  "grade": { "type": "string", "enum": ["B420B", "B500B", "B420C", "B500C"] },
+                  "length": { "type": "number", "unit": "mm" },
+                  "quantity": { "type": "number" }
+                }
+              },
+              "required": true
+            },
+            {
+              "name": "lap_lengths",
+              "label": "Lap Lengths",
+              "type": "object",
+              "properties": {
+                "compression": { "type": "number", "unit": "mm", "default": 300 },
+                "tension": { "type": "number", "unit": "mm", "default": 400 }
+              }
+            }
+          ],
+          "calculations": [
+            {
+              "name": "total_reinforcement_weight",
+              "label": "Total Reinforcement Weight",
+              "formula": "calculateReinforcementWeight(reinforcement_bars)",
+              "unit": "kg"
+            },
+            {
+              "name": "reinforcement_percentage",
+              "label": "Reinforcement Percentage",
+              "formula": "calculateReinforcementPercentage(reinforcement_bars, concrete_dimensions)",
+              "unit": "%"
+            },
+            {
+              "name": "lap_splices_count",
+              "label": "Lap Splices Required",
+              "formula": "calculateLapSplices(reinforcement_bars, lap_lengths)",
+              "unit": "count"
+            },
+            {
+              "name": "material_cost",
+              "label": "Reinforcement Cost",
+              "formula": "calculateReinforcementCost(reinforcement_bars)",
+              "unit": "ZAR"
+            }
+          ],
+          "standards": ["SANS-10100", "BS-8110"],
+          "validation_rules": [
+            {
+              "rule": "reinforcement_minimum",
+              "description": "Minimum reinforcement requirements must be met",
+              "severity": "critical"
+            },
+            {
+              "rule": "reinforcement_maximum",
+              "description": "Maximum reinforcement limits must not be exceeded",
+              "severity": "error"
+            },
+            {
+              "rule": "lap_length_compliance",
+              "description": "Lap lengths must meet structural requirements",
+              "severity": "error"
+            }
+          ],
+          "measurement_types": ["weight", "percentage", "count"],
+          "default_tools": ["distance", "count", "weight"]
+        }
+      }
+    }
+  },
+  "global_standards": {
+    "SANS-1200": {
+      "name": "SANS 1200 - Earthworks",
+      "jurisdictions": ["ZA"],
+      "categories": ["civil_engineering", "earthworks"],
+      "last_updated": "2026-04-21"
+    },
+    "SANS-10142": {
+      "name": "SANS 10142 - Electrical Installations",
+      "jurisdictions": ["ZA"],
+      "categories": ["electrical_engineering", "safety"],
+      "last_updated": "2026-04-21"
+    },
+    "IEC-60364": {
+      "name": "IEC 60364 - Electrical Installations",
+      "jurisdictions": ["ZA", "EU", "GB"],
+      "categories": ["electrical_engineering", "safety"],
+      "last_updated": "2026-04-21"
+    },
+    "SANS-10100": {
+      "name": "SANS 10100 - Structural Design",
+      "jurisdictions": ["ZA"],
+      "categories": ["structural_engineering", "concrete"],
+      "last_updated": "2026-04-21"
+    }
+  },
+  "validation_rules": {
+    "tolerance_checking": {
+      "description": "Standard tolerance validation for measurements",
+      "rules": {
+        "linear_dimensions": {
+          "tolerance": "±5mm",
+          "severity": "warning"
+        },
+        "area_calculations": {
+          "tolerance": "±2%",
+          "severity": "error"
+        },
+        "volume_calculations": {
+          "tolerance": "±3%",
+          "severity": "error"
+        },
+        "weight_calculations": {
+          "tolerance": "±5%",
+          "severity": "warning"
+        }
+      }
+    },
+    "standards_compliance": {
+      "description": "Regulatory standards compliance checking",
+      "rules": {
+        "material_specifications": {
+          "check_type": "reference",
+          "severity": "error"
+        },
+        "safety_requirements": {
+          "check_type": "mandatory",
+          "severity": "critical"
+        },
+        "quality_standards": {
+          "check_type": "recommended",
+          "severity": "warning"
+        }
+      }
+    }
+  }
+}

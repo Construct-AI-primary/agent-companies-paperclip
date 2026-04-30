@@ -1,0 +1,53 @@
+---
+memory_layer: durable_knowledge
+para_section: pages/codebase/schema
+gigabrain_tags: schema, codebase, data-modeling
+documentation
+openstinger_context: data-architecture, schema-design
+last_updated: 2026-03-21
+related_docs:
+  - codebase/schema/
+  - disciplines/
+---
+# 📋 Modals Breakdown - Construct AI
+
+**Detailed analysis of all modal dialogs in the system.**
+
+## 📋 Overview
+
+This document contains detailed information about each modal dialog found in the Construct AI system.
+
+## 📊 Statistics
+
+- **Total Modals**: 2
+- **Types**: 1
+- **Generated**: 2026-03-19T12:08:57.026Z
+
+## 📋 Modal Details
+
+### 1. Documentation Audit Results
+
+**Type**: Modal
+
+**File**: `client/src/pages/02050-information-technology/components/DevSettings/DocumentationManager.jsx`
+
+**Default State**: Closed
+
+**Pattern**: Modal component
+
+**Page Type**: 02050-information-technology
+
+---
+
+### 2. hitl-modal-description
+
+**Type**: Modal
+
+**File**: `client/src/pages/00435-contracts-post-award/components/agents/AccessibleProgressiveDisclosureHITLModal.jsx`
+
+**Pattern**: Modal with className
+
+**Page Type**: 00435-contracts-post-award
+
+---
+

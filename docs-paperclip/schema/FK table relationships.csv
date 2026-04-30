@@ -1,0 +1,237 @@
+type,table_name,relationship,referenced_table,local_column,referenced_column,delete_rule,update_rule
+Table,public.a_engineering_analysis,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_engineering_analysis,has FK to,public.a_engineering_models,model_id,id,CASCADE,NO ACTION
+Table,public.a_engineering_audit_trail,has FK to,public.a_engineering_analysis,analysis_id,id,CASCADE,NO ACTION
+Table,public.a_engineering_audit_trail,has FK to,public.a_engineering_models,model_id,id,CASCADE,NO ACTION
+Table,public.a_engineering_audit_trail,has FK to,public.agents,user_id,id,NO ACTION,NO ACTION
+Table,public.a_engineering_models,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_engineering_models,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_engineering_standards,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_engineering_standards,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_engineering_templates,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_engineering_templates,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_approvals,has FK to,public.agents,approver_user,id,NO ACTION,NO ACTION
+Table,public.a_measurement_approvals,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_approvals,has FK to,public.a_measurement_data,measurement_id,id,CASCADE,NO ACTION
+Table,public.a_measurement_audit_trail,has FK to,public.a_measurement_data,measurement_id,id,CASCADE,NO ACTION
+Table,public.a_measurement_audit_trail,has FK to,public.agents,user_id,id,NO ACTION,NO ACTION
+Table,public.a_measurement_cad_integration,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_cad_integration,has FK to,public.a_measurement_data,measurement_id,id,CASCADE,NO ACTION
+Table,public.a_measurement_cad_integration,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_data,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_data,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_standards,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_standards,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_templates,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_templates,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_validation_rules,has FK to,public.agents,created_by,id,NO ACTION,NO ACTION
+Table,public.a_measurement_validation_rules,has FK to,public.agents,updated_by,id,NO ACTION,NO ACTION
+Table,public.account,has FK to,public.user,user_id,id,CASCADE,NO ACTION
+Table,public.activity_log,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.activity_log,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.activity_log,has FK to,public.heartbeat_runs,run_id,id,NO ACTION,NO ACTION
+Table,public.agent_api_keys,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.agent_api_keys,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agent_config_revisions,has FK to,public.agents,agent_id,id,CASCADE,NO ACTION
+Table,public.agent_config_revisions,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agent_config_revisions,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.agent_models,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agent_runtime_state,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.agent_runtime_state,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agent_skill_assignments,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.agent_skill_assignments,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agent_task_sessions,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.agent_task_sessions,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agent_task_sessions,has FK to,public.heartbeat_runs,last_run_id,id,NO ACTION,NO ACTION
+Table,public.agent_wakeup_requests,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.agent_wakeup_requests,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agents,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.agents,has FK to,public.agents,reports_to,id,NO ACTION,NO ACTION
+Table,public.approval_comments,has FK to,public.approvals,approval_id,id,NO ACTION,NO ACTION
+Table,public.approval_comments,has FK to,public.agents,author_agent_id,id,NO ACTION,NO ACTION
+Table,public.approval_comments,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.approvals,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.approvals,has FK to,public.agents,requested_by_agent_id,id,NO ACTION,NO ACTION
+Table,public.assets,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.assets,has FK to,public.agents,created_by_agent_id,id,NO ACTION,NO ACTION
+Table,public.auth_accounts,has FK to,public.auth_users,user_id,id,CASCADE,NO ACTION
+Table,public.auth_sessions,has FK to,public.auth_users,user_id,id,CASCADE,NO ACTION
+Table,public.board_api_keys,has FK to,public.user,user_id,id,CASCADE,NO ACTION
+Table,public.budget_incidents,has FK to,public.approvals,approval_id,id,NO ACTION,NO ACTION
+Table,public.budget_incidents,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.budget_incidents,has FK to,public.budget_policies,policy_id,id,NO ACTION,NO ACTION
+Table,public.budget_policies,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.cli_auth_challenges,has FK to,public.user,approved_by_user_id,id,SET NULL,NO ACTION
+Table,public.cli_auth_challenges,has FK to,public.board_api_keys,board_api_key_id,id,SET NULL,NO ACTION
+Table,public.cli_auth_challenges,has FK to,public.companies,requested_company_id,id,SET NULL,NO ACTION
+Table,public.company_logos,has FK to,public.assets,asset_id,id,CASCADE,NO ACTION
+Table,public.company_logos,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.company_secret_versions,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.company_secret_versions,has FK to,public.company_secrets,secret_id,id,CASCADE,NO ACTION
+Table,public.company_secrets,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.company_secrets,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.company_skills,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.company_user_sidebar_preferences,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.cost_events,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.cost_events,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.cost_events,has FK to,public.goals,goal_id,id,NO ACTION,NO ACTION
+Table,public.cost_events,has FK to,public.heartbeat_runs,heartbeat_run_id,id,NO ACTION,NO ACTION
+Table,public.cost_events,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.cost_events,has FK to,public.projects,project_id,id,NO ACTION,NO ACTION
+Table,public.document_revisions,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.document_revisions,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.document_revisions,has FK to,public.heartbeat_runs,created_by_run_id,id,SET NULL,NO ACTION
+Table,public.document_revisions,has FK to,public.documents,document_id,id,CASCADE,NO ACTION
+Table,public.documents,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.documents,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.documents,has FK to,public.agents,updated_by_agent_id,id,SET NULL,NO ACTION
+Table,public.execution_workspaces,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.execution_workspaces,has FK to,public.execution_workspaces,derived_from_execution_workspace_id,id,SET NULL,NO ACTION
+Table,public.execution_workspaces,has FK to,public.projects,project_id,id,CASCADE,NO ACTION
+Table,public.execution_workspaces,has FK to,public.project_workspaces,project_workspace_id,id,SET NULL,NO ACTION
+Table,public.execution_workspaces,has FK to,public.issues,source_issue_id,id,SET NULL,NO ACTION
+Table,public.feedback_exports,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.feedback_exports,has FK to,public.feedback_votes,feedback_vote_id,id,CASCADE,NO ACTION
+Table,public.feedback_exports,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.feedback_exports,has FK to,public.projects,project_id,id,SET NULL,NO ACTION
+Table,public.feedback_votes,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.feedback_votes,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.cost_events,cost_event_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.goals,goal_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.heartbeat_runs,heartbeat_run_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.finance_events,has FK to,public.projects,project_id,id,NO ACTION,NO ACTION
+Table,public.goals,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.goals,has FK to,public.agents,owner_agent_id,id,NO ACTION,NO ACTION
+Table,public.goals,has FK to,public.goals,parent_id,id,NO ACTION,NO ACTION
+Table,public.heartbeat_run_events,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.heartbeat_run_events,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.heartbeat_run_events,has FK to,public.heartbeat_runs,run_id,id,NO ACTION,NO ACTION
+Table,public.heartbeat_runs,has FK to,public.agents,agent_id,id,NO ACTION,NO ACTION
+Table,public.heartbeat_runs,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.heartbeat_runs,has FK to,public.heartbeat_runs,retry_of_run_id,id,SET NULL,NO ACTION
+Table,public.heartbeat_runs,has FK to,public.agent_wakeup_requests,wakeup_request_id,id,NO ACTION,NO ACTION
+Table,public.inbox_dismissals,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.invites,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_approvals,has FK to,public.approvals,approval_id,id,CASCADE,NO ACTION
+Table,public.issue_approvals,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_approvals,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_approvals,has FK to,public.agents,linked_by_agent_id,id,SET NULL,NO ACTION
+Table,public.issue_attachments,has FK to,public.assets,asset_id,id,CASCADE,NO ACTION
+Table,public.issue_attachments,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_attachments,has FK to,public.issue_comments,issue_comment_id,id,SET NULL,NO ACTION
+Table,public.issue_attachments,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_comments,has FK to,public.agents,author_agent_id,id,NO ACTION,NO ACTION
+Table,public.issue_comments,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_comments,has FK to,public.heartbeat_runs,created_by_run_id,id,SET NULL,NO ACTION
+Table,public.issue_comments,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.issue_documents,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_documents,has FK to,public.documents,document_id,id,CASCADE,NO ACTION
+Table,public.issue_documents,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_execution_decisions,has FK to,public.agents,actor_agent_id,id,NO ACTION,NO ACTION
+Table,public.issue_execution_decisions,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_execution_decisions,has FK to,public.heartbeat_runs,created_by_run_id,id,SET NULL,NO ACTION
+Table,public.issue_execution_decisions,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_inbox_archives,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_inbox_archives,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.issue_labels,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.issue_labels,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_labels,has FK to,public.labels,label_id,id,CASCADE,NO ACTION
+Table,public.issue_read_states,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_read_states,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.issue_reference_mentions,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_reference_mentions,has FK to,public.issues,source_issue_id,id,CASCADE,NO ACTION
+Table,public.issue_reference_mentions,has FK to,public.issues,target_issue_id,id,CASCADE,NO ACTION
+Table,public.issue_relations,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_relations,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.issue_relations,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_relations,has FK to,public.issues,related_issue_id,id,CASCADE,NO ACTION
+Table,public.issue_thread_interactions,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_thread_interactions,has FK to,public.agents,created_by_agent_id,id,NO ACTION,NO ACTION
+Table,public.issue_thread_interactions,has FK to,public.issues,issue_id,id,NO ACTION,NO ACTION
+Table,public.issue_thread_interactions,has FK to,public.agents,resolved_by_agent_id,id,NO ACTION,NO ACTION
+Table,public.issue_thread_interactions,has FK to,public.issue_comments,source_comment_id,id,SET NULL,NO ACTION
+Table,public.issue_thread_interactions,has FK to,public.heartbeat_runs,source_run_id,id,SET NULL,NO ACTION
+Table,public.issue_work_products,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issue_work_products,has FK to,public.heartbeat_runs,created_by_run_id,id,SET NULL,NO ACTION
+Table,public.issue_work_products,has FK to,public.execution_workspaces,execution_workspace_id,id,SET NULL,NO ACTION
+Table,public.issue_work_products,has FK to,public.issues,issue_id,id,CASCADE,NO ACTION
+Table,public.issue_work_products,has FK to,public.projects,project_id,id,SET NULL,NO ACTION
+Table,public.issue_work_products,has FK to,public.workspace_runtime_services,runtime_service_id,id,SET NULL,NO ACTION
+Table,public.issues,has FK to,public.agents,assignee_agent_id,id,NO ACTION,NO ACTION
+Table,public.issues,has FK to,public.heartbeat_runs,checkout_run_id,id,SET NULL,NO ACTION
+Table,public.issues,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.issues,has FK to,public.agents,created_by_agent_id,id,NO ACTION,NO ACTION
+Table,public.issues,has FK to,public.heartbeat_runs,execution_run_id,id,SET NULL,NO ACTION
+Table,public.issues,has FK to,public.execution_workspaces,execution_workspace_id,id,SET NULL,NO ACTION
+Table,public.issues,has FK to,public.goals,goal_id,id,NO ACTION,NO ACTION
+Table,public.issues,has FK to,public.issues,parent_id,id,NO ACTION,NO ACTION
+Table,public.issues,has FK to,public.projects,project_id,id,NO ACTION,NO ACTION
+Table,public.issues,has FK to,public.project_workspaces,project_workspace_id,id,SET NULL,NO ACTION
+Table,public.join_requests,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.join_requests,has FK to,public.agents,created_agent_id,id,NO ACTION,NO ACTION
+Table,public.join_requests,has FK to,public.invites,invite_id,id,NO ACTION,NO ACTION
+Table,public.labels,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.model_benchmarks,has FK to,public.models,model_id,id,NO ACTION,NO ACTION
+Table,public.model_change_log,has FK to,public.models,new_model_id,id,NO ACTION,NO ACTION
+Table,public.model_change_log,has FK to,public.models,old_model_id,id,NO ACTION,NO ACTION
+Table,public.plugin_company_settings,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.plugin_company_settings,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_config,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_database_namespaces,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_entities,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_job_runs,has FK to,public.plugin_jobs,job_id,id,CASCADE,NO ACTION
+Table,public.plugin_job_runs,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_jobs,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_logs,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_migrations,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_state,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.plugin_webhook_deliveries,has FK to,public.plugins,plugin_id,id,CASCADE,NO ACTION
+Table,public.principal_permission_grants,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.project_goals,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.project_goals,has FK to,public.goals,goal_id,id,CASCADE,NO ACTION
+Table,public.project_goals,has FK to,public.projects,project_id,id,CASCADE,NO ACTION
+Table,public.project_workspaces,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.project_workspaces,has FK to,public.projects,project_id,id,CASCADE,NO ACTION
+Table,public.projects,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.projects,has FK to,public.goals,goal_id,id,NO ACTION,NO ACTION
+Table,public.projects,has FK to,public.agents,lead_agent_id,id,NO ACTION,NO ACTION
+Table,public.promptforge_analytics,has FK to,public.promptforge_experiments,experiment_id,id,SET NULL,NO ACTION
+Table,public.promptforge_analytics,has FK to,public.promptforge_prompts,prompt_id,id,CASCADE,NO ACTION
+Table,public.promptforge_compliance_checks,has FK to,public.promptforge_prompts,prompt_id,id,CASCADE,NO ACTION
+Table,public.promptforge_experiments,has FK to,public.promptforge_prompts,prompt_id,id,CASCADE,NO ACTION
+Table,public.promptforge_prompt_versions,has FK to,public.promptforge_prompts,prompt_id,id,CASCADE,NO ACTION
+Table,public.promptforge_validation_results,has FK to,public.promptforge_prompts,prompt_id,id,CASCADE,NO ACTION
+Table,public.promptforge_validation_results,has FK to,public.promptforge_validation_rules,rule_id,id,CASCADE,NO ACTION
+Table,public.promptforge_workflow_executions,has FK to,public.promptforge_workflows,workflow_id,id,CASCADE,NO ACTION
+Table,public.routine_runs,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.routine_runs,has FK to,public.issues,linked_issue_id,id,SET NULL,NO ACTION
+Table,public.routine_runs,has FK to,public.routines,routine_id,id,CASCADE,NO ACTION
+Table,public.routine_runs,has FK to,public.routine_triggers,trigger_id,id,SET NULL,NO ACTION
+Table,public.routine_triggers,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.routine_triggers,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.routine_triggers,has FK to,public.routines,routine_id,id,CASCADE,NO ACTION
+Table,public.routine_triggers,has FK to,public.company_secrets,secret_id,id,SET NULL,NO ACTION
+Table,public.routine_triggers,has FK to,public.agents,updated_by_agent_id,id,SET NULL,NO ACTION
+Table,public.routines,has FK to,public.agents,assignee_agent_id,id,NO ACTION,NO ACTION
+Table,public.routines,has FK to,public.companies,company_id,id,CASCADE,NO ACTION
+Table,public.routines,has FK to,public.agents,created_by_agent_id,id,SET NULL,NO ACTION
+Table,public.routines,has FK to,public.goals,goal_id,id,SET NULL,NO ACTION
+Table,public.routines,has FK to,public.issues,parent_issue_id,id,SET NULL,NO ACTION
+Table,public.routines,has FK to,public.projects,project_id,id,CASCADE,NO ACTION
+Table,public.routines,has FK to,public.agents,updated_by_agent_id,id,SET NULL,NO ACTION
+Table,public.session,has FK to,public.user,user_id,id,CASCADE,NO ACTION
+Table,public.skill_usage_logs,has FK to,public.paperclip_issues,issue_id,id,SET NULL,NO ACTION
+Table,public.skill_usage_logs,has FK to,public.superpowers_skills,skill_id,id,CASCADE,NO ACTION
+Table,public.workspace_operations,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.workspace_operations,has FK to,public.execution_workspaces,execution_workspace_id,id,SET NULL,NO ACTION
+Table,public.workspace_operations,has FK to,public.heartbeat_runs,heartbeat_run_id,id,SET NULL,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.companies,company_id,id,NO ACTION,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.execution_workspaces,execution_workspace_id,id,SET NULL,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.issues,issue_id,id,SET NULL,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.agents,owner_agent_id,id,SET NULL,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.projects,project_id,id,SET NULL,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.project_workspaces,project_workspace_id,id,SET NULL,NO ACTION
+Table,public.workspace_runtime_services,has FK to,public.heartbeat_runs,started_by_run_id,id,SET NULL,NO ACTION

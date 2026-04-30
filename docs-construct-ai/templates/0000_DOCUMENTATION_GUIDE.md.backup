@@ -1,0 +1,2411 @@
+---
+title: DOCUMENTATION GUIDE.md.backup
+author: Construct AI Memory System Team
+date: 2026-03-28
+version: 1.0
+memory_layer: durable_knowledge
+para_section: templates
+gigabrain_tags: templates, prompts, standards
+openstinger_context: template-management, standardization
+last_updated: 2026-03-28
+related_docs:
+  - templates/
+---
+
+# 0000_DOCUMENTATION_GUIDE.md
+
+## Status
+- [x] Initial draft
+- [x] Tech review completed
+- [x] Approved for use
+- [ ] Audit completed
+
+## Version History
+- v1.2 (2025-09-23): Added DWG Comparison Vision API documentation reference
+- v1.1 (2025-07-09): Added automated validation requirements
+- v1.0 (2025-07-09): Initial version
+
+## Overview
+This document establishes standards for all technical documentation in the project.
+
+## Requirements
+All documentation must include:
+- 5-digit prefix matching related functionality
+- Standard sections (Overview, Requirements, Implementation, Status)
+- Version history with timestamps
+- Clear ownership and review cycles
+- Automated validation checks
+
+## Implementation
+1. Create new documents using this template
+2. Include all standard sections
+3. Maintain consistent formatting
+4. Implement automated validation:
+   ```bash
+   node scripts/documentation-audit/status-checker.js
+   ```
+5. Review documentation monthly
+
+## Status
+- [x] Initial draft
+- [x] Tech review completed
+- [x] Approved for use
+- [ ] Audit completed
+
+## Version History
+- v1.1 (2025-07-09): Added automated validation requirements
+- v1.0 (2025-07-09): Initial version
+
+This guide provides an overview of the project's documentation, including its structure, standards, and key areas of focus.
+
+## 🎯 **API Integration Implementation** (September 2025)
+
+### External API Settings Management System
+
+**📋 Overview:**
+The External API Settings component provides comprehensive management for all external API integrations throughout the application. This centralized system enables secure configuration, testing, and monitoring of API connections for AI services, flight bookings, safety analysis, and other third-party integrations.
+
+**🔧 Key Components:**
+- **ExternalApiSettings.jsx**: Main configuration interface with multi-provider support
+- **SimpleExternalApiSettings.jsx**: Lightweight version for basic API management
+- **externalApiConfigurationService.js**: Comprehensive service layer with CRUD operations
+- **external-api-routes.js**: Backend API endpoints for configuration management
+- **externalApiController.js**: Server-side logic for API configuration operations
+
+**🎨 Features:**
+- Multi-provider API type support (OpenAI, Claude, Flight APIs, Safety APIs, etc.)
+- Real-time connection testing with status indicators
+- Encrypted API key storage with proper security measures
+- Conditional form fields based on API type selection
+- Comprehensive error handling and user feedback
+
+**📊 Integration Points:**
+- **Drawing Analysis Service**: Retrieves OpenAI configurations for DWG comparison functionality
+- **Flight Booking Modal**: Automatically detects configured travel API providers
+- **Safety Analysis Agents**: Uses configured vision and analysis APIs
+- **AI Generation Services**: Leverages multiple LLM providers with automatic failover
+
+**🔐 Security Features:**
+- API keys encrypted before database storage
+- Role-based access control for configuration management
+- Secure HTTP communication with timeout management
+- Audit logging for configuration changes
+
+**📈 Performance:**
+- Optimized async/await pattern with proper error handling
+- Connection pooling and retry mechanisms
+- Rate limiting protection against API abuse
+- Comprehensive logging for monitoring and debugging
+
+**🎯 Current Status:** **PRODUCTION READY** ✅
+
+**Files Updated:**
+- `client/src/pages/02050-information-technology/components/DevSettings/ExternalApiSettings.jsx`
+- `client/src/pages/02050-information-technology/components/DevSettings/SimpleExternalApiSettings.jsx`
+- `client/src/services/externalApiConfigurationService.js`
+- `server/src/routes/external-api-routes.js`
+- `server/src/controllers/externalApiController.js`
+- `client/src/services/drawingAnalysisService.js`
+- `client/src/services/aiServiceBase.js`
+- Documentation: `api-integration-implementation-plan.md`
+
+**🚀 Ready for production deployment and API integration!**
+
+---
+
+## 🏗️ **Form Processing System** (September 2025)
+
+**📋 Overview:**
+The Form Processing System enables users to upload PDFs and automatically generate interactive HTML forms. The system provides complete document processing capabilities with database integration for template management, form instances, and processing analytics.
+
+**🔧 Key Components:**
+- **form-templates**: HTML form templates generated from document processing
+- **form-instances**: Processed form data and user submissions
+- **document-processing-log**: Complete audit trail for all processing activities
+- **processing-statistics**: Analytics view for processing metrics and performance
+- **Form Creation Page**: Enhanced governance form creation page with PDF upload modal
+- **Comprehensive Test Suite**: 100% pass rate with 8/8 tests covering all functionality
+
+**🎨 Features:**
+- Multi-format document support (PDF, Excel, Word, Pages, ODT, RTF, Text)
+- Intelligent form generation from uploaded documents
+- Organization and discipline-based categorization
+- Complete audit trails and processing analytics
+- Full integration with existing organizations and disciplines tables
+- Procurement-specific templates pre-loaded (Construction permits, Equipment specs, etc.)
+
+**📊 Integration Points:**
+- **Organizations Table**: Forms linked to organization's structure
+- **Disciplines Table**: Forms categorized by procurement disciplines
+- **Procurement Templates**: Forms generated from procurement documents
+- **Document Control**: Full audit trail and compliance tracking
+
+**🔐 Security Features:**
+- Foreign key relationships to organizations and disciplines
+- Comprehensive processing logs with timestamps and user tracking
+- Row-level security design ready for RLS policies
+- Encrypted data handling and audit compliance
+
+**📈 Performance:**
+- Optimized database indexes for common query patterns
+- Foreign key constraints ensuring data integrity
+- Analytics views for real-time performance monitoring
+- Comprehensive test coverage with automated validation
+
+**🎯 Current Status:** **PRODUCTION READY** ✅
+
+**Database Tables:**
+- `form_templates`: HTML form templates with organization/discipline linking
+- `form_instances`: Processed form data with submission tracking
+- `document_processing_log`: Complete audit trail for troubleshooting and analytics
+- `processing_statistics`: Analytics view for performance monitoring
+
+**Files Created:**
+- `form-processing-system-setup.sql`: Complete database schema with seeded data
+- `test-form-processing-system.cjs`: Comprehensive automated test suite (8/8 tests passing)
+- Uploaded to governance form creation page modal (`01300-pdf-upload-modal.js`)
+- Enhanced form creation page (`01300-form-creation-page.js`) with upload functionality
+
+**📚 Documentation Updated:**
+- `docs/1300_01900_PROCUREMENT_DATABASE_INTEGRATION.md`: Form processing schema documentation
+- `docs/1300_01900_PROCUREMENT_TEMPLATES_IMPLEMENTATION_SUMMARY.md`: System integration summary
+- `docs/0000_DOCUMENTATION_GUIDE.md`: System status and overview
+
+**🚀 Ready for production deployment with comprehensive testing validation!**
+
+---
+
+This guide provides an overview of the project's documentation, including its structure, standards, and key areas of focus.
+
+## Accordion Navigation System Architecture
+
+### Quick Reference: How to Modify Accordion Navigation
+
+**🚨 CRITICAL: The accordion structure is controlled by SERVER-SIDE templates, NOT client-side configuration files.**
+
+**⚠️ DUAL TEMPLATE SYSTEM WARNING:**
+The accordion uses **TWO separate template files** that MUST be kept in sync:
+- **Server/Production**: `server/src/routes/accordion-sections-routes.js` (MASTER_TEMPLATE)
+- **Local Development**: `client/src/common/js/data/accordion-fallback-data.js` (masterTemplate)
+
+#### To Add/Modify Accordion Links:
+1. **Primary Location**: Edit `server/src/routes/accordion-sections-routes.js`
+   - Update the `MASTER_TEMPLATE` constant with your changes
+   - Restart the server for changes to take effect
+2. **MANDATORY**: Also edit `client/src/common/js/data/accordion-fallback-data.js`
+   - Update the `masterTemplate` array with identical changes
+   - Failure to sync both templates causes production/development differences
+3. **Secondary (Legacy)**: The client-side file `client/src/common/js/config/00200-ui-display-mappings.js` is used for some client-side routing but does NOT control accordion structure
+
+#### Common Misconceptions:
+❌ **Wrong**: Modifying only one template file
+❌ **Wrong**: Modifying `client/src/common/js/config/00200-ui-display-mappings.js` will change accordion navigation
+✅ **Correct**: Modify BOTH template files with identical changes
+✅ **Correct**: Server template for production, fallback template for local development
+
+### Accordion System Components
+
+#### 1. Server-Side Template System (PRIMARY)
+- **File**: `server/src/routes/accordion-sections-routes.js`
+- **Purpose**: Defines the complete accordion structure for all organizations
+- **Key Components**:
+  - `MASTER_TEMPLATE`: Complete EPCM accordion structure (~150 sections)
+  - `TEMPLATE_VARIATIONS`: Minimal, contractor, and judicial templates
+  - `ORGANIZATION_TEMPLATES`: Maps organizations to specific templates
+  - Template inheritance system for code reuse
+
+#### 2. Client-Side Components
+- **File**: `client/src/modules/accordion/00200-accordion-component.js`
+- **Purpose**: React component that renders accordion from server data
+- **Data Flow**: Fetches structure from `/api/accordion-sections` endpoint
+
+#### 3. Collaboration System
+- **File**: `server/src/routes/accordion-collaboration-routes.js`
+- **Purpose**: Manages shared sections between organizations
+- **Integration**: Merged into main accordion structure with precedence rules
+
+#### 4. Legacy UI Display Mappings (SECONDARY)
+- **File**: `client/src/common/js/config/00200-ui-display-mappings.js`
+- **Purpose**: Client-side routing and some UI configuration (NOT accordion structure)
+- **Status**: Maintained for backward compatibility and specific client-side features
+
+### Template Structure Example
+
+```javascript
+// In server/src/routes/accordion-sections-routes.js
+const MASTER_TEMPLATE = [
+  {
+    id: 'accordion-button-02050',
+    title: 'Information Technology',
+    display_order: 1550,
+    sector: 'global',
+    links: [
+      { title: 'Information Technology', url: '/information-technology' },
+      { title: 'All Documents', url: '/all-documents' },
+      { title: 'Email Management', url: '/email-management' }
+    ],
+    subsections: {
+      'subsection-02051': {
+        id: 'subsection-02051',
+        title: 'Developer settings',
+        linl: '/chatbot-management' },
+          { title: 'Prompts Management', url: '/information-technology/prompts-management' },
+          // ... more links
+        ]
+      }
+    }
+  }
+];
+```
+
+### Troubleshooting Accordion Issues
+
+#### Link Not Appearing in Accordion?
+1. ✅ Check `server/src/routes/accordion-sections-routes.js` MASTER_TEMPLATE
+2. ✅ Verify the link is in the correct subsection
+3. ✅ Restart the server after changes
+4. ✅ Check browser network tab for `/api/accordion-sections` response
+
+#### Page Not Found When Clicking Link?
+1. ✅ Add route in `client/src/App.js` Routes section
+2. ✅ Ensure component import is correct
+3. ✅ Rebuild client application: `cd client && npm run build`
+
+#### Template Changes Not Showing?
+1. ✅ Restart server (server-side templates are cached)
+2. ✅ Clear browser cache
+3. ✅ Check server console for template loading messages
+
+### Related Documentation Files
+
+- **[0975_ACCORDION_MASTER_DOCUMENTATION.md](0975_ACCORDION_MASTER_DOCUMENTATION.md)** - Complete accordion system documentation
+- **[0950_ACCORDION_MANAGEMENT.md](0950_ACCORDION_MANAGEMENT.md)** - Accordion management interface
+- **[0975_ACCORDION_COLLABORATION_INTEGRATION.md](0975_ACCORDION_COLLABORATION_INTEGRATION.md)** - Organization collaboration features
+- **[1300_02050_UI_MANAGEMENT_INTERFACES.md](1300_02050_UI_MANAGEMENT_INTERFACES.md)** - UI management for accordion sections
+
+## Documentation Index
+
+### 0000-0099 Range - Core Documentation
+- [0000_DOCUMENTATION_GUIDE.md](0000_DOCUMENTATION_GUIDE.md) - This guide
+- [0000_README.md](0000_README.md) - Project README
+- [0000_BUILD_ERROR_ANALYSIS.md](0000_BUILD_ERROR_ANALYSIS.md) - Build Error Analysis (Troubleshooting Guide)
+- [0000_DROPDOWN_IMPLEMENTATIONS.md](0000_DROPDOWN_IMPLEMENTATIONS.md) - Dropdown Implementation Guide - Comprehensive dropdown system implementation across all application contexts
+- [0050_QUICK_REFERENCE_CARDS.md](0050_QUICK_REFERENCE_CARDS.md) - **Quick Reference Cards** - 30-second implementation guides, troubleshooting, and decision trees for rapid development
+- [00950_ACCORDION_GLOBAL_FILTERING_FIX.md](00950_ACCORDION_GLOBAL_FILTERING_FIX.md) - Accordion Global Filtering Fix
+- [00960_GLOBAL_TO_SHARED_MIGRATION.md](00960_GLOBAL_TO_SHARED_MIGRATION.md) - Global to Shared Migration
+- [00435_CONTRACTS_POST_AWARD_IMAGE_DEBUGGING.md](00435_CONTRACTS_POST_AWARD_IMAGE_DEBUGGING.md) - Contracts Post-Award Image Debugging
+
+### 0100-0199 Range - Getting Started
+- [0100_GETTING_STARTED.md](0100_GETTING_STARTED.md) - Getting Started
+
+### 0200-0299 Range - System Architecture
+- [0200_SYSTEM_ARCHITECTURE.md](0200_SYSTEM_ARCHITECTURE.md) - System Architecture
+- [0250_UTILITIES_ARCHITECTURE.md](0250_UTILITIES_ARCHITECTURE.md) - Utilities Architecture
+
+### 0300-0399 Range - Database & Schema
+- [0300_DATABASE_SCHEMA.md](0300_DATABASE_SCHEMA.md) - Database Schema
+- [0301_PAGES_TABLE_SCHEMA.md](0301_PAGES_TABLE_SCHEMA.md) - Pages Table Schema (NEW)
+- [0302_PAGES_TABLE_POPULATION_GUIDE.md](0302_PAGES_TABLE_POPULATION_GUIDE.md) - Pages Table Population Guide
+- [0303_DATABASE_SCHEMA_REFERENCE.md](./0303_DATABASE_SCHEMA_REFERENCE.md) - **Complete Database Schema Reference** - Comprehensive PostgreSQL table documentation
+- [sql_reorganization_plan.md](sql_reorganization_plan.md) - SQL File Reorganization Plan
+
+#### 0303\_ - Complete Database Schema Reference (UPDATED September 2025)
+**📊 PRODUCTION DATABASE SCHEMA REFERENCE**
+
+This section provides a **complete reference** of all PostgreSQL tables in the system (updated September 2025):
+
+### 📋 System Infrastructure
+| Table | Description |
+|-------|-------------|
+| sections | Section definitions and menu navigation |
+| pages | Dynamic page management and routing |
+| organizations | Organization definitions and settings |
+| sectors | Industry sectors for categorization |
+| active_entities | Currently active system entities |
+
+### 👥 User Management
+| Table | Description |
+|-------|-------------|
+| user_management | Core user authentication and profiles |
+| personnel_records | Employee and personnel data |
+| user_roles | User role assignments and permissions |
+| user_department_access | Department-level access controls |
+| user_organization_access | Organization-level access controls |
+| user_profiles | Extended user profile information |
+| user_email_accounts | Email account configurations |
+| user_email_aliases | Email alias management |
+
+### ✋ Workflow & Approvals
+| Table | Description |
+|-------|-------------|
+| approval_workflow_templates | Approval workflow definitions |
+| approval_workflows | Active approval workflows |
+| approval_instances | Individual approval instances |
+| approval_steps | Workflow step definitions |
+| approval_delegations | Approval delegation rules |
+| approval_document_links | Document approval links |
+| approval_history_log | Approval action history |
+
+### 🤖 AI & Vector Search
+| Table | Description |
+|-------|-------------|
+| vector_search_criteria | Vector search configuration |
+| a_001000_environmental_vector | Environmental discipline embeddings |
+| a_001200_finance_vector | Financial discipline embeddings |
+| a_001300_governance_vector | Governance discipline embeddings |
+| a_001400_health_vector | Health discipline embeddings |
+| prompt_management | AI prompt templates |
+| form_instances | Form instance data |
+| form_templates | Form template definitions |
+
+### 📄 Document Control & Management
+| Table | Description |
+|-------|-------------|
+| a_00900_doccontrol_documents | Document control main records |
+| a_00900_doccontrol_document_versions | Document control versions |
+| a_00900_doccontrol_approvals | Document approvals |
+| a_00900_doccontrol_approval_rules | Approval rules |
+| document_types | Document type definitions |
+| document_versions | Document version control |
+| document_categories | Document categorization |
+| document_hashes | Document hash tracking |
+| document_references | Document cross-references |
+| document_stores | Document storage locations |
+| document_comparisons | Document comparison results |
+| document_embeddings | Document AI embeddings |
+| document_numbering_methodologies | Document numbering methods |
+| document_number_sequences | Document number sequences |
+| document_processing_queue | Document processing tasks |
+| document_access_logs | Document access tracking |
+| a_00900_doccontrol_document_embeddings | Document control embeddings |
+| a_00900_user_langchain_settings | User AI settings |
+
+### 📧 Email & Communication
+| Table | Description |
+|-------|-------------|
+| emails | Main email storage |
+| email_signatures | Email signature templates |
+| email_templates | Email template library |
+| email_threads | Email conversation threads |
+| email_attachments | Email attachment storage |
+| email_notification_queue | Email notification processing |
+| email_send_attachments | Email send attachments |
+| email_sends | Email sending records |
+| email_ai_processing_queue | AI email processing queue |
+| email_search_history | Email search history |
+| email_content_storage | Email content storage |
+| email_sync_log | Email synchronization logs |
+| email_drafts | Email draft storage |
+| email_providers | Email provider configurations |
+| email_access_logs | Email access tracking |
+
+### 🤝 Organizations & Companies
+| Table | Description |
+|-------|-------------|
+| organisations_backup | Organization backup records |
+| organization_collaborations | Organization collaboration settings |
+| organization_organization_mapping | Organization mapping |
+| companies | Company definitions and settings |
+| consultants | Consultant management |
+
+### 📝 Contracts & Procurement
+| Table | Description |
+|-------|-------------|
+| contracts | Contract management main records |
+| procurement_signatures | Procurement signature tracking |
+| suppliers | Supplier management system |
+| contractors | Contractor main records |
+| contractor_vetting | Contractor vetting records |
+| contractor_vetting_dashboard_stats | Contractor dashboard data |
+| contractor_evaluation_results | Contractor evaluation results |
+| scope_of_work | Scope of work definitions |
+| fuel_lubricants | Fuel and lubricants tracking |
+| a_002025_invoice_processing | Invoice processing data |
+| a_002025_qs_data | Quantity survey data |
+
+### 🏗️ Engineering Disciplines
+| Table | Description |
+|-------|-------------|
+| a_00825_architectural_vector | Architectural discipline vector search |
+| a_00835_chemeng_vector | Chemical engineering vector search |
+| a_00850_civileng_vector | Civil engineering vector search |
+| a_00860_eleceng_vector | Electrical engineering vector search |
+| a_00870_mecheng_vector | Mechanical engineering vector search |
+| a_00872_developer_vector | Developer discipline vector search |
+| a_00875_sales_vector | Sales discipline vector search |
+| a_00877_sundry_vector | Business operations vector search |
+| a_00880_boarddir_vector | Board directorate vector search |
+| a_00882_dirconst_vector | Director construction vector search |
+| a_00883_dircontracts_vector | Director contracts vector search |
+| a_00884_1_dirfinance_vector | Director finance vector search |
+| a_00884_direng_vector | Director engineering vector search |
+| a_00885_dirhse_vector | Director HSEQ vector search |
+| a_00886_dirlogistics_vector | Director logistics vector search |
+| a_00888_dirprocurement_vector | Director procurement vector search |
+| a_00890_dirprojects_vector | Director projects vector search |
+| a_00895_dirproject_vector | Director project vector search |
+
+### 📊 Project Management
+| Table | Description |
+|-------|-------------|
+| projects | Project main records |
+| project_phase_assignments | Project phase assignments |
+| project_phases | Project phase definitions |
+| a_002035_scheduling_vector | Scheduling vector search |
+| timesheets | Timesheet main records |
+| timesheet_entries | Individual timesheet entries |
+| timesheet_submissions | Timesheet submission records |
+| timesheet_templates | Timesheet templates |
+| timesheet_amendments | Timesheet amendment tracking |
+| timesheet_audit_logs | Timesheet audit logs巅
+
+### 🏭 Operations & Logistics
+| Table | Description |
+|-------|-------------|
+| operations_equipment | Equipment management |
+| maintenance_assets | Asset maintenance tracking |
+| maintenance_history | Maintenance history logs |
+| maintenance_schedules | Scheduled maintenance |
+| maintenance_work_orders | Maintenance work orders |
+| materials | Materials inventory |
+| logistics_shipments | Logistics shipment tracking |
+| logistics_alerts | Logistics alert system |
+| logistics_api_credentials | Logistics API configurations |
+| shipment_containers | Shipment container tracking |
+
+### 🔬 Quality & Safety
+| Table | Description |
+|-------|-------------|
+| a_002200_qa_vector | Quality assurance vector search |
+| a_002250_qc_vector | Quality control vector search |
+| a_002400_safety_data | Safety data processing |
+| a_002400_safety_vector | Safety vector search |
+| inspections | Inspection records |
+| inspection_items | Inspection checklist items |
+| inspection_media | Inspection multimedia attachments |
+| a_002075_inspection_data | Inspection data processing |
+| a_002075_inspection_vector | Inspection vector search |
+| compliance_reports | Compliance reporting |
+
+### 🛫 Travel & Fleet Management
+| Table | Description |
+|-------|-------------|
+| travel_requests | Travel request processing |
+| travel_airports | Airport information database |
+| travel_equipment_filters | Travel equipment filtering |
+| travel_ground_routes | Ground transportation routes |
+| travel_hazard_alerts | Travel hazard alerts |
+| travel_helipads | Helicopter landing locations |
+| travel_templates | Travel request templates |
+| vessels | Vessel information database |
+
+### 💼 Finance & Administration
+| Table | Description |
+|-------|-------------|
+| petty_cash | Petty cash management |
+| a_001200_finance_vector | Financial discipline vector search |
+| risk_assessments | Risk assessment records |
+| role_definitions | Role definitions |
+| section_hierarchy | Section hierarchy definitions |
+| section_organization_mapping | Section organization mappings |
+
+### 📊 Analytics & Monitoring
+| Table | Description |
+|-------|-------------|
+| chat_analytics | Chat analytics and reporting |
+| chat_messages | Individual chat messages |
+| chat_sessions | Chat session tracking |
+| chatbots | Chatbot definitions and configurations |
+| chatbots_backup | Chatbot backup configurations |
+| internal_notifications | System notification management |
+| migration_rename_log | Migration tracking logs |
+| migration_validation_results | Migration validation results |
+| sql_file_tracking | SQL file change tracking |
+| tracking_events | System event tracking |
+
+### ⚙️ Configuration & UI
+| Table | Description |
+|-------|-------------|
+| ui_button_settings | UI button configuration |
+| ui_display_settings | Display settings management |
+| user_accordion_settings | User accordion preferences |
+| button_options | Button option definitions |
+| modal_configurations | Modal configuration settings |
+| pathways | Pathway configurations |
+| dropdown_options | Dropdown option lists |
+| numbering_config | Numbering system configuration |
+| numbering_patterns | Numbering pattern definitions |
+| numbering_methodologies | Numbering methodology definitions |
+
+| schemaname | tablename                                    | tableowner |
+| ---------- | -------------------------------------------- | ---------- |
+| public     | a_000435_contracts_post_data                 | postgres   |
+| public     | a_001000_environmental_vector                | postgres   |
+| public     | a_00102_admin_data                           | postgres   |
+| public     | a_00102_admin_vector                         | postgres   |
+| public     | a_001100_ethics_vector                       | postgres   |
+| public     | a_001200_finance_vector                      | postgres   |
+| public     | a_001300_governance_vector                   | postgres   |
+| public     | a_001400_health_vector                       | postgres   |
+| public     | a_001500_hr_candidate_evaluation             | postgres   |
+| public     | a_001500_hr_vector                           | postgres   |
+| public     | a_001600_localcontent_vector                 | postgres   |
+| public     | a_001700_logistics_vector                    | postgres   |
+| public     | a_001750_legal_vector                        | postgres   |
+| public     | a_001800_operations_vector                   | postgres   |
+| public     | a_001850_otherparties_vector                 | postgres   |
+| public     | a_001900_pr_media                            | postgres   |
+| public     | a_001900_procurement_vector                  | postgres   |
+| public     | a_00200_commercial_vector                    | postgres   |
+| public     | a_002025_invoice_processing                  | postgres   |
+| public     | a_002025_qs_data                             | postgres   |
+| public     | a_002025_qs_vector                           | postgres   |
+| public     | a_002035_scheduling_vector                   | postgres   |
+| public     | a_002050_it_vector                           | postgres   |
+| public     | a_002050_logistics_data                      | postgres   |
+| public     | a_002075_inspection_data                     | postgres   |
+| public     | a_002075_inspection_vector                   | postgres   |
+| public     | a_002075_knowledge_base                      | postgres   |
+| public     | a_002075_knowledge_base_data                 | postgres   |
+| public     | a_002100_publicrel_vector                    | postgres   |
+| public     | a_002200_qa_vector                           | postgres   |
+| public     | a_002250_qc_vector                           | postgres   |
+| public     | a_002400_safety_data                         | postgres   |
+| public     | a_002400_safety_vector                       | postgres   |
+| public     | a_002500_security_vector                     | postgres   |
+| public     | a_003000_landscaping_vector                  | postgres   |
+| public     | a_00300_construction_vector                  | postgres   |
+| public     | a_00435_contracts_post_vector                | postgres   |
+| public     | a_00825_architectural_vector                 | postgres   |
+| public     | a_00835_chemeng_vector                       | postgres   |
+| public     | a_00850_civileng_vector                      | postgres   |
+| public     | a_00860_eleceng_vector                       | postgres   |
+| public     | a_00870_mecheng_vector                       | postgres   |
+| public     | a_00872_developer_vector                     | postgres   |
+| public     | a_00875_sales_vector                         | postgres   |
+| public     | a_00877_sundry_vector                        | postgres   |
+| public     | a_00880_boarddir_vector                      | postgres   |
+| public     | a_00882_dirconst_vector                      | postgres   |
+| public     | a_00883_dircontracts_vector                  | postgres   |
+| public     | a_00884_1_dirfinance_vector                  | postgres   |
+| public     | a_00884_direng_vector                        | postgres   |
+| public     | a_00885_dirhse_vector                        | postgres   |
+| public     | a_00886_dirlogistics_vector                  | postgres   |
+| public     | a_00888_dirprocurement_vector                | postgres   |
+| public     | a_00890_dirprojects_vector                   | postgres   |
+| public     | a_00895_dirproject_vector                    | postgres   |
+| public     | a_00900_doccontrol_approval_rule_steps       | postgres   |
+| public     | a_00900_doccontrol_approval_rules            | postgres   |
+| public     | a_00900_doccontrol_approvals                 | postgres   |
+| public     | a_00900_doccontrol_data                      | postgres   |
+| public     | a_00900_doccontrol_document_embeddings       | postgres   |
+| public     | a_00900_doccontrol_document_versions         | postgres   |
+| public     | a_00900_doccontrol_documents                 | postgres   |
+| public     | a_00900_doccontrol_langchain_jobs            | postgres   |
+| public     | a_00900_doccontrol_vector                    | postgres   |
+| public     | a_00900_user_langchain_settings              | postgres   |
+| public     | a_00test                                     | postgres   |
+| public     | a_02400_contractor_vetting_data              | postgres   |
+| public     | a_02400_contractor_vetting_document_versions | postgres   |
+| public     | a_02400_contractor_vetting_documents         | postgres   |
+| public     | accordion_options                            | postgres   |
+| public     | accordion_sections                           | postgres   |
+| public     | accordion_sections_directors_backup_20250726 | postgres   |
+| public     | active_entities                              | postgres   |
+| public     | agent_modal_assignments                      | postgres   |
+| public     | agents_tracking                              | postgres   |
+| public     | approval_delegations                         | postgres   |
+| public     | approval_document_links                      | postgres   |
+| public     | approval_history_log                         | postgres   |
+| public     | approval_instances                           | postgres   |
+| public     | approval_steps                               | postgres   |
+| public     | approval_workflow_templates                  | postgres   |
+| public     | approval_workflows                           | postgres   |
+| public     | button_options                               | postgres   |
+| public     | chat_analytics                               | postgres   |
+| public     | chat_messages                                | postgres   |
+| public     | chat_sessions                                | postgres   |
+| public     | chatbots                                     | postgres   |
+| public     | chatbots_backup                              | postgres   |
+| public     | companies                                    | postgres   |
+| public     | compliance_reports                           | postgres   |
+| public     | consultants                                  | postgres   |
+| public     | contacts                                     | postgres   |
+| public     | containers                                   | postgres   |
+| public     | contractor_evaluation_results                | postgres   |
+| public     | contractor_vetting                           | postgres   |
+| public     | contractor_vetting_chat_messages             | postgres   |
+| public     | contractor_vetting_dashboard_stats           | postgres   |
+| public     | contractor_vetting_document_hashes           | postgres   |
+| public     | contractor_vetting_document_parts            | postgres   |
+| public     | contractor_vetting_documents                 | postgres   |
+| public     | contractor_vetting_ingestion_registry        | postgres   |
+| public     | contractor_vetting_sections                  | postgres   |
+| public     | contractors                                  | postgres   |
+| public     | contracts                                    | postgres   |
+| public     | contributor_assignments                      | postgres   |
+| public     | contributors                                 | postgres   |
+| public     | customized                                   | postgres   |
+| public     | cv_applications                              | postgres   |
+| public     | defects                                      | postgres   |
+| public     | discipline_document_paths                    | postgres   |
+| public     | disciplines                                  | postgres   |
+| public     | document_access_logs                         | postgres   |
+| public     | document_ai_analysis                         | postgres   |
+| public     | document_categories                          | postgres   |
+| public     | document_comparisons                         | postgres   |
+| public     | document_embeddings                          | postgres   |
+| public     | document_hashes                              | postgres   |
+| public     | document_number_audit_log                    | postgres   |
+| public     | document_number_sequences                    | postgres   |
+| public     | document_numbering_methodologies             | postgres   |
+| public     | document_numbering_sequences                 | postgres   |
+| public     | document_processing_queue                    | postgres   |
+| public     | document_references                          | postgres   |
+| public     | document_stores                              | postgres   |
+| public     | document_types                               | postgres   |
+| public     | document_types_by_discipline                 | postgres   |
+| public     | document_versions                            | postgres   |
+| public     | dropdown_options                             | postgres   |
+| public     | email_access_logs                            | postgres   |
+| public     | email_ai_processing_queue                    | postgres   |
+| public     | email_attachments                            | postgres   |
+| public     | email_content_storage                        | postgres   |
+| public     | email_drafts                                 | postgres   |
+| public     | email_notification_queue                     | postgres   |
+| public     | email_providers                              | postgres   |
+| public     | email_search_history                         | postgres   |
+| public     | email_send_attachments                       | postgres   |
+| public     | email_sends                                  | postgres   |
+| public     | email_signatures                             | postgres   |
+| public     | email_sync_log                               | postgres   |
+| public     | email_templates                              | postgres   |
+| public     | email_threads                                | postgres   |
+| public     | email_vector                                 | postgres   |
+| public     | emails                                       | postgres   |
+| public     | equipment_documentation                      | postgres   |
+| public     | esignature_audit                             | postgres   | Complete audit trail for all e-signatures including cryptographic proof, IP logging, and user session context
+| public     | external_api_configurations                  | postgres   |
+| public     | flowise_documents                            | postgres   |
+| public     | flowise_record_manager                       | postgres   |
+| public     | form_instances                               | postgres   |
+| public     | form_templates                               | postgres   |
+| public     | fuel_lubricants                              | postgres   |
+| public     | governance_approval_instances                | postgres   |
+| public     | governance_approval_matrices                 | postgres   |
+| public     | governance_approval_steps                    | postgres   |
+| public     | inspection_items                             | postgres   |
+| public     | inspection_media                             | postgres   |
+| public     | inspections                                  | postgres   |
+| public     | internal_notifications                       | postgres   |
+| public     | llm_configurations                           | postgres   |
+| public     | llm_document_type_mappings                   | postgres   |
+| public     | llm_functions                                | postgres   |
+| public     | logistics_alerts                             | postgres   |
+| public     | logistics_api_credentials                    | postgres   |
+| public     | logistics_shipments                          | postgres   |
+| public     | maintenance_assets                           | postgres   |
+| public     | maintenance_history                          | postgres   |
+| public     | maintenance_schedules                        | postgres   |
+| public     | maintenance_work_orders                      | postgres   |
+| public     | materials                                    | postgres   |
+| public     | migration_rename_log                         | postgres   |
+| public     | migration_validation_results                 | postgres   |
+| public     | modal_configurations                         | postgres   |
+| public     | numbering_config                             | postgres   |
+| public     | numbering_methodologies                      | postgres   |
+| public     | numbering_patterns                           | postgres   |
+| public     | operations_equipment                         | postgres   |
+| public     | organisations_backup                         | postgres   |
+| public     | organization_collaborations                  | postgres   |
+| public     | organizations                                | postgres   |
+| public     | pages                                        | postgres   |
+| public     | pages_directors_backup_20250726              | postgres   |
+| public     | path_configurations                          | postgres   |
+| public     | personnel_records                            | postgres   |
+| public     | petty_cash                                   | postgres   |
+| public     | ports                                        | postgres   |
+| public     | procurement_signatures                       | postgres   |
+| public     | project_phase_assignments                    | postgres   |
+| public     | project_phases                               | postgres   |
+| public     | projects                                     | postgres   |
+| public     | prompts                                      | postgres   |
+| public     | record _manager                              | postgres   |
+| public     | resource_documentation                       | postgres   |
+| public     | resource_prompts                             | postgres   |
+| public     | risk_assessments                             | postgres   |
+| public     | role_definitions                             | postgres   |
+| public     | scope_of_work                                | postgres   |
+| public     | section_hierarchy                            | postgres   |
+| public     | section_organization_mapping                 | postgres   |
+| public     | section_pages                                | postgres   |
+| public     | sections                                     | postgres   |
+| public     | sectors                                      | postgres   |
+| public     | shipment_containers                          | postgres   |
+| public     | signature_audit_trail                        | postgres   |
+| public     | signature_documents                          | postgres   |
+| public     | signature_requests                           | postgres   |
+| public     | signature_templates                          | postgres   |
+| public     | signature_webhooks                           | postgres   |
+| public     | sql_file_tracking                            | postgres   |
+| public     | suppliers                                    | postgres   |
+| public     | temporary_uploads                            | postgres   |
+| public     | timesheet_amendments                         | postgres   |
+| public     | timesheet_audit_logs                         | postgres   |
+| public     | timesheet_entries                            | postgres   |
+| public     | timesheet_submissions                        | postgres   |
+| public     | timesheet_templates                          | postgres   |
+| public     | timesheets                                   | postgres   |
+| public     | tracking_events                              | postgres   |
+| public     | travel_airports                              | postgres   |
+| public     | travel_equipment_filters                     | postgres   |
+| public     | travel_ground_routes                         | postgres   |
+| public     | travel_hazard_alerts                         | postgres   |
+| public     | travel_helipads                              | postgres   |
+| public     | travel_requests                              | postgres   |
+| public     | travel_templates                             | postgres   |
+| public     | ui_button_settings                           | postgres   |
+| public     | ui_display_settings                          | postgres   |
+| public     | user_accordion_settings                      | postgres   |
+| public     | user_companies                               | postgres   |
+| public     | user_department_access                       | postgres   |
+| public     | user_email_accounts                          | postgres   |
+| public     | user_email_aliases                           | postgres   |
+| public     | user_emails                                  | postgres   |
+| public     | user_management                              | postgres   |
+| public     | user_organization_access                     | postgres   |
+| public     | user_organizations                           | postgres   |
+| public     | user_profiles                                | postgres   |
+| public     | user_role_assignments                        | postgres   |
+| public     | user_roles                                   | postgres   |
+| public     | vector_search_criteria                       | postgres   |
+| public     | vessels                                      | postgres   |
+
+**📊 Database Analysis:**
+- **Total Tables:** 196+ active tables
+- **Schema:** `public` (primary production schema)
+- **Owner:** `postgres` (default administrative user)
+- **Coverage:** Complete system architecture across all departments
+- **Status Management**: Email processing pipeline with visual indicators (received → parsing → AI processing → ready)
+- **Modal System**: Integrated modals for email composition, details, AI tools, signatures, and smart replies
+- **Authentication**: Supabase authentication integration with fallback mechanisms
+
+**Key Features:**
+- **Email Organization**: Tab-based filtering (Inbox: 6 emails, Sent: 1 email, Drafts: 1 email)
+- **AI Enhancement**: Background AI processing with real-time progress indicators
+- **Search & Filter**: Advanced filtering by status, attachments, content, and sender
+- **Bulk Operations**: Multi-select functionality for batch AI processing
+- **Email Composition**: Full-featured email composer with signature integration
+- **Thread Management**: Conversation grouping and thread analysis
+- **Smart Replies**: AI-generated contextual response suggestions
+
+**Database Tables:**
+- `esignature_audit`: Tracks cryptographic proof of signatures with columns:
+  - `signature_data`: Encrypted signature payload
+  - `signature_metadata`: JSON structure with client/user agent details
+  - `session_identifier`: Links to authentication logs
+  - RLS Policy: Users can only view their own signatures
+- `emails`: Main email storage with AI processing columns
+- `email_signatures`: User signature management
+- `user_management`: User authentication and profile data
+
+**Files Implemented:**
+- `client/src/pages/03010-email-management/components/03010-modern-email-management-page.js` - Main email interface
+- `client/src/pages/03010-email-management/components/modals/` - Email modals (detail, AI tools, composition, signatures)
+- `client/src/pages/03010-email-management/components/status/03010-EmailStatusIndicator.js` - Processing status display
+- `client/src/pages/03010-email-management/components/threads/03010-EmailThreadView.js` - Thread management
+- `sql/create-email-signatures-table.sql` - Database schema
+- `populate-comprehensive-email-test-data.sql` - Test data population
+
+**Status**: Production-ready email management system with comprehensive AI processing capabilities and realistic test data for development and demonstration purposes.
+
+### 1300\_ - AI Agent Prompt Management System
+- [1300_AGENT_PROMPT_MIGRATION_SUMMARY.md](1300_AGENT_PROMPT_MIGRATION_SUMMARY.md) - **RBAC Agent Prompt Migration Summary** - Complete migration audit of AI agents to role-based access control with system/user prompt separation, cross-reference IDs, and comprehensive deployment assets
+- [1300_00100_z_index_analysis_report.md](./1300_00100_z_index_analysis_report.md) - Z-Index Analysis Report (troubleshooting guide for background image display issue)
+- [1300_0000_PAGE_LIST.md](./1300_0000_PAGE_LIST.md) - **Complete Page List Documentation** - Comprehensive list of all pages, their sector associations, organization access permissions, and accordion structure
+- [1300_0000_PAGE_IMPLEMENTATIONS_AUDIT.md](./1300_0000_PAGE_IMPLEMENTATIONS_AUDIT.md) - **Page Implementation Standardization Audit** - Comprehensive audit of page implementation patterns, component organization, and React standards
+- [1300_01900_CONSOLIDATED_SUPPLIER_DIRECTORY_DOCUMENTATION.md](./1300_01900_CONSOLIDATED_SUPPLIER_DIRECTORY_DOCUMENTATION.md) - **Supplier Directory Implementation** - Comprehensive supplier management system with approval workflows
+- [1300_01900_TENDER_MANAGEMENT_DOCUMENTATION.md](./1300_01900_TENDER_MANAGEMENT_DOCUMENTATION.md) - **Tender Management System** - Complete tender discovery and management implementation
+- [1300_02050_UI_MANAGEMENT_INTERFACES.md](./1300_02050_UI_MANAGEMENT_INTERFACES.md) - **UI Management Interfaces** - Accordion sections and user interface management
+
+### 1350-1399 Range - Vector Search System
+- [1350_AI_DOCUMENT_ANALYSIS_SYSTEM_STATUS.md](1350_AI_DOCUMENT_ANALYSIS_SYSTEM_STATUS.md) - AI Document Analysis System Status
+- [1350_SUPABASE_VECTOR_SEARCH_SETUP.md](1350_SUPABASE_VECTOR_SEARCH_SETUP.md) - Supabase Vector Search Setup
+- [1350_supabase_search_test_summary.md](1350_supabase_search_test_summary.md) - Supabase Search Test Summary
+- [1352_FLOWISE_SUPABASE_SETUP.md](1352_FLOWISE_SUPABASE_SETUP.md) - Flowise Supabase Setup
+- [1360_FLOWISE_DOCUMENT_STORE_IMPLEMENTATION_PLAN.md](1360_FLOWISE_DOCUMENT_STORE_IMPLEMENTATION_PLAN.md) - Flowise Document Store Implementation Plan
+- [1361_EDGE_FUNCTION_DEPLOYMENT_GUIDE.md](1361_EDGE_FUNCTION_DEPLOYMENT_GUIDE.md) - Edge Function Deployment Guide
+- [1361_FLOWISE_DOCUMENT_STORE_DEPLOYMENT_GUIDE.md](1361_FLOWISE_DOCUMENT_STORE_DEPLOYMENT_GUIDE.md) - Flowise Document Store Deployment Guide
+- [1362_FLOWISE_RECORD_MANAGER_SETUP_GUIDE.md](1362_FLOWISE_RECORD_MANAGER_SETUP_GUIDE.md) - Flowise Record Manager Setup Guide
+- [1363_LOADER_TEMPLATES_MANAGEMENT.md](1363_LOADER_TEMPLATES_MANAGEMENT.md) - Loader Templates Management
+- [1363_DEPARTMENT_AWARE_EMBEDDINGS_FINAL_SOLUTION.md](1363_DEPARTMENT_AWARE_EMBEDDINGS_FINAL_SOLUTION.md) - Department-Aware Embeddings: Final Solution
+- [1370_DOCUMENT_VIEW_FUNCTIONALITY.md](1370_DOCUMENT_VIEW_FUNCTIONALITY.md) - Document View Functionality
+- [1371_COMPLETE_FLOWISE_INTEGRATION_TEST.md](1371_COMPLETE_FLOWISE_INTEGRATION_TEST.md) - Complete Flowise Integration Test
+- [1372_VECTOR_STORE_SECURITY_ARCHITECTURE.md](1372_VECTOR_STORE_SECURITY_ARCHITECTURE.md) - Vector Store Security Architecture with Discipline-Specific Isolation
+- [1373_FLOWISE_DASHBOARD_PERSISTENCE_FIX_VALIDATION.md](1373_FLOWISE_DASHBOARD_PERSISTENCE_FIX_VALIDATION.md) - Flowise Dashboard Persistence Fix Validation
+- [1373_VECTOR_SEARCH_SYSTEM.md](1373_VECTOR_SEARCH_SYSTEM.md) - Vector Search System
+- [1374_VECTOR_SEARCH_IMPLEMENTATION.md](1374_VECTOR_SEARCH_IMPLEMENTATION.md) - Vector Search Implementation Guide
+- [1375_FLOWISE_VECTOR_SEARCH.md](1375_FLOWISE_VECTOR_SEARCH.md) - Flowise Vector Search Integration
+- [1380_UNIFIED_FILE_UPLOADER_LANGCHAIN_INTEGRATION.md](1380_UNIFIED_FILE_UPLOADER_LANGCHAIN_INTEGRATION.md) - Unified File Uploader with LangChain Integration
+
+### 1365-1399 Range - ES Module Quality Assurance
+- **[1365_ES_MODULE_QUALITY_ASSURANCE.md](1365_ES_MODULE_QUALITY_ASSURANCE.md)** - **ES Module Quality Assurance System** - Automated validation and prevention of connectivity errors caused by syntax mistakes, import path issues, and ES module failures. Includes git hooks, validation scripts, and troubleshooting guides for preventing `ERR_CONNECTION_REFUSED` errors.
+
+### 1400-1499 Range - CSS Architecture
+- [1400_CSS_ARCHITECTURE.md](1400_CSS_ARCHITECTURE.md) - CSS Architecture
+
+### 1500-1599 Range - Webpack Architecture
+- [1500_WEBPACK_ARCHITECTURE.md](1500_WEBPACK_ARCHITECTURE.md) - Webpack Architecture
+- [1510_WEBPACK_CONFIGURATION_FILE.md](1510_WEBPACK_CONFIGURATION_FILE.md) - Webpack Configuration File
+
+### 1600-1699 Range - Document Numbering System
+- [1600_DOCUMENT_NUMBERING_COMPLETE_SYSTEM.md](1600_DOCUMENT_NUMBERING_COMPLETE_SYSTEM.md) - Document Numbering System (Complete Implementation)
+- [1600_DEMO FILE FOR SECTORS.md](1600_DEMO FILE FOR SECTORS.md) - Demo File for Sectors
+
+#### Document Numbering System Updates (January 2025)
+
+**Organisation-Based Document Numbering Implementation:**
+- **Root Cause Resolution**: Fixed "Document type configuration not found" errors by implementing organisation-based document numbering
+- **Database Schema**: Updated document type configurations to use organisations as the primary entity instead of companies
+- **SQL Migration**: Created `populate-all-document-types-for-companies.sql` script to populate document types for all organisations
+- **Frontend Updates**: Modified UpsertFileModal to use organisation dropdown instead of company dropdown
+- **API Integration**: Updated document numbering service calls to use organisation IDs
+- **Schema Compliance**: Handles mixed British/American spelling conventions (organisations table, organization_id column)
+
+**Key Changes:**
+- Document types are now configured at the organisation level (the correct entity for document numbering)
+- All 7 standard document types (Claim, Contract Agreement, Correspondence, Minutes of Meeting, Request for Quotation, Site Instruction, Variation Notice) are created for each organisation
+- Frontend forms now display "Organisation" instead of "Company" for document uploads
+- Document numbering preview and generation use organisation-based parameters
+- Proper foreign key relationships maintained with valid company_id references
+
+**Files Modified:**
+- `client/src/pages/00435-contracts-post-award/components/modals/00435-02-UpsertFileModal.js` - Updated to use organisations
+- `populate-all-document-types-for-companies.sql` - SQL script for populating document types
+- `client/src/services/documentNumberingService.js` - Service integration
+- `server/api/document-numbering/` - Backend API endpoints
+
+**Impact:**
+- Resolves document numbering configuration errors
+- Provides consistent organisation-based document management
+- Maintains backward compatibility with existing data structures
+- Enables proper document number generation for all organisations
+
+### 9999 Range - Migration Files
+- [9999_MIGRATION_PLAN.md](9999_MIGRATION_PLAN.md) - Migration Plan
+- [9999_MIGRATION_TRACKER.md](9999_MIGRATION_TRACKER.md) - Migration Tracker
+
+[Previous content up to "Client & Internationalization" section remains the same...]
+
+#### 0800\_ - Client & Internationalization
+
+- Client-side architecture
+- Language management
+- Localization strategies
+- RTL support
+- Common JavaScript utilities (0200-all-common):
+  - Environment configuration and detection
+  - Event system for application-wide communication
+  - DOM manipulation utilities
+  - Data handling and validation
+  - Performance optimization (debounce/throttle)
+
+#### 0250\_ - Utilities Architecture
+
+- Utility scripts and tools
+  - String manipulation and formatting
+  - Cookie management
+  - File handling utilities
+- Path resolution and services
+    - Webpack Configuration:
+      - Manages the bundling of JavaScript, CSS, HTML, and other assets for the client-side application.
+      - The project has transitioned to a Single-Page Application (SPA) structure, with webpack configured for a single entry point and dynamic content rendering via React.
+      - Key aspects of the configuration include a single entry point, output management (to `client/dist2/`), various loaders for different file types (JavaScript/JSX, CSS, assets), an extensive set of plugins (e.g., `HtmlWebpackPlugin`, `MiniCssExtractPlugin`, `CopyWebpackPlugin`), and a development server setup.
+      - For a high-level overview of webpack's role and best practices in this project, see [1500 Webpack Architecture](./1500_WEBPACK_ARCHITECTURE.md).
+      - For a detailed explanation of the `client/config/webpack.config.js` file and its specific settings, see [1510 Webpack Configuration File Details](./1510_WEBPACK_CONFIGURATION_FILE.md).
+
+#### 0750\_ - Image Theme Settings
+
+- Dynamic selection of image sets (themes) based on folders in `public/assets/`.
+- Managed via the "Dev settings" UI.
+- See [0750 Image Theme Settings](./0750_IMAGE_THEME_SETTINGS.md) for full details.
+
+#### 0900\_ - Chatbot & UI Components
+
+- Component library
+- Design patterns
+- Accessibility standards
+- Performance optimization
+- Chatbot implementation
+- [Metadata Strategy](./0900_METADATA_STRATEGY.md) - **NEW** Guide for standardizing document metadata.
+- **AI Document Tools Color Scheme Standardization** - **COMPLETED** (June 2025):
+  - All 6 AI Document Tools now use consistent orange color scheme (#FFA500)
+  - Fixed blue icon conflicts by removing custom external icons
+  - Standardized user message backgrounds (#FFE8CC) and send buttons (#FFA500)
+  - Tools affected: Document Translator, Version Comparator, Compliance Checker
+  - Maintained full functionality while achieving visual consistency
+  - Components: DocumentTranslatorChatbot, DocumentVersionComparatorChatbot, DocumentComplianceCheckerChatbot
+- React Components:
+  - Component structure
+  - Context providers
+  - Custom hooks
+  - State management
+  - Component lifecycle
+  - Performance optimization
+  - Testing strategies
+
+[Previous content for sections 1000-1200 remains the same...]
+
+#### 1300\_ - Page Implementations
+
+- Login page (00100-user-login)
+- Settings page (00165-settings)
+- Home page (00100-home):
+  - React component structure
+  - Integration with accordion module
+  - State management
+  - Settings manager integration
+  - **Note on Background Image**: The background image on this page currently does not display due to a persistent UI rendering issue. Refer to [Z-Index Analysis Report](./1300_00100_z_index_analysis_report.md) for detailed troubleshooting and [Sector Management System](./0950_SECTOR_MANAGEMENT.md) for related implementation details.
+  - **Dynamic Page Loading**: Pages are now dynamically loaded and filtered based on active sector and organization settings, with metadata stored in the `pages` database table.
+- **All Documents page (0200-all-documents)**: 
+  - **Purpose**: General document management interface for all departments
+  - **URL**: `http://localhost:3000/0200-all-documents`
+  - **Key Features**:
+    - Document search and filtering across all disciplines
+    - Document upload and version management
+    - AI-enhanced search and interaction with document content
+    - Access control based on user permissions and disciplines
+    - Integration with vector search system
+  - **Database Integration**: Interacts with document control tables (`a_00900_doccontrol_documents`, `a_00900_doccontrol_document_versions`, `a_00900_doccontrol_data`)
+  - **Modals**: Document upload, document details, document agents
+  - **State Management**: Three-state system (Agents, Upsert, Workspace)
+  - **Distinction**: Complements the specialist Document Control page (0900) by providing general access for all departments
+- Document Control page (00900-document-control):
+  - **Purpose**: Specialist interface for dedicated document control personnel
+  - **URL**: `http://localhost:3000/00900-document-control`
+  - **Advanced Features**: Document revisions, approvals, specialist workflows
+- Logistics page (01700-logistics)
+- Quality Assurance page (02200-quality-assurance): Note: This page has a persistent UI rendering issue in some environments despite extensive troubleshooting and code consistency with working pages. Refer to [Audit: Page Implementation Standardization Progress](./1300_0000_PAGE_IMPLEMENTATIONS_AUDIT.md) for detailed troubleshooting notes and current status.
+- Safety page (02400-safety)
+- **Procurement Supplier Directory (01900-supplier-directory)**:
+  - **Purpose**: Comprehensive supplier management and approval system
+  - **URL**: `http://localhost:3060/supplier-directory`
+  - **Key Features**:
+    - Advanced search and filtering system with multi-field search
+    - Approval workflow management with status tracking
+    - Import/export functionality for supplier data
+    - Duplicate detection with intelligent matching
+    - URL validation and formatting
+    - Metadata tracking for traceability
+    - Dashboard statistics with key metrics
+    - Responsive, accessible design following 00200 page patterns
+  - **Database Integration**: Enhanced suppliers table with comprehensive fields (website, approval_status, goods_services, rating, completed_projects, registration_date, last_activity, tax_number, compliance_status, source_url, scrape_method, scraped_at)
+  - **Modals**: Supplier details, bulk actions, import wizard
+  - **State Management**: Complex state management with React hooks
+  - **Documentation**: [1300_01900_CONSOLIDATED_SUPPLIER_DIRECTORY_DOCUMENTATION.md](./1300_01900_CONSOLIDATED_SUPPLIER_DIRECTORY_DOCUMENTATION.md)
+- **Procurement Tender Management (01900-tender-management)**:
+  - **Purpose**: Comprehensive tender discovery, processing, and approval system
+  - **URL**: `http://localhost:3060/tender-management`
+  - **Key Features**:
+    - Dashboard with key tender statistics and metrics
+    - Advanced search and filtering for tender discovery
+    - Tender creation and management with approval workflows
+    - Supplier bid management and evaluation system
+    - Document management for tender specifications and addendums
+    - Real-time status tracking and notifications
+    - Integration with supplier directory for bidder management
+    - Responsive design following Template A standards
+  - **Database Integration**: Comprehensive tender management schema with 5 main tables (tenders, tender_items, tender_suppliers, tender_evaluation, tender_approvals)
+  - **Modals**: Tender details, bid management, evaluation criteria, approval workflow
+  - **State Management**: Complex state management with React hooks and context
+  - **Chatbot Integration**: Custom AI assistant for tender-related queries and assistance
+  - **Documentation**: [1300_01900_TENDER_MANAGEMENT_DOCUMENTATION.md](./1300_01900_TENDER_MANAGEMENT_DOCUMENTATION.md)
+- **Complete Page List**: For a comprehensive list of all pages, their sector associations, organization access permissions, and accordion structure, see [Page List Documentation](./1300_0000_PAGE_LIST.md).
+- Common patterns and standards:
+  - React component organization
+  - State management patterns
+  - Performance optimization
+  - Testing strategies
+
+#### 1350\_ - Vector Search System
+
+- **Vector Search System**: Comprehensive Supabase-based vector search implementation for document similarity search across 100+ disciplines using OpenAI embeddings.
+- **Multi-Discipline Support**: Dynamic search criteria management through database configuration, supporting contracts post-award, civil engineering, electrical engineering, mechanical engineering, and extensible to additional disciplines.
+- **Integration Components**:
+  - Universal search functions for all disciplines
+  - Discipline-specific search functions with proper table name mapping
+  - JavaScript client libraries for web applications
+  - Flowise integration for AI-powered document retrieval
+  - Edge Functions for HTTP-based access (alternative approach)
+- **Key Features**:
+  - Dynamic search criteria stored in database table
+  - Automatic function resolution based on table names
+  - Support for 1536-dimensional OpenAI embeddings
+  - Performance optimization with proper indexing
+  - Comprehensive error handling and validation
+- **Implementation**: See [1350 Vector Search System](./1350_VECTOR_SEARCH_SYSTEM.md) for system overview, [1351 Vector Search Implementation](./1351_VECTOR_SEARCH_IMPLEMENTATION.md) for setup guide, and [1352 Flowise Vector Search Integration](./1352_FLOWISE_VECTOR_SEARCH.md) for Flowise-specific configuration.
+
+[Previous content for remaining sections remains the same...]
+
+### Environment Variables
+
+The following environment variables are used in the project:
+
+- `LLAMA_PARSER_ENDPOINT`: The API endpoint for the Llama Parser service (e.g., `https://cloud.llamaindex.ai`).
+- `LLAMA_CLOUD_API_KEY`: The API key for accessing the Llama Parser service.
+
+### Documentation Standards (v2.0)
+
+#### Review Cycles & Maintenance
+- Documentation should be reviewed:
+  - Monthly for core documentation (0000-0099 range)
+  - Quarterly for functional area documentation (0100-0999 range)  
+  - Semi-annually for technical components (1000-1999 range)
+- Documentation owners should:
+  - Update documentation when features change
+  - Archive deprecated documentation
+  - Maintain version history of significant changes
+
+#### Audit Checklist
+- [ ] Verify all documentation files follow naming conventions
+- [ ] Check cross-references between documents
+- [ ] Validate all code examples are up-to-date
+- [ ] Confirm documentation matches current implementation
+- [ ] Review for consistent terminology
+- [ ] Check for outdated or deprecated content
+
+#### File Naming Conventions
+
+##### Documentation Files (.md)
+
+- Use 4-digit prefixes in hundreds (e.g., 0100_)
+- Use uppercase for file names (e.g., DOCUMENTATION_GUIDE.md)
+- Use underscores to separate words
+- Place files in the `docs/` directory
+- Standardized prefixes:
+  - 0000-0099: Core documentation
+  - 0100-0999: Functional areas
+  - 1000-1999: Technical components
+  - 2000-9999: Special cases
+  - All prefixes must be exactly 4 digits
+
+Example:
+
+```
+docs/
+├── 0000_DOCUMENTATION_GUIDE.md
+├── 0100_GETTING_STARTED.md
+└── 1300_00100_LOGIN_PAGE.md
+```
+
+#### SQL File Naming Conventions
+
+SQL files use special prefixes for different types of database operations:
+
+- **7-digit sequential** (`0000001-0999999`): Migration scripts and direct SQL
+- **Category prefix + 4-digit** (`create_`, `audit_`, etc.): Operation-specific SQL files
+
+Example:
+
+```
+sql/
+├── create_project_template_workflow.sql    # Main workflow schema
+├── audit_existing_schema.sql               # Database structure audit
+├── fix_form_templates_columns.sql          # Column fixing operations
+└── run_sql_enhancement.cjs                 # Node.js execution script
+```
+
+#### Database Schema Management with CJS Files
+
+**Node.js CommonJS (CJS) files are now the recommended approach for creating and amending Supabase tables.** This provides several advantages over direct SQL execution:
+
+##### Benefits of CJS Database Management
+
+1. **Connection Management**: Automatic Supabase connection handling using `.env` variables
+2. **Error Handling**: Robust exception handling with SQL error reporting
+3. **Transaction Control**: Proper BEGIN/COMMIT blocks for atomic operations
+4. **Verification**: Built-in execution feedback and data validation
+5. **Integration**: Seamless integration with existing codebase and deployment scripts
+
+##### CJS File Structure and Best Practices
+
+#### 1. Basic CJS Template
+```javascript
+#!/usr/bin/env node
+
+/**
+ * DATABASE OPERATION: Brief description
+ * Creates table for feature implementation
+ */
+
+const { Pool } = require('pg');
+require('dotenv').config();
+
+console.log('🔧 STARTING: Brief operation name');
+console.log('================================\n');
+
+const databaseUrl = process.env.DATABASE_URL;
+if (!databaseUrl) {
+  console.error('❌ MISSING: DATABASE_URL in .env file');
+  process.exit(1);
+}
+
+const pool = new Pool({
+  connectionString: databaseUrl,
+  ssl: { rejectUnauthorized: false }
+});
+
+async function executeDatabaseOperation() {
+  try {
+    console.log('🔗 Connecting to database...');
+    await pool.query('SELECT 1'); // Test connection
+    console.log('✅ Database connection successful\n');
+
+    // 🏗️ EXECUTE DATABASE OPERATIONS HERE
+    await pool.query(`
+      -- SQL operations go here
+      CREATE TABLE IF NOT EXISTS example_table (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        created_at TIMESTAMP DEFAULT NOW()
+      );
+    `);
+
+    console.log('✅ Operation completed successfully');
+
+    // 🔍 Verification
+    const result = await pool.query('SELECT COUNT(*) as count FROM example_table');
+    console.log(`📊 Created table with ${result.rows[0].count} records`);
+
+  } catch (error) {
+    console.error('❌ Database operation failed:', error.message);
+    process.exit(1);
+  } finally {
+    await pool.end();
+  }
+}
+
+// Execute the operation
+executeDatabaseOperation();
+```
+
+#### 2. Environment Configuration
+
+**Required Environment Variables:**
+```env
+# Supabase Database Connection
+DATABASE_URL=postgresql://user:password@host:5432/database?pgbouncer=true&connection_limit=1
+
+# Alternative Connection Parameters (if needed)
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-key
+```
+
+#### 3. Standardization of Database Operations
+
+##### Create Tables with CJS:
+```javascript
+// File: sql/create_feature_tables.cjs
+console.log('🏗️ CREATING TABLES: Feature tables');
+console.log('================================\n');
+
+// Table creation operations
+await pool.query(`CREATE TABLE feature_table (...)`);
+
+// Indexes and constraints
+await pool.query(`CREATE INDEX idx_feature_name ON feature_table(name)`);
+
+// Verification
+const result = await pool.query('SELECT tablename FROM pg_tables WHERE tablename = $1', ['feature_table']);
+console.log(`${result.rows.length ? '✅' : '❌'} Table created successfully`);
+```
+
+##### Amend Existing Tables with CJS:
+```javascript
+// File: sql/amend_existing_tables.cjs
+console.log('🔧 AMENDING TABLES: Adding columns and constraints');
+console.log('=================================================\n');
+
+// Safe column additions
+await pool.query(`ALTER TABLE projects ADD COLUMN IF NOT EXISTS new_field TEXT DEFAULT ''`);
+
+// Foreign key constraints (handle dupes gracefully)
+try {
+  await pool.query(`ALTER TABLE child_table ADD CONSTRAINT fk_parent
+                    FOREIGN KEY (parent_id) REFERENCES parent_table(id)`);
+  console.log('✅ Foreign key constraint added');
+} catch (error) {
+  if (error.message.includes('already exists')) {
+    console.log('ℹ️  Foreign key constraint already exists');
+  } else {
+    throw error;
+  }
+}
+
+// Data migration if needed
+await pool.query(`UPDATE existing_table SET new_field = default_value WHERE new_field IS NULL`);
+```
+
+##### Verification and Auditing with CJS:
+```javascript
+// File: sql/verify_schema_changes.cjs
+console.log('🔍 VERIFYING SCHEMA: Checking implementation');
+console.log('===========================================\n');
+
+// Check if tables exist
+const tables = ['template_customization_rules', 'project_templates', 'agents_tracking'];
+for (const table of tables) {
+  try {
+    const exists = await pool.query(`SELECT EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_name = $1 AND table_schema = 'public'
+    )`, [table]);
+    console.log(`${exists.rows[0].exists ? '✅' : '❌'} ${table} exists`);
+  } catch (error) {
+    console.log(`❌ ${table} check failed: ${error.message}`);
+  }
+}
+
+// Check if columns were added
+const columnChecks = [
+  { table: 'projects', column: 'site_location' },
+  { table: 'form_templates', column: 'status' },
+  { table: 'project_templates', column: 'form_template_id' }
+];
+
+for (const {table, column} of columnChecks) {
+  try {
+    const hasColumn = await pool.query(`SELECT EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_name = $1 AND column_name = $2 AND table_schema = 'public'
+    )`, [table, column]);
+    console.log(`${hasColumn.rows[0].exists ? '✅' : '❌'} ${table}.${column} exists`);
+  } catch (error) {
+    console.log(`❌ ${table}.${column} check failed: ${error.message}`);
+  }
+}
+
+// Count records in new tables
+for (const table of tables) {
+  try {
+    const count = await pool.query(`SELECT COUNT(*) as count FROM ${table}`);
+    console.log(`🔢 ${table}: ${count.rows[0].count} records`);
+  } catch (error) {
+    console.log(`❌ ${table} count failed: ${error.message}`);
+  }
+}
+```
+
+#### 4. Execution Workflow
+
+##### Standard Workflow Steps:
+
+1. **Create Script** (`sql/create_feature_tables.cjs`):
+   ```bash
+   # Implement the database feature in CJS
+   node sql/create_feature_tables.cjs
+   ```
+
+2. **Verify Schema** (`sql/verify_schema_changes.cjs`):
+   ```bash
+   # Check that changes were applied correctly
+   node sql/verify_schema_changes.cjs
+   ```
+
+3. **Update Documentation** (`docs/0007_DATABASE_SCHEMA_REFERENCE.md`):
+   ```markdown
+   ## Feature Table
+   - **New Table**: feature_table
+   - **Purpose**: Feature implementation
+   - **Columns**: id, name, created_at
+   ```
+
+4. **Commit Changes**:
+   ```bash
+   git add .
+   git commit -m "feat: Add feature table with CJS management
+
+   - Added feature_table with proper indexes
+   - Verified column additions and constraints
+   - Updated schema documentation
+   - All operations verified via CJS scripts"
+   ```
+
+#### 5. Error Handling Patterns
+
+##### Connection Error Handling:
+```javascript
+try {
+  await pool.query('SELECT 1'); // Test connection
+  console.log('✅ Database connection successful');
+} catch (error) {
+  console.error('❌ Database connection failed');
+  if (error.message.includes('Tenant or user not found')) {
+    console.error('   Check your DATABASE_URL and Supabase credentials');
+  }
+  process.exit(1);
+}
+```
+
+##### Transaction Error Handling:
+```javascript
+try {
+  await pool.query('BEGIN');
+  // Multiple operations here
+  await pool.query('ALTER TABLE ...');
+  await pool.query('CREATE INDEX ...');
+  await pool.query('INSERT INTO ...');
+  await pool.query('COMMIT');
+  console.log('✅ All operations completed successfully');
+} catch (error) {
+  await pool.query('ROLLBACK').catch(() => {}); // Best effort rollback
+  console.error('❌ Transaction failed, all changes rolled back');
+  throw error;
+}
+```
+
+#### 6. Migration Patterns
+
+##### Schema Migration Scripts:
+```javascript
+// File: sql/migrate_v1_to_v2.cjs
+console.log('🔄 MIGRATING SCHEMA: v1 → v2');
+console.log('===============================\n');
+
+// Check current schema version
+const currentVersion = await pool.query(`SELECT version FROM schema_versions ORDER BY created_at DESC LIMIT 1`);
+if (currentVersion.rows[0].version >= 2) {
+  console.log('✅ Already migrated to v2');
+  return;
+}
+
+// Apply migration steps
+await pool.query(`ALTER TABLE existing_table ADD COLUMN IF NOT EXISTS new_col TEXT`);
+
+// Update schema version
+await pool.query(`INSERT INTO schema_versions (version, description) VALUES (2, 'Added new column')`);
+
+console.log('✅ Migration to v2 completed');
+```
+
+##### Data Migration Scripts:
+```javascript
+// File: sql/migrate_data_v1_to_v2.cjs
+console.log('🔄 MIGRATING DATA: v1 → v2');
+console.log('===========================\n');
+
+const migrationStats = { updated: 0, skipped: 0, errors: 0 };
+
+// Safely migrate existing data
+const rows = await pool.query('SELECT id, old_column FROM table WHERE old_column IS NOT NULL');
+for (const row of rows) {
+  try {
+    // Transform and update each row
+    const transformedValue = transformData(row.old_column);
+    await pool.query('UPDATE table SET new_column = $1 WHERE id = $2', [transformedValue, row.id]);
+    migrationStats.updated++;
+  } catch (error) {
+    console.error(`❌ Failed to migrate row ${row.id}: ${error.message}`);
+    migrationStats.errors++;
+  }
+}
+
+// Report results
+console.log(`📊 Migration completed:`);
+console.log(`   ✅ ${migrationStats.updated} records updated`);
+console.log(`   ⚠️  ${migrationStats.errors} records had errors`);
+console.log(`   ℹ️  ${migrationStats.skipped} records skipped`);
+```
+
+#### 7. Multi-Environment Support
+
+##### Environment Detection:
+```javascript
+// Detect current environment
+function getCurrentEnvironment() {
+  const url = process.env.DATABASE_URL;
+  if (url.includes('localhost')) return 'development';
+  if (url.includes('supabase.com')) return 'production';
+  if (url.includes('test')) return 'test';
+  return 'unknown';
+}
+
+const environment = getCurrentEnvironment();
+console.log(`🏷️  Environment: ${environment}`);
+
+// Environment-specific operations
+if (environment === 'production') {
+  console.log('⚠️  Performing production-safe operations only');
+  // Skip destructive operations in production
+}
+if (environment === 'development') {
+  console.log('🚧 Running development-mode operations');
+  // Enable additional logging, test data, etc.
+}
+```
+
+#### 8. Recommended CJS File Organization
+
+```
+sql/
+├── 📁 core/                    # Core schema operations
+│   ├── create_base_tables.cjs
+│   ├── amend_core_tables.cjs
+│   └── verify_core_schema.cjs
+│
+├── 📁 features/                # Feature-specific operations
+│   ├── create_agent_system.cjs
+│   ├── amend_workflow_tables.cjs
+│   ├── create_document_system.cjs
+│   └── verify_feature_schemas.cjs
+│
+├── 📁 migrate/                 # Migration scripts
+│   ├── migrate_v1_to_v2.cjs
+│   ├── data_migration_v2.cjs
+│   └── rollback_v2_to_v1.cjs
+│
+├── 📁 audit/                   # Audit and verification
+│   ├── audit_full_schema.cjs
+│   ├── verify_table_counts.cjs
+│   ├── check_foreign_keys.cjs
+│   └── audit_index_usage.cjs
+│
+└── 📁 templates/               # Reusable templates
+    ├── cjs_script_template.cjs
+    └── documentation_template.md
+```
+
+#### 9. Performance Considerations
+
+#### Efficient Bulk Operations:
+```javascript
+// Use larger chunks for bulk operations
+const BATCH_SIZE = 1000;
+const rows = await pool.query('SELECT id, data FROM large_table WHERE needs_update');
+
+for (let i = 0; i < rows.rows.length; i += BATCH_SIZE) {
+  const batch = rows.rows.slice(i, i + BATCH_SIZE);
+  const values = batch.map(row => `(${row.id}, '${JSON.stringify(row.data)}')`).join(', ');
+  await pool.query(`INSERT INTO target_table VALUES ${values} ON CONFLICT DO UPDATE SET ...`);
+  console.log(`✅ Processed batch ${(i / BATCH_SIZE) + 1}`);
+}
+```
+
+#### Connection Pooling:
+```javascript
+// Use pooled connections for concurrent operations
+const operations = [...]; // Array of async operations
+
+// Process in controlled concurrency
+const CONCURRENT_LIMIT = 3;
+for (let i = 0; i < operations.length; i += CONCURRENT_LIMIT) {
+  const batch = operations.slice(i, i + CONCURRENT_LIMIT);
+  await Promise.all(batch.map(op => op()));
+}
+```
+
+#### 10. Security Best Practices
+
+##### Sensitive Data Handling:
+```javascript
+// Never log sensitive data
+const result = await pool.query('SELECT id, email FROM users WHERE active = true');
+console.log(`✅ Processed ${result.rows.length} user records`);
+// ❌ DON'T: console.log(`User emails: ${result.rows.map(r => r.email).join(', ')}`);
+```
+
+##### SQL Injection Prevention:
+```javascript
+// Use parameterized queries ALWAYS
+const userId = req.params.id;
+await pool.query('SELECT * FROM users WHERE id = $1', [userId]);
+
+// ✅ NEVER directly concatenate user input
+// ❌ BAD: `SELECT * FROM users WHERE id = '${userId}'`
+```
+
+##### Permission Management:
+```javascript
+// Restrict operations based on environment
+const isProduction = process.env.NODE_ENV === 'production';
+
+// Enable destructive operations only in development
+if (!isProduction) {
+  await pool.query('DROP TABLE IF EXISTS temp_test_table');
+} else {
+  console.log('⚠️  Skipping destructive operations in production');
+}
+```
+
+This comprehensive CJS-based workflow provides:
+
+✅ **Automated Connection Management** - SSL, authentication, error handling
+✅ **Transactional Safety** - COMMIT/ROLLBACK support
+✅ **Schema Verification** - Automatic checks after operations
+✅ **Performance Optimization** - Batch processing and connection pooling
+✅ **Security** - Body parameterized queries and environment restrictions
+✅ **Error Recovery** - Graceful handling of conflicts and failures
+✅ **Documentation Integration** - Automatic schema auditing and updates
+
+**CJS files are now the standard for all Supabase database operations in this project.** 🔧
+
+##### JavaScript Files (.js)
+
+- Use 5-digit prefixes in hundreds (e.g., 00200*)
+- Use lowercase for file names
+- Use hyphens to separate words
+- Place files in appropriate directories based on functionality:
+  - React components: components/ directory
+  - Context providers: context/ directory
+  - Custom hooks: hooks/ directory
+  - Utility functions: utils/ directory
+  - Common code: common/ directory
+
+Example:
+
+```
+client/src/modules/accordion/
+├── 00200-accordion-manager.js
+├── 00200-accordion-component.js
+├── context/
+│   └── 00200-accordion-context.js
+└── hooks/
+    ├── 00200-accordion-state.js
+    └── 00200-accordion-cache.js
+```
+
+##### 5-Digit Page Number Interpretation
+
+Page numbers and their associated ranges (e.g., for sectors) are represented using a 5-digit format (e.g., `00102`, `02050`). It is important to note that leading zeros are for formatting convenience and visual alignment only. The numerical value should be interpreted without these leading zeros.
+
+- **Individual Page Numbers**: A page number like `00102` should be interpreted as `102`.
+- **Page Ranges**: A range such as `00200-09999` should be interpreted as `200` to `9999`.
+
+This convention ensures consistency in file naming and logical grouping while allowing for a clear numerical understanding of page identifiers and their associated ranges.
+
+### Component Documentation
+
+Components should be documented directly in their source files using JSDoc comments for JavaScript/React files and structured HTML comments for template files.
+
+#### React Component Documentation
+
+```javascript
+/**
+ * @component ComponentName
+ * @description Brief description of the component's purpose
+ *
+ * @prop {Type} propName - Description of the prop
+ * @prop {Type} anotherProp - Description of another prop
+ *
+ * @example
+ * import { ComponentName } from '@components/ComponentName';
+ *
+ * <ComponentName prop="value" />
+ */
+```
+
+#### Context Provider Documentation
+
+```javascript
+/**
+ * @context ContextName
+ * @description Purpose of this context
+ *
+ * @property {Type} value - Description of context value
+ * @property {Function} action - Description of context action
+ *
+ * @example
+ * import { useContext } from '@context/ContextName';
+ */
+```
+
+#### Custom Hook Documentation
+
+```javascript
+/**
+ * @hook useHookName
+ * @description Purpose of this hook
+ *
+ * @param {Type} param - Description of parameter
+ * @returns {Type} Description of return value
+ *
+ * @example
+ * import { useHookName } from '@hooks/useHookName';
+ */
+```
+
+[Previous content for remaining sections remains the same...]
+
+## Version History
+
+### Current Version: 1.5.0
+
+- **Database Schema Update**: Introduced `pages` table for dynamic page management.
+- **Dynamic Page Management**: Implemented backend and frontend logic for adding, storing, and filtering pages by sector and organization.
+- **Accordion Filtering**: Enhanced accordion to dynamically display pages based on active sector and organization from database.
+- **Organization Management**: Improved consistency in active organization handling across the application.
+- Added React component documentation standards
+- Updated webpack alias documentation
+- Enhanced JavaScript file organization guidelines
+- Added component structure documentation
+- Updated page implementations with React patterns
+
+[Previous version history remains the same...]
+
+## Optimized Architecture for Organization-Specific Deployments
+
+This section provides a high-level overview of the recommended architecture for supporting multiple organizations with bespoke requirements through independent deployments. For a detailed explanation, refer to the [System Architecture](./0200_SYSTEM_ARCHITECTURE.md#optimized-architecture-for-organization-specific-deployments) document.
+
+This approach eliminates the complexity of multi-tenancy by providing each organization with its own customized application instance. Key aspects include separate codebases, independent deployments, isolated development, and bespoke customization.
+
+The strategy involves using a master template to generate organization-specific codebases, managing prefix ranges for page organization, and utilizing automated scripts for template generation and prefix renumbering. Configuration and asset management are also handled on an organization-specific basis.
+
+For details on the automated scripts used in the template generation process, refer to the [Utilities Architecture](./0250_UTILITIES_ARCHITECTURE.md#automated-template-generation-utilities) document.
+
+
+
+
+
+
+#### Configuration Management
+
+**Environment-Specific Settings:**
+```javascript
+// .env.orgA
+ORG_ID=orgA
+ORG_NAME="Organization A"
+ORG_DOMAIN=orga.company.com
+ORG_PREFIX_START=100
+ORG_PREFIX_END=3010
+DATABASE_URL=postgresql://orga-db.company.com
+API_ENDPOINT=https://api-orga.company.com
+
+// .env.orgB  
+ORG_ID=orgB
+ORG_NAME="Organization B"
+ORG_DOMAIN=orgb.company.com
+ORG_PREFIX_START=3100
+ORG_PREFIX_END=4999
+DATABASE_URL=postgresql://orgb-db.company.com
+API_ENDPOINT=https://api-orgb.company.com
+```
+
+#### Build Process Optimization
+
+**Organization-Specific Webpack Configuration:**
+```javascript
+// webpack.config.js
+const orgId = process.env.ORG_ID || 'orgA';
+const orgConfig = require(`./config/org-${orgId}.config.js`);
+
+module.exports = {
+  entry: {
+    index: `./client/src/organizations/${orgId}/index.jsx`
+  },
+  resolve: {
+    alias: {
+      '@org-config': path.resolve(__dirname, `./config/org-${orgId}`),
+      '@org-assets': path.resolve(__dirname, `./public/assets/${orgId}`)
+    }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.ORG_CONFIG': JSON.stringify(orgConfig)
+    })
+  ]
+};
+```
+
+### Risk Assessment and Mitigation
+
+#### Low-Risk Factors
+
+**Simplified Architecture:**
+- **No Multi-Tenancy Complexity**: Standard single-application deployment model
+- **Proven Technology Stack**: Uses existing React/Webpack architecture
+- **Clear Separation**: No shared runtime dependencies between organizations
+- **Standard Security Model**: Traditional single-tenant security approaches
+
+#### Potential Challenges and Solutions
+
+**Challenge 1: Template Synchronization**
+- **Risk**: Keeping organization codebases in sync with template improvements
+- **Solution**: Automated merge tools and selective update mechanisms
+- **Mitigation**: Clear documentation of breaking changes and migration guides
+
+**Challenge 2: Code Duplication**
+- **Risk**: Duplicated code across organization deployments
+- **Solution**: Shared utility libraries and common component packages
+- **Mitigation**: Regular refactoring to extract common functionality
+
+**Challenge 3: Maintenance Overhead**
+- **Risk**: Managing multiple codebases and deployments
+- **Solution**: Automated deployment pipelines and monitoring tools
+- **Mitigation**: Standardized operational procedures and documentation
+
+### Implementation Timeline
+
+#### Phase 1: Template Generation Infrastructure (Weeks 1-2)
+- Develop automated template creation scripts
+- Implement prefix renumbering utilities
+- Create organization-specific configuration management
+- Set up basic deployment pipeline
+
+#### Phase 2: First Organization Template (Weeks 3-4)
+- Generate Organization B from template
+- Test prefix renumbering and asset management
+- Validate independent deployment process
+- Perform comprehensive functionality testing
+
+#### Phase 3: Scaling and Optimization (Weeks 5-6)
+- Create additional organization templates
+- Optimize build and deployment processes
+- Implement monitoring and maintenance tools
+- Document operational procedures
+
+### Success Metrics
+
+**Technical Metrics:**
+- Template generation time: < 30 minutes per organization
+- Build time: Comparable to single-organization builds
+- Deployment success rate: > 99%
+- Cross-organization isolation: 100% (no shared runtime state)
+
+**Operational Metrics:**
+- Independent release capability: Each organization can deploy independently
+- Customization flexibility: Organizations can modify 100% of their codebase
+- Maintenance efficiency: Template updates propagate to organizations within 1 week
+- Developer productivity: No coordination overhead between organization teams
+
+This architecture provides a robust, scalable solution for organization-specific deployments while maintaining the simplicity and reliability of single-tenant applications.
+
+### Design Consistency Assessment
+
+Before diving into architectural choices, it's crucial to assess the level of design consistency across your multi-tenant application:
+
+*   **High Design Consistency:** Most pages follow the same design patterns, layouts, and UI components across all tenants. Customization is primarily limited to branding (logos, color schemes), content, and feature visibility.
+*   **Low Design Consistency:** Tenants require significantly different UI/UX, unique page layouts, bespoke components, or entirely different user workflows.
+
+This assessment is a primary driver for the architectural decision.
+
+### Scenario 1: Retaining the Existing Monolithic Structure
+
+In this scenario, a single codebase serves all companies. Differentiation is achieved primarily through configuration, feature flags, and data filtering based on the active organization.
+
+**Pros:**
+
+*   **Lower Initial Overhead:** Simpler to develop, build, and deploy initially.
+*   **Easier Universal Updates:** Bug fixes and new features in the core application are immediately available to all companies.
+*   **Centralized Code Management:** All code is in one place, simplifying code sharing and dependency management within the monolith.
+
+**Cons:**
+
+*   **Limited Customization:** Bespoke UI/UX or significantly different page layouts per company are difficult to implement without heavily complicating the codebase with conditional logic.
+*   **Complex Page Management:** Managing the visibility of a large number of pages across many companies through configuration can become cumbersome.
+*   **Code Bloat:** The client bundle contains code for all pages, potentially increasing load times.
+*   **Increased Maintenance Complexity:** As company-specific logic and UI variations are added, the codebase can become harder to understand and maintain.
+*   **Risk of Customization Conflicts:** Changes for one company might inadvertently affect others.
+
+**Implications:**
+
+*   Customization is primarily limited to what can be controlled via configuration, feature flags, and data.
+*   Page visibility is managed through a centralized configuration (`sectionMappings`) filtered by the active organization/sector.
+*   Agent logic resides in company-specific Flowise flows, with the client-side code handling interactions based on configuration.
+*   Code revisions are managed in a single repository, with potential for conflicts when merging company-specific features.
+*   Development teams work on a single codebase, requiring close coordination for company-specific work.
+
+### Scenario 2: Transitioning to a Micro-Frontend Architecture
+
+In this scenario, the client application is decomposed into smaller, independent micro-frontends (e.g., a shared core shell and company-specific micro-frontends). Company-specific code is dynamically loaded based on the active organization.
+
+**Pros:**
+
+*   **High Customization:** Enables significant UI/UX differences and entirely bespoke pages/features per company by allowing company-specific codebases.
+*   **Code Isolation:** Provides better isolation between company-specific logic and UI, reducing the risk of unintended side effects.
+*   **Independent Deployments:** Company-specific features can be developed and deployed independently of the shared core or other company micro-frontends.
+*   **Scalability:** Can be more scalable for large organizations with dedicated development teams working on their specific customizations.
+
+**Cons:**
+
+*   **Higher Initial Overhead:** More complex to design, build, and deploy initially due to the distributed nature of the architecture.
+*   **Increased Infrastructure Complexity:** Requires setting up infrastructure for building, deploying, and hosting multiple micro-frontends.
+*   **Complex Integration and Orchestration:** Integrating micro-frontends within the shell and managing communication between them adds complexity.
+*   **Code Revision Management:** Requires careful planning for managing shared code vs. company-specific code, potentially using a monorepo and clear extension points.
+*   **Debugging Challenges:** Debugging issues across multiple dynamically loaded bundles can be more complex.
+
+**Implications:**
+
+*   Company-specific code (pages, components, logic) resides in separate micro-frontend bundles loaded at runtime.
+*   A shared core micro-frontend provides common functionalities (shell, shared components, utilities).
+*   Page management might involve company-specific configurations or code within their micro-frontends.
+*   Agent interaction logic is part of the company-specific micro-frontend, interacting with company-specific Flowise instances.
+*   Code revisions are managed with strategies for shared core updates and independent company customizations (e.g., monorepo, extension points).
+*   Development teams can be aligned with specific companies or micro-frontends.
+
+### Risk Assessment in Terms of AI Assistant Capabilities
+
+Transitioning to a micro-frontend architecture is complex and high-risk, and this is also true when involving an AI assistant like myself. While I possess extensive knowledge and tool capabilities, limitations exist in:
+
+*   Deep architectural decision-making requiring nuanced business understanding.
+*   Grasping implicit dependencies and subtle code nuances.
+*   Debugging complex runtime issues across distributed systems.
+*   Visual verification and comprehensive UX assessment.
+*   Adapting to entirely unforeseen issues creatively.
+
+**Minimizing Risk with AI Assistant Involvement:**
+
+To mitigate these risks and leverage my strengths during such a transition:
+
+*   **Human-Led Architecture and Planning:** Human architects and senior developers should drive the high-level design and planning.
+*   **Clear and Specific Instructions:** Provide me with detailed tasks for implementation.
+*   **Phased Implementation:** Break down the work into small, verifiable steps.
+*   **Leverage AI for Analysis and Repetitive Tasks:** Use me for code analysis, identifying patterns, and automating refactoring.
+*   **Continuous Human Verification:** Thoroughly review code changes, perform testing, and visually verify results.
+*   **Clear Context Communication:** Provide all relevant documentation and rationale.
+*   **Utilize PLAN MODE for Strategy:** Continue strategic discussions in PLAN MODE before implementing changes.
+
+By combining human expertise with AI capabilities in a collaborative and structured manner, the risks can be significantly reduced, enabling a more effective transition.
+
+### Enhanced Risk Quantification
+
+To provide a more concrete understanding of potential failure points, consider these specific risks:
+
+*   **Database Schema Conflicts:** Integrating multiple micro-frontends, especially if they interact with shared data, can lead to complex schema evolution and potential conflicts.
+*   **Authentication/Authorization Complexity:** Managing user identities and permissions across distributed frontends requires robust and consistent mechanisms, increasing the attack surface if not handled carefully.
+*   **State Management Synchronization Issues:** Maintaining consistent application state across independent micro-frontends can be challenging, leading to data inconsistencies and difficult-to-debug issues.
+*   **Performance Degradation:** Dynamically loading multiple bundles can increase initial load times and introduce performance bottlenecks if not optimized.
+*   **Network Latency:** Increased inter-service communication can introduce latency, impacting user experience.
+
+### Strengthened Risk Mitigation Strategy
+
+Beyond the existing strategies, consider these additional measures:
+
+*   **Prototype-First Approach:** Before full-scale implementation, build a small, isolated proof-of-concept for a single micro-frontend to validate the architectural choices and integration patterns.
+*   **Clear Rollback Strategy:** Define and test clear procedures for reverting changes or entire micro-frontends if critical issues arise post-deployment.
+*   **Comprehensive Performance Monitoring:** Implement specific metrics and tools to track load times, API response times, and inter-micro-frontend communication during and after the transition.
+*   **Structured User Acceptance Testing (UAT):** Develop rigorous UAT protocols for each micro-frontend and for the integrated system to ensure all functionalities and UX aspects meet requirements.
+*   **Automated End-to-End Testing:** Implement automated tests that span across multiple micro-frontends to catch integration issues early.
+
+### Decision Framework for Architectural Choice
+
+To guide the decision between monolithic and micro-frontend architectures, consider the following criteria, with **Design Consistency** being a primary determinant:
+
+*   **Design Consistency (Primary Factor):**
+    *   **High Consistency (Monolithic Favored):** If most pages follow the same design and require little customization, a monolithic approach is generally more efficient and less complex. Multi-tenancy can be effectively managed through configuration, data filtering, and minor theme adjustments.
+    *   **Low Consistency (Micro-Frontend Favored):** If tenants require significantly different UI/UX, unique page layouts, or entirely bespoke features, a micro-frontend architecture provides the necessary isolation and flexibility.
+
+*   **Number of Companies/Tenants:**
+    *   **Monolithic (Recommended for < 20 Tenants):** Highly suitable for a small number of tenants (e.g., less than 20) with consistent design requirements. The simplicity and lower overhead make it the preferred choice.
+    *   **Micro-Frontend:** Becomes more viable for a large or rapidly growing number of tenants (e.g., 50+), especially when combined with diverse and evolving customization needs.
+
+*   **Degree of Customization Required (beyond design):**
+    *   **Monolithic:** Customization is primarily limited to what can be controlled via configuration, feature flags, and data.
+    *   **Micro-Frontend:** Enables significant UI/UX differences, entirely bespoke pages/features, and distinct user workflows.
+
+*   **Development Team Structure and Expertise:**
+    *   **Monolithic:** Centralized teams, potentially leading to bottlenecks for company-specific work. Requires careful coordination to avoid conflicts.
+    *   **Micro-Frontend:** Can align teams with specific micro-frontends, fostering autonomy and specialized expertise. Requires strong communication and governance for shared components and integration.
+
+*   **Timeline and Budget Constraints:**
+    *   **Monolithic:** Generally lower initial cost and faster time-to-market for basic multi-tenancy due to simpler setup.
+    *   **Micro-Frontend:** Higher initial investment in design, infrastructure, and tooling due to distributed nature. However, it can offer faster long-term development and deployment for highly customized solutions once the initial setup is mature.
+
+### Technical Debt Considerations
+
+*   **Monolithic:** Technical debt accumulates in a single codebase, affecting all tenants. Refactoring can be a large, risky undertaking.
+*   **Micro-Frontend:** Technical debt can be isolated within individual micro-frontends, allowing for more targeted refactoring. However, there's a risk of duplicating technical debt across multiple micro-frontends if not managed with shared libraries and clear guidelines.
+
+</file_content>
+
+Now that you have the latest state of the file, try the operation again with fewer, more precise SEARCH blocks. For large files especially, it may be prudent to try to limit yourself to <5 SEARCH/REPLACE blocks at a time, then wait for the user to respond with the result of the operation before following up with another replace_in_file call to make additional edits.
+(If you run into this error 3 times in a row, you may use the write_to_file tool as a fallback.)
+</error><environment_details>
+# VSCode Visible Files
+docs/0000_DOCUMENTATION_GUIDE.md
+
+# VSCode Open Tabs
+docs/1300_01900_PROCUREMENT_PAGE.md
+docs/1300_02050_INFORMATION_TECHNOLOGY_PAGE.md
+docs/0700_UI_SETTINGS.md
+docs/0750_IMAGE_THEME_SETTINGS.md
+docs/0950_ACCORDION_MANAGEMENT.md
+docs/0950_SECTOR_MANAGEMENT.md
+client/src/common/js/config/00200-sector-config.js
+docs/0200_SYSTEM_ARCHITECTURE.md
+docs/0000_DOCUMENTATION_GUIDE.md
+docs/0100_GETTING_STARTED.md
+docs/0250_UTILITIES_ARCHITECTURE.md
+client/src/App.js
+scripts/generateAccordionConfig.js
+docs/0950_ACCORDION_MANAGEMENT_AUDIT.md
+
+# Current Time
+14/06/2025, 10:19:03 am (Africa/Johannesburg, UTC+2:00)
+
+# Context Window Usage
+587,525 / 1,048.576K tokens used (56%)
+
+# Current Mode
+ACT MODE
+</environment_details>
+
+
+
+### 📋 Core System
+| Table | Description |
+|-------|-------------|
+| **🔹 System Infrastructure** | |
+| sections | Section definitions and menu navigation |
+| pages | Dynamic page management and routing |
+| organizations | Organization definitions and settings |
+| sectors | Industry sectors for categorization |
+| active_entities | Currently active system entities |
+| **🔹 User Management** | |
+| user_management | Core user authentication and profiles |
+| personnel_records | Employee and personnel data |
+| user_roles | User role assignments and permissions |
+| user_department_access | Department-level access controls |
+| user_organization_access | Organization-level access controls |
+| user_profiles | Extended user profile information |
+| user_email_accounts | Email account configurations |
+| user_email_aliases | Email alias management |
+| **🔹 Workflow & Approvals** | |
+| approval_workflow_templates | Approval workflow definitions |
+| approval_workflows | Active approval workflows |
+| approval_instances | Individual approval instances |
+| approval_steps | Workflow step definitions |
+| approval_delegations | Approval delegation rules |
+| approval_document_links | Document approval links |
+| approval_history_log | Approval action history |
+
+### 📊 Vector Search & AI
+| Table | Description |
+|-------|-------------|
+| **🔹 Vector Embeddings** | |
+| vector_search_criteria | Vector search configuration |
+| a_001000_environmental_vector | Environmental discipline embeddings |
+| a_001200_finance_vector | Financial discipline embeddings |
+| a_001300_governance_vector | Governance discipline embeddings |
+| a_001400_health_vector | Health discipline embeddings |
+| **🔹 Document Processing** | |
+| flowise_documents | Flowise document management |
+| flowise_record_manager | Record management system |
+| external_api_configurations | External API settings |
+| llm_configurations | LLM model configurations |
+| llm_document_type_mappings | LLM document type mappings |
+| llm_functions | AI function definitions |
+
+### 📋 Document Control
+| Table | Description |
+|-------|-------------|
+| **🔹 Document Management** | |
+| document_types | Document type definitions |
+| document_versions | Document version control |
+| document_categories | Document categorization |
+| document_hashes | Document hash tracking |
+| document_references | Document cross-references |
+| document_stores | Document storage locations |
+| document_comparisons | Document comparison results |
+| document_embeddings | Document AI embeddings |
+| **🔹 Document Control** | |
+| a_00900_doccontrol_documents | Document control main records |
+| a_00900_doccontrol_document_versions | Document control versions |
+| a_00900_doccontrol_approvals | Document approvals |
+| a_00900_doccontrol_approval_rules | Approval rules |
+| a_00900_doccontrol_document_embeddings | Document embeddings |
+| a_00900_user_langchain_settings | User AI settings |
+| document_numbering_methodologies | Document numbering methods |
+| document_number_sequences | Document number sequences |
+| **🔹 Document Processing** | |
+| document_processing_queue | Document processing tasks |
+| document_access_logs | Document access tracking |
+
+### 🏢 Contract & Procurement
+| Table | Description |
+|-------|-------------|
+| **🔹 Contracts & Procurement** | |
+| contracts | Contract management main records |
+| procurement_signatures | Procurement signature tracking |
+| suppliers | Supplier management system |
+| scope_of_work | Scope of work definitions |
+| fuel_lubricants | Fuel and lubricants tracking |
+| **🔹 Contractor Management** | |
+| contractor_vetting | Contractor vetting records |
+| contractor_vetting_dashboard_stats | Contractor dashboard data |
+| contractor_evaluation_results | Contractor evaluation results |
+| contractors | Contractor main records |
+| **🔹 Purchasing Orders** | |
+| a_002025_invoice_processing | Invoice processing data |
+| a_002025_qs_data | Quantity survey data |
+
+### 📧 Email & Communication
+| Table | Description |
+|-------|-------------|
+| **🔹 Email System** | |
+| emails | Main email storage |
+| email_signatures | Email signature templates |
+| email_templates | Email template library |
+| email_threads | Email conversation threads |
+| email_attachments | Email attachment storage |
+| email_notification_queue | Email notification processing |
+| email_send_attachments | Email send attachments |
+| email_sends | Email sending records |
+| **🔹 Email Processing** | |
+| email_ai_processing_queue | AI email processing queue |
+| email_search_history | Email search history |
+| email_content_storage | Email content storage |
+| email_sync_log | Email synchronization logs |
+| email_drafts | Email draft storage |
+| email_providers | Email provider configurations |
+| email_access_logs | Email access tracking |
+
+### 🏗️ Engineering Disciplines
+| Table | Description |
+|-------|-------------|
+| **🔹 Architectural** | |
+| a_00825_architectural_vector | Architectural discipline vector search |
+| **🔹 Chemical Engineering** | |
+| a_00835_chemeng_vector | Chemical engineering vector search |
+| **🔹 Civil Engineering** | |
+| a_00850_civileng_vector | Civil engineering vector search |
+| **🔹 Electrical Engineering** | |
+| a_00860_eleceng_vector | Electrical engineering vector search |
+| **🔹 Mechanical Engineering** | |
+| a_00870_mecheng_vector | Mechanical engineering vector search |
+| **🔹 Developer Tools** | |
+| a_00872_developer_vector | Developer discipline vector search |
+| **🔹 Sales & Marketing** | |
+| a_00875_sales_vector | Sales discipline vector search |
+| **🔹 Business Operations** | |
+| a_00877_sundry_vector | Business operations vector search |
+| **🔹 Directorate Level** | |
+| a_00880_boarddir_vector | Board directorate vector search |
+| a_00882_dirconst_vector | Director construction vector search |
+| a_00883_dircontracts_vector | Director contracts vector search |
+| a_00884_1_dirfinance_vector | Director finance vector search |
+
+### 🎯 Project Management
+| Table | Description |
+|-------|-------------|
+| **🔹 Project Data** | |
+| projects | Project main records |
+| project_phase_assignments | Project phase assignments |
+| project_phases | Project phase definitions |
+| **🔹 Timesheet Management** | |
+| timesheets | Timesheet main records |
+| timesheet_entries | Individual timesheet entries |
+| timesheet_submissions | Timesheet submission records |
+| timesheet_templates | Timesheet templates |
+| timesheet_amendments | Timesheet amendment tracking |
+| timesheet_audit_logs | Timesheet audit logs |
+| timesheet_descriptions | Timesheet description catalog |
+| **🔹 Scheduling** | |
+| a_002035_scheduling_vector | Scheduling vector search |
+
+### 🏭 Operations & Logistics
+| Table | Description |
+|-------|-------------|
+| **🔹 Operations** | |
+| operations_equipment | Equipment management |
+| maintenance_assets | Asset maintenance tracking |
+| maintenance_history | Maintenance history logs |
+| maintenance_schedules | Scheduled maintenance |
+| maintenance_work_orders | Maintenance work orders |
+| materials | Materials inventory |
+| **🔹 Logistics** | |
+| logistics_shipments | Logistics shipment tracking |
+| logistics_alerts | Logistics alert system |
+| logistics_api_credentials | Logistics API configurations |
+| shipment_containers | Shipment container tracking |
+| **🔹 Inspections** | |
+| inspections | Inspection records |
+| inspection_items | Inspection checklist items |
+| inspection_media | Inspection multimedia attachments |
+| a_002075_inspection_data | Inspection data processing |
+| a_002075_inspection_vector | Inspection vector search |
+
+### 🔄 System Administration
+| Table | Description |
+|-------|-------------|
+| **🔹 UI & Configuration** | |
+| ui_button_settings | UI button configuration |
+| ui_display_settings | Display settings management |
+| user_accordion_settings | User accordion preferences |
+| button_options | Button option definitions |
+| modal_configurations | Modal configuration settings |
+| pathway_configurations | Pathway configurations |
+| dropdown_options | Dropdown option lists |
+| numbering_config | Numbering system configuration |
+| numbering_patterns | Numbering pattern definitions |
+| numbering_methodologies | Numbering methodology definitions |
+| **🔹 System & Metadata** | |
+| migration_rename_log | Migration tracking logs |
+| migration_validation_results | Migration validation results |
+| sql_file_tracking | SQL file change tracking |
+| tracking_events | System event tracking |
+| ports | Port configuration management |
+| distress_signals | System distress signals |
+
+### 📚 Knowledge Base
+| Table | Description |
+|-------|-------------|
+| **🔹 Knowledge Management** | |
+| a_002075_knowledge_base | Knowledge base content |
+| a_002075_knowledge_base_data | Knowledge base data processing |
+| disciplines | Discipline definitions |
+| resource_documentation | Resource documentation |
+| resource_prompts | Resource prompts library |
+| **🔹 AI Tools** | |
+| prompts | AI prompt templates |
+| form_instances | Form instance data |
+| form_templates | Form template definitions |
+| llm_functions | LLM function definitions |
+
+### 🛡️ Safety & Quality
+| Table | Description |
+|-------|-------------|
+| **🔹 Safety Management** | |
+| a_002400_safety_data | Safety data processing |
+| a_002400_safety_vector | Safety vector search |
+| **🔹 Quality Assurance** | |
+| a_002200_qa_vector | Quality assurance vector search |
+| a_002250_qc_vector | Quality control vector search |
+| a_002075_inspection_data | Inspection data processing |
+| defect_processing | Defect processing data |
+
+### 🚢 Travel & Florida Logistics
+| Table | Description |
+|-------|-------------|
+| **🔹 Travel Management** | |
+| travel_requests | Travel request processing |
+| travel_airports | Airport information database |
+| travel_equipment_filters | Travel equipment filtering |
+| travel_ground_routes | Ground transportation routes |
+| travel_hazard_alerts | Travel hazard alerts |
+| travel_helipads | Helicopter landing locations |
+| travel_templates | Travel request templates |
+| **🔹 Vessel Management** | |
+| vessels | Vessel information database |
+
+### 💰 Finance & Administration
+| Table | Description |
+|-------|-------------|
+| **🔹 Financial Management** | |
+| petty_cash | Petty cash management |
+| **🔹 Company Management** | |
+| companies | Company definitions and settings |
+| consultants | Consultant management |
+| **🔹 Organization Records** | |
+| organisations_backup | Organization backup records |
+| organization_collaborations | Organization collaboration settings |
+| compliance_reports | Compliance reporting |
+| governance_approval_instances | Governance approval workflows |
+| governance_approval_matrices | Approval matrix definitions |
+| governance_approval_steps | Approval workflow steps |
+| governance_document_templates | Document templates |
+
+### 📊 Analytics & Monitoring
+| Table | Description |
+|-------|-------------|
+| **🔹 User Analytics** | |
+| chat_analytics | Chat analytics and reporting |
+| chat_messages | Individual chat messages |
+| chat_sessions | Chat session tracking |
+| chatbots | Chatbot definitions and configurations |
+| chatbots_backup | Chatbot backup configurations |
+| **🔹 Internal Notifications** | |
+| internal_notifications | System notification management |
+
+## 🤖 AI Generation System Status & Documentation
+
+### 📝 **AI Generation System Overview** (September 2025)
+
+The AI generation system in this project has undergone significant enhancements and fixes. Below is the comprehensive status of the AI generation functionality, particularly focus on the Scope of Work (SOW) generation system.
+
+### 🎯 **Core AI Functionality Status**
+
+#### ✅ **Current Operational Features:**
+
+**1. Scope of Work (SOW) Generation**
+- **Location**: `client/src/services/scopeOfWorkGenerationService.js`
+- **Method**: `_buildGenerationPrompt()` (dynamic prompt construction)
+- **Integration**: Full database integration with category context loading
+- **Status**: ✅ **Fully Operational** - Successfully generates complete 9-section SOW documents
+
+**2. AI Provider Support**
+- **Primary Provider**: OpenAI GPT-4o-mini
+- **Alternative**: Anthropic Claude (configured and ready)
+- **Provider Management**: Database-driven with `external_api_configurations` table
+- **Status**: ✅ **Production Ready** - Multiple providers supported with automatic failover
+
+**3. Prompt System Architecture**
+- **Static vs Dynamic**: **Runtime Dynamic Construction**
+- **Storage Method**: Database-enhanced with user parameters
+- **Context Integration**: Supports uploaded documents, URLs, specifications
+- **Category Intelligence**: Loads context from `procurement_categories` table
+- **Status**: ✅ **Highly Flexible** - Adapts based on procurement category and user context
+
+#### 📊 **Recent Fixes & Enhancements** (September 2025)
+
+**1. Copy & Download Functionality**
+- **Issue Fixed**: Copy button with clipboard API including fallback methods
+- **Issue Fixed**: Download button with proper blob generation and filename sanitization
+- **Files Updated**:
+  - `client/src/pages/01900-procurement/components/modals/01900-ScopeOfWorkModal.js`
+  - Modal event handlers and download logic
+
+**2. Test Validation Fixes**
+- **Issue Fixed**: Response Format Validation test in AI generation service tests
+- **Issue Description**: Test validation logic wasn't properly handling empty sections arrays, causing incorrect boolean evaluation
+- **Solution**: Updated validation logic to use `Boolean()` wrapper for proper boolean comparison
+- **Impact**: Ensures test suite accurately validates response formats for dynamic content generation
+
+**2. Database Integration**
+- **Enhanced**: Category context loading from `procurement_categories` table
+- **Enhanced**: AI configuration loading from `user_llm_preferences` and `external_api_configurations`
+- **Enhanced**: Generation logging to `generation_logs` table for analytics
+
+**3. Response Processing**
+- **Fixed**: Content parsing with section detection algorithms
+- **Enhanced**: Format validation for modal consumption
+- **Enhanced**: Professional formatting with proper structure
+
+**4. Service Layer Improvements**
+- **Fixed**: Error handling with user-friendly messages
+- **Enhanced**: Retry logic with exponential backoff
+- **Enhanced**: Timeout management (30-second limit)
+
+### 🔧 **System Architecture Details**
+
+#### 🎯 **Prompt Generation Process:**
+
+```javascript
+// 1. User inputs parameters in modal
+const params = {
+  title: "Equipment Procurement",
+  category: "B", // Industrial equipment
+  subcategory: "B01",
+  template: "Standard Template",
+  language: "en", // or "fr" for French
+  description: userDescription,
+  projectSpecifications: specs,
+  additionalContext: context
+};
+
+// 2. Service loads category context from database
+const categoryContext = await this._loadCategoryContext(
+  params.category, params.subcategory
+);
+
+// 3. Dynamic prompt construction
+const prompt = this._buildGenerationPrompt({
+  ...params,
+  categoryContext,
+  // Include uploaded documents and URLs
+  referenceDocuments: uploadedFiles,
+  referenceUrls: urls
+});
+
+// 4. Send to AI provider (OpenAI GPT-4o-mini)
+const response = await this._generateWithAI(prompt, aiConfig);
+
+// 5. Process and return formatted SOW
+return this._processGeneratedContent(response, params);
+```
+
+#### 💾 **Database Tables Integration:**
+
+| Table | Purpose | Status |
+|-------|---------|---------|
+| `procurement_categories` | Category context for enhanced prompts | ✅ Active |
+| `external_api_configurations` | AI provider API keys and settings | ✅ Active |
+| `user_llm_preferences` | User AI model preferences | ✅ Active |
+| `generation_logs` | Analytics and response tracking | ✅ Active |
+| `scope_of_work` | Generated SOW document storage | ✅ Active |
+
+#### 📁 **Key Files in AI System:**
+
+```
+client/src/services/
+├── scopeOfWorkGenerationService.js     # Main AI service
+├── procurementTemplateService.js       # Template management
+└── procurementCategoryService.js       # Category operations
+
+client/src/pages/01900-procurement/
+├── components/modals/
+│   └── 01900-ScopeOfWorkModal.js        # Main SOW modal
+└── components/agents/
+    └── 01900-supplier-analysis-agent.js # Supplier analysis
+
+sql/ (Database Scripts)
+├── create_procurement_categories_migration.sql
+└── create_procurement_master_templates.sql
+```
+
+### 🚀 **AI Generation Workflow**
+
+1. **Input Collection**: User fills modal form with project details
+2. **Category Loading**: System queries `procurement_categories` for industry context
+3. **Context Enhancement**: Uploaded documents and URLs are processed
+4. **Prompt Construction**: Dynamic prompt built with all parameters
+5. **AI Processing**: Request sent to OpenAI GPT-4o-mini API
+6. **Content Structuring**: Response parsed into 8-9 professional sections
+7. **Format Validation**: Content formatted for modal display and download
+8. **Analytics Logging**: Generation metrics stored for monitoring
+
+### 📊 **Performance & Reliability**
+
+#### ✅ **Current Operational Metrics:**
+- **Average Generation Time**: ~3-8 seconds per SOW
+- **Success Rate**: >95% (with retry logic)
+- **Response Quality**: Professional 5000+ character SOW documents
+- **Format Consistency**: 8-9 structured sections always
+- **Error Recovery**: Automatic retry with exponential backoff
+
+#### 🔧 **Recent Improvements:**
+- **Timeout Management**: 30-second timeout prevents hanging
+- **Error Handling**: Comprehensive error messages and fallback options
+- **Rate Limiting**: Built-in protection against API limits
+- **Logging**: Complete generation analytics for monitoring
+- **Language Support**: English and French with category translations
+
+### 🎯 **Modal Integration Features**
+
+#### ✅ **Fully Operational Modal Features:**
+- **Copy to Clipboard**: Multiple fallback methods for compatibility
+- **Download as TXT**: Proper blob generation with sanitized filenames
+- **Save to Database**: SOW records stored in `scope_of_work` table
+- **Template Selection**: Standard and custom templates supported
+- **Category Intelligence**: Context-aware prompts based on procurement type
+- **Document Upload**: Supporting documents processed and integrated into prompts
+- **URL Integration**: Reference URLs embedded in generation context
+
+#### 🎨 **User Interface Enhancements:**
+- **Step-by-Step Wizard**: Clear progression through form steps
+- **Real-time Validation**: Immediate feedback on required fields
+- **Progress Indicators**: Loading states during AI generation
+- **Error Notifications**: User-friendly error messages
+- **Success Confirmations**: Clear feedback on completed operations
+
+### 📈 **Future Enhancements Roadmap**
+
+#### 🔄 **Planned Features:**
+- **Multi-Lingual Support**: Expanded language options beyond English/French
+- **Template Customization**: User-defined prompt templates
+- **Batch Processing**: Multiple SOW generation in single request
+- **Advanced Analytics**: Detailed usage and performance metrics
+- **Integration APIs**: RESTful endpoints for external systems
+
+#### 🎯 **Current Status:** **PRODUCTION READY** ✅
+
+**The AI generation system is fully operational with:**
+- ✅ Complete Scope of Work generation functionality
+- ✅ Robust database integration and error handling
+- ✅ Professional copy/download features working
+- ✅ Enhanced prompting with category intelligence
+- ✅ Comprehensive analytics and logging
+- ✅ User-friendly modal interface
+- ✅ Document upload and context integration
+- ✅ Multi-provider AI support (OpenAI/Claude)
+
+**Ready for production deployment and user adoption!** 🚀

@@ -1,0 +1,244 @@
+schema: paperclip/v1
+
+# SaaSForge AI - Paperclip Configuration
+# White-label multi-tenant SaaS deployment platform
+
+agents:
+  # Core Leadership
+  onboard-master:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-opus-4-6
+    inputs:
+      env:
+        OPENROUTER_API_KEY:
+          kind: secret
+          requirement: required
+    budgetMonthlyCents: 10000
+    permissions:
+      - company:saasforge-ai:admin
+
+  # Tenant Operations Team
+  tenant-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 5000
+    permissions:
+      - company:saasforge-ai:tenant-operations
+
+  data-guardian:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 5000
+    permissions:
+      - company:saasforge-ai:data-security
+
+  access-controller:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 4000
+    permissions:
+      - company:saasforge-ai:access-control
+
+  resource-optimizer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 4000
+    permissions:
+      - company:saasforge-ai:resource-management
+
+  # Customer Success Team
+  onboarding-coordinator:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 5000
+    permissions:
+      - company:saasforge-ai:onboarding
+
+  success-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 5000
+    permissions:
+      - company:saasforge-ai:customer-success
+
+  analytics-specialist:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 4000
+    permissions:
+      - company:saasforge-ai:analytics
+
+  support-integrator:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 4000
+    permissions:
+      - company:saasforge-ai:support
+
+  # Platform Operations Team
+  platform-architect:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-opus-4-6
+    budgetMonthlyCents: 6000
+    permissions:
+      - company:saasforge-ai:architecture
+
+  devops-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 5000
+    permissions:
+      - company:saasforge-ai:devops
+
+  security-specialist:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 5000
+    permissions:
+      - company:saasforge-ai:security
+
+  # NEW: Deployment Operations Team
+  deployment-orchestrator:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    inputs:
+      env:
+        GITHUB_TOKEN:
+          kind: secret
+          requirement: required
+        RENDER_API_KEY:
+          kind: secret
+          requirement: required
+    budgetMonthlyCents: 6000
+    permissions:
+      - company:saasforge-ai:deployment
+      - github:deployments
+
+  client-config-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    budgetMonthlyCents: 4000
+    permissions:
+      - company:saasforge-ai:configuration
+
+  github-branch-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    inputs:
+      env:
+        GITHUB_TOKEN:
+          kind: secret
+          requirement: required
+    budgetMonthlyCents: 4000
+    permissions:
+      - github:repo
+      - github:actions
+
+  render-service-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-7-20250514
+    inputs:
+      env:
+        RENDER_API_KEY:
+          kind: secret
+          requirement: required
+    budgetMonthlyCents: 5000
+    permissions:
+      - render:admin
+
+# Global Company Settings
+company:
+  name: SaaSForge AI
+  type: orchestrator
+  industry: SaaS Operations & Customer Success Automation
+  
+# Multi-Tenant Platform Settings
+platform:
+  deployment_target: render
+  git_provider: github
+  
+  per_company_structure:
+    repos: true  # Each company gets own repo
+    branches:
+      - main  # Production (client sees)
+      - dev   # Development (team works)
+    render_services:
+      - production  # {company}.saasforge.ai
+      - development # dev.{company}.saasforge.ai
+  
+  client_onboarding:
+    automated: true
+    template_repo: template/client-system-template
+    default_plan: professional
+
+# Routine Schedules
+routines:
+  daily-deployment-queue:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 8 * * *"
+        timezone: UTC
+    description: "Process deployment queue and coordinate rollouts"
+    
+  weekly-client-check-in:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 9 * * 1"
+        timezone: UTC
+    description: "Review client health metrics and satisfaction"
+    
+  monthly-platform-audit:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 0 1 * *"
+        timezone: UTC
+    description: "Comprehensive platform and security audit"
+
+# Integration Settings
+integrations:
+  render:
+    auto_deploy: true
+    health_check_enabled: true
+    
+  github:
+    branch_protection:
+      main:
+        require_pr: true
+        required_reviews: 1
+    auto_merge: false
+    
+  monitoring:
+    error_threshold: 1%
+    latency_threshold_ms: 500

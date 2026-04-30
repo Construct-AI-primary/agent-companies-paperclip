@@ -1,0 +1,15 @@
+# Shared Data Models
+
+This directory contains shared data models for the PROC-AMEND project.
+
+## Contents
+
+- Amendment request data model
+- Impact assessment data model
+- Approval routing data model
+- Document update data model
+- Communication data model
+
+## Usage
+
+Import shared data models into platform-specific implementations as needed.

@@ -1,0 +1,88 @@
+# Mermaid Diagram Template Registry
+# Central version registry for all parameterized diagram templates.
+# When a template is refined, bump its version and add a changelog entry.
+# All consuming specs should be re-rendered after a version bump.
+
+templates:
+  procurement-lifecycle:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial procurement lifecycle flow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - complexity
+      - showHITL
+      - showPayment
+
+  three-state-navigation:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial three-state navigation flow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - states
+      - buttons
+
+  order-creation-flow:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial order creation flow with template variation selection extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - complexity
+
+  sow-generation:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial SOW generation and appendix routing flow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - appendices
+
+  hitl-review:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial HITL review workflow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - confidenceThreshold
+
+  approval-matrix:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial progressive approval matrix flow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - thresholds
+
+  spec-template-registry:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial spec template registry flow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - appendixLetter
+
+  appendix-b-hitl:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial template-driven appendix HITL flow extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - templateId
+
+  template-complexity-tree:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial complexity level decision tree extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+
+  page-state-flow:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial page state flow with modal integration extracted from 01900 UI/UX spec"
+    parameters:
+      - discipline
+      - states
+      - modals

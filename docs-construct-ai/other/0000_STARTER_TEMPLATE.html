@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Project Starter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --muted: #555;
+      --card: #f9f9f9;
+      --border: #ddd;
+      --btn: #fafafa;
+      --btn-h: #f0f0f0;
+      --accent: #0d6efd;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --text: #e6e6e6;
+        --muted: #aaa;
+        --card: #151922;
+        --border: #2a2f3a;
+        --btn: #1b2030;
+        --btn-h: #232a3b;
+        --accent: #61dafb;
+      }
+    }
+    html, body { height: 100%; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
+    h1 { margin: 0 0 6px; font-size: 24px; }
+    .desc { color: var(--muted); margin-bottom: 12px; font-size: 13px; }
+
+    /* Grid: 3 columns on wide, 2 on medium, 1 on small */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card { border: 1px solid var(--border); border-radius: 8px; padding: 10px; background: var(--card); }
+    .row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    button { padding: 6px 9px; border: 1px solid var(--border); border-radius: 6px; background: var(--btn); cursor: pointer; color: var(--text); font-size: 12px; }
+    button:hover { background: var(--btn-h); }
+    pre { background: var(--bg); border: 1px dashed var(--border); padding: 6px; border-radius: 6px; overflow: auto; margin-top: 4px; font-size: 11px; }
+    code { color: var(--text); }
+    .small { font-size: 11px; color: var(--muted); }
+    .hint { color: var(--muted); margin-top: 4px; font-size: 11px; }
+    .ok { color: #2e7d32; }
+    .warn { color: #b26a00; }
+    .danger { color: #b00020; }
+    .link { color: var(--accent); text-decoration: none; }
+    .link:hover { text-decoration: underline; }
+    .footer { margin-top: 12px; color: var(--muted); font-size: 11px; grid-column: 1 / -1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Project Starter</h1>
+    <div class="desc">Click a button to copy the exact command. Paste it in your VSCode terminal (PowerShell 7). No special tooling required.</div>
+
+    <div class="grid">
+      <div class="card">
+        <h2 style="margin:0 0 2px; font-size:16px;">1) Initiate (install dependencies)</h2>
+        <p style="margin:0 0 4px; font-size:12px;">Installs dependencies at root, client, and server.</p>
+        <div class="row">
+          <button onclick="copy(`npm install && cd client && npm install && cd .. && cd server && npm install && cd ..`)">Copy Initiate</button>
+        </div>
+        <pre><code>npm install && cd client && npm install && cd .. && cd server && npm install && cd ..</code></pre>
+        <div class="small">Run in project root: C:\Users\Admin\Documents\GitHub\construct_ai\construct_ai</div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 2px; font-size:16px;">2) Build & Serve – Client</h2>
+        <p style="margin:0 0 4px; font-size:12px;">Starts the React dev server for the client.</p>
+        <div class="row">
+          <button onclick="copy(`cd client && npm run dev`)">Copy Client</button>
+        </div>
+        <pre><code>cd client && npm run dev</code></pre>
+        <div class="hint">Default dev server: http://localhost:3001/</div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 2px; font-size:16px;">3) Build & Serve – Server</h2>
+        <p style="margin:0 0 4px; font-size:12px;">Starts the API/server dev process.</p>
+        <div class="row">
+          <button onclick="copy(`cd server && npm run dev`)">Copy Server</button>
+        </div>
+        <pre><code>cd server && npm run dev</code></pre>
+        <div class="hint">Default API proxied by client at /api → http://localhost:3003/</div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 2px; font-size:16px;">4) Build & Serve – Both</h2>
+        <p style="margin:0 0 4px; font-size:12px;">Opens two terminals: one for server and one for client (PowerShell 7).</p>
+        <div class="row">
+          <button onclick="copy(`Start-Process pwsh -ArgumentList '-NoExit','-Command','cd server; npm run dev' -WindowStyle Normal; Start-Process pwsh -ArgumentList '-NoExit','-Command','cd client; npm run dev' -WindowStyle Normal`)">Copy Both (PowerShell)</button>
+        </div>
+        <pre><code>Start-Process pwsh -ArgumentList '-NoExit','-Command','cd server; npm run dev' -WindowStyle Normal; Start-Process pwsh -ArgumentList '-NoExit','-Command','cd client; npm run dev' -WindowStyle Normal</code></pre>
+        <div class="hint">Run in project root. This launches two new terminal windows.</div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 2px; font-size:16px;">5) Modal Test Route</h2>
+        <p style="margin:0 0 4px; font-size:12px;">
+          Select only the page/discipline here. The App will list all available modals for that page.
+        </p>
+
+        <div class="row" style="align-items:center">
+          <label for="discipline" class="small">Discipline:</label>
+          <select id="discipline">
+            <!-- Populated from registry names discovered below -->
+          </select>
+
+          <button onclick="openHarness()">Open in App</button>
+        </div>
+
+        <pre id="modalUrlPreview"><code>http://localhost:3001/#/modal-test</code></pre>
+        <div class="hint">This opens: <code>http://localhost:3001/#/modal-test?discipline=...</code>. The in‑app selector will list the modals.</div>
+      </div>
+
+      <div class="footer">
+        Tip: You can bookmark this page. It only copies text; you still paste into your terminal for safety.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Discover disciplines dynamically from a minimal list here to keep Starter lightweight.
+    // The SPA will handle full modal listing. Include common known disciplines and allow extension.
+    const DISCIPLINES = [
+      { value: 'Contracts', label: 'Contracts (00435)' },
+      { value: 'Safety', label: 'Safety (02700)' },
+      { value: 'DocumentControl', label: 'Document Control (00900)' },
+      { value: 'Governance', label: 'Governance (01300)' }
+    ];
+
+    const DISCIPLINE_TO_NAME = {
+      Contracts: 'Contracts',
+      Safety: 'Safety',
+      DocumentControl: 'Document Control',
+      Governance: 'Governance'
+    };
+
+    function buildHarnessUrl() {
+      const sel = document.getElementById('discipline').value;
+      const base = 'http://localhost:3001/#/modal-test';
+      const params = new URLSearchParams();
+      if (sel) params.set('discipline', DISCIPLINE_TO_NAME[sel] || sel);
+      return params.toString() ? `${base}?${params.toString()}` : base;
+    }
+
+    function updatePreview() {
+      const url = buildHarnessUrl();
+      document.getElementById('modalUrlPreview').innerHTML = `<code>${url.replace(/&/g, '&')}</code>`;
+    }
+
+    function openHarness() {
+      const url = buildHarnessUrl();
+      window.open(url, '_blank');
+    }
+
+    async function copy(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        alert('Command copied to clipboard. Paste it in your terminal.');
+      } catch (e) {
+        window.prompt('Copy this command:', text);
+      }
+    }
+
+    // Init
+    (function init() {
+      const sel = document.getElementById('discipline');
+      // populate disciplines
+      sel.innerHTML = '';
+      DISCIPLINES.forEach(d => {
+        const opt = document.createElement('option');
+        opt.value = d.value;
+        opt.textContent = d.label;
+        sel.appendChild(opt);
+      });
+      sel.addEventListener('change', updatePreview);
+      updatePreview();
+    })();
+  </script>
+</body>
+</html>

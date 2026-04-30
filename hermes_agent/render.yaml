@@ -1,0 +1,84 @@
+# Hermes Agent API Server - Render Blueprint
+# Deploy with: render-blueprint render.yaml
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: hermes-agent-api
+    env: docker
+    region: oregon
+    plan: standard
+
+    # Persistent disk for Hermes home directory (survives container restarts)
+    disk:
+      name: hermes-data
+      mountPath: /opt/data
+      sizeGB: 1
+
+    dockerfilePath: ./Dockerfile
+
+    # entrypoint.sh handles HERMES_MODE=serve to run `hermes serve` directly.
+    # API server config is passed via env vars below.
+    envVars:
+      - key: HERMES_HOME
+        value: /opt/data
+      - key: HERMES_MODE
+        value: serve
+      - key: LOG_LEVEL
+        value: INFO
+      - key: API_SERVER_KEY
+        generateValue: true
+      - key: API_SERVER_CORS_ORIGINS
+        value: "*"
+      - key: HERMES_INFERENCE_PROVIDER
+        sync: false
+      # Provider API keys — set these in the Render dashboard for your provider
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: TERMINAL_ENV
+        value: local
+      - key: WORKSPACE_DIR
+        value: /opt/data/workspace
+      - key: GIT_TERMINAL_PROMPT
+        value: "0"
+      - key: HERMES_TIMEOUT
+        value: "600"
+      # Set HERMES_UID to match Render's persistent disk owner (typically 10001)
+      # This allows hermes user to write to /opt/data volume
+      - key: HERMES_UID
+        value: "10001"
+      - key: GITHUB_TOKEN
+        sync: false
+
+    healthCheckPath: /health
+    autoDeploy: true
+
+    # Zero-downtime deploy: Render starts new container first, then switches
+    # traffic. Hermes handles graceful shutdown on SIGTERM.
+    numInstances: 1
+
+    # Scaling — adjust based on expected load
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 70
+      targetCPUPercent: 60
+
+    # Environment groups for team collaboration
+    envGroupPayload:
+      - name: hermes-production
+        envVars:
+          - key: LOG_LEVEL
+            value: INFO
+          - key: API_SERVER_CORS_ORIGINS
+            # Replace with your Paperclip frontend domain in production
+            value: "https://paperclip.example.com,https://app.example.com"
+
+metadata:
+  description: "Hermes Agent HTTP API Server — OpenAI-compatible endpoints for Paperclip and web integrations"
+  price: "https://render.com/pricing"
+  version: "1.0"

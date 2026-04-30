@@ -1,0 +1,285 @@
+import express from 'express';
+import multer from 'multer';
+import { analyzeDocument } from '../services/ai-document-analyzer.js';
+import { getSupabaseServerClient } from '../utils/supabase-server-client.js';
+
+const router = express.Router();
+const upload = multer({
+storage: multer.memoryStorage(),
+limits: { fileSize: 50 * 1024 * 1024 } // 50MB
+});
+
+/**
+* POST /api/auto-fill/supplier-documents
+* Analyze uploaded documents and extract form answers for contractor evaluation
+*/
+router.post('/supplier-documents', upload.array('documents'), async (req, res) => {
+console.log('🚀 [AUTO-FILL] POST /api/auto-fill/supplier-documents called');
+
+try {
+const { questions, contractorName, contractorName: contractorNameAlias } = req.body;
+
+console.log(🔍 [AUTO-FILL] Processing ${req.files?.length || 0} documents for contractor: ${contractorName || 'Unknown'});
+
+if (!req.files || req.files.length === 0) {
+return res.status(400).json({
+success: false,
+error: 'No documents uploaded'
+});
+}
+
+// Parse questions from JSON
+let parsedQuestions = [];
+try {
+parsedQuestions = JSON.parse(questions || '[]');
+} catch (error) {
+console.error('❌ [AUTO-FILL] Failed to parse questions JSON:', error);
+return res.status(400).json({
+success: false,
+error: 'Invalid questions format'
+});
+}
+
+console.log(📋 [AUTO-FILL] Analyzing ${parsedQuestions.length} questions);
+
+// Analyze each document
+const documentAnalyses = [];
+for (const file of req.files) {
+console.log(📄 [AUTO-FILL] Analyzing document: ${file.originalname});
+
+try {
+// Convert file buffer to text content
+const fileContent = file.buffer.toString('utf8');
+console.log(📋 [AUTO-FILL] File content length: ${fileContent.length} characters);
+
+const analysis = await analyzeDocument(fileContent, parsedQuestions);
+documentAnalyses.push({
+filename: file.originalname,
+size: file.size,
+type: file.mimetype,
+analysis
+});
+} catch (analysisError) {
+console.error(❌ [AUTO-FILL] Failed to analyze ${file.originalname}:, analysisError);
+// Continue with other documents instead of failing completely
+}
+}
+
+if (documentAnalyses.length === 0) {
+return res.status(400).json({
+success: false,
+error: 'No documents could be analyzed'
+});
+}
+
+// Aggregate answers from all documents (prefer first non-empty answer)
+const aggregatedAnswers = parsedQuestions.map(question => {
+let bestAnswer = '';
+let bestConfidence = 0;
+
+// Find the best answer across all documents
+for (const docAnalysis of documentAnalyses) {
+const docAnswers = docAnalysis.analysis || [];
+const matchingAnswer = docAnswers.find(ans => ans.id === question.id);
+
+if (matchingAnswer && matchingAnswer.confidence > bestConfidence) {
+bestAnswer = matchingAnswer.answer || '';
+bestConfidence = matchingAnswer.confidence || 0;
+}
+}
+
+return {
+id: question.id,
+answer: bestAnswer,
+confidence: bestConfidence,
+section: question.section,
+question: question.question,
+keyword: question.keyword
+};
+});
+
+console.log(✅ [AUTO-FILL] Generated ${aggregatedAnswers.length} answers);
+
+// Save to Supabase if we have valid answers
+const supabase = getSupabaseServerClient(req);
+if (aggregatedAnswers.some(ans => ans.answer.trim())) {
+try {
+const docId = 'auto-fill-' + Date.now() + '-' + Math.random();
+
+const { error } = await supabase
+.from('document_evaluations')
+.insert({
+id: docId,
+contractor_name: contractorName || contractorNameAlias || 'Unknown Contractor',
+document_type: 'HSSE Auto-Fill',
+processing_status: 'completed',
+confidence: 85, // Average confidence
+created_at: new Date().toISOString(),
+score: 0, // Auto-filled, no score yet
+
+// Store the analysis results
+form_submission_data: {
+source: 'auto-fill',
+document_analyses: documentAnalyses,
+aggregated_answers: aggregatedAnswers,
+input_questions: parsedQuestions
+}
+});
+
+if (error) {
+console.warn('⚠️ [AUTO-FILL] Failed to save results to database:', error.message);
+} else {
+console.log('💾 [AUTO-FILL] Results saved to database');
+}
+} catch (dbError) {
+console.warn('⚠️ [AUTO-FILL] Database error:', dbError.message);
+// Continue anyway - the main function is to return answers
+}
+}
+
+// Return results
+console.log('✅ [AUTO-FILL] Sending response with aggregated answers');
+res.json({
+success: true,
+answers: aggregatedAnswers,
+analyzedDocuments: documentAnalyses.length,
+totalQuestions: parsedQuestions.length,
+answeredQuestions: aggregatedAnswers.filter(ans => ans.answer.trim()).length
+});
+
+} catch (error) {
+console.error('❌ [AUTO-FILL] Error:', error);
+res.status(500).json({
+success: false,
+error: Auto-fill failed: ${error.message}
+});
+}
+});
+
+/**
+* GET /api/auto-fill/get-contractor-answers/:contractorName
+* Retrieve previous evaluation answers for a contractor
+*/
+router.get('/get-contractor-answers/:contractorName', async (req, res) => {
+console.log('🔍 [AUTO-FILL] GET /api/auto-fill/get-contractor-answers called');
+console.log('🔍 [AUTO-FILL] Contractor:', req.params.contractorName);
+
+try {
+const contractorName = decodeURIComponent(req.params.contractorName);
+const supabase = getSupabaseServerClient(req);
+
+const { data: evaluations, error } = await supabase
+.from('document_evaluations')
+.select('form_submission_data, contractor_name, created_at, score, processing_status')
+.eq('contractor_name', contractorName)
+.eq('processing_status', 'completed')
+.order('created_at', { ascending: false })
+.limit(10);
+
+if (error) {
+throw error;
+}
+
+// Extract answers from evaluations
+const answers = [];
+
+if (evaluations && evaluations.length > 0) {
+for (const evaluation of evaluations) {
+const formData = evaluation.form_submission_data;
+if (formData && formData.aggregated_answers) {
+// Use aggregated answers from auto-fill
+answers.push(...formData.aggregated_answers.filter(ans => ans.answer && ans.answer.trim()));
+} else if (formData && formData.questions) {
+// Fallback to legacy format
+Object.entries(formData.questions || {}).forEach(([questionId, questionData]) => {
+if (questionData && questionData.answer && questionData.answer.trim()) {
+answers.push({
+id: questionId,
+answer: questionData.answer.trim(),
+confidence: questionData.confidence || 100
+});
+}
+});
+}
+}
+}
+
+// Remove duplicates (prefer most recent)
+const uniqueAnswers = {};
+for (const answer of answers) {
+if (!uniqueAnswers[answer.id] || answer.confidence > uniqueAnswers[answer.id].confidence) {
+uniqueAnswers[answer.id] = answer;
+}
+}
+
+const finalAnswers = Object.values(uniqueAnswers);
+
+console.log(✅ [AUTO-FILL] Found ${finalAnswers.length} answers for ${contractorName});
+
+res.json({
+success: true,
+contractor: contractorName,
+answers: finalAnswers,
+totalEvaluations: evaluations?.length || 0
+});
+
+} catch (error) {
+console.error('❌ [AUTO-FILL] Error retrieving answers:', error);
+res.status(500).json({
+success: false,
+error: Failed to retrieve answers: ${error.message}
+});
+}
+});
+
+/**
+* GET /api/auto-fill/get-contractor-evaluations/:contractorName
+* Retrieve previous evaluations for a contractor
+*/
+router.get('/get-contractor-evaluations/:contractorName', async (req, res) => {
+console.log('🔍 [AUTO-FILL] GET /api/auto-fill/get-contractor-evaluations called');
+console.log('🔍 [AUTO-FILL] Contractor:', req.params.contractorName);
+
+try {
+const contractorName = decodeURIComponent(req.params.contractorName);
+const supabase = getSupabaseServerClient(req);
+
+const { data: evaluations, error } = await supabase
+.from('document_evaluations')
+.select('id, contractor_name, document_type, created_at, updated_at, score, processing_status, form_submission_data, confidence')
+.eq('contractor_name', contractorName)
+.eq('processing_status', 'completed')
+.order('created_at', { ascending: false })
+.limit(10);
+
+if (error) {
+throw error;
+}
+
+if (!evaluations || evaluations.length === 0) {
+console.log(📭 [AUTO-FILL] No evaluations found for ${contractorName});
+return res.json({
+success: true,
+evaluations: [],
+total: 0
+});
+}
+
+console.log(✅ [AUTO-FILL] Found ${evaluations.length} evaluations for ${contractorName});
+
+res.json({
+success: true,
+evaluations: evaluations,
+total: evaluations.length
+});
+
+} catch (error) {
+console.error('❌ [AUTO-FILL] Error retrieving evaluations:', error);
+res.status(500).json({
+success: false,
+error: Failed to retrieve evaluations: ${error.message}
+});
+}
+});
+
+export default router;

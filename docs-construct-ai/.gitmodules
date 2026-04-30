@@ -1,0 +1,7 @@
+[submodule "hermes_agent"]
+	path = hermes_agent
+	url = https://github.com/tennantalistair/hermes-agent.git
+[submodule "mobile"]
+	path = mobile
+	url = https://github.com/Construct-AI-primary/construct_ai-mobile.git
+	branch = main

@@ -1,0 +1,34 @@
+{
+  "generation_result": {
+    "request_id": "3586553c-d142-48ca-b8d6-0da11960f07f",
+    "table_name": "financial_reports",
+    "policies_generated": 3,
+    "deployment_ready": true,
+    "generation_duration": 0.000264,
+    "success": true,
+    "error_message": null
+  },
+  "policies": [
+    {
+      "table_name": "financial_reports",
+      "policy_name": "financial_reports_dev_access",
+      "pattern": "development_bypass",
+      "risk_level": "critical",
+      "performance_impact": 0.01
+    },
+    {
+      "table_name": "financial_reports",
+      "policy_name": "financial_reports_service_access",
+      "pattern": "service_role_override",
+      "risk_level": "critical",
+      "performance_impact": 0.01
+    },
+    {
+      "table_name": "financial_reports",
+      "policy_name": "financial_reports_org_access",
+      "pattern": "organization_isolation",
+      "risk_level": "critical",
+      "performance_impact": 0.03
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+UPDATE agents SET adapter_config = jsonb_set(adapter_config, '{cwd}', '"/opt/render/project/src/hermes_agent"') WHERE adapter_config IS NOT NULL AND adapter_config->>'command' LIKE '%hermes_agent/run.sh%';

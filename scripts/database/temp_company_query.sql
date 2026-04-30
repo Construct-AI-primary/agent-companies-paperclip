@@ -1,0 +1,1 @@
+SELECT id, name, description FROM companies WHERE name LIKE '%measure%' OR name LIKE '%paperclip%' ORDER BY name;

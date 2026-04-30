@@ -1,0 +1,6125 @@
+[
+  {
+    "discipline": "devforge-orion",
+    "displayName": "Orion",
+    "description": "Central nervous system of the autonomous enterprise and workflow review coordination",
+    "agentPersona": {
+      "role": "Chief Orchestrator & Workflow Review Coordinator",
+      "expertise": [
+        "orchestration",
+        "workflow",
+        "coordination",
+        "monitoring",
+        "governance"
+      ],
+      "workspace": "./codebase/devforge/executive",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "global",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "orchestrate",
+      "coordinate",
+      "workflow",
+      "monitor",
+      "govern"
+    ]
+  },
+  {
+    "discipline": "devforge-strategos",
+    "displayName": "Strategos",
+    "description": "Long-term strategic direction and roadmap development",
+    "agentPersona": {
+      "role": "Strategic Planning",
+      "expertise": [
+        "strategy",
+        "planning",
+        "market-analysis",
+        "risk-assessment"
+      ],
+      "workspace": "./codebase/devforge/executive",
+      "tools": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "strategy",
+      "plan",
+      "roadmap",
+      "market"
+    ]
+  },
+  {
+    "discipline": "devforge-insight",
+    "displayName": "Insight",
+    "description": "Data-driven decision support and analytics",
+    "agentPersona": {
+      "role": "Business Intelligence",
+      "expertise": [
+        "analytics",
+        "bi",
+        "metrics",
+        "forecasting"
+      ],
+      "workspace": "./codebase/devforge/executive",
+      "tools": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "analytics",
+      "insights",
+      "metrics",
+      "reporting"
+    ]
+  },
+  {
+    "discipline": "devforge-council",
+    "displayName": "Council",
+    "description": "Collective strategic governance and policy development",
+    "agentPersona": {
+      "role": "Strategic Decision Making",
+      "expertise": [
+        "governance",
+        "policy",
+        "decision-making",
+        "standards"
+      ],
+      "workspace": "./codebase/devforge/executive",
+      "tools": [
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "governance",
+      "policy",
+      "decision",
+      "standards"
+    ]
+  },
+  {
+    "discipline": "devforge-ledger",
+    "displayName": "Ledger",
+    "description": "Financial management and resource allocation",
+    "agentPersona": {
+      "role": "Financial Oversight",
+      "expertise": [
+        "finance",
+        "budget",
+        "cost-optimization",
+        "compliance"
+      ],
+      "workspace": "./codebase/devforge/executive",
+      "tools": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "finance",
+      "budget",
+      "cost",
+      "roi"
+    ]
+  },
+  {
+    "discipline": "devforge-codesmith",
+    "displayName": "Codesmith",
+    "description": "Server-side development and API design",
+    "agentPersona": {
+      "role": "Backend Engineer",
+      "expertise": [
+        "backend",
+        "api",
+        "database",
+        "microservices",
+        "security"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "backend",
+      "api",
+      "database",
+      "server"
+    ]
+  },
+  {
+    "discipline": "devforge-cortex",
+    "displayName": "Cortex",
+    "description": "AI system architecture and reasoning frameworks",
+    "agentPersona": {
+      "role": "AI Reasoning Specialist",
+      "expertise": [
+        "ai",
+        "ml",
+        "reasoning",
+        "neural-networks",
+        "optimization"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "ai",
+      "ml",
+      "reasoning",
+      "model"
+    ]
+  },
+  {
+    "discipline": "devforge-devcore",
+    "displayName": "Devcore",
+    "description": "Core system development and framework architecture",
+    "agentPersona": {
+      "role": "Core Development",
+      "expertise": [
+        "architecture",
+        "frameworks",
+        "integration",
+        "standards"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "core",
+      "framework",
+      "architecture",
+      "development"
+    ]
+  },
+  {
+    "discipline": "devforge-automata",
+    "displayName": "Automata",
+    "description": "Process automation and workflow optimization",
+    "agentPersona": {
+      "role": "Automation Systems",
+      "expertise": [
+        "automation",
+        "ci-cd",
+        "devops",
+        "workflows"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "automation",
+      "ci-cd",
+      "pipeline",
+      "devops"
+    ]
+  },
+  {
+    "discipline": "devforge-vector",
+    "displayName": "Vector",
+    "description": "Vector database management and semantic search",
+    "agentPersona": {
+      "role": "Vector Processing",
+      "expertise": [
+        "vectors",
+        "embeddings",
+        "semantic-search",
+        "databases"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "vector",
+      "embedding",
+      "semantic",
+      "search"
+    ]
+  },
+  {
+    "discipline": "devforge-interface",
+    "displayName": "Interface",
+    "description": "System integration and API gateway management",
+    "agentPersona": {
+      "role": "API and Integration",
+      "expertise": [
+        "api-gateway",
+        "integration",
+        "interoperability",
+        "testing"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "api",
+      "integration",
+      "gateway",
+      "interoperability"
+    ]
+  },
+  {
+    "discipline": "devforge-promptsmith",
+    "displayName": "Promptsmith",
+    "description": "AI prompt optimization, LLM integration, and workflow validation",
+    "agentPersona": {
+      "role": "Prompt Engineering & Workflow Review",
+      "expertise": [
+        "prompt-engineering",
+        "llm",
+        "optimization",
+        "workflow-review"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "prompt",
+      "llm",
+      "workflow-review",
+      "optimization"
+    ]
+  },
+  {
+    "discipline": "devforge-reviewer",
+    "displayName": "Reviewer",
+    "description": "Code quality assurance, peer review, and workflow quality validation",
+    "agentPersona": {
+      "role": "Code Review & Quality Assurance",
+      "expertise": [
+        "code-review",
+        "quality",
+        "security",
+        "best-practices"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "review",
+      "quality",
+      "code-review",
+      "validation"
+    ]
+  },
+  {
+    "discipline": "devforge-synth",
+    "displayName": "Synth",
+    "description": "Synthetic data creation and data augmentation",
+    "agentPersona": {
+      "role": "Synthetic Data Generation",
+      "expertise": [
+        "synthetic-data",
+        "data-augmentation",
+        "privacy",
+        "training-data"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "synthetic",
+      "data-generation",
+      "augmentation"
+    ]
+  },
+  {
+    "discipline": "devforge-fixer",
+    "displayName": "Fixer",
+    "description": "System debugging and performance optimization",
+    "agentPersona": {
+      "role": "Bug Fixing and Optimization",
+      "expertise": [
+        "debugging",
+        "optimization",
+        "refactoring",
+        "troubleshooting"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "bug",
+      "fix",
+      "debug",
+      "optimize"
+    ]
+  },
+  {
+    "discipline": "devforge-forge",
+    "displayName": "Forge",
+    "description": "Enterprise system architecture and design",
+    "agentPersona": {
+      "role": "System Architecture",
+      "expertise": [
+        "architecture",
+        "scalability",
+        "enterprise",
+        "patterns"
+      ],
+      "workspace": "./codebase/devforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "architecture",
+      "design",
+      "scalability",
+      "enterprise"
+    ]
+  },
+  {
+    "discipline": "devforge-dataforge",
+    "displayName": "Dataforge",
+    "description": "Data processing and transformation pipelines",
+    "agentPersona": {
+      "role": "Data Transformation",
+      "expertise": [
+        "etl",
+        "data-transformation",
+        "pipelines",
+        "data-quality"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "data",
+      "etl",
+      "transformation",
+      "pipeline"
+    ]
+  },
+  {
+    "discipline": "devforge-navigator",
+    "displayName": "Navigator",
+    "description": "Data exploration and discovery systems",
+    "agentPersona": {
+      "role": "Data Discovery",
+      "expertise": [
+        "data-catalog",
+        "lineage",
+        "discovery",
+        "metadata"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "data-discovery",
+      "catalog",
+      "lineage",
+      "metadata"
+    ]
+  },
+  {
+    "discipline": "devforge-pulse",
+    "displayName": "Pulse",
+    "description": "Real-time data monitoring and alerting",
+    "agentPersona": {
+      "role": "Real-time Data Monitoring",
+      "expertise": [
+        "real-time",
+        "monitoring",
+        "alerting",
+        "streaming"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "monitoring",
+      "real-time",
+      "alerts",
+      "streaming"
+    ]
+  },
+  {
+    "discipline": "devforge-schema",
+    "displayName": "Schema",
+    "description": "Database schema design and management",
+    "agentPersona": {
+      "role": "Data Schema Management",
+      "expertise": [
+        "schema",
+        "data-modeling",
+        "normalization",
+        "migration"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "schema",
+      "database",
+      "modeling",
+      "migration"
+    ]
+  },
+  {
+    "discipline": "devforge-sentinel",
+    "displayName": "Sentinel",
+    "description": "Data quality assurance and monitoring",
+    "agentPersona": {
+      "role": "Data Quality Monitoring",
+      "expertise": [
+        "data-quality",
+        "profiling",
+        "cleansing",
+        "validation"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "data-quality",
+      "validation",
+      "profiling",
+      "cleansing"
+    ]
+  },
+  {
+    "discipline": "devforge-stream",
+    "displayName": "Stream",
+    "description": "Real-time data streaming and processing",
+    "agentPersona": {
+      "role": "Data Streaming",
+      "expertise": [
+        "streaming",
+        "event-driven",
+        "real-time",
+        "kafka"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "streaming",
+      "event",
+      "real-time",
+      "kafka"
+    ]
+  },
+  {
+    "discipline": "devforge-cloudops",
+    "displayName": "Cloudops",
+    "description": "Cloud infrastructure and operations management",
+    "agentPersona": {
+      "role": "Cloud Operations",
+      "expertise": [
+        "cloud",
+        "infrastructure",
+        "devops",
+        "security"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "cloud",
+      "infrastructure",
+      "devops",
+      "operations"
+    ]
+  },
+  {
+    "discipline": "devforge-ledgerai",
+    "displayName": "Ledgerai",
+    "description": "Financial data management and analysis",
+    "agentPersona": {
+      "role": "Financial Data Processing",
+      "expertise": [
+        "financial-data",
+        "accounting",
+        "reporting",
+        "compliance"
+      ],
+      "workspace": "./codebase/devforge/data",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "financial",
+      "accounting",
+      "budget",
+      "reporting"
+    ]
+  },
+  {
+    "discipline": "devforge-guardian",
+    "displayName": "Guardian",
+    "description": "Comprehensive security monitoring and protection",
+    "agentPersona": {
+      "role": "Threat Protection",
+      "expertise": [
+        "security",
+        "threat-detection",
+        "incident-response",
+        "vulnerability"
+      ],
+      "workspace": "./codebase/devforge/security",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "security",
+      "threat",
+      "protection",
+      "incident"
+    ]
+  },
+  {
+    "discipline": "devforge-gatekeeper",
+    "displayName": "Gatekeeper",
+    "description": "Identity and access management",
+    "agentPersona": {
+      "role": "Access Control",
+      "expertise": [
+        "access-control",
+        "authentication",
+        "authorization",
+        "identity"
+      ],
+      "workspace": "./codebase/devforge/security",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "access",
+      "authentication",
+      "authorization",
+      "identity"
+    ]
+  },
+  {
+    "discipline": "devforge-auditor",
+    "displayName": "Auditor",
+    "description": "Security compliance and audit management",
+    "agentPersona": {
+      "role": "Security Compliance",
+      "expertise": [
+        "compliance",
+        "audit",
+        "regulatory",
+        "policy"
+      ],
+      "workspace": "./codebase/devforge/security",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "compliance",
+      "audit",
+      "regulatory",
+      "policy"
+    ]
+  },
+  {
+    "discipline": "devforge-sentinelx",
+    "displayName": "Sentinelx",
+    "description": "Advanced security monitoring and analytics",
+    "agentPersona": {
+      "role": "Advanced Monitoring",
+      "expertise": [
+        "threat-analytics",
+        "behavioral-analysis",
+        "anomaly-detection",
+        "intelligence"
+      ],
+      "workspace": "./codebase/devforge/security",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "security-analytics",
+      "threat-detection",
+      "anomaly",
+      "intelligence"
+    ]
+  },
+  {
+    "discipline": "devforge-watchtower",
+    "displayName": "Watchtower",
+    "description": "Security governance and oversight",
+    "agentPersona": {
+      "role": "Security Oversight",
+      "expertise": [
+        "governance",
+        "risk-management",
+        "architecture",
+        "training"
+      ],
+      "workspace": "./codebase/devforge/security",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "governance",
+      "risk",
+      "oversight",
+      "security-policy"
+    ]
+  },
+  {
+    "discipline": "devforge-archivist",
+    "displayName": "Archivist",
+    "description": "Knowledge security and information protection",
+    "agentPersona": {
+      "role": "Knowledge Security",
+      "expertise": [
+        "knowledge-security",
+        "classification",
+        "encryption",
+        "data-protection"
+      ],
+      "workspace": "./codebase/devforge/security",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "knowledge-security",
+      "encryption",
+      "classification",
+      "protection"
+    ]
+  },
+  {
+    "discipline": "devforge-atlas",
+    "displayName": "Atlas",
+    "description": "Product architecture and system mapping",
+    "agentPersona": {
+      "role": "Product Mapping",
+      "expertise": [
+        "product-architecture",
+        "mapping",
+        "roadmap",
+        "prioritization"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "product",
+      "architecture",
+      "mapping",
+      "roadmap"
+    ]
+  },
+  {
+    "discipline": "devforge-brandforge",
+    "displayName": "Brandforge",
+    "description": "Brand strategy and market positioning",
+    "agentPersona": {
+      "role": "Brand Development",
+      "expertise": [
+        "branding",
+        "positioning",
+        "messaging",
+        "marketing"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "brand",
+      "positioning",
+      "marketing",
+      "messaging"
+    ]
+  },
+  {
+    "discipline": "devforge-cartographer",
+    "displayName": "Cartographer",
+    "description": "Product roadmap development and management",
+    "agentPersona": {
+      "role": "Product Roadmapping",
+      "expertise": [
+        "roadmap",
+        "planning",
+        "market-research",
+        "stakeholder"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "roadmap",
+      "planning",
+      "features",
+      "prioritization"
+    ]
+  },
+  {
+    "discipline": "devforge-catalyst",
+    "displayName": "Catalyst",
+    "description": "Product innovation and feature development",
+    "agentPersona": {
+      "role": "Product Innovation",
+      "expertise": [
+        "innovation",
+        "features",
+        "ux",
+        "trends"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "innovation",
+      "features",
+      "product-development",
+      "ux"
+    ]
+  },
+  {
+    "discipline": "devforge-concierge",
+    "displayName": "Concierge",
+    "description": "Customer experience management and support",
+    "agentPersona": {
+      "role": "Customer Experience",
+      "expertise": [
+        "customer-experience",
+        "support",
+        "feedback",
+        "satisfaction"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "customer",
+      "experience",
+      "support",
+      "feedback"
+    ]
+  },
+  {
+    "discipline": "devforge-nova",
+    "displayName": "Nova",
+    "description": "Product launch coordination and execution",
+    "agentPersona": {
+      "role": "Product Launches",
+      "expertise": [
+        "launches",
+        "campaigns",
+        "metrics",
+        "execution"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "launch",
+      "product-release",
+      "campaign",
+      "go-to-market"
+    ]
+  },
+  {
+    "discipline": "devforge-storycraft",
+    "displayName": "Storycraft",
+    "description": "Product narrative and communication",
+    "agentPersona": {
+      "role": "Product Storytelling",
+      "expertise": [
+        "storytelling",
+        "communication",
+        "content",
+        "narrative"
+      ],
+      "workspace": "./codebase/devforge/product",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "storytelling",
+      "narrative",
+      "communication",
+      "content"
+    ]
+  },
+  {
+    "discipline": "devforge-ambassador",
+    "displayName": "Ambassador",
+    "description": "Brand ambassador and public relations",
+    "agentPersona": {
+      "role": "Brand Representation",
+      "expertise": [
+        "pr",
+        "media",
+        "advocacy",
+        "thought-leadership"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "pr",
+      "media",
+      "brand",
+      "advocacy"
+    ]
+  },
+  {
+    "discipline": "devforge-ally",
+    "displayName": "Ally",
+    "description": "Strategic partnerships and alliance management",
+    "agentPersona": {
+      "role": "Partnership Management",
+      "expertise": [
+        "partnerships",
+        "alliances",
+        "strategy",
+        "collaboration"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "partnership",
+      "alliance",
+      "collaboration",
+      "joint-venture"
+    ]
+  },
+  {
+    "discipline": "devforge-amplifier",
+    "displayName": "Amplifier",
+    "description": "Marketing strategy and promotional campaigns",
+    "agentPersona": {
+      "role": "Marketing and Promotion",
+      "expertise": [
+        "marketing",
+        "campaigns",
+        "digital",
+        "social-media"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "marketing",
+      "campaigns",
+      "promotion",
+      "digital"
+    ]
+  },
+  {
+    "discipline": "devforge-catalystx",
+    "displayName": "Catalystx",
+    "description": "Market innovation and disruption strategy",
+    "agentPersona": {
+      "role": "Market Disruption",
+      "expertise": [
+        "disruption",
+        "innovation",
+        "competitive-analysis",
+        "trends"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "disruption",
+      "innovation",
+      "competitive",
+      "market"
+    ]
+  },
+  {
+    "discipline": "devforge-dealmaker",
+    "displayName": "Dealmaker",
+    "description": "Sales strategy and business negotiations",
+    "agentPersona": {
+      "role": "Sales and Negotiation",
+      "expertise": [
+        "sales",
+        "negotiation",
+        "revenue",
+        "crm"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "sales",
+      "negotiation",
+      "revenue",
+      "deals"
+    ]
+  },
+  {
+    "discipline": "devforge-merchant",
+    "displayName": "Merchant",
+    "description": "E-commerce and commercial operations",
+    "agentPersona": {
+      "role": "Commerce Operations",
+      "expertise": [
+        "ecommerce",
+        "commerce",
+        "pricing",
+        "acquisition"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "ecommerce",
+      "commerce",
+      "pricing",
+      "retail"
+    ]
+  },
+  {
+    "discipline": "devforge-voyager",
+    "displayName": "Voyager",
+    "description": "Market research and expansion opportunities",
+    "agentPersona": {
+      "role": "Market Exploration",
+      "expertise": [
+        "market-research",
+        "expansion",
+        "competitive-landscape",
+        "entry-strategy"
+      ],
+      "workspace": "./codebase/devforge/growth",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "market-research",
+      "expansion",
+      "exploration",
+      "entry"
+    ]
+  },
+  {
+    "discipline": "devforge-analyst",
+    "displayName": "Analyst",
+    "description": "Market research and competitive analysis",
+    "agentPersona": {
+      "role": "Market Analysis",
+      "expertise": [
+        "market-analysis",
+        "competitive-intelligence",
+        "forecasting",
+        "research"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "analysis",
+      "market",
+      "competitive",
+      "research"
+    ]
+  },
+  {
+    "discipline": "devforge-compass",
+    "displayName": "Compass",
+    "description": "Strategic direction and objective setting",
+    "agentPersona": {
+      "role": "Direction Setting",
+      "expertise": [
+        "direction",
+        "objectives",
+        "goals",
+        "alignment"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "direction",
+      "objectives",
+      "goals",
+      "strategy"
+    ]
+  },
+  {
+    "discipline": "devforge-librarian",
+    "displayName": "Librarian",
+    "description": "Knowledge organization, information management, and workflow documentation",
+    "agentPersona": {
+      "role": "Knowledge Management & Workflow Documentation",
+      "expertise": [
+        "knowledge-management",
+        "documentation",
+        "classification",
+        "workflows"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "knowledge",
+      "documentation",
+      "information",
+      "workflows"
+    ]
+  },
+  {
+    "discipline": "devforge-mentor",
+    "displayName": "Mentor",
+    "description": "Team development and capability building",
+    "agentPersona": {
+      "role": "Team Development",
+      "expertise": [
+        "training",
+        "development",
+        "coaching",
+        "mentoring"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "training",
+      "development",
+      "coaching",
+      "mentoring"
+    ]
+  },
+  {
+    "discipline": "devforge-oracle",
+    "displayName": "Oracle",
+    "description": "Predictive modeling and forecasting",
+    "agentPersona": {
+      "role": "Predictive Analytics",
+      "expertise": [
+        "predictive-analytics",
+        "forecasting",
+        "modeling",
+        "scenarios"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "predictive",
+      "forecasting",
+      "modeling",
+      "scenarios"
+    ]
+  },
+  {
+    "discipline": "devforge-pathfinder",
+    "displayName": "Pathfinder",
+    "description": "Opportunity discovery and strategic positioning",
+    "agentPersona": {
+      "role": "Opportunity Identification",
+      "expertise": [
+        "opportunities",
+        "positioning",
+        "competitive-advantage",
+        "growth"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "opportunities",
+      "positioning",
+      "growth",
+      "advantage"
+    ]
+  },
+  {
+    "discipline": "devforge-scout",
+    "displayName": "Scout",
+    "description": "Competitive analysis and market surveillance",
+    "agentPersona": {
+      "role": "Competitive Intelligence",
+      "expertise": [
+        "competitive-intelligence",
+        "surveillance",
+        "trends",
+        "threats"
+      ],
+      "workspace": "./codebase/devforge/strategy",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "competitive",
+      "intelligence",
+      "surveillance",
+      "monitoring"
+    ]
+  },
+  {
+    "discipline": "loopy-vision",
+    "displayName": "Vision",
+    "description": "Strategic leadership and vision for creative AI",
+    "agentPersona": {
+      "role": "Chief Executive Officer",
+      "expertise": [
+        "leadership",
+        "strategy",
+        "creative-ai",
+        "executive",
+        "ceo"
+      ],
+      "workspace": "./codebase/loopy/executive",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "global",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "leadership",
+      "strategy",
+      "creative-ai",
+      "executive",
+      "ceo"
+    ]
+  },
+  {
+    "discipline": "loopy-alex",
+    "displayName": "Alex",
+    "description": "Deep research specialist for creative intelligence",
+    "agentPersona": {
+      "role": "Deep Research Specialist",
+      "expertise": [
+        "research",
+        "trends",
+        "market-intelligence",
+        "creative-industry"
+      ],
+      "workspace": "./codebase/loopy/creative",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "research",
+      "trends",
+      "creative-intelligence",
+      "market"
+    ]
+  },
+  {
+    "discipline": "loopy-maya",
+    "displayName": "Maya",
+    "description": "Content strategy and creative direction",
+    "agentPersona": {
+      "role": "Content Strategist",
+      "expertise": [
+        "content-strategy",
+        "creative-direction",
+        "brand-voice",
+        "engagement"
+      ],
+      "workspace": "./codebase/loopy/creative",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "content",
+      "strategy",
+      "creative",
+      "brand"
+    ]
+  },
+  {
+    "discipline": "loopy-jordan",
+    "displayName": "Jordan",
+    "description": "Creative marketing and campaign management",
+    "agentPersona": {
+      "role": "Marketing Specialist",
+      "expertise": [
+        "marketing",
+        "campaigns",
+        "branding",
+        "digital-marketing"
+      ],
+      "workspace": "./codebase/loopy/creative",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "marketing",
+      "campaigns",
+      "branding",
+      "digital"
+    ]
+  },
+  {
+    "discipline": "loopy-sam",
+    "displayName": "Sam",
+    "description": "Social media strategy and community engagement",
+    "agentPersona": {
+      "role": "Social Media Coordinator",
+      "expertise": [
+        "social-media",
+        "community",
+        "engagement",
+        "analytics"
+      ],
+      "workspace": "./codebase/loopy/creative",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "social-media",
+      "community",
+      "engagement",
+      "content"
+    ]
+  },
+  {
+    "discipline": "loopy-dev",
+    "displayName": "Dev",
+    "description": "Technical implementation of creative solutions",
+    "agentPersona": {
+      "role": "Technical Creative",
+      "expertise": [
+        "creative-technology",
+        "interactive-media",
+        "tools",
+        "technical"
+      ],
+      "workspace": "./codebase/loopy/creative",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "creative-tech",
+      "interactive",
+      "tools",
+      "technical"
+    ]
+  },
+  {
+    "discipline": "qualityforge-unittest",
+    "displayName": "unittest",
+    "description": "Unit testing architecture and implementation",
+    "agentPersona": {
+      "role": "Unit Testing Specialist",
+      "expertise": [
+        "unit-testing",
+        "tdd",
+        "coverage",
+        "testing-frameworks"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "unit-test",
+      "tdd",
+      "coverage",
+      "testing"
+    ]
+  },
+  {
+    "discipline": "qualityforge-integration",
+    "displayName": "integration",
+    "description": "Integration testing and system interoperability",
+    "agentPersona": {
+      "role": "Integration Testing Expert",
+      "expertise": [
+        "integration-testing",
+        "api-testing",
+        "interoperability",
+        "automation"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "integration-test",
+      "api-test",
+      "interoperability"
+    ]
+  },
+  {
+    "discipline": "qualityforge-e2e",
+    "displayName": "e2e",
+    "description": "End-to-end testing and user journey validation",
+    "agentPersona": {
+      "role": "End-to-End Testing Coordinator",
+      "expertise": [
+        "e2e-testing",
+        "user-journeys",
+        "cross-browser",
+        "automation"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "e2e",
+      "end-to-end",
+      "user-journey",
+      "testing"
+    ]
+  },
+  {
+    "discipline": "qualityforge-performance",
+    "displayName": "performance",
+    "description": "Performance testing and optimization",
+    "agentPersona": {
+      "role": "Performance Testing Engineer",
+      "expertise": [
+        "performance-testing",
+        "load-testing",
+        "stress-testing",
+        "optimization"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "performance",
+      "load-test",
+      "stress-test",
+      "optimization"
+    ]
+  },
+  {
+    "discipline": "qualityforge-security-test",
+    "displayName": "security-test",
+    "description": "Security testing and vulnerability assessment",
+    "agentPersona": {
+      "role": "Security Testing Specialist",
+      "expertise": [
+        "security-testing",
+        "penetration-testing",
+        "vulnerability",
+        "compliance"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "security-test",
+      "penetration",
+      "vulnerability",
+      "security"
+    ]
+  },
+  {
+    "discipline": "qualityforge-accessibility",
+    "displayName": "accessibility",
+    "description": "Accessibility compliance and inclusive design testing",
+    "agentPersona": {
+      "role": "Accessibility Testing Expert",
+      "expertise": [
+        "accessibility",
+        "wcag",
+        "inclusive-design",
+        "audit"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "accessibility",
+      "wcag",
+      "inclusive",
+      "a11y"
+    ]
+  },
+  {
+    "discipline": "qualityforge-compatibility",
+    "displayName": "compatibility",
+    "description": "Cross-platform and cross-browser compatibility",
+    "agentPersona": {
+      "role": "Cross-Platform Compatibility Testing",
+      "expertise": [
+        "compatibility",
+        "cross-browser",
+        "cross-platform",
+        "device-testing"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "compatibility",
+      "cross-browser",
+      "cross-platform",
+      "device"
+    ]
+  },
+  {
+    "discipline": "qualityforge-load",
+    "displayName": "load",
+    "description": "Load testing and system capacity validation",
+    "agentPersona": {
+      "role": "Load and Stress Testing Engineer",
+      "expertise": [
+        "load-testing",
+        "capacity",
+        "stress-testing",
+        "monitoring"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "load",
+      "stress",
+      "capacity",
+      "testing"
+    ]
+  },
+  {
+    "discipline": "qualityforge-automation",
+    "displayName": "automation",
+    "description": "Test automation framework and strategy",
+    "agentPersona": {
+      "role": "Test Automation Architect",
+      "expertise": [
+        "test-automation",
+        "frameworks",
+        "ci-cd",
+        "best-practices"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "automation",
+      "framework",
+      "ci-cd",
+      "test-automation"
+    ]
+  },
+  {
+    "discipline": "qualityforge-coverage",
+    "displayName": "coverage",
+    "description": "Code coverage analysis and quality metrics",
+    "agentPersona": {
+      "role": "Code Coverage and Quality Metrics Analyst",
+      "expertise": [
+        "coverage",
+        "metrics",
+        "quality-analysis",
+        "reporting"
+      ],
+      "workspace": "./codebase/qualityforge/testing",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "coverage",
+      "metrics",
+      "quality",
+      "analysis"
+    ]
+  },
+  {
+    "discipline": "qualityforge-diagnostics",
+    "displayName": "diagnostics",
+    "description": "Comprehensive error analysis and root cause identification",
+    "agentPersona": {
+      "role": "Error Diagnostics and Root Cause Analysis",
+      "expertise": [
+        "diagnostics",
+        "root-cause",
+        "error-analysis",
+        "troubleshooting"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "diagnostics",
+      "root-cause",
+      "error",
+      "analysis"
+    ]
+  },
+  {
+    "discipline": "qualityforge-tracer",
+    "displayName": "tracer",
+    "description": "Code execution tracing and debugging support",
+    "agentPersona": {
+      "role": "Code Tracing and Debugging Specialist",
+      "expertise": [
+        "tracing",
+        "debugging",
+        "instrumentation",
+        "logging"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "tracing",
+      "debugging",
+      "logging",
+      "instrumentation"
+    ]
+  },
+  {
+    "discipline": "qualityforge-fixer",
+    "displayName": "fixer",
+    "description": "Bug resolution and patch development",
+    "agentPersona": {
+      "role": "Bug Fixing and Patch Development",
+      "expertise": [
+        "bug-fixing",
+        "patches",
+        "resolution",
+        "tracking"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "bug",
+      "fix",
+      "patch",
+      "resolution"
+    ]
+  },
+  {
+    "discipline": "qualityforge-analyzer",
+    "displayName": "analyzer",
+    "description": "Static code analysis and vulnerability detection",
+    "agentPersona": {
+      "role": "Code Analysis and Vulnerability Detection",
+      "expertise": [
+        "static-analysis",
+        "vulnerability",
+        "code-quality",
+        "security"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "analysis",
+      "vulnerability",
+      "static",
+      "security"
+    ]
+  },
+  {
+    "discipline": "qualityforge-profiler",
+    "displayName": "profiler",
+    "description": "Performance profiling and system optimization",
+    "agentPersona": {
+      "role": "Performance Profiling and Optimization",
+      "expertise": [
+        "profiling",
+        "performance",
+        "bottleneck",
+        "optimization"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "profiling",
+      "performance",
+      "bottleneck",
+      "optimization"
+    ]
+  },
+  {
+    "discipline": "qualityforge-debugger",
+    "displayName": "debugger",
+    "description": "Advanced debugging tool development and support",
+    "agentPersona": {
+      "role": "Advanced Debugging Tools Specialist",
+      "expertise": [
+        "debugging-tools",
+        "workflows",
+        "best-practices",
+        "integration"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "debugging",
+      "tools",
+      "workflows",
+      "standards"
+    ]
+  },
+  {
+    "discipline": "qualityforge-inspector",
+    "displayName": "inspector",
+    "description": "Code inspection and review-based debugging",
+    "agentPersona": {
+      "role": "Code Inspection and Review Debugging",
+      "expertise": [
+        "inspection",
+        "review",
+        "quality",
+        "bug-detection"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "inspection",
+      "review",
+      "code-review",
+      "quality"
+    ]
+  },
+  {
+    "discipline": "qualityforge-resolver",
+    "displayName": "resolver",
+    "description": "Complex issue resolution and conflict management",
+    "agentPersona": {
+      "role": "Issue Resolution and Conflict Management",
+      "expertise": [
+        "resolution",
+        "conflict",
+        "escalation",
+        "coordination"
+      ],
+      "workspace": "./codebase/qualityforge/debugging",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "resolution",
+      "conflict",
+      "escalation",
+      "issue"
+    ]
+  },
+  {
+    "discipline": "qualityforge-codesmith",
+    "displayName": "codesmith",
+    "description": "High-quality code generation and implementation",
+    "agentPersona": {
+      "role": "Code Generation and Implementation",
+      "expertise": [
+        "code-generation",
+        "clean-code",
+        "best-practices",
+        "standards"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "code",
+      "generation",
+      "implementation",
+      "clean-code"
+    ]
+  },
+  {
+    "discipline": "qualityforge-refactor",
+    "displayName": "refactor",
+    "description": "Code refactoring and performance optimization",
+    "agentPersona": {
+      "role": "Code Refactoring and Optimization",
+      "expertise": [
+        "refactoring",
+        "optimization",
+        "maintainability",
+        "technical-debt"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "refactor",
+      "optimization",
+      "improvement",
+      "cleanup"
+    ]
+  },
+  {
+    "discipline": "qualityforge-architect",
+    "displayName": "architect",
+    "description": "System architecture and design quality assurance",
+    "agentPersona": {
+      "role": "System Architecture and Design",
+      "expertise": [
+        "architecture",
+        "design-patterns",
+        "quality",
+        "documentation"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "architecture",
+      "design",
+      "patterns",
+      "quality"
+    ]
+  },
+  {
+    "discipline": "qualityforge-optimizer",
+    "displayName": "optimizer",
+    "description": "System performance optimization and tuning",
+    "agentPersona": {
+      "role": "Performance Optimization Specialist",
+      "expertise": [
+        "performance",
+        "tuning",
+        "efficiency",
+        "monitoring"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "optimization",
+      "performance",
+      "tuning",
+      "efficiency"
+    ]
+  },
+  {
+    "discipline": "qualityforge-maintainer",
+    "displayName": "maintainer",
+    "description": "Code maintenance and continuous improvement",
+    "agentPersona": {
+      "role": "Code Maintenance and Updates",
+      "expertise": [
+        "maintenance",
+        "dependencies",
+        "cleanup",
+        "documentation"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "maintenance",
+      "updates",
+      "dependencies",
+      "cleanup"
+    ]
+  },
+  {
+    "discipline": "qualityforge-integrator",
+    "displayName": "integrator",
+    "description": "System integration and API quality assurance",
+    "agentPersona": {
+      "role": "System Integration and API Development",
+      "expertise": [
+        "integration",
+        "api",
+        "interoperability",
+        "documentation"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "integration",
+      "api",
+      "interoperability",
+      "quality"
+    ]
+  },
+  {
+    "discipline": "qualityforge-reviewer",
+    "displayName": "reviewer",
+    "description": "Code review and quality gate management",
+    "agentPersona": {
+      "role": "Code Review and Quality Assurance",
+      "expertise": [
+        "code-review",
+        "quality-gates",
+        "best-practices",
+        "process"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "review",
+      "quality",
+      "gates",
+      "best-practices"
+    ]
+  },
+  {
+    "discipline": "qualityforge-standards",
+    "displayName": "standards",
+    "description": "Coding standards and best practices enforcement",
+    "agentPersona": {
+      "role": "Coding Standards Enforcement",
+      "expertise": [
+        "standards",
+        "best-practices",
+        "compliance",
+        "training"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "standards",
+      "best-practices",
+      "compliance",
+      "enforcement"
+    ]
+  },
+  {
+    "discipline": "qualityforge-documenter",
+    "displayName": "documenter",
+    "description": "Code documentation and technical writing",
+    "agentPersona": {
+      "role": "Code Documentation Specialist",
+      "expertise": [
+        "documentation",
+        "technical-writing",
+        "api-docs",
+        "standards"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "documentation",
+      "technical-writing",
+      "api-docs",
+      "specs"
+    ]
+  },
+  {
+    "discipline": "qualityforge-migrator",
+    "displayName": "migrator",
+    "description": "Code migration and system modernization",
+    "agentPersona": {
+      "role": "Code Migration and Modernization",
+      "expertise": [
+        "migration",
+        "modernization",
+        "legacy",
+        "technology-updates"
+      ],
+      "workspace": "./codebase/qualityforge/coding",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "migration",
+      "modernization",
+      "legacy",
+      "upgrade"
+    ]
+  },
+  {
+    "discipline": "qualityforge-guardian",
+    "displayName": "guardian",
+    "description": "Quality gate management and standards enforcement",
+    "agentPersona": {
+      "role": "Quality Gatekeeper and Standards Enforcement",
+      "expertise": [
+        "quality-gates",
+        "compliance",
+        "process",
+        "metrics"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "quality",
+      "gates",
+      "compliance",
+      "standards"
+    ]
+  },
+  {
+    "discipline": "qualityforge-auditor",
+    "displayName": "auditor",
+    "description": "Code auditing and compliance validation",
+    "agentPersona": {
+      "role": "Code Audit and Compliance Specialist",
+      "expertise": [
+        "audit",
+        "compliance",
+        "regulatory",
+        "security"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "audit",
+      "compliance",
+      "regulatory",
+      "security"
+    ]
+  },
+  {
+    "discipline": "qualityforge-validator",
+    "displayName": "validator",
+    "description": "Validation and verification processes",
+    "agentPersona": {
+      "role": "Validation and Verification Expert",
+      "expertise": [
+        "validation",
+        "verification",
+        "standards",
+        "documentation"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "validation",
+      "verification",
+      "standards",
+      "quality"
+    ]
+  },
+  {
+    "discipline": "qualityforge-monitor",
+    "displayName": "monitor",
+    "description": "Continuous quality monitoring and alerting",
+    "agentPersona": {
+      "role": "Continuous Monitoring and Alerting",
+      "expertise": [
+        "monitoring",
+        "alerting",
+        "metrics",
+        "real-time"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "monitoring",
+      "alerting",
+      "metrics",
+      "real-time"
+    ]
+  },
+  {
+    "discipline": "qualityforge-reporter",
+    "displayName": "reporter",
+    "description": "Quality reporting and metrics management",
+    "agentPersona": {
+      "role": "Quality Reporting and Metrics",
+      "expertise": [
+        "reporting",
+        "metrics",
+        "analysis",
+        "dashboards"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "reporting",
+      "metrics",
+      "dashboards",
+      "analysis"
+    ]
+  },
+  {
+    "discipline": "qualityforge-trainer",
+    "displayName": "trainer",
+    "description": "Quality training and best practices development",
+    "agentPersona": {
+      "role": "Quality Training and Best Practices",
+      "expertise": [
+        "training",
+        "best-practices",
+        "education",
+        "awareness"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "training",
+      "best-practices",
+      "education",
+      "quality"
+    ]
+  },
+  {
+    "discipline": "qualityforge-governor",
+    "displayName": "governor",
+    "description": "Quality governance and policy management",
+    "agentPersona": {
+      "role": "Quality Governance and Policy Management",
+      "expertise": [
+        "governance",
+        "policy",
+        "strategy",
+        "oversight"
+      ],
+      "workspace": "./codebase/qualityforge/quality",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "governance",
+      "policy",
+      "strategy",
+      "oversight"
+    ]
+  },
+  {
+    "discipline": "domainforge-orion",
+    "displayName": "Orion",
+    "description": "Chief Civil Engineering Orchestrator",
+    "agentPersona": {
+      "role": "Chief Civil Engineering Orchestrator",
+      "expertise": [
+        "civil-engineering-orchestration",
+        "construction-coordination",
+        "project-management",
+        "infrastructure-governance",
+        "engineering-standards"
+      ],
+      "workspace": "./codebase/domainforge/executive",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "global",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "civil-orchestrate",
+      "construction-coordinate",
+      "engineering-workflow",
+      "infrastructure-monitor",
+      "project-govern"
+    ]
+  },
+  {
+    "discipline": "domainforge-strategos",
+    "displayName": "Strategos",
+    "description": "Civil Engineering Strategic Planning",
+    "agentPersona": {
+      "role": "Civil Engineering Strategic Planning",
+      "expertise": [
+        "infrastructure-strategy",
+        "construction-planning",
+        "civil-engineering-market-analysis",
+        "infrastructure-risk-assessment"
+      ],
+      "workspace": "./codebase/domainforge/executive",
+      "tools": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "read",
+        "write",
+        "search",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "infrastructure-strategy",
+      "construction-plan",
+      "civil-engineering-roadmap",
+      "infrastructure-market"
+    ]
+  },
+  {
+    "discipline": "domainforge-council",
+    "displayName": "Council",
+    "description": "Civil Engineering Governance",
+    "agentPersona": {
+      "role": "Civil Engineering Governance",
+      "expertise": [
+        "civil-engineering-governance",
+        "infrastructure-policy",
+        "construction-decision-making",
+        "engineering-standards"
+      ],
+      "workspace": "./codebase/domainforge/executive",
+      "tools": [
+        "read",
+        "write",
+        "search"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "read",
+        "write",
+        "search"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "civil-governance",
+      "infrastructure-policy",
+      "construction-decision",
+      "engineering-standards"
+    ]
+  },
+  {
+    "discipline": "domainforge-structural",
+    "displayName": "Structural",
+    "description": "Structural Engineering Specialist",
+    "agentPersona": {
+      "role": "Structural Engineering Specialist",
+      "expertise": [
+        "structural-analysis",
+        "load-calculations",
+        "foundation-design",
+        "structural-integrity",
+        "construction-specs"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "structural-analysis",
+      "load-calculations",
+      "foundation-design",
+      "structural-integrity"
+    ]
+  },
+  {
+    "discipline": "domainforge-geotechnical",
+    "displayName": "Geotechnical",
+    "description": "Geotechnical Engineering Specialist",
+    "agentPersona": {
+      "role": "Geotechnical Engineering Specialist",
+      "expertise": [
+        "soil-mechanics",
+        "foundation-engineering",
+        "slope-stability",
+        "groundwater-analysis",
+        "earthquake-engineering"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "geotechnical-analysis",
+      "soil-investigation",
+      "foundation-design",
+      "slope-stability"
+    ]
+  },
+  {
+    "discipline": "domainforge-transportation",
+    "displayName": "Transportation",
+    "description": "Transportation Engineering Specialist",
+    "agentPersona": {
+      "role": "Transportation Engineering Specialist",
+      "expertise": [
+        "highway-design",
+        "traffic-engineering",
+        "railway-design",
+        "intersection-design",
+        "transportation-safety"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "transportation-design",
+      "highway-engineering",
+      "traffic-analysis",
+      "railway-design"
+    ]
+  },
+  {
+    "discipline": "domainforge-water",
+    "displayName": "Water",
+    "description": "Water Resources Engineering Specialist",
+    "agentPersona": {
+      "role": "Water Resources Engineering Specialist",
+      "expertise": [
+        "water-distribution",
+        "wastewater-engineering",
+        "hydraulic-analysis",
+        "stormwater-management",
+        "flood-control"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "water-engineering",
+      "hydraulic-design",
+      "wastewater-systems",
+      "stormwater-management"
+    ]
+  },
+  {
+    "discipline": "domainforge-environmental",
+    "displayName": "Environmental",
+    "description": "Environmental Engineering Specialist",
+    "agentPersona": {
+      "role": "Environmental Engineering Specialist",
+      "expertise": [
+        "environmental-impact",
+        "sustainable-design",
+        "air-quality",
+        "water-quality",
+        "environmental-permitting"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "environmental-engineering",
+      "sustainable-design",
+      "impact-assessment",
+      "environmental-permitting"
+    ]
+  },
+  {
+    "discipline": "domainforge-surveying",
+    "displayName": "Surveying",
+    "description": "Surveying and Geomatics Specialist",
+    "agentPersona": {
+      "role": "Surveying and Geomatics Specialist",
+      "expertise": [
+        "land-surveying",
+        "gis-mapping",
+        "construction-staking",
+        "remote-sensing",
+        "geodetic-control"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "surveying",
+      "gis-mapping",
+      "construction-staking",
+      "geospatial-analysis"
+    ]
+  },
+  {
+    "discipline": "domainforge-materials",
+    "displayName": "Materials",
+    "description": "Materials Engineering Specialist",
+    "agentPersona": {
+      "role": "Materials Engineering Specialist",
+      "expertise": [
+        "materials-testing",
+        "concrete-design",
+        "asphalt-materials",
+        "quality-control",
+        "material-durability"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "materials-testing",
+      "concrete-design",
+      "quality-control",
+      "material-specs"
+    ]
+  },
+  {
+    "discipline": "domainforge-construction",
+    "displayName": "Construction",
+    "description": "Construction Engineering Specialist",
+    "agentPersona": {
+      "role": "Construction Engineering Specialist",
+      "expertise": [
+        "construction-sequencing",
+        "project-scheduling",
+        "construction-safety",
+        "quality-assurance",
+        "contract-administration"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "construction-sequencing",
+      "project-scheduling",
+      "construction-safety",
+      "quality-control"
+    ]
+  },
+  {
+    "discipline": "domainforge-project",
+    "displayName": "Project",
+    "description": "Project Management Specialist",
+    "agentPersona": {
+      "role": "Project Management Specialist",
+      "expertise": [
+        "project-planning",
+        "cost-estimation",
+        "stakeholder-management",
+        "risk-management",
+        "project-documentation"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "project-management",
+      "cost-estimation",
+      "stakeholder-coordination",
+      "risk-management"
+    ]
+  },
+  {
+    "discipline": "domainforge-procurement",
+    "displayName": "Procurement",
+    "description": "Procurement and Contracts Specialist",
+    "agentPersona": {
+      "role": "Procurement and Contracts Specialist",
+      "expertise": [
+        "procurement-planning",
+        "contract-administration",
+        "vendor-management",
+        "subcontractor-coordination",
+        "procurement-compliance"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "procurement",
+      "contract-administration",
+      "vendor-management",
+      "subcontractor-coordination"
+    ]
+  },
+  {
+    "discipline": "domainforge-safety",
+    "displayName": "Safety",
+    "description": "Safety and Risk Management Specialist",
+    "agentPersona": {
+      "role": "Safety and Risk Management Specialist",
+      "expertise": [
+        "construction-safety",
+        "occupational-health",
+        "hazard-assessment",
+        "safety-training",
+        "risk-mitigation"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "construction-safety",
+      "occupational-health",
+      "hazard-assessment",
+      "safety-compliance"
+    ]
+  },
+
+  {
+    "discipline": "domainforge-legal",
+    "displayName": "Legal",
+    "description": "Legal and Regulatory Compliance Specialist",
+    "agentPersona": {
+      "role": "Legal and Regulatory Compliance Specialist",
+      "expertise": [
+        "regulatory-compliance",
+        "permitting",
+        "contract-law",
+        "environmental-compliance",
+        "right-of-way"
+      ],
+      "workspace": "./codebase/domainforge/engineering",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "regulatory-compliance",
+      "permitting",
+      "contract-review",
+      "environmental-law"
+    ]
+  },
+  {
+    "discipline": "infraforge-orchestrator",
+    "displayName": "Orchestrator",
+    "description": "Infrastructure Orchestration Specialist",
+    "agentPersona": {
+      "role": "Infrastructure Orchestration Specialist",
+      "expertise": [
+        "infrastructure-orchestration",
+        "system-integration",
+        "api-management",
+        "service-monitoring",
+        "performance-optimization"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep",
+        "lcm_describe"
+      ],
+      "workspaceScope": "global",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "infrastructure-orchestrate",
+      "system-integration",
+      "service-coordination",
+      "infrastructure-monitor",
+      "performance-optimize"
+    ]
+  },
+  {
+    "discipline": "infraforge-database",
+    "displayName": "Database",
+    "description": "Database Infrastructure Specialist",
+    "agentPersona": {
+      "role": "Database Infrastructure Specialist",
+      "expertise": [
+        "database-architecture",
+        "performance-tuning",
+        "data-backup",
+        "database-security",
+        "data-migration"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "database-architecture",
+      "performance-tuning",
+      "data-backup",
+      "database-security"
+    ]
+  },
+  {
+    "discipline": "infraforge-compute",
+    "displayName": "Compute",
+    "description": "Compute Infrastructure Specialist",
+    "agentPersona": {
+      "role": "Compute Infrastructure Specialist",
+      "expertise": [
+        "compute-provisioning",
+        "container-orchestration",
+        "serverless-computing",
+        "cost-optimization",
+        "hpc-engineering"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "compute-provisioning",
+      "container-orchestration",
+      "serverless-computing",
+      "hpc-management"
+    ]
+  },
+  {
+    "discipline": "infraforge-networking",
+    "displayName": "Networking",
+    "description": "Network Infrastructure Specialist",
+    "agentPersona": {
+      "role": "Network Infrastructure Specialist",
+      "expertise": [
+        "network-architecture",
+        "network-security",
+        "load-balancing",
+        "vpn-management",
+        "network-monitoring"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "network-architecture",
+      "network-security",
+      "load-balancing",
+      "network-monitoring"
+    ]
+  },
+  {
+    "discipline": "infraforge-storage",
+    "displayName": "Storage",
+    "description": "Storage Infrastructure Specialist",
+    "agentPersona": {
+      "role": "Storage Infrastructure Specialist",
+      "expertise": [
+        "storage-architecture",
+        "data-backup",
+        "file-system-management",
+        "object-storage",
+        "storage-security"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "submodule_only",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "storage-architecture",
+      "data-backup",
+      "file-system-management",
+      "object-storage"
+    ]
+  },
+  {
+    "discipline": "infraforge-security",
+    "displayName": "Security",
+    "description": "Infrastructure Security Specialist",
+    "agentPersona": {
+      "role": "Infrastructure Security Specialist",
+      "expertise": [
+        "infrastructure-security",
+        "threat-detection",
+        "compliance-monitoring",
+        "access-control",
+        "vulnerability-management"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal",
+        "lcm_grep"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "infrastructure-security",
+      "threat-detection",
+      "compliance-monitoring",
+      "access-control"
+    ]
+  },
+  {
+    "discipline": "infraforge-monitoring",
+    "displayName": "Monitoring",
+    "description": "Infrastructure Monitoring Specialist",
+    "agentPersona": {
+      "role": "Infrastructure Monitoring Specialist",
+      "expertise": [
+        "system-monitoring",
+        "performance-metrics",
+        "log-aggregation",
+        "incident-detection",
+        "capacity-planning"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "system-monitoring",
+      "performance-metrics",
+      "log-aggregation",
+      "incident-detection"
+    ]
+  },
+  {
+    "discipline": "infraforge-automation",
+    "displayName": "Automation",
+    "description": "Infrastructure Automation Specialist",
+    "agentPersona": {
+      "role": "Infrastructure Automation Specialist",
+      "expertise": [
+        "infrastructure-as-code",
+        "configuration-management",
+        "ci-cd-pipelines",
+        "automated-deployment",
+        "infrastructure-testing"
+      ],
+      "workspace": "./codebase/infraforge/infrastructure",
+      "tools": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ]
+    },
+    "toolsConfig": {
+      "allowed": [
+        "git",
+        "read",
+        "write",
+        "grep",
+        "run_terminal"
+      ],
+      "workspaceScope": "team",
+      "memoryIntegration": true
+    },
+    "memoryConfig": {
+      "losslessClaw": {
+        "enabled": true,
+        "contextWindow": 128000,
+        "compressionRatio": 25
+      },
+      "gigabrain": {
+        "enabled": true,
+        "entities": true,
+        "beliefs": true,
+        "episodes": true,
+        "openLoops": true
+      }
+    },
+    "routingKeywords": [
+      "infrastructure-automation",
+      "configuration-management",
+      "ci-cd-pipelines",
+      "automated-deployment"
+    ]
+  }
+]

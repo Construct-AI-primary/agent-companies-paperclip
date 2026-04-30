@@ -1,0 +1,27 @@
+---
+memory_layer: durable_knowledge
+para_section: pages/disciplines
+gigabrain_tags: disciplines, documentation
+documentation
+openstinger_context: discipline-knowledge
+last_updated: 2026-03-30
+related_docs:
+  - disciplines/
+---
+
+# 📋 Modals Breakdown - Construct AI
+
+**Detailed analysis of all modal dialogs in the system.**
+
+## 📋 Overview
+
+This document contains detailed information about each modal dialog found in the Construct AI system.
+
+## 📊 Statistics
+
+- **Total Modals**: 0
+- **Types**: 0
+- **Generated**: 2026-01-30T18:16:06.819Z
+
+## 📋 Modal Details
+

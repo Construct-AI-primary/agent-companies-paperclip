@@ -1,0 +1,88 @@
+Document 1: Variation Instruction
+
+VARIATION INSTRUCTION
+
+Project: Durban Highway Bridge Repair & Associated Works
+Client: [Client Name - e.g., eThekwini Municipality / SANRAL]
+Engineer: Urban Infrastructure Consultants
+Contractor: BridgeBuilders Inc.
+
+Variation Instruction No.: VI-003
+Date of Issue: July 15, 2023
+
+Subject: Deeper Foundation Piles for Repaired Support Structures
+
+Reference Contract Clause(s): [Insert relevant clause from the main contract, e.g., Clause 13.1 -
+Right to Vary, Clause 51 - Valuation of Variations]
+Reference Drawing(s): DWG-STR-FD-008 Rev A (Original Design), DWG-STR-FD-012 Rev B
+(Revised Design)
+Reference Geotechnical Report: [Insert Geotechnical Report Ref, e.g., GeoInvest-DHBEP-Final-
+June2023]
+
+1. Description of Variation:
+
+This instruction is issued to direct the Contractor to construct foundation piles for the repaired
+support structures (as generally indicated on drawing DWG-STR-FD-012 Rev B) to depths greater
+than those indicated in the original tender documents and Bill of Quantities.
+
+This variation is necessitated by findings from the detailed "Geotechnical investigations" (SoW
+Clause 2.1.1), specifically report [GeoInvest-DHBEP-Final-June2023], which identified that
+competent founding strata are located at a greater depth than initially anticipated to achieve the
+required design bearing capacity for the repaired bridge structure.
+
+2. Scope of Varied Work:
+
+The varied work shall include, but not be limited to:
+
+•Drilling/piling to the revised, increased depths as specified in DWG-STR-FD-012 Rev B
+and any associated site instructions confirming specific pile termination depths.
+
+•Provision and installation of additional steel reinforcement cages to suit the increased pile
+lengths.
+
+•Provision and placement of additional C40/50 concrete for the increased pile lengths.
+
+•Any necessary adjustments to pile cap design if directly impacted by the increased pile
+depth, subject to further review and instruction if applicable.
+
+3. Impact on Cost:
+
+The additional work resulting from this Variation Instruction shall be valued as follows:
+
+•The additional volume of concrete and length of reinforcement directly attributable to the
+increased pile depth (beyond the original BoQ estimated depths) will be measured on-site.
+
+•Payment for the additional measured quantities of concrete and reinforcement will be
+made at the existing BoQ rates for similar items, where applicable. If no directly applicable
+
+rates exist, new rates shall be agreed upon between the Engineer and the Contractor in
+accordance with the Contract.
+
+•The Contractor is requested to submit a detailed claim for the costs associated with this
+variation, including any preliminary and general costs directly attributable to the execution
+of this varied work, for the Engineer's assessment.
+
+4. Impact on Time:
+
+Any impact on the Time for Completion resulting from this Variation Instruction will be assessed
+by the Engineer upon submission of a detailed claim by the Contractor, in accordance with the
+provisions of the Contract. The Contractor is to provide full particulars of any claim for an
+extension of time.
+
+5. Instruction:
+
+The Contractor is hereby instructed to proceed with the works as described in this Variation
+Instruction. All work is to be carried out in accordance with the Contract specifications, approved
+drawings, and relevant quality standards.
+
+Authorized by:
+
+[Engineer's Representative Name]
+The Engineer
+Urban Infrastructure Consultants
+
+Acknowledgement by Contractor:
+
+[Contractor's Representative Name]
+For BridgeBuilders Inc.
+Date: _______________

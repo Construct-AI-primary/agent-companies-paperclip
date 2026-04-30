@@ -1,0 +1,3 @@
+[submodule "hermes_agent"]
+	path = hermes_agent
+	url = https://github.com/Construct-AI-primary/hermes-agent.git

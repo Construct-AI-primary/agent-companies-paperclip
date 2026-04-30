@@ -1,0 +1,1 @@
+UPDATE agents SET adapter_type = 'http', adapter_config = jsonb_build_object('url', 'http://localhost:3001/api/execute', 'method', 'POST', 'timeoutMs', 300000, 'payloadTemplate', jsonb_build_object('task', '{{context}}', 'model', 'openrouter/qwen/qwen-3-6-plus')) WHERE adapter_config->>'command' LIKE '%hermes_agent/run.sh%';

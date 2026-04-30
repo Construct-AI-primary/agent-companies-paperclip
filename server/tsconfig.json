@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "include": ["src"],
+  "exclude": ["src/__tests__"]
+}

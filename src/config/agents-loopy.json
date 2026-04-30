@@ -1,0 +1,402 @@
+{
+  "team": "loopy",
+  "team_name": "Loopy AI",
+  "description": "Creative AI, content generation, and artistic applications",
+  "total_agents": 6,
+  "ceo": {
+    "agent_id": "loopy-vision",
+    "name": "Vision",
+    "role": "Chief Executive Officer",
+    "authority_level": "ceo",
+    "email": "vision@loopy.constructai.com"
+  },
+  "divisions": {
+    "executive": {
+      "name": "Executive Leadership",
+      "count": 1,
+      "agents": [
+        {
+          "agent_id": "loopy-vision",
+          "name": "Vision",
+          "division": "executive",
+          "role": "Chief Executive Officer",
+          "description": "Strategic leadership and vision for creative AI",
+          "status": "active",
+          "authority_level": "ceo",
+          "responsibilities": [
+            "Strategic leadership and vision for creative AI",
+            "Company-wide decision making and governance",
+            "Cross-team coordination and resource allocation",
+            "Stakeholder communication and partnership development",
+            "Creative AI innovation and market positioning"
+          ],
+          "expertise": [
+            "leadership",
+            "strategy",
+            "creative-ai",
+            "executive",
+            "ceo"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "loopy-alex",
+              "loopy-maya",
+              "loopy-jordan",
+              "loopy-dev",
+              "loopy-sam"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "global",
+            "max_concurrent_requests": 10,
+            "timeout_seconds": 600
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "leadership",
+              "strategy",
+              "creative-ai",
+              "executive",
+              "ceo"
+            ],
+            "priority": 1
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "deepseek/deepseek-r1",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    },
+    "creative": {
+      "name": "Creative Division",
+      "count": 5,
+      "reports_to": "loopy-vision",
+      "agents": [
+        {
+          "agent_id": "loopy-alex",
+          "name": "Alex",
+          "division": "creative",
+          "role": "Deep Research Specialist",
+          "description": "Deep research specialist for creative intelligence",
+          "status": "active",
+          "authority_level": "senior",
+          "reports_to": "loopy-vision",
+          "responsibilities": [
+            "Trend research and industry analysis in creative fields",
+            "Market intelligence and competitor analysis",
+            "Source verification and information validation",
+            "Structured presentation of research findings"
+          ],
+          "expertise": [
+            "research",
+            "trends",
+            "market-intelligence",
+            "creative-industry"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "loopy-vision",
+              "loopy-maya",
+              "loopy-jordan",
+              "loopy-dev",
+              "loopy-sam"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep",
+              "lcm_describe"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "research",
+              "trends",
+              "creative-intelligence",
+              "market"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "loopy-maya",
+          "name": "Maya",
+          "division": "creative",
+          "role": "Content Strategist",
+          "description": "Content strategy and creative direction",
+          "status": "active",
+          "authority_level": "senior",
+          "reports_to": "loopy-vision",
+          "responsibilities": [
+            "Content strategy development and implementation",
+            "Creative direction and brand voice management",
+            "Content calendar planning and execution",
+            "Audience engagement and content optimization"
+          ],
+          "expertise": [
+            "content-strategy",
+            "creative-direction",
+            "brand-voice",
+            "engagement"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "loopy-vision",
+              "loopy-alex",
+              "loopy-jordan",
+              "loopy-sam"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "para"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search",
+              "lcm_grep"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "content",
+              "strategy",
+              "creative",
+              "brand"
+            ],
+            "priority": 4
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "loopy-jordan",
+          "name": "Jordan",
+          "division": "creative",
+          "role": "Marketing Specialist",
+          "description": "Creative marketing and campaign management",
+          "status": "active",
+          "authority_level": "standard",
+          "reports_to": "loopy-vision",
+          "responsibilities": [
+            "Creative marketing campaign development",
+            "Brand positioning and messaging strategy",
+            "Digital marketing and social media management",
+            "Market research and customer insights"
+          ],
+          "expertise": [
+            "marketing",
+            "campaigns",
+            "branding",
+            "digital-marketing"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "loopy-vision",
+              "loopy-maya",
+              "loopy-alex",
+              "loopy-sam"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "marketing",
+              "campaigns",
+              "branding",
+              "digital"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "loopy-sam",
+          "name": "Sam",
+          "division": "creative",
+          "role": "Social Media Coordinator",
+          "description": "Social media strategy and community engagement",
+          "status": "active",
+          "authority_level": "standard",
+          "reports_to": "loopy-vision",
+          "responsibilities": [
+            "Social media content creation and scheduling",
+            "Community management and engagement",
+            "Social media analytics and performance optimization",
+            "Trend monitoring and social listening"
+          ],
+          "expertise": [
+            "social-media",
+            "community",
+            "engagement",
+            "analytics"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "loopy-vision",
+              "loopy-maya",
+              "loopy-alex",
+              "loopy-jordan"
+            ],
+            "memory_systems": [
+              "gigabrain"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "search"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "social-media",
+              "community",
+              "engagement",
+              "content"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        },
+        {
+          "agent_id": "loopy-dev",
+          "name": "Dev",
+          "division": "creative",
+          "role": "Technical Creative",
+          "description": "Technical implementation of creative solutions",
+          "status": "active",
+          "authority_level": "standard",
+          "reports_to": "loopy-vision",
+          "responsibilities": [
+            "Creative technology implementation",
+            "Interactive media development",
+            "Creative tool integration and optimization",
+            "Technical support for creative projects"
+          ],
+          "expertise": [
+            "creative-technology",
+            "interactive-media",
+            "tools",
+            "technical"
+          ],
+          "integration": {
+            "coordinates_with": [
+              "loopy-vision",
+              "loopy-alex",
+              "loopy-maya"
+            ],
+            "memory_systems": [
+              "gigabrain",
+              "openstinger"
+            ]
+          },
+          "openclaw_config": {
+            "tools_allowed": [
+              "git",
+              "read",
+              "write",
+              "grep",
+              "run_terminal"
+            ],
+            "workspace_scope": "team",
+            "max_concurrent_requests": 5,
+            "timeout_seconds": 300
+          },
+          "paperclip_config": {
+            "routing_keywords": [
+              "creative-tech",
+              "interactive",
+              "tools",
+              "technical"
+            ],
+            "priority": 5
+          },
+          "model_config": {
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k2.5",
+            "fallback_models": [],
+            "temperature": 0.7,
+            "max_tokens": 4096
+          }
+        }
+      ]
+    }
+  }
+}

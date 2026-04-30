@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-02-21T06:31:31.406818",
+  "server_url": "http://localhost:3060",
+  "page_url": "http://localhost:3060/#/drawing-measurements",
+  "tests": {
+    "measurement_validation": {
+      "subtests": [
+        {
+          "name": "tolerance",
+          "passed": false
+        },
+        {
+          "name": "cross_validation",
+          "passed": true
+        },
+        {
+          "name": "duplicates",
+          "passed": true
+        }
+      ],
+      "passed": 2,
+      "failed": 1
+    },
+    "opencv_analysis": {
+      "subtests": [
+        {
+          "name": "pipeline",
+          "passed": true
+        },
+        {
+          "name": "contour",
+          "passed": true
+        },
+        {
+          "name": "ocr",
+          "passed": true
+        }
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    "scale_calibration": {
+      "subtests": [
+        {
+          "name": "parsing",
+          "passed": true
+        },
+        {
+          "name": "detection",
+          "passed": true
+        },
+        {
+          "name": "verification",
+          "passed": true
+        }
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    "dimension_extraction": {
+      "subtests": [
+        {
+          "name": "calculation",
+          "passed": true
+        },
+        {
+          "name": "unit",
+          "passed": true
+        },
+        {
+          "name": "classification",
+          "passed": true
+        }
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    "boq_generation": {
+      "subtests": [
+        {
+          "name": "calculation",
+          "passed": true
+        },
+        {
+          "name": "category",
+          "passed": true
+        },
+        {
+          "name": "wastage",
+          "passed": true
+        }
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    "coordinator_integration": {
+      "subtests": [
+        {
+          "name": "routing",
+          "passed": true
+        },
+        {
+          "name": "debug",
+          "passed": true
+        }
+      ],
+      "passed": 2,
+      "failed": 0
+    },
+    "full_pipeline": {
+      "subtests": [
+        {
+          "name": "comprehensive",
+          "passed": true
+        }
+      ],
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "summary": {
+    "total_tests": 18,
+    "passed": 17,
+    "failed": 1
+  }
+}

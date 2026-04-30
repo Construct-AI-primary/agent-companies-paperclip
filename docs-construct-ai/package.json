@@ -1,0 +1,9 @@
+{
+  "name": "superpowers",
+  "version": "5.0.4",
+  "type": "module",
+  "main": ".opencode/plugins/superpowers.js",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1"
+  }
+}

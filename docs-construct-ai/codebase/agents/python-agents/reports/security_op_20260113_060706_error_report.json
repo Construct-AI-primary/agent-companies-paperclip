@@ -1,0 +1,13 @@
+{
+  "operation_id": "security_op_20260113_060706",
+  "status": "failed",
+  "error": "SecurityAssessment.__init__() missing 1 required positional argument: 'table_metadata'",
+  "timestamp": "2026-01-13T06:07:06.692214",
+  "performance_metrics": {
+    "start_time": "2026-01-13 06:07:06.688006",
+    "operations_completed": 0,
+    "tables_secured": 0,
+    "policies_deployed": 0,
+    "errors_encountered": 1
+  }
+}

@@ -1,0 +1,182 @@
+Document 2: Concrete Cube Test Register (Excerpts)
+
+APPENDIX E
+
+Project: Durban Highway Bridge Repair & Associated Works
+Document Reference: CCTR-DHBEP-Phase1
+Subject: Concrete Cube Test Register – Excerpts for Repaired Deck Sections
+Date of Register Compilation (Ongoing): November 20, 2023
+
+The following are excerpts from the Concrete Cube Test Register (CCTR-DHBEP-Phase1) pertaining to
+concrete pours for the repaired bridge deck sections, as referenced in our letter BB/DHBEP/C003. These
+results demonstrate compliance with specified strengths as per SoW Clause 3.1 "Quality Control" and
+"Material test reports and quality control records" (SoW Clause 5).
+
+Note:
+
+•All tests conducted by [Name of Accredited Laboratory], Test Report Refs available upon request.
+
+•Full Concrete Cube Test Register (CCTR-DHBEP-Phase1) is available for inspection at the
+Contractor's site office.
+
+•"Specified Min. Strength (MPa)" for 28-day tests is based on the characteristic strength requirement
+for C40/50 concrete.
+
+•
+
+Sample
+ID
+Date
+Cast
+Location of
+Pour
+(Element as
+per DWG-
+Specified
+Grade
+Test
+Age
+(Days)
+Achieved
+Compressive
+Strength
+(MPa)
+Specified
+Min.
+Strength
+(MPa)
+Compliance
+Status
+Remarks
+DC045-
+A
+2023-
+09-12
+Repaired Deck
+- Bay 2, Span
+1
+(Northbound)
+C40/50733.5
+N/A
+(Indicative)
+Indicative
+DC045-
+B
+2023-
+09-12
+Repaired Deck
+- Bay 2, Span
+1
+(Northbound)
+C40/502848.240
+PASS
+DC045-
+C
+2023-
+09-12
+Repaired Deck
+- Bay 2, Span
+1
+(Northbound)
+C40/502849.140
+PASS
+DC051-
+A
+2023-
+09-18
+Repaired Deck
+- Bay 3, Span
+1
+(Southbound)
+C40/50734.1
+N/A
+(Indicative)
+Indicative
+DC051-
+B
+2023-
+09-18
+Repaired Deck
+- Bay 3, Span
+1
+(Southbound)
+C40/502850.540
+PASS
+DC051-
+C
+2023-
+09-18
+Repaired Deck
+- Bay 3, Span
+1
+(Southbound)
+C40/502849.840
+PASS
+DC058-
+A
+2023-
+09-25
+Repaired Deck
+- Bay 4, Span
+2
+(Northbound)
+C40/50732.8
+N/A
+(Indicative)
+Indicative
+Slight
+delay in
+curing
+start
+DC058-
+B
+2023-
+09-25
+Repaired Deck
+- Bay 4, Span
+2
+(Northbound)
+C40/502846.540
+PASS
+DC058-
+C
+2023-
+09-25
+Repaired Deck
+- Bay 4, Span
+2
+(Northbound)
+C40/502847.040
+PASS
+DC063-
+A
+2023-
+10-02
+Repaired Deck
+- Approach
+Slab
+Transition
+C40/50735.0
+N/A
+(Indicative)
+Indicative
+DC063-
+B
+2023-
+10-02
+Repaired Deck
+- Approach
+Slab
+Transition
+C40/502851.240
+PASS
+DC063-
+C
+2023-
+10-02
+Repaired Deck
+- Approach
+Slab
+Transition
+C40/502850.840
+PASS

@@ -1,0 +1,1453 @@
+import React, { useState, useEffect, useRef } from 'react';
+import styled from '@emotion/styled';
+
+// Styled Components
+const Container = styled.div`
+max-width: 2000px;
+margin: 0 auto;
+background: white;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+overflow: hidden;
+`;
+
+const Header = styled.div`
+background: linear-gradient(135deg, #2c3e50, #3498db);
+color: white;
+padding: 30px;
+text-align: center;
+`;
+
+const HeaderTitle = styled.h1`
+font-size: 2.5rem;
+margin-bottom: 10px;
+`;
+
+const HeaderSubtitle = styled.p`
+font-size: 1.1rem;
+opacity: 0.9;
+`;
+
+const ImportantNote = styled.div`
+background: #fff3cd;
+border: 1px solid #ffeaa7;
+padding: 15px;
+border-radius: 4px;
+margin: 15px 0;
+
+p {
+color: #856404;
+margin: 0;
+}
+`;
+
+const GeneralInfo = styled.div`
+padding: 30px;
+background: #f1f3f4;
+border-bottom: 1px solid #ddd;
+`;
+
+const GeneralInfoTitle = styled.h3`
+color: #2c3e50;
+margin-bottom: 20px;
+font-size: 1.4rem;
+`;
+
+const InfoGrid = styled.div`
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+`;
+
+const FormGroup = styled.div`
+margin-bottom: 15px;
+`;
+
+const FormLabel = styled.label`
+display: block;
+margin-bottom: 5px;
+font-weight: 600;
+color: #333;
+`;
+
+const FormInput = styled.input`
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
+`;
+
+const ScoringPanel = styled.div`
+padding: 20px 30px;
+background: #2c3e50;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+`;
+
+const ScoringSummary = styled.div`
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+`;
+
+const ScoreBox = styled.div`
+text-align: center;
+`;
+
+const ScoreLabel = styled.div`
+font-size: 12px;
+opacity: 0.8;
+margin-bottom: 5px;
+`;
+
+const ScoreDisplay = styled.div`
+font-size: 2rem;
+font-weight: bold;
+`;
+
+const Recommendation = styled.div`
+padding: 10px 20px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 4px;
+font-weight: 600;
+`;
+
+const ToggleButton = styled.button`
+background: rgba(255, 255, 255, 0.2);
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 8px 16px;
+border-radius: 4px;
+cursor: pointer;
+
+&:hover {
+background: rgba(255, 255, 255, 0.3);
+}
+`;
+
+const SectionStats = styled.div`
+padding: 20px 30px;
+background: #ecf0f1;
+border-bottom: 1px solid #bdc3c7;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
+`;
+
+const StatsDescription = styled.div``;
+const StatsCompletion = styled.div``;
+
+const SectionContent = styled.div`
+display: block;
+`;
+
+const EvaluationTable = styled.table`
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+`;
+
+const TableHeader = styled.th`
+border: 1px solid #ddd;
+padding: 12px;
+text-align: left;
+vertical-align: top;
+background: #f8f9fa;
+font-weight: 600;
+color: #2c3e50;
+`;
+
+const TableCell = styled.td`
+border: 1px solid #ddd;
+padding: 12px;
+text-align: left;
+vertical-align: top;
+`;
+
+const QuestionNumberCell = styled.td`
+width: 80px;
+font-weight: bold;
+color: #2c3e50;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const QuestionTextCell = styled.td`
+min-width: 300px;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const KeywordCell = styled.td`
+width: 120px;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const DocumentCell = styled.td`
+width: 150px;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const AnswerCell = styled.td`
+min-width: 250px;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const ScoreCell = styled.td`
+width: 100px;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const FeedbackCell = styled.td`
+min-width: 200px;
+border: 1px solid #ddd;
+padding: 12px;
+`;
+
+const QuestionRow = styled.tr`
+&:hover {
+background: #f8f9fa;
+}
+`;
+
+const SubQuestionRow = styled.tr`
+background: #e8f4fd;
+border-left: 3px solid #3498db;
+
+td {
+background: #e8f4fd;
+border-left: 3px solid #3498db;
+}
+`;
+
+const TextInput = styled.textarea`
+width: 100%;
+padding: 8px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
+min-height: ${props => props.rows ? (props.rows * 20 + 16) + 'px' : '60px'};
+resize: vertical;
+`;
+
+const ScoreInput = styled.input`
+width: 60px;
+text-align: center;
+padding: 6px;
+`;
+
+const FileInput = styled.input`
+padding: 5px;
+`;
+
+const SelectInput = styled.select`
+width: 100%;
+padding: 8px;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: 14px;
+`;
+
+const SubmitButton = styled.button`
+background: #27ae60;
+color: white;
+border: none;
+padding: 15px 30px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+transition: background 0.3s;
+margin: 20px auto;
+display: block;
+
+&:hover {
+background: #229954;
+}
+`;
+
+const Footer = styled.div`
+background: #34495e;
+color: white;
+padding: 30px;
+text-align: center;
+
+h3 {
+margin-bottom: 15px;
+}
+
+p {
+opacity: 0.8;
+font-size: 14px;
+}
+`;
+
+// Styled Components for AutoFill Modal
+const ModalOverlay = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.7);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+padding: 20px;
+`;
+
+const ModalContent = styled.div`
+background: white;
+border-radius: 12px;
+width: 100%;
+max-width: 600px;
+max-height: 90vh;
+overflow: hidden;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+display: flex;
+flex-direction: column;
+`;
+
+const ModalHeader = styled.div`
+padding: 20px 24px;
+border-bottom: 1px solid #e0e0e0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #f8f9fa;
+`;
+
+const ModalBody = styled.div`
+padding: 20px 24px;
+overflow-y: auto;
+flex: 1;
+`;
+
+const ModalFooter = styled.div`
+padding: 16px 24px;
+border-top: 1px solid #e0e0e0;
+background: #f8f9fa;
+display: flex;
+justify-content: flex-end;
+gap: 12px;
+`;
+
+const CloseButton = styled.button`
+background: none;
+border: none;
+font-size: 28px;
+cursor: pointer;
+color: #666;
+padding: 4px 8px;
+border-radius: 4px;
+
+&:hover {
+color: #333;
+background: #e9ecef;
+}
+`;
+
+const Description = styled.p`
+color: #666;
+margin-bottom: 20px;
+text-align: center;
+`;
+
+const ModalFormGroup = styled.div`
+margin-bottom: 20px;
+`;
+
+const Label = styled.label`
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+color: #333;
+`;
+
+const TextArea = styled.textarea`
+width: 100%;
+padding: 10px 12px;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 14px;
+resize: vertical;
+min-height: 60px;
+`;
+
+const UrlInputContainer = styled.div`
+display: flex;
+align-items: center;
+gap: 8px;
+margin-bottom: 8px;
+`;
+
+const UrlInput = styled.input`
+flex: 1;
+padding: 8px 12px;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 14px;
+
+&:focus {
+outline: none;
+border-color: #007bff;
+box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+`;
+
+const AddButton = styled.button`
+background: transparent;
+color: #007bff;
+border: 1px solid #007bff;
+border-radius: 6px;
+padding: 6px 12px;
+cursor: pointer;
+font-size: 14px;
+
+&:hover {
+background: #007bff;
+color: white;
+}
+`;
+
+const RemoveButton = styled.button`
+background: #dc3545;
+color: white;
+border: none;
+border-radius: 50%;
+width: 24px;
+height: 24px;
+cursor: pointer;
+font-size: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+&:hover {
+background: #c82333;
+}
+`;
+
+const FileUploadArea = styled.div`
+border: 2px dashed #007bff;
+border-radius: 8px;
+padding: 40px;
+text-align: center;
+cursor: pointer;
+background: #f8f9ff;
+transition: all 0.3s ease;
+
+&:hover {
+background: #e3f2fd;
+border-color: #0056b3;
+}
+`;
+
+const UploadIcon = styled.div`
+font-size: 48px;
+margin-bottom: 12px;
+`;
+
+const UploadText = styled.div`
+font-size: 16px;
+font-weight: 500;
+color: #333;
+margin-bottom: 8px;
+`;
+
+const SupportedText = styled.div`
+font-size: 12px;
+color: #666;
+`;
+
+const HiddenFileInput = styled.input`
+display: none;
+`;
+
+const FilesList = styled.div`
+margin-top: 20px;
+
+h4 {
+margin-bottom: 12px;
+color: #333;
+}
+`;
+
+const FileCard = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 16px;
+background: #f8f9fa;
+border: 1px solid #e9ecef;
+border-radius: 8px;
+margin-bottom: 8px;
+`;
+
+const FileInfo = styled.div`
+display: flex;
+align-items: center;
+gap: 12px;
+`;
+
+const FileIcon = styled.span`
+font-size: 20px;
+`;
+
+const FileName = styled.span`
+font-weight: 500;
+color: #333;
+flex: 1;
+word-break: break-all;
+`;
+
+const FileSize = styled.span`
+color: #666;
+font-size: 12px;
+`;
+
+const FileRemoveButton = styled.button`
+background: #dc3545;
+color: white;
+border: none;
+border-radius: 4px;
+width: 24px;
+height: 24px;
+cursor: pointer;
+font-size: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+&:hover {
+background: #c82333;
+}
+`;
+
+const CancelButton = styled.button`
+background: #6c757d;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+
+&:hover:not(:disabled) {
+background: #5a6268;
+}
+
+&:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+`;
+
+const ProcessButton = styled.button`
+background: #007bff;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 500;
+
+&:hover:not(:disabled) {
+background: #0056b3;
+}
+
+&:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+`;
+
+// Hook for HSSE Form Management
+const useHSSEForm = (contractorName, onFormSubmit) => {
+const [generalInfo, setGeneralInfo] = useState({
+supplierName: contractorName || '',
+evaluationDate: new Date().toISOString().split('T')[0],
+evaluator: '',
+evaluatorCompany: ''
+});
+
+const [sectionsData, setSectionsData] = useState({
+1: { answers: {}, completed: 0, score: 0, weight: 10 },
+2: { answers: {}, completed: 0, score: 0, weight: 15 },
+3: { answers: {}, completed: 0, score: 0, weight: 15 },
+4: { answers: {}, completed: 0, score: 0, weight: 15 },
+5: { answers: {}, completed: 0, score: 0, weight: 10 },
+6: { answers: {}, completed: 0, score: 0, weight: 10 },
+7: { answers: {}, completed: 0, score: 0, weight: 8 },
+8: { answers: {}, completed: 0, score: 0, weight: 5 },
+9: { answers: {}, completed: 0, score: 0, weight: 4 }
+});
+
+const [overallScore, setOverallScore] = useState(0);
+const [maxScore, setMaxScore] = useState(0);
+const [percentage, setPercentage] = useState(0);
+const [recommendation, setRecommendation] = useState('No Score Yet');
+
+const sectionQuestions = {
+1: 3, 2: 10, 3: 19, 4: 23, 5: 7, 6: 17, 7: 9, 8: 4, 9: 1
+};
+
+// Calculate max score and overall score
+useEffect(() => {
+const totalMaxScore = Object.entries(sectionQuestions).reduce((total, [section, questions]) => {
+return total + (questions * 5 * (sectionsData[section].weight / 100));
+}, 0);
+
+setMaxScore(totalMaxScore);
+
+const totalScore = Object.entries(sectionsData).reduce((total, [sectionId, section]) => {
+const weightedScore = section.score * (section.weight / 100);
+return total + weightedScore;
+}, 0);
+
+setOverallScore(totalScore);
+
+const percentageValue = totalMaxScore > 0 ? (totalScore / totalMaxScore) * 100 : 0;
+setPercentage(percentageValue);
+
+// Determine recommendation
+if (percentageValue >= 90) {
+setRecommendation('APPROVED - Excellent Performance');
+} else if (percentageValue >= 80) {
+setRecommendation('APPROVED - Good Performance');
+} else if (percentageValue >= 70) {
+setRecommendation('CONDITIONAL APPROVAL - Acceptable with Improvements');
+} else if (percentageValue >= 60) {
+setRecommendation('CONDITIONAL APPROVAL - Needs Significant Improvements');
+} else {
+setRecommendation('REJECTED - Does Not Meet Minimum Requirements');
+}
+}, [sectionsData]);
+
+const updateSectionAnswer = (sectionId, questionId, field, value) => {
+setSectionsData(prev => {
+// Create deep clones to ensure React detects changes
+const newSectionsData = { ...prev };
+const section = newSectionsData[sectionId] || {
+answers: {}, completed: 0, score: 0, weight: sectionsData[sectionId]?.weight || 10
+};
+
+if (!section.answers) section.answers = {};
+if (!section.answers[questionId]) section.answers[questionId] = {};
+
+// Set the field value
+section.answers[questionId][field] = value;
+
+newSectionsData[sectionId] = section;
+
+// Recalculate completed questions and section score
+const questionsInSection = sectionQuestions[sectionId] || 0;
+let completed = 0;
+let totalScore = 0;
+
+Object.values(section.answers).forEach(answer => {
+if (answer.answer && answer.answer.trim()) {
+completed++;
+if (typeof answer.score === 'number') {
+totalScore += answer.score;
+}
+}
+});
+
+newSectionsData[sectionId].completed = completed;
+newSectionsData[sectionId].score = totalScore;
+
+return newSectionsData;
+});
+
+// Real-time save to database (only if not in auto-fill mode)
+// We'll handle saving for auto-fill separately
+};
+
+const saveAnswerToDB = async (sectionId, questionId, field, value) => {
+try {
+const payload = {
+contractor_name: contractorName,
+document_name: ${contractorName} - Manual Entry Q${questionId},
+document_type: HSSE Section ${sectionId} Question ${questionId},
+document_path: /manual/questions/${sectionId}/${questionId},
+processing_status: 'Manual Entry',
+score: sectionsData[sectionId].answers[questionId]?.score || Math.round(typeof value === 'number' ? value : 0),
+confidence: 100,
+commentary: Manual entry for HSSE Question ${questionId} (Section ${sectionId}),
+form_submission_data: {
+question_id: questionId,
+question_text: sectionsData[sectionId].answers[questionId]?.answer || '',
+section: sectionId,
+answer: field === 'answer' ? value : (sectionsData[sectionId].answers[questionId]?.answer || ''),
+score: field === 'score' ? Math.round(value) : (sectionsData[sectionId].answers[questionId]?.score || 0),
+feedback: field === 'feedback' ? value : (sectionsData[sectionId].answers[questionId]?.feedback || ''),
+field_type: field,
+manual_entry: true,
+timestamp: new Date().toISOString()
+}
+};
+
+const response = await fetch('/api/auto-fill/save-individual-answer', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify(payload)
+});
+
+if (!response.ok) {
+console.error(Failed to save ${field} for question ${questionId});
+} else {
+console.log(✅ Saved ${field} for question ${questionId});
+}
+} catch (error) {
+console.error(Error saving ${field} for question ${questionId}:, error);
+}
+};
+
+const submitForm = async () => {
+const formData = {
+overallScore: overallScore,
+percentage: percentage,
+recommendation: recommendation,
+sections: sectionsData,
+generalInfo: generalInfo,
+questions: Object.entries(sectionsData).reduce((all, [sectionId, section]) => {
+Object.entries(section.answers).forEach(([questionId, data]) => {
+all[questionId] = {
+...data,
+section: sectionId
+};
+});
+return all;
+}, {}),
+formData: {}, // Legacy compatibility
+selectedContractorId: contractorName,
+currentSection: 1,
+contractorName: contractorName,
+timestamp: new Date().toISOString()
+};
+
+if (onFormSubmit) {
+onFormSubmit(formData);
+}
+};
+
+return {
+generalInfo,
+setGeneralInfo,
+sectionsData,
+overallScore,
+maxScore,
+percentage,
+recommendation,
+updateSectionAnswer,
+submitForm,
+sectionQuestions
+};
+};
+
+// HSSE Section Component
+const HSSESection = ({
+sectionId,
+title,
+description,
+questions,
+sectionData,
+onSectionUpdate
+}) => {
+const [isExpanded, setIsExpanded] = useState(sectionId === 1); // First section expanded by default
+const { completed, weight } = sectionData;
+
+return (
+<FormSection>
+<SectionHeader onClick={() => setIsExpanded(!isExpanded)}>
+<SectionTitle>
+{sectionId}. {title}
+</SectionTitle>
+<SectionToggle>{isExpanded ? '−' : '+'}</SectionToggle>
+</SectionHeader>
+<SectionStats>
+<StatsDescription>{description}</StatsDescription>
+<StatsCompletion>{completed ?? 0} / {questions.length} questions completed</StatsCompletion>
+</SectionStats>
+{isExpanded && (
+<SectionContent>
+<EvaluationTable>
+<thead>
+<tr>
+<TableHeader>No.</TableHeader>
+<TableHeader>Question</TableHeader>
+<TableHeader>Keyword</TableHeader>
+<TableHeader>Document</TableHeader>
+<TableHeader>Answer</TableHeader>
+<TableHeader>Score (0-5)</TableHeader>
+<TableHeader>Feedback</TableHeader>
+</tr>
+</thead>
+<tbody>
+{questions.map(question => (
+<QuestionRow key={question.id}>
+<QuestionNumberCell>{question.id}</QuestionNumberCell>
+<QuestionTextCell>{question.question}</QuestionTextCell>
+<KeywordCell>{question.keyword}</KeywordCell>
+<DocumentCell>
+<FileInput type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple />
+</DocumentCell>
+<AnswerCell>
+{question.type === 'select' ? (
+<SelectInput
+value={sectionData.answers[question.id]?.answer || ''}
+onChange={(e) => onSectionUpdate(question.id, 'answer', e.target.value)}
+>
+<option value="">Select</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+{question.options?.map(option => (
+<option key={option} value={option}>{option}</option>
+))}
+</SelectInput>
+) : (
+<TextInput
+rows={3}
+placeholder="Enter detailed answer"
+value={sectionData?.answers?.[question.id]?.answer || ''}
+onChange={(e) => onSectionUpdate(question.id, 'answer', e.target.value)}
+/>
+)}
+</AnswerCell>
+<ScoreCell>
+<ScoreInput
+type="number"
+min="0"
+max="5"
+step="0.25"
+value={sectionData?.answers?.[question.id]?.score || ''}
+onChange={(e) => onSectionUpdate(question.id, 'score', parseFloat(e.target.value) || 0)}
+key={score-${question.id}-${sectionData?.answers?.[question.id]?.score || 'empty'}}
+/>
+</ScoreCell>
+<FeedbackCell>
+<TextInput
+rows={2}
+placeholder="Comments"
+value={sectionData?.answers?.[question.id]?.feedback || ''}
+onChange={(e) => onSectionUpdate(question.id, 'feedback', e.target.value)}
+key={feedback-${question.id}-${sectionData?.answers?.[question.id]?.feedback?.length || 'empty'}}
+/>
+</FeedbackCell>
+</QuestionRow>
+))}
+</tbody>
+</EvaluationTable>
+</SectionContent>
+)}
+</FormSection>
+);
+};
+
+// Auto Fill Documents Modal Component
+const AutoFillModal = ({ isOpen, onClose, onFilesProcessed, contractorName }) => {
+const [uploadedFiles, setUploadedFiles] = useState([]);
+const [isProcessing, setIsProcessing] = useState(false);
+const [additionalContext, setAdditionalContext] = useState('');
+const [referenceUrls, setReferenceUrls] = useState(['']);
+const fileInputRef = useRef(null);
+
+const handleFileSelect = (files) => {
+const validFiles = files.filter(file =>
+['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'].includes(file.type) ||
+['.pdf', '.docx', '.doc', '.txt'].some(ext => file.name.toLowerCase().endsWith(ext))
+);
+
+setUploadedFiles(prev => [...prev, ...validFiles]);
+
+if (validFiles.length < files.length) {
+alert('Some files were skipped. Only PDF, DOCX, and TXT files are supported for auto-fill.');
+}
+};
+
+const removeFile = (index) => {
+setUploadedFiles(prev => prev.filter((_, i) => i !== index));
+};
+
+const addReferenceUrl = () => {
+setReferenceUrls(prev => [...prev, '']);
+};
+
+const updateReferenceUrl = (index, value) => {
+setReferenceUrls(prev => prev.map((url, i) => i === index ? value : url));
+};
+
+const removeReferenceUrl = (index) => {
+setReferenceUrls(prev => prev.filter((_, i) => i !== index));
+};
+
+const processDocuments = async () => {
+if (uploadedFiles.length === 0) {
+alert('Please upload at least one document.');
+return;
+}
+
+setIsProcessing(true);
+
+try {
+const formData = new FormData();
+uploadedFiles.forEach(file => formData.append('documents', file));
+formData.append('contractorName', contractorName || '');
+formData.append('additionalContext', additionalContext);
+formData.append('referenceUrls', JSON.stringify(referenceUrls.filter(url => url.trim())));
+
+const response = await fetch('/api/auto-fill/process-documents', {
+method: 'POST',
+body: formData
+});
+
+if (!response.ok) {
+throw new Error(HTTP ${response.status}: ${response.statusText});
+}
+
+const result = await response.json();
+
+if (result.success && result.answers) {
+onFilesProcessed(result.answers);
+onClose();
+alert(Auto-fill completed! ${result.answers.length} answers have been populated from the document(s).);
+} else {
+throw new Error(result.error || 'Failed to process documents');
+}
+
+} catch (error) {
+console.error('Auto-fill error:', error);
+alert(Auto-fill failed: ${error.message});
+} finally {
+setIsProcessing(false);
+}
+};
+
+if (!isOpen) return null;
+
+return (
+<ModalOverlay>
+<ModalContent>
+<ModalHeader>
+<h3 style={{ margin: 0 }}>Auto Fill from Documents</h3>
+<CloseButton onClick={onClose}>×</CloseButton>
+</ModalHeader>
+
+<ModalBody>
+<Description>
+Upload supplier documents (PDF, DOCX, TXT) to automatically populate form answers using AI analysis.
+</Description>
+
+{/* Additional Context */}
+<ModalFormGroup>
+<Label>Additional Context (Optional):</Label>
+<TextArea
+rows={3}
+value={additionalContext}
+onChange={(e) => setAdditionalContext(e.target.value)}
+placeholder="Enter any additional context or notes about the documents..."
+/>
+</ModalFormGroup>
+
+{/* Reference URLs */}
+<ModalFormGroup>
+<Label>Reference URLs (Optional):</Label>
+{referenceUrls.map((url, index) => (
+<UrlInputContainer key={index}>
+<UrlInput
+type="url"
+value={url}
+onChange={(e) => updateReferenceUrl(index, e.target.value)}
+placeholder="https://example.com/document"
+/>
+{referenceUrls.length > 1 && (
+<RemoveButton onClick={() => removeReferenceUrl(index)}>×</RemoveButton>
+)}
+</UrlInputContainer>
+))}
+<AddButton onClick={addReferenceUrl}>+ Add Another URL</AddButton>
+</ModalFormGroup>
+
+{/* File Upload Area */}
+<FileUploadArea onClick={() => fileInputRef.current?.click()}>
+<UploadIcon>📄</UploadIcon>
+<UploadText>Drop files here or click to upload</UploadText>
+<SupportedText>Supported: PDF, DOCX, TXT</SupportedText>
+<HiddenFileInput
+ref={fileInputRef}
+type="file"
+multiple
+accept=".pdf,.docx,.doc,.txt"
+onChange={(e) => handleFileSelect(Array.from(e.target.files))}
+/>
+</FileUploadArea>
+
+{/* Uploaded Files List */}
+{uploadedFiles.length > 0 && (
+<FilesList>
+<h4>Uploaded Files:</h4>
+{uploadedFiles.map((file, index) => (
+<FileCard key={index}>
+<FileInfo>
+<FileIcon>
+{file.name.toLowerCase().endsWith('.pdf') ? '📄' : '📝'}
+</FileIcon>
+<FileName>{file.name}</FileName>
+<FileSize>({Math.round(file.size / 1024)} KB)</FileSize>
+</FileInfo>
+<FileRemoveButton onClick={() => removeFile(index)}>×</FileRemoveButton>
+</FileCard>
+))}
+</FilesList>
+)}
+</ModalBody>
+
+<ModalFooter>
+<CancelButton onClick={onClose} disabled={isProcessing}>
+Cancel
+</CancelButton>
+<ProcessButton onClick={processDocuments} disabled={isProcessing || uploadedFiles.length === 0}>
+{isProcessing ? 'Processing...' : 'Process Documents'}
+</ProcessButton>
+</ModalFooter>
+</ModalContent>
+</ModalOverlay>
+);
+};
+
+// Main HSSE Evaluation Form Component
+const HSSEEvaluationForm = ({ contractorName, onFormSubmit }) => {
+const formRef = useRef(null);
+const [showAutoFillModal, setShowAutoFillModal] = useState(false);
+const {
+generalInfo,
+setGeneralInfo,
+sectionsData,
+overallScore,
+maxScore,
+percentage,
+recommendation,
+updateSectionAnswer,
+submitForm,
+sectionQuestions
+} = useHSSEForm(contractorName, onFormSubmit);
+
+// Define all questions by section
+const sectionQuestionsData = [
+{
+id: 1,
+title: "HSSE Management and Culture",
+description: "Management and involvement of leadership in HSE promotion",
+questions: [
+{ id: "1.1 a)", question: "What is the personal involvement of senior managers in HSE management, for example in determining and monitoring objectives?", keyword: "Involvement in HSE aspects through management", type: "textarea" },
+{ id: "1.1 b)", question: "Provide signs of involvement at all levels of the company?", keyword: "Involvement in HSE aspects through management", type: "textarea" },
+{ id: "1.1 c)", question: "How do you promote a positive culture of HSE?", keyword: "Involvement in HSE aspects through management", type: "textarea" }
+]
+},
+{
+id: 2,
+title: "HSSE Policy and Strategic Objectives",
+description: "Policy framework and strategic HSE planning",
+questions: [
+{ id: "2.1 a)", question: "Does your company have documentation relating to the HSE policy? If yes, attach a copy.", keyword: "HSE policy documents", type: "select" },
+{ id: "2.1 b)", question: "Does this policy take into account the requirements of the mine and the quarry?", keyword: "HSE policy documents", type: "select" },
+{ id: "2.1 c)", question: "Who is the most senior person in the company responsible for communicating this policy on the premises and on the site where employees work? Indicate its name and title.", keyword: "HSE policy documents", type: "textarea" },
+{ id: "2.1 d)", question: "Detail the methods you used to bring the policy statement to the attention of all your employees.", keyword: "HSE policy documents", type: "textarea" },
+{ id: "2.1 e)", question: "What are your arrangements for notifying employees of policy changes?", keyword: "HSE policy documents", type: "textarea" },
+{ id: "2.2 a)", question: "Has your company defined strategic HSE objectives? If yes, attach a copy.", keyword: "Strategic objectives of the HSE contract", type: "select" },
+{ id: "2.2 b)", question: "Detail the methods you use to communicate your strategic HSE goals to all your employees.", keyword: "Strategic objectives of the HSE contract", type: "textarea" },
+{ id: "2.2 c)", question: "How do you ensure strategic HSE objectives are reviewed and updated regularly?", keyword: "Strategic objectives of the HSE contract", type: "textarea" },
+{ id: "2.2 d)", question: "What KPIs do you use to measure achievement of strategic HSE objectives?", keyword: "Strategic objectives of the HSE contract", type: "textarea" },
+{ id: "2.2 e)", question: "How are strategic HSE objectives aligned with overall company goals?", keyword: "Strategic objectives of the HSE contract", type: "textarea" }
+]
+},
+{
+id: 3,
+title: "Company, Responsibilities, Resources, Standards and Documentation",
+description: "Organizational structure and HSE responsibilities",
+questions: [
+{ id: "3.1 a)", question: "What is the structure of your company for effective HSE management and communication?", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 b)", question: "Do HSE meetings promote HSE awareness?", keyword: "Organisational structure for HSE management", type: "select" },
+{ id: "3.1 c)", question: "Do customers and entrepreneurs meet regularly to discuss interaction situations and act accordingly?", keyword: "Organisational structure for HSE management", type: "select" },
+{ id: "3.1 d)", question: "What are your company's arrangements for HSE communication meetings? Provide an organizational chart.", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 e)", question: "How are HSE responsibilities clearly defined and documented throughout your organization?", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 f)", question: "What mechanisms exist for HSE information flow between management levels?", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 g)", question: "How do you ensure HSE competence is maintained across all organizational levels?", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 h)", question: "Describe your HSE audit and inspection program structure.", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 i)", question: "How do you handle HSE incidents and investigations organizationally?", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.1 j)", question: "What is your approach to HSE supplier and contractor management?", keyword: "Organisational structure for HSE management", type: "textarea" },
+{ id: "3.2 a)", question: "Have managers and supervisors at all levels received formal HSE training on their responsibilities?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "select" },
+{ id: "3.2 b)", question: "Describe the content and duration of HSE training courses.", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 c)", question: "How do you determine specialized HSE training needs?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 d)", question: "What specialized HSE resources does your company have?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 e)", question: "How do you provide specialized HSE training for HSE staff?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 f)", question: "What is your HSE training records management system?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 g)", question: "How do you evaluate the effectiveness of HSE training programs?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 h)", question: "Describe your HSE competency assessment and certification procedures.", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" },
+{ id: "3.2 i)", question: "What HSE training is provided for new employee induction?", keyword: "HSE training for managers, supervisors and critical HSE positions", type: "textarea" }
+]
+},
+{
+id: 4,
+title: "Risk Management",
+description: "Hazard identification and risk control measures",
+questions: [
+{ id: "4.1 a)", question: "How does your company identify hazards, assess risks, control and mitigate consequences at the lowest reasonably practicable level?", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.1 b)", question: "What is your risk assessment methodology and frequency?", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.1 c)", question: "How do you prioritize and rank identified risks?", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.1 d)", question: "What risk control hierarchy do you follow?", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.1 e)", question: "How do you monitor the effectiveness of risk controls?", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.1 f)", question: "Describe your emergency risk assessment procedures.", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.1 g)", question: "How do you involve employees in risk assessment processes?", keyword: "Risk assessment and control", type: "textarea" },
+{ id: "4.2 a)", question: "Are specific policies and programs in place for specific health risks?", keyword: "Health risks", type: "textarea" },
+{ id: "4.2 b)", question: "Explain how you identify, assess and control occupational health risks.", keyword: "Health risks", type: "textarea" },
+{ id: "4.2 c)", question: "What health surveillance programs do you implement?", keyword: "Health risks", type: "textarea" },
+{ id: "4.2 d)", question: "How do you manage chemical and hazardous material risks?", keyword: "Health risks", type: "textarea" },
+{ id: "4.2 e)", question: "What ergonomic hazard assessment do you conduct?", keyword: "Health risks", type: "textarea" },
+{ id: "4.2 f)", question: "Describe your hearing conservation and noise control programs.", keyword: "Health risks", type: "textarea" },
+{ id: "4.2 g)", question: "What respiratory protection programs are in place?", keyword: "Health risks", type: "textarea" },
+{ id: "4.3 a)", question: "What types of safety risks are associated with your services?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.3 b)", question: "How do you control these safety risks?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.3 c)", question: "What fall protection and working at heights procedures exist?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.3 d)", question: "Describe your electrical safety management system.", keyword: "Security Risks", type: "textarea" },
+{ id: "4.3 e)", question: "What lockout/tagout procedures are in place?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.3 f)", question: "How do you manage confined space entry risks?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.3 g)", question: "What crane and lifting equipment safety measures exist?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.4 a)", question: "What types of environmental risks are associated with your services?", keyword: "Environmental risks", type: "textarea" },
+{ id: "4.4 b)", question: "How do you control environmental impacts and emissions?", keyword: "Environmental risks", type: "textarea" },
+{ id: "4.5 a)", question: "What types of security risks are associated with your services?", keyword: "Security Risks", type: "textarea" },
+{ id: "4.5 b)", question: "Describe your security risk assessment and control measures.", keyword: "Security Risks", type: "textarea" }
+]
+},
+{
+id: 5,
+title: "Planning and Procedures",
+description: "Operational procedures and infrastructure management",
+questions: [
+{ id: "5.1 a)", question: "Do you have an HSE operations manual?", keyword: "HSE Operations Manual", type: "select" },
+{ id: "5.1 b)", question: "What is the content and scope of your HSE operations manual?", keyword: "HSE Operations Manual", type: "textarea" },
+{ id: "5.1 c)", question: "How often is the HSE operations manual reviewed and updated?", keyword: "HSE Operations Manual", type: "textarea" },
+{ id: "5.2 a)", question: "How do you ensure safe equipment and premises?", keyword: "Infrastructure and Equipment Integrity", type: "textarea" },
+{ id: "5.3 a)", question: "How do you manage change and assess associated risks?", keyword: "Change management", type: "textarea" },
+{ id: "5.3 b)", question: "What change management procedures exist for HSE aspects?", keyword: "Change management", type: "textarea" },
+{ id: "5.4 a)", question: "What emergency planning and response arrangements are in place?", keyword: "Emergency Planning and Response", type: "textarea" }
+]
+},
+{
+id: 6,
+title: "Implementation and Performance Monitoring",
+description: "Performance monitoring and incident management",
+questions: [
+{ id: "6.1 a)", question: "How do you monitor HSE implementation?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 b)", question: "How do you ensure proper procedure implementation?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 c)", question: "What HSE performance indicators do you track?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 d)", question: "How frequently are HSE performance metrics reviewed?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 e)", question: "What corrective action procedures exist for HSE non-conformances?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 f)", question: "How do you conduct internal HSE audits?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 g)", question: "What is your incident investigation and reporting process?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 h)", question: "How are HSE training records maintained and verified?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 i)", question: "What preventive action programs do you implement?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 j)", question: "How do you manage HSE legal and regulatory compliance?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.1 k)", question: "What HSE communication and awareness programs exist?", keyword: "HSE-MS Implementation", type: "textarea" },
+{ id: "6.2 a)", question: "How is incident performance measured and reported?", keyword: "HSE Performance Monitoring", type: "textarea" },
+{ id: "6.3 a)", question: "How is hygiene performance monitored?", keyword: "HSE Performance Monitoring", type: "textarea" },
+{ id: "6.3 b)", question: "How is environmental performance monitored?", keyword: "HSE Performance Monitoring", type: "textarea" },
+{ id: "6.3 c)", question: "How is safety performance monitored?", keyword: "HSE Performance Monitoring", type: "textarea" },
+{ id: "6.3 d)", question: "What near-miss reporting and analysis programs exist?", keyword: "HSE Performance Monitoring", type: "textarea" },
+{ id: "6.3 e)", question: "How are HSE performance trends analyzed and acted upon?", keyword: "HSE Performance Monitoring", type: "textarea" }
+]
+},
+{
+id: 7,
+title: "HSE Audits and Management Review",
+description: "Audits and continuous improvement processes",
+questions: [
+{ id: "7.1 a)", question: "Is there a written HSE audit procedure?", keyword: "Audits", type: "select" },
+{ id: "7.1 b)", question: "How are HSE audits conducted?", keyword: "Audits", type: "textarea" },
+{ id: "7.1 c)", question: "What is the frequency and scope of internal HSE audits?", keyword: "Audits", type: "textarea" },
+{ id: "7.1 d)", question: "How are audit findings tracked and closed out?", keyword: "Audits", type: "textarea" },
+{ id: "7.1 e)", question: "What external HSE audit experience do you have?", keyword: "Audits", type: "textarea" },
+{ id: "7.1 f)", question: "How do you ensure audit independence and impartiality?", keyword: "Audits", type: "textarea" },
+{ id: "7.2 a)", question: "Is there a procedure for management review?", keyword: "Management review and follow-up", type: "select" },
+{ id: "7.2 b)", question: "What HSE topics are reviewed in management meetings?", keyword: "Management review and follow-up", type: "textarea" },
+{ id: "7.2 c)", question: "How often does senior management review HSE performance?", keyword: "Management review and follow-up", type: "textarea" }
+]
+},
+{
+id: 8,
+title: "HSE Additional Functions",
+description: "Certifications and external HSE involvement",
+questions: [
+{ id: "8.1", question: "Provide information about HSE certifications.", keyword: "Certification", type: "textarea" },
+{ id: "8.1 a)", question: "What HSE management system certifications does your company hold?", keyword: "Certification", type: "textarea" },
+{ id: "8.2", question: "Describe HSE participation in organizations.", keyword: "Associations", type: "textarea" },
+{ id: "8.2 a)", question: "What HSE training and educational programs do you offer?", keyword: "Associations", type: "textarea" }
+]
+},
+{
+id: 9,
+title: "Company-Specific Information",
+description: "Additional company-specific HSE information",
+questions: [
+{ id: "9.1", question: "Provide any additional HSE information specific to your company.", keyword: "Company-specific", type: "textarea" }
+]
+}
+];
+
+const handleGeneralInfoChange = (field, value) => {
+setGeneralInfo(prev => ({ ...prev, [field]: value }));
+};
+
+const handleSectionUpdate = (sectionId, questionId, field, value) => {
+updateSectionAnswer(sectionId, questionId, field, value);
+};
+
+const handleSubmit = async (e) => {
+e.preventDefault();
+await submitForm();
+};
+
+const handleAutoFillComplete = (answers) => {
+console.log('🔄 Auto-fill completed - processing', answers?.length || 0, 'answers from AI');
+console.log('📋 Full answers object:', JSON.stringify(answers, null, 2));
+console.log('📋 Available sections in form:', Object.keys(sectionsData));
+
+answers.forEach((answer, index) => {
+console.log(📋 Answer ${index + 1}:, {
+id: answer.id,
+answerLength: answer.answer?.length || 0,
+score: answer.score,
+hasFeedback: !!answer.feedback
+});
+});
+
+// Process and populate form answers from actual AI analysis
+let processedCount = 0;
+
+if (!answers || answers.length === 0) {
+console.warn('⚠️ No answers received from auto-fill process');
+console.log('Empty answers array received, checking sectionsData:', sectionsData);
+alert('Auto-fill completed but no answers were generated. Please try uploading different documents.');
+return;
+}
+
+answers.forEach(answer => {
+const { id, answer: answerText, score = 0, feedback = '' } = answer;
+
+if (!id) {
+console.warn('⚠️ Skipping answer with missing ID:', answer);
+return;
+}
+
+// Extract section and question ID from the answer ID
+// Format is like "1.1 a)" or "2.2 b)"
+const sectionMatch = id.match(/^(\d+)\./);
+if (sectionMatch) {
+const sectionId = parseInt(sectionMatch[1]);
+
+if (sectionsData[sectionId]) {
+// Update the form state with auto-filled answer (no automatic scoring)
+updateSectionAnswer(sectionId, id, 'answer', answerText || '');
+
+if (feedback && feedback.trim()) {
+updateSectionAnswer(sectionId, id, 'feedback', feedback);
+}
+
+processedCount++;
+console.log(✅ Auto-filled section ${sectionId}, question ${id}: answer populated (score to be set manually));
+} else {
+console.warn(❌ Invalid section ID ${sectionId} for question ${id});
+}
+} else {
+console.warn(❌ Could not parse section from question ID ${id});
+}
+});
+
+console.log(🎉 Auto-fill completed: ${processedCount} out of ${answers.length} answers successfully processed);
+
+const successMessage = processedCount > 0
+? Auto-fill successful! ${processedCount} answers have been populated. Expand the form sections to see the results.
+: 'Auto-fill completed but no answers were processed.';
+
+alert(successMessage);
+
+// Force component re-render to ensure updates are visible
+setTimeout(() => {
+window.dispatchEvent(new Event('resize'));
+}, 100);
+};
+
+return (
+<>
+{/* Auto Fill Modal */}
+<AutoFillModal
+isOpen={showAutoFillModal}
+onClose={() => setShowAutoFillModal(false)}
+onFilesProcessed={handleAutoFillComplete}
+contractorName={contractorName}
+/>
+
+<Container ref={formRef}>
+{/* Header */}
+<Header>
+<div style={{ flex: 1 }}>
+<HeaderTitle>GPCHSEQS24001</HeaderTitle>
+<HeaderSubtitle>HSSE Supplier/Contractor Evaluation Questionnaire</HeaderSubtitle>
+</div>
+<div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+<ToggleButton onClick={() => setShowAutoFillModal(true)}>
+🤖 Auto Fill from Documents
+</ToggleButton>
+</div>
+<ImportantNote>
+<p><strong>Note:</strong> GPC HSSE is the acronym for Health, Safety, Security and Environment. Consider all of these aspects when answering questions.</p>
+</ImportantNote>
+</Header>
+
+{/* General Information */}
+<GeneralInfo>
+<GeneralInfoTitle>🔶 General Information</GeneralInfoTitle>
+<InfoGrid>
+<FormGroup>
+<FormLabel htmlFor="supplier-name">Supplier / Contractor:</FormLabel>
+<FormInput
+id="supplier-name"
+type="text"
+value={generalInfo.supplierName}
+onChange={(e) => handleGeneralInfoChange('supplierName', e.target.value)}
+/>
+</FormGroup>
+<FormGroup>
+<FormLabel htmlFor="evaluation-date">Date of assessment:</FormLabel>
+<FormInput
+id="evaluation-date"
+type="date"
+value={generalInfo.evaluationDate}
+onChange={(e) => handleGeneralInfoChange('evaluationDate', e.target.value)}
+/>
+</FormGroup>
+<FormGroup>
+<FormLabel htmlFor="evaluator">Rating by:</FormLabel>
+<FormInput
+id="evaluator"
+type="text"
+value={generalInfo.evaluator}
+onChange={(e) => handleGeneralInfoChange('evaluator', e.target.value)}
+/>
+</FormGroup>
+<FormGroup>
+<FormLabel htmlFor="evaluator-company">Evaluator Company:</FormLabel>
+<FormInput
+id="evaluator-company"
+type="text"
+value={generalInfo.evaluatorCompany}
+onChange={(e) => handleGeneralInfoChange('evaluatorCompany', e.target.value)}
+/>
+</FormGroup>
+</InfoGrid>
+</GeneralInfo>
+
+{/* Scoring Panel */}
+<ScoringPanel>
+<ScoringSummary>
+<ScoreBox>
+<ScoreLabel>OVERALL SCORE</ScoreLabel>
+<ScoreDisplay>{overallScore.toFixed(2)}</ScoreDisplay>
+</ScoreBox>
+<ScoreBox>
+<ScoreLabel>MAXIMUM SCORE</ScoreLabel>
+<ScoreDisplay>{maxScore.toFixed(2)}</ScoreDisplay>
+</ScoreBox>
+<ScoreBox>
+<ScoreLabel>PERCENTAGE</ScoreLabel>
+<ScoreDisplay>{percentage.toFixed(2)}%</ScoreDisplay>
+</ScoreBox>
+<Recommendation>
+<ScoreLabel>EVALUATION RECOMMENDATION</ScoreLabel>
+<div>{recommendation}</div>
+<div style={{ fontSize: '10px', opacity: 0.7, marginTop: '4px' }}>
+Scoring calculated from manual evaluator input
+</div>
+</Recommendation>
+</ScoringSummary>
+</ScoringPanel>
+
+{/* Form Sections */}
+<form onSubmit={handleSubmit}>
+{sectionQuestionsData.map(section => (
+<HSSESection
+key={section.id}
+sectionId={section.id}
+title={section.title}
+description={section.description}
+questions={section.questions}
+sectionData={sectionsData[section.id]}
+onSectionUpdate={(questionId, field, value) =>
+handleSectionUpdate(section.id, questionId, field, value)
+}
+/>
+))}
+</form>
+
+{/* Footer */}
+<Footer>
+<GeneralInfoTitle>Submit Evaluation</GeneralInfoTitle>
+<p>Please ensure all required documents are attached and information is complete before submission.</p>
+<SubmitButton onClick={handleSubmit}>
+Submit Evaluation Form
+</SubmitButton>
+</Footer>
+</Container>
+</>
+);
+};
+
+// Additional styled components
+const FormSection = styled.div`
+border-bottom: 1px solid #ddd;
+
+&:last-child {
+border-bottom: none;
+}
+`;
+
+const SectionHeader = styled.div`
+background: linear-gradient(135deg, #34495e, #7f8c8d);
+color: white;
+padding: 20px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+cursor: pointer;
+
+&:hover {
+background: linear-gradient(135deg, #2c3e50, #95a5a6);
+}
+`;
+
+const SectionTitle = styled.h2`
+font-size: 1.4rem;
+margin: 0;
+`;
+
+const SectionToggle = styled.span`
+font-size: 1.5rem;
+font-weight: bold;
+`;
+
+export default HSSEEvaluationForm;

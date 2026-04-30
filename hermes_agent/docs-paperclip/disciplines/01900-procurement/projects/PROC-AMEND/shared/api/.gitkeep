@@ -1,0 +1,15 @@
+# Shared API Components
+
+This directory contains shared API components for the PROC-AMEND project.
+
+## Contents
+
+- API client implementations
+- API endpoint definitions
+- API request/response types
+- API authentication handlers
+- API error handling
+
+## Usage
+
+Import shared API components into platform-specific implementations as needed.

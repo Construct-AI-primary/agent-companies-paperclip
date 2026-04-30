@@ -1,0 +1,7 @@
+[submodule "tinker-atropos"]
+	path = tinker-atropos
+	url = https://github.com/nousresearch/tinker-atropos
+[submodule "docs-paperclip"]
+	path = docs-paperclip
+	url = https://github.com/Construct-AI-primary/docs-paperclip.git
+	branch = main

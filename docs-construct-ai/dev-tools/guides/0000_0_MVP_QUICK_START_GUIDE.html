@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Tracking System - MVP Quick Start Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #000;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        h1 {
+            font-size: 2em;
+            border-bottom: 3px solid #000;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #666;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #000;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        .checklist {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .checklist li {
+            list-style-type: none;
+            margin: 8px 0;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 8px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                padding: 10px;
+                max-width: 100%;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            pre, table {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Logistics Tracking System - MVP Quick Start Guide</h1>
+
+    <h2>Overview</h2>
+    <p>This guide provides the minimum data requirements to get your logistics tracking system operational quickly. Focus on these essential elements for your MVP deployment.</p>
+
+    <h2>1. Essential API Credentials</h2>
+    
+    <h3>Minimum Required APIs</h3>
+    <p><strong>VesselFinder API (for vessel tracking):</strong></p>
+    <ul>
+        <li>API Key: 32-character alphanumeric key</li>
+        <li>Base URL: <code>https://api.vesselfinder.com</code></li>
+    </ul>
+    
+    <p><strong>Container Tracking (simplified approach):</strong></p>
+    <ul>
+        <li>For MVP, you can manually input container data</li>
+        <li>Later integrate with specific shipping line APIs</li>
+    </ul>
+    
+    <p><strong>Example Credential Format:</strong></p>
+    <pre>VESSELFINDER_API_KEY=your_32_char_key_here
+VESSELFINDER_BASE_URL=https://api.vesselfinder.com</pre>
+
+    <h2>2. Core Shipment Data (Minimum Fields)</h2>
+    
+    <h3>Essential Shipment Information</h3>
+    <ul>
+        <li><strong>Shipment Number</strong>: Unique identifier (e.g., "SH-2025-001")</li>
+        <li><strong>Shipment Name</strong>: Brief description (e.g., "Guinea Mining Equipment")</li>
+        <li><strong>Origin Port</strong>: Port code (e.g., "CNSHG" for Shanghai)</li>
+        <li><strong>Destination Port</strong>: Port code (e.g., "GUFNA" for Fria, Guinea)</li>
+        <li><strong>Planned Departure Date</strong>: YYYY-MM-DD format</li>
+        <li><strong>Planned Arrival Date</strong>: YYYY-MM-DD format</li>
+        <li><strong>Shipper Name</strong>: Company shipping goods</li>
+        <li><strong>Consignee Name</strong>: Company receiving goods</li>
+    </ul>
+    
+    <h3>Sample Shipment Data:</h3>
+    <pre>shipment_number,shipment_name,origin_port,destination_port,planned_departure_date,planned_arrival_date,shipper_name,consignee_name
+SH-2025-001,"Guinea Mining Equipment","CNSHG","GUFNA","2025-09-01","2025-09-20","Shanghai Industrial Co.","Guinea Mining Ltd."
+SH-2025-002,"Construction Materials","FRLEH","GUFNA","2025-09-05","2025-09-25","Le Havre Construction","Guinea Infrastructure"</pre>
+
+    <h2>3. Basic Container Information</h2>
+    
+    <h3>Minimum Container Data</h3>
+    <ul>
+        <li><strong>Container Number</strong>: Standard ISO format (e.g., "TOLU1234567")</li>
+        <li><strong>Container Size</strong>: "20ft" or "40ft"</li>
+        <li><strong>Cargo Description</strong>: Brief description</li>
+        <li><strong>Booking Reference</strong>: Carrier booking number (if available)</li>
+    </ul>
+    
+    <h3>Sample Container Data:</h3>
+    <pre>container_number,container_size,cargo_description,booking_reference,shipment_number
+TOLU1234567,40ft,"Mining Equipment","BOOK-2025-001",SH-2025-001
+CMAU7654321,20ft,"Spare Parts","BOOK-2025-001",SH-2025-001</pre>
+
+    <h2>4. Critical Port Data</h2>
+    
+    <h3>Essential Ports (Minimum Set)</h3>
+    <p>Provide port codes for your key routes:</p>
+    
+    <p><strong>Format Required:</strong></p>
+    <ul>
+        <li><strong>Port Code</strong>: 5-character UN/LOCODE</li>
+        <li><strong>Port Name</strong>: Full name</li>
+        <li><strong>Country</strong>: Country name</li>
+    </ul>
+    
+    <h3>Sample Port Data:</h3>
+    <pre>port_code,port_name,country_name
+CNSHG,Shanghai,China
+GUFNA,Fria,Guinea
+FRLEH,Le Havre,France
+ZADUR,Durban,South Africa
+SGSIN,Singapore,Singapore</pre>
+
+    <h2>5. Basic Vessel Information (Optional for MVP)</h2>
+    <p>For basic vessel tracking, you'll need:</p>
+    <ul>
+        <li><strong>IMO Number</strong>: 7-digit number (e.g., "9234567")</li>
+        <li><strong>Vessel Name</strong>: Full official name</li>
+        <li><strong>Current Position</strong>: Latitude/Longitude (can be updated via API)</li>
+    </ul>
+
+    <h2>6. Quick Setup Process</h2>
+    
+    <h3>Step 1: API Credentials</h3>
+    <ol>
+        <li>Get your VesselFinder API key</li>
+        <li>Test basic connectivity</li>
+        <li>Store in system configuration</li>
+    </ol>
+    
+    <h3>Step 2: Load Port Data</h3>
+    <ol>
+        <li>Create CSV with essential ports</li>
+        <li>Import into <code>ports</code> table</li>
+        <li>Verify port codes are correct</li>
+    </ol>
+    
+    <h3>Step 3: Create Sample Shipments</h3>
+    <ol>
+        <li>Use the shipment CSV template above</li>
+        <li>Import into <code>logistics_shipments</code> table</li>
+        <li>Link to containers using <code>shipment_containers</code> table</li>
+    </ol>
+    
+    <h3>Step 4: Basic Testing</h3>
+    <ol>
+        <li>Verify shipments appear in the UI</li>
+        <li>Check that "Add Shipment" form works</li>
+        <li>Confirm search and filter functionality</li>
+    </ol>
+
+    <h2>7. MVP Data Validation Checklist</h2>
+    
+    <div class="checklist">
+        <h3>Quick Check Items:</h3>
+        <ul>
+            <li>VesselFinder API key works and returns data</li>
+            <li>Port codes are valid UN/LOCODE format</li>
+            <li>Shipment numbers are unique</li>
+            <li>Container numbers follow ISO standards</li>
+            <li>Dates are in YYYY-MM-DD format</li>
+            <li>All required fields are populated</li>
+        </ul>
+    </div>
+
+    <h2>8. Common MVP Issues and Quick Fixes</h2>
+    
+    <h3>API Connection Issues</h3>
+    <ul>
+        <li>Verify API key hasn't expired</li>
+        <li>Check internet connectivity</li>
+        <li>Confirm base URL is correct</li>
+    </ul>
+    
+    <h3>Data Import Problems</h3>
+    <ul>
+        <li>Check CSV file encoding (use UTF-8)</li>
+        <li>Verify column headers match exactly</li>
+        <li>Ensure dates are in correct format</li>
+    </ul>
+    
+    <h3>UI Display Issues</h3>
+    <ul>
+        <li>Clear browser cache and refresh</li>
+        <li>Check browser console for errors</li>
+        <li>Verify all required fields are filled</li>
+    </ul>
+
+    <h2>Getting Started</h2>
+    <ol>
+        <li><strong>Collect API credentials</strong> from VesselFinder</li>
+        <li><strong>Prepare port data</strong> using the sample format</li>
+        <li><strong>Create sample shipments</strong> with basic information</li>
+        <li><strong>Test the system</strong> with the validation checklist</li>
+        <li><strong>Iterate</strong> based on user feedback</li>
+    </ol>
+    
+    <p>This MVP approach gets you operational quickly. You can add advanced features like detailed cargo tracking, comprehensive alerts, and full API integrations as your system matures.</p>
+    
+    <div class="footer">
+        <p><em>For advanced integration features, see <code>docs/logistics-advanced-integration.md</code></em></p>
+        <p>Document generated for printing - Logistics Tracking System MVP Guide</p>
+    </div>
+</body>
+</html>

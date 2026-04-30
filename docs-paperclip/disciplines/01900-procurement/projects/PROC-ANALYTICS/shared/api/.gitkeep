@@ -1,0 +1,11 @@
+# Shared API Components
+
+This directory contains shared API components for PROC-ANALYTICS.
+
+## Contents
+
+Placeholder for shared API components:
+- API client utilities
+- Request/response types
+- API middleware
+- Authentication handlers

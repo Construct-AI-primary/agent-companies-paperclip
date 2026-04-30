@@ -1,0 +1,1142 @@
+table_name,column_name,data_type,is_nullable,column_default
+account,id,text,NO,null
+account,account_id,text,NO,null
+account,provider_id,text,NO,null
+account,user_id,text,NO,null
+account,access_token,text,YES,null
+account,refresh_token,text,YES,null
+account,id_token,text,YES,null
+account,access_token_expires_at,timestamp with time zone,YES,null
+account,refresh_token_expires_at,timestamp with time zone,YES,null
+account,scope,text,YES,null
+account,password,text,YES,null
+account,created_at,timestamp with time zone,NO,null
+account,updated_at,timestamp with time zone,NO,null
+active_agents,id,uuid,YES,null
+active_agents,company_id,uuid,YES,null
+active_agents,name,text,YES,null
+active_agents,role,text,YES,null
+active_agents,title,text,YES,null
+active_agents,status,text,YES,null
+active_agents,reports_to,uuid,YES,null
+active_agents,capabilities,text,YES,null
+active_agents,adapter_type,text,YES,null
+active_agents,adapter_config,jsonb,YES,null
+active_agents,budget_monthly_cents,integer,YES,null
+active_agents,spent_monthly_cents,integer,YES,null
+active_agents,last_heartbeat_at,timestamp with time zone,YES,null
+active_agents,metadata,jsonb,YES,null
+active_agents,created_at,timestamp with time zone,YES,null
+active_agents,updated_at,timestamp with time zone,YES,null
+active_agents,runtime_config,jsonb,YES,null
+active_agents,permissions,jsonb,YES,null
+active_agents,icon,text,YES,null
+active_agents,pause_reason,text,YES,null
+active_agents,paused_at,timestamp with time zone,YES,null
+active_agents,model_config,jsonb,YES,null
+active_agents,device_config,jsonb,YES,null
+active_agents,deleted_at,timestamp without time zone,YES,null
+active_agents,is_active,boolean,YES,null
+active_companies,id,uuid,YES,null
+active_companies,name,text,YES,null
+active_companies,description,text,YES,null
+active_companies,status,text,YES,null
+active_companies,budget_monthly_cents,integer,YES,null
+active_companies,spent_monthly_cents,integer,YES,null
+active_companies,created_at,timestamp with time zone,YES,null
+active_companies,updated_at,timestamp with time zone,YES,null
+active_companies,issue_prefix,text,YES,null
+active_companies,issue_counter,integer,YES,null
+active_companies,require_board_approval_for_new_agents,boolean,YES,null
+active_companies,brand_color,text,YES,null
+active_companies,pause_reason,text,YES,null
+active_companies,paused_at,timestamp with time zone,YES,null
+active_companies,deleted_at,timestamp without time zone,YES,null
+active_companies,is_active,boolean,YES,null
+activity_log,id,uuid,NO,gen_random_uuid()
+activity_log,company_id,uuid,NO,null
+activity_log,actor_type,text,NO,'system'::text
+activity_log,actor_id,text,NO,null
+activity_log,action,text,NO,null
+activity_log,entity_type,text,NO,null
+activity_log,entity_id,text,NO,null
+activity_log,agent_id,uuid,YES,null
+activity_log,details,jsonb,YES,null
+activity_log,created_at,timestamp with time zone,NO,now()
+activity_log,run_id,uuid,YES,null
+agent_api_keys,id,uuid,NO,gen_random_uuid()
+agent_api_keys,agent_id,uuid,NO,null
+agent_api_keys,company_id,uuid,NO,null
+agent_api_keys,name,text,NO,null
+agent_api_keys,key_hash,text,NO,null
+agent_api_keys,last_used_at,timestamp with time zone,YES,null
+agent_api_keys,revoked_at,timestamp with time zone,YES,null
+agent_api_keys,created_at,timestamp with time zone,NO,now()
+agent_config_revisions,id,uuid,NO,gen_random_uuid()
+agent_config_revisions,company_id,uuid,NO,null
+agent_config_revisions,agent_id,uuid,NO,null
+agent_config_revisions,created_by_agent_id,uuid,YES,null
+agent_config_revisions,created_by_user_id,text,YES,null
+agent_config_revisions,source,text,NO,'patch'::text
+agent_config_revisions,rolled_back_from_revision_id,uuid,YES,null
+agent_config_revisions,changed_keys,jsonb,NO,'[]'::jsonb
+agent_config_revisions,before_config,jsonb,NO,null
+agent_config_revisions,after_config,jsonb,NO,null
+agent_config_revisions,created_at,timestamp with time zone,NO,now()
+agent_models,id,uuid,NO,gen_random_uuid()
+agent_models,agent_id,character varying,NO,null
+agent_models,model_id,uuid,YES,null
+agent_models,assignment_type,character varying,NO,'primary'::character varying
+agent_models,priority,integer,YES,1
+agent_models,temperature,numeric,YES,0.7
+agent_models,max_tokens,integer,YES,4096
+agent_models,assigned_at,timestamp with time zone,YES,now()
+agent_models,assigned_by,character varying,YES,null
+agent_models,reason,text,YES,null
+agent_models,total_requests,integer,YES,0
+agent_models,total_tokens_input,bigint,YES,0
+agent_models,total_tokens_output,bigint,YES,0
+agent_models,total_cost,numeric,YES,0
+agent_models,avg_latency_ms,integer,YES,null
+agent_models,error_rate,numeric,YES,0
+agent_models,is_active,boolean,YES,true
+agent_models,created_at,timestamp with time zone,YES,now()
+agent_models,updated_at,timestamp with time zone,YES,now()
+agent_runtime_state,agent_id,uuid,NO,null
+agent_runtime_state,company_id,uuid,NO,null
+agent_runtime_state,adapter_type,text,NO,null
+agent_runtime_state,session_id,text,YES,null
+agent_runtime_state,state_json,jsonb,NO,'{}'::jsonb
+agent_runtime_state,last_run_id,uuid,YES,null
+agent_runtime_state,last_run_status,text,YES,null
+agent_runtime_state,total_input_tokens,bigint,NO,0
+agent_runtime_state,total_output_tokens,bigint,NO,0
+agent_runtime_state,total_cached_input_tokens,bigint,NO,0
+agent_runtime_state,total_cost_cents,bigint,NO,0
+agent_runtime_state,last_error,text,YES,null
+agent_runtime_state,created_at,timestamp with time zone,NO,now()
+agent_runtime_state,updated_at,timestamp with time zone,NO,now()
+agent_task_sessions,id,uuid,NO,gen_random_uuid()
+agent_task_sessions,company_id,uuid,NO,null
+agent_task_sessions,agent_id,uuid,NO,null
+agent_task_sessions,adapter_type,text,NO,null
+agent_task_sessions,task_key,text,NO,null
+agent_task_sessions,session_params_json,jsonb,YES,null
+agent_task_sessions,session_display_id,text,YES,null
+agent_task_sessions,last_run_id,uuid,YES,null
+agent_task_sessions,last_error,text,YES,null
+agent_task_sessions,created_at,timestamp with time zone,NO,now()
+agent_task_sessions,updated_at,timestamp with time zone,NO,now()
+agent_wakeup_requests,id,uuid,NO,gen_random_uuid()
+agent_wakeup_requests,company_id,uuid,NO,null
+agent_wakeup_requests,agent_id,uuid,YES,null
+agent_wakeup_requests,source,text,NO,null
+agent_wakeup_requests,trigger_detail,text,YES,null
+agent_wakeup_requests,reason,text,YES,null
+agent_wakeup_requests,payload,jsonb,YES,null
+agent_wakeup_requests,status,text,NO,'queued'::text
+agent_wakeup_requests,coalesced_count,integer,NO,0
+agent_wakeup_requests,requested_by_actor_type,text,YES,null
+agent_wakeup_requests,requested_by_actor_id,text,YES,null
+agent_wakeup_requests,idempotency_key,text,YES,null
+agent_wakeup_requests,run_id,uuid,YES,null
+agent_wakeup_requests,requested_at,timestamp with time zone,NO,now()
+agent_wakeup_requests,claimed_at,timestamp with time zone,YES,null
+agent_wakeup_requests,finished_at,timestamp with time zone,YES,null
+agent_wakeup_requests,error,text,YES,null
+agent_wakeup_requests,created_at,timestamp with time zone,NO,now()
+agent_wakeup_requests,updated_at,timestamp with time zone,NO,now()
+agents,id,uuid,NO,gen_random_uuid()
+agents,company_id,uuid,NO,null
+agents,name,text,NO,null
+agents,role,text,NO,'general'::text
+agents,title,text,YES,null
+agents,status,text,NO,'idle'::text
+agents,reports_to,uuid,YES,null
+agents,capabilities,text,YES,null
+agents,adapter_type,text,NO,'process'::text
+agents,adapter_config,jsonb,NO,'{}'::jsonb
+agents,budget_monthly_cents,integer,NO,0
+agents,spent_monthly_cents,integer,NO,0
+agents,last_heartbeat_at,timestamp with time zone,YES,null
+agents,metadata,jsonb,YES,null
+agents,created_at,timestamp with time zone,NO,now()
+agents,updated_at,timestamp with time zone,NO,now()
+agents,runtime_config,jsonb,NO,'{}'::jsonb
+agents,permissions,jsonb,NO,'{}'::jsonb
+agents,icon,text,YES,null
+agents,pause_reason,text,YES,null
+agents,paused_at,timestamp with time zone,YES,null
+agents,model_config,jsonb,YES,null
+agents,device_config,jsonb,YES,null
+agents,deleted_at,timestamp without time zone,YES,null
+agents,is_active,boolean,YES,true
+approval_comments,id,uuid,NO,gen_random_uuid()
+approval_comments,company_id,uuid,NO,null
+approval_comments,approval_id,uuid,NO,null
+approval_comments,author_agent_id,uuid,YES,null
+approval_comments,author_user_id,text,YES,null
+approval_comments,body,text,NO,null
+approval_comments,created_at,timestamp with time zone,NO,now()
+approval_comments,updated_at,timestamp with time zone,NO,now()
+approvals,id,uuid,NO,gen_random_uuid()
+approvals,company_id,uuid,NO,null
+approvals,type,text,NO,null
+approvals,requested_by_agent_id,uuid,YES,null
+approvals,requested_by_user_id,text,YES,null
+approvals,status,text,NO,'pending'::text
+approvals,payload,jsonb,NO,null
+approvals,decision_note,text,YES,null
+approvals,decided_by_user_id,text,YES,null
+approvals,decided_at,timestamp with time zone,YES,null
+approvals,created_at,timestamp with time zone,NO,now()
+approvals,updated_at,timestamp with time zone,NO,now()
+assets,id,uuid,NO,gen_random_uuid()
+assets,company_id,uuid,NO,null
+assets,provider,text,NO,null
+assets,object_key,text,NO,null
+assets,content_type,text,NO,null
+assets,byte_size,integer,NO,null
+assets,sha256,text,NO,null
+assets,original_filename,text,YES,null
+assets,created_by_agent_id,uuid,YES,null
+assets,created_by_user_id,text,YES,null
+assets,created_at,timestamp with time zone,NO,now()
+assets,updated_at,timestamp with time zone,NO,now()
+board_api_keys,id,uuid,NO,gen_random_uuid()
+board_api_keys,user_id,text,NO,null
+board_api_keys,name,text,NO,null
+board_api_keys,key_hash,text,NO,null
+board_api_keys,last_used_at,timestamp with time zone,YES,null
+board_api_keys,revoked_at,timestamp with time zone,YES,null
+board_api_keys,expires_at,timestamp with time zone,YES,null
+board_api_keys,created_at,timestamp with time zone,NO,now()
+budget_incidents,id,uuid,NO,gen_random_uuid()
+budget_incidents,company_id,uuid,NO,null
+budget_incidents,policy_id,uuid,NO,null
+budget_incidents,scope_type,text,NO,null
+budget_incidents,scope_id,uuid,NO,null
+budget_incidents,metric,text,NO,null
+budget_incidents,window_kind,text,NO,null
+budget_incidents,window_start,timestamp with time zone,NO,null
+budget_incidents,window_end,timestamp with time zone,NO,null
+budget_incidents,threshold_type,text,NO,null
+budget_incidents,amount_limit,integer,NO,null
+budget_incidents,amount_observed,integer,NO,null
+budget_incidents,status,text,NO,'open'::text
+budget_incidents,approval_id,uuid,YES,null
+budget_incidents,resolved_at,timestamp with time zone,YES,null
+budget_incidents,created_at,timestamp with time zone,NO,now()
+budget_incidents,updated_at,timestamp with time zone,NO,now()
+budget_policies,id,uuid,NO,gen_random_uuid()
+budget_policies,company_id,uuid,NO,null
+budget_policies,scope_type,text,NO,null
+budget_policies,scope_id,uuid,NO,null
+budget_policies,metric,text,NO,'billed_cents'::text
+budget_policies,window_kind,text,NO,null
+budget_policies,amount,integer,NO,0
+budget_policies,warn_percent,integer,NO,80
+budget_policies,hard_stop_enabled,boolean,NO,true
+budget_policies,notify_enabled,boolean,NO,true
+budget_policies,is_active,boolean,NO,true
+budget_policies,created_by_user_id,text,YES,null
+budget_policies,updated_by_user_id,text,YES,null
+budget_policies,created_at,timestamp with time zone,NO,now()
+budget_policies,updated_at,timestamp with time zone,NO,now()
+cli_auth_challenges,id,uuid,NO,gen_random_uuid()
+cli_auth_challenges,secret_hash,text,NO,null
+cli_auth_challenges,command,text,NO,null
+cli_auth_challenges,client_name,text,YES,null
+cli_auth_challenges,requested_access,text,NO,'board'::text
+cli_auth_challenges,requested_company_id,uuid,YES,null
+cli_auth_challenges,pending_key_hash,text,NO,null
+cli_auth_challenges,pending_key_name,text,NO,null
+cli_auth_challenges,approved_by_user_id,text,YES,null
+cli_auth_challenges,board_api_key_id,uuid,YES,null
+cli_auth_challenges,approved_at,timestamp with time zone,YES,null
+cli_auth_challenges,cancelled_at,timestamp with time zone,YES,null
+cli_auth_challenges,expires_at,timestamp with time zone,NO,null
+cli_auth_challenges,created_at,timestamp with time zone,NO,now()
+cli_auth_challenges,updated_at,timestamp with time zone,NO,now()
+companies,id,uuid,NO,gen_random_uuid()
+companies,name,text,NO,null
+companies,description,text,YES,null
+companies,status,text,NO,'active'::text
+companies,budget_monthly_cents,integer,NO,0
+companies,spent_monthly_cents,integer,NO,0
+companies,created_at,timestamp with time zone,NO,now()
+companies,updated_at,timestamp with time zone,NO,now()
+companies,issue_prefix,text,NO,'PAP'::text
+companies,issue_counter,integer,NO,0
+companies,require_board_approval_for_new_agents,boolean,NO,true
+companies,brand_color,text,YES,null
+companies,pause_reason,text,YES,null
+companies,paused_at,timestamp with time zone,YES,null
+companies,deleted_at,timestamp without time zone,YES,null
+companies,is_active,boolean,YES,true
+company_logos,id,uuid,NO,gen_random_uuid()
+company_logos,company_id,uuid,NO,null
+company_logos,asset_id,uuid,NO,null
+company_logos,created_at,timestamp with time zone,NO,now()
+company_logos,updated_at,timestamp with time zone,NO,now()
+company_memberships,id,uuid,NO,gen_random_uuid()
+company_memberships,company_id,uuid,NO,null
+company_memberships,principal_type,text,NO,null
+company_memberships,principal_id,text,NO,null
+company_memberships,status,text,NO,'active'::text
+company_memberships,membership_role,text,YES,null
+company_memberships,created_at,timestamp with time zone,NO,now()
+company_memberships,updated_at,timestamp with time zone,NO,now()
+company_secret_versions,id,uuid,NO,gen_random_uuid()
+company_secret_versions,secret_id,uuid,NO,null
+company_secret_versions,version,integer,NO,null
+company_secret_versions,material,jsonb,NO,null
+company_secret_versions,value_sha256,text,NO,null
+company_secret_versions,created_by_agent_id,uuid,YES,null
+company_secret_versions,created_by_user_id,text,YES,null
+company_secret_versions,created_at,timestamp with time zone,NO,now()
+company_secret_versions,revoked_at,timestamp with time zone,YES,null
+company_secrets,id,uuid,NO,gen_random_uuid()
+company_secrets,company_id,uuid,NO,null
+company_secrets,name,text,NO,null
+company_secrets,provider,text,NO,'local_encrypted'::text
+company_secrets,external_ref,text,YES,null
+company_secrets,latest_version,integer,NO,1
+company_secrets,description,text,YES,null
+company_secrets,created_by_agent_id,uuid,YES,null
+company_secrets,created_by_user_id,text,YES,null
+company_secrets,created_at,timestamp with time zone,NO,now()
+company_secrets,updated_at,timestamp with time zone,NO,now()
+company_skills,id,uuid,NO,gen_random_uuid()
+company_skills,company_id,uuid,NO,null
+company_skills,key,text,NO,null
+company_skills,slug,text,NO,null
+company_skills,name,text,NO,null
+company_skills,description,text,YES,null
+company_skills,markdown,text,NO,null
+company_skills,source_type,text,NO,'local_path'::text
+company_skills,source_locator,text,YES,null
+company_skills,source_ref,text,YES,null
+company_skills,trust_level,text,NO,'markdown_only'::text
+company_skills,compatibility,text,NO,'compatible'::text
+company_skills,file_inventory,jsonb,NO,'[]'::jsonb
+company_skills,metadata,jsonb,YES,null
+company_skills,created_at,timestamp with time zone,NO,now()
+company_skills,updated_at,timestamp with time zone,NO,now()
+cost_events,id,uuid,NO,gen_random_uuid()
+cost_events,company_id,uuid,NO,null
+cost_events,agent_id,uuid,NO,null
+cost_events,issue_id,uuid,YES,null
+cost_events,project_id,uuid,YES,null
+cost_events,goal_id,uuid,YES,null
+cost_events,billing_code,text,YES,null
+cost_events,provider,text,NO,null
+cost_events,model,text,NO,null
+cost_events,input_tokens,integer,NO,0
+cost_events,output_tokens,integer,NO,0
+cost_events,cost_cents,integer,NO,null
+cost_events,occurred_at,timestamp with time zone,NO,null
+cost_events,created_at,timestamp with time zone,NO,now()
+cost_events,heartbeat_run_id,uuid,YES,null
+cost_events,biller,text,NO,'unknown'::text
+cost_events,billing_type,text,NO,'unknown'::text
+cost_events,cached_input_tokens,integer,NO,0
+document_revisions,id,uuid,NO,gen_random_uuid()
+document_revisions,company_id,uuid,NO,null
+document_revisions,document_id,uuid,NO,null
+document_revisions,revision_number,integer,NO,null
+document_revisions,body,text,NO,null
+document_revisions,change_summary,text,YES,null
+document_revisions,created_by_agent_id,uuid,YES,null
+document_revisions,created_by_user_id,text,YES,null
+document_revisions,created_at,timestamp with time zone,NO,now()
+document_revisions,title,text,YES,null
+document_revisions,format,text,NO,'markdown'::text
+documents,id,uuid,NO,gen_random_uuid()
+documents,company_id,uuid,NO,null
+documents,title,text,YES,null
+documents,format,text,NO,'markdown'::text
+documents,latest_body,text,NO,null
+documents,latest_revision_id,uuid,YES,null
+documents,latest_revision_number,integer,NO,1
+documents,created_by_agent_id,uuid,YES,null
+documents,created_by_user_id,text,YES,null
+documents,updated_by_agent_id,uuid,YES,null
+documents,updated_by_user_id,text,YES,null
+documents,created_at,timestamp with time zone,NO,now()
+documents,updated_at,timestamp with time zone,NO,now()
+execution_workspaces,id,uuid,NO,gen_random_uuid()
+execution_workspaces,company_id,uuid,NO,null
+execution_workspaces,project_id,uuid,NO,null
+execution_workspaces,project_workspace_id,uuid,YES,null
+execution_workspaces,source_issue_id,uuid,YES,null
+execution_workspaces,mode,text,NO,null
+execution_workspaces,strategy_type,text,NO,null
+execution_workspaces,name,text,NO,null
+execution_workspaces,status,text,NO,'active'::text
+execution_workspaces,cwd,text,YES,null
+execution_workspaces,repo_url,text,YES,null
+execution_workspaces,base_ref,text,YES,null
+execution_workspaces,branch_name,text,YES,null
+execution_workspaces,provider_type,text,NO,'local_fs'::text
+execution_workspaces,provider_ref,text,YES,null
+execution_workspaces,derived_from_execution_workspace_id,uuid,YES,null
+execution_workspaces,last_used_at,timestamp with time zone,NO,now()
+execution_workspaces,opened_at,timestamp with time zone,NO,now()
+execution_workspaces,closed_at,timestamp with time zone,YES,null
+execution_workspaces,cleanup_eligible_at,timestamp with time zone,YES,null
+execution_workspaces,cleanup_reason,text,YES,null
+execution_workspaces,metadata,jsonb,YES,null
+execution_workspaces,created_at,timestamp with time zone,NO,now()
+execution_workspaces,updated_at,timestamp with time zone,NO,now()
+finance_events,id,uuid,NO,gen_random_uuid()
+finance_events,company_id,uuid,NO,null
+finance_events,agent_id,uuid,YES,null
+finance_events,issue_id,uuid,YES,null
+finance_events,project_id,uuid,YES,null
+finance_events,goal_id,uuid,YES,null
+finance_events,heartbeat_run_id,uuid,YES,null
+finance_events,cost_event_id,uuid,YES,null
+finance_events,billing_code,text,YES,null
+finance_events,description,text,YES,null
+finance_events,event_kind,text,NO,null
+finance_events,direction,text,NO,'debit'::text
+finance_events,biller,text,NO,null
+finance_events,provider,text,YES,null
+finance_events,execution_adapter_type,text,YES,null
+finance_events,pricing_tier,text,YES,null
+finance_events,region,text,YES,null
+finance_events,model,text,YES,null
+finance_events,quantity,integer,YES,null
+finance_events,unit,text,YES,null
+finance_events,amount_cents,integer,NO,null
+finance_events,currency,text,NO,'USD'::text
+finance_events,estimated,boolean,NO,false
+finance_events,external_invoice_id,text,YES,null
+finance_events,metadata_json,jsonb,YES,null
+finance_events,occurred_at,timestamp with time zone,NO,null
+finance_events,created_at,timestamp with time zone,NO,now()
+goals,id,uuid,NO,gen_random_uuid()
+goals,company_id,uuid,NO,null
+goals,title,text,NO,null
+goals,description,text,YES,null
+goals,level,text,NO,'task'::text
+goals,status,text,NO,'planned'::text
+goals,parent_id,uuid,YES,null
+goals,owner_agent_id,uuid,YES,null
+goals,created_at,timestamp with time zone,NO,now()
+goals,updated_at,timestamp with time zone,NO,now()
+heartbeat_run_events,id,bigint,NO,nextval('heartbeat_run_events_id_seq'::regclass)
+heartbeat_run_events,company_id,uuid,NO,null
+heartbeat_run_events,run_id,uuid,NO,null
+heartbeat_run_events,agent_id,uuid,NO,null
+heartbeat_run_events,seq,integer,NO,null
+heartbeat_run_events,event_type,text,NO,null
+heartbeat_run_events,stream,text,YES,null
+heartbeat_run_events,level,text,YES,null
+heartbeat_run_events,color,text,YES,null
+heartbeat_run_events,message,text,YES,null
+heartbeat_run_events,payload,jsonb,YES,null
+heartbeat_run_events,created_at,timestamp with time zone,NO,now()
+heartbeat_runs,id,uuid,NO,gen_random_uuid()
+heartbeat_runs,company_id,uuid,NO,null
+heartbeat_runs,agent_id,uuid,YES,null
+heartbeat_runs,invocation_source,text,NO,'on_demand'::text
+heartbeat_runs,status,text,NO,'queued'::text
+heartbeat_runs,started_at,timestamp with time zone,YES,null
+heartbeat_runs,finished_at,timestamp with time zone,YES,null
+heartbeat_runs,error,text,YES,null
+heartbeat_runs,external_run_id,text,YES,null
+heartbeat_runs,context_snapshot,jsonb,YES,null
+heartbeat_runs,created_at,timestamp with time zone,NO,now()
+heartbeat_runs,updated_at,timestamp with time zone,NO,now()
+heartbeat_runs,trigger_detail,text,YES,null
+heartbeat_runs,wakeup_request_id,uuid,YES,null
+heartbeat_runs,exit_code,integer,YES,null
+heartbeat_runs,signal,text,YES,null
+heartbeat_runs,usage_json,jsonb,YES,null
+heartbeat_runs,result_json,jsonb,YES,null
+heartbeat_runs,session_id_before,text,YES,null
+heartbeat_runs,session_id_after,text,YES,null
+heartbeat_runs,log_store,text,YES,null
+heartbeat_runs,log_ref,text,YES,null
+heartbeat_runs,log_bytes,bigint,YES,null
+heartbeat_runs,log_sha256,text,YES,null
+heartbeat_runs,log_compressed,boolean,NO,false
+heartbeat_runs,stdout_excerpt,text,YES,null
+heartbeat_runs,stderr_excerpt,text,YES,null
+heartbeat_runs,error_code,text,YES,null
+heartbeat_runs,process_pid,integer,YES,null
+heartbeat_runs,process_started_at,timestamp with time zone,YES,null
+heartbeat_runs,retry_of_run_id,uuid,YES,null
+heartbeat_runs,process_loss_retry_count,integer,NO,0
+instance_settings,id,uuid,NO,gen_random_uuid()
+instance_settings,singleton_key,text,NO,'default'::text
+instance_settings,experimental,jsonb,NO,'{}'::jsonb
+instance_settings,created_at,timestamp with time zone,NO,now()
+instance_settings,updated_at,timestamp with time zone,NO,now()
+instance_settings,general,jsonb,NO,'{}'::jsonb
+instance_user_roles,id,uuid,NO,gen_random_uuid()
+instance_user_roles,user_id,text,NO,null
+instance_user_roles,role,text,NO,'instance_admin'::text
+instance_user_roles,created_at,timestamp with time zone,NO,now()
+instance_user_roles,updated_at,timestamp with time zone,NO,now()
+invites,id,uuid,NO,gen_random_uuid()
+invites,company_id,uuid,YES,null
+invites,invite_type,text,NO,'company_join'::text
+invites,token_hash,text,NO,null
+invites,allowed_join_types,text,NO,'both'::text
+invites,defaults_payload,jsonb,YES,null
+invites,expires_at,timestamp with time zone,NO,null
+invites,invited_by_user_id,text,YES,null
+invites,revoked_at,timestamp with time zone,YES,null
+invites,accepted_at,timestamp with time zone,YES,null
+invites,created_at,timestamp with time zone,NO,now()
+invites,updated_at,timestamp with time zone,NO,now()
+issue_approvals,company_id,uuid,NO,null
+issue_approvals,issue_id,uuid,NO,null
+issue_approvals,approval_id,uuid,NO,null
+issue_approvals,linked_by_agent_id,uuid,YES,null
+issue_approvals,linked_by_user_id,text,YES,null
+issue_approvals,created_at,timestamp with time zone,NO,now()
+issue_attachments,id,uuid,NO,gen_random_uuid()
+issue_attachments,company_id,uuid,NO,null
+issue_attachments,issue_id,uuid,NO,null
+issue_attachments,asset_id,uuid,NO,null
+issue_attachments,issue_comment_id,uuid,YES,null
+issue_attachments,created_at,timestamp with time zone,NO,now()
+issue_attachments,updated_at,timestamp with time zone,NO,now()
+issue_comments,id,uuid,NO,gen_random_uuid()
+issue_comments,company_id,uuid,NO,null
+issue_comments,issue_id,uuid,NO,null
+issue_comments,author_agent_id,uuid,YES,null
+issue_comments,author_user_id,text,YES,null
+issue_comments,body,text,NO,null
+issue_comments,created_at,timestamp with time zone,NO,now()
+issue_comments,updated_at,timestamp with time zone,NO,now()
+issue_documents,id,uuid,NO,gen_random_uuid()
+issue_documents,company_id,uuid,NO,null
+issue_documents,issue_id,uuid,NO,null
+issue_documents,document_id,uuid,NO,null
+issue_documents,key,text,NO,null
+issue_documents,created_at,timestamp with time zone,NO,now()
+issue_documents,updated_at,timestamp with time zone,NO,now()
+issue_inbox_archives,id,uuid,NO,gen_random_uuid()
+issue_inbox_archives,company_id,uuid,NO,null
+issue_inbox_archives,issue_id,uuid,NO,null
+issue_inbox_archives,user_id,text,NO,null
+issue_inbox_archives,archived_at,timestamp with time zone,NO,now()
+issue_inbox_archives,created_at,timestamp with time zone,NO,now()
+issue_inbox_archives,updated_at,timestamp with time zone,NO,now()
+issue_labels,issue_id,uuid,NO,null
+issue_labels,label_id,uuid,NO,null
+issue_labels,company_id,uuid,NO,null
+issue_labels,created_at,timestamp with time zone,NO,now()
+issue_read_states,id,uuid,NO,gen_random_uuid()
+issue_read_states,company_id,uuid,NO,null
+issue_read_states,issue_id,uuid,NO,null
+issue_read_states,user_id,text,NO,null
+issue_read_states,last_read_at,timestamp with time zone,NO,now()
+issue_read_states,created_at,timestamp with time zone,NO,now()
+issue_read_states,updated_at,timestamp with time zone,NO,now()
+issue_work_products,id,uuid,NO,gen_random_uuid()
+issue_work_products,company_id,uuid,NO,null
+issue_work_products,project_id,uuid,YES,null
+issue_work_products,issue_id,uuid,NO,null
+issue_work_products,execution_workspace_id,uuid,YES,null
+issue_work_products,runtime_service_id,uuid,YES,null
+issue_work_products,type,text,NO,null
+issue_work_products,provider,text,NO,null
+issue_work_products,external_id,text,YES,null
+issue_work_products,title,text,NO,null
+issue_work_products,url,text,YES,null
+issue_work_products,status,text,NO,null
+issue_work_products,review_state,text,NO,'none'::text
+issue_work_products,is_primary,boolean,NO,false
+issue_work_products,health_status,text,NO,'unknown'::text
+issue_work_products,summary,text,YES,null
+issue_work_products,metadata,jsonb,YES,null
+issue_work_products,created_by_run_id,uuid,YES,null
+issue_work_products,created_at,timestamp with time zone,NO,now()
+issue_work_products,updated_at,timestamp with time zone,NO,now()
+issues,id,uuid,NO,gen_random_uuid()
+issues,company_id,uuid,NO,null
+issues,project_id,uuid,YES,null
+issues,goal_id,uuid,YES,null
+issues,parent_id,uuid,YES,null
+issues,title,text,NO,null
+issues,description,text,YES,null
+issues,status,text,NO,'backlog'::text
+issues,priority,text,NO,'medium'::text
+issues,assignee_agent_id,uuid,YES,null
+issues,created_by_agent_id,uuid,YES,null
+issues,created_by_user_id,text,YES,null
+issues,request_depth,integer,NO,0
+issues,billing_code,text,YES,null
+issues,started_at,timestamp with time zone,YES,null
+issues,completed_at,timestamp with time zone,YES,null
+issues,cancelled_at,timestamp with time zone,YES,null
+issues,created_at,timestamp with time zone,NO,now()
+issues,updated_at,timestamp with time zone,NO,now()
+issues,issue_number,integer,YES,null
+issues,identifier,text,YES,null
+issues,hidden_at,timestamp with time zone,YES,null
+issues,checkout_run_id,uuid,YES,null
+issues,execution_run_id,uuid,YES,null
+issues,execution_agent_name_key,text,YES,null
+issues,execution_locked_at,timestamp with time zone,YES,null
+issues,assignee_user_id,text,YES,null
+issues,assignee_adapter_overrides,jsonb,YES,null
+issues,execution_workspace_settings,jsonb,YES,null
+issues,project_workspace_id,uuid,YES,null
+issues,execution_workspace_id,uuid,YES,null
+issues,execution_workspace_preference,text,YES,null
+issues,origin_kind,text,NO,'manual'::text
+issues,origin_id,text,YES,null
+issues,origin_run_id,text,YES,null
+join_requests,id,uuid,NO,gen_random_uuid()
+join_requests,invite_id,uuid,NO,null
+join_requests,company_id,uuid,NO,null
+join_requests,request_type,text,NO,null
+join_requests,status,text,NO,'pending_approval'::text
+join_requests,request_ip,text,NO,null
+join_requests,requesting_user_id,text,YES,null
+join_requests,request_email_snapshot,text,YES,null
+join_requests,agent_name,text,YES,null
+join_requests,adapter_type,text,YES,null
+join_requests,capabilities,text,YES,null
+join_requests,agent_defaults_payload,jsonb,YES,null
+join_requests,created_agent_id,uuid,YES,null
+join_requests,approved_by_user_id,text,YES,null
+join_requests,approved_at,timestamp with time zone,YES,null
+join_requests,rejected_by_user_id,text,YES,null
+join_requests,rejected_at,timestamp with time zone,YES,null
+join_requests,created_at,timestamp with time zone,NO,now()
+join_requests,updated_at,timestamp with time zone,NO,now()
+join_requests,claim_secret_hash,text,YES,null
+join_requests,claim_secret_expires_at,timestamp with time zone,YES,null
+join_requests,claim_secret_consumed_at,timestamp with time zone,YES,null
+labels,id,uuid,NO,gen_random_uuid()
+labels,company_id,uuid,NO,null
+labels,name,text,NO,null
+labels,color,text,NO,null
+labels,created_at,timestamp with time zone,NO,now()
+labels,updated_at,timestamp with time zone,NO,now()
+model_benchmarks,id,uuid,NO,gen_random_uuid()
+model_benchmarks,model_id,uuid,YES,null
+model_benchmarks,benchmark_date,date,NO,null
+model_benchmarks,source,character varying,NO,null
+model_benchmarks,coding_index,integer,YES,null
+model_benchmarks,human_eval,numeric,YES,null
+model_benchmarks,swe_bench,numeric,YES,null
+model_benchmarks,live_code_bench,numeric,YES,null
+model_benchmarks,mbpp,numeric,YES,null
+model_benchmarks,overall_score,integer,YES,null
+model_benchmarks,input_price,numeric,YES,null
+model_benchmarks,output_price,numeric,YES,null
+model_benchmarks,notes,text,YES,null
+model_benchmarks,raw_data,jsonb,YES,null
+model_benchmarks,created_at,timestamp with time zone,YES,now()
+model_change_log,id,uuid,NO,gen_random_uuid()
+model_change_log,agent_id,character varying,NO,null
+model_change_log,change_type,character varying,NO,null
+model_change_log,old_model_id,uuid,YES,null
+model_change_log,new_model_id,uuid,YES,null
+model_change_log,old_config,jsonb,YES,null
+model_change_log,new_config,jsonb,YES,null
+model_change_log,reason,text,NO,null
+model_change_log,triggered_by,character varying,YES,null
+model_change_log,changed_by,character varying,YES,null
+model_change_log,estimated_cost_change,numeric,YES,null
+model_change_log,estimated_performance_change,integer,YES,null
+model_change_log,created_at,timestamp with time zone,YES,now()
+models,id,uuid,NO,gen_random_uuid()
+models,model_id,character varying,NO,null
+models,provider,character varying,NO,null
+models,display_name,character varying,NO,null
+models,input_price,numeric,NO,null
+models,output_price,numeric,NO,null
+models,cache_read_price,numeric,YES,null
+models,context_window,integer,NO,null
+models,max_output_tokens,integer,YES,null
+models,coding_index,integer,YES,null
+models,human_eval,numeric,YES,null
+models,swe_bench,numeric,YES,null
+models,live_code_bench,numeric,YES,null
+models,overall_score,integer,YES,null
+models,efficiency_ratio,numeric,YES,null
+models,value_tier,character varying,YES,null
+models,is_active,boolean,YES,true
+models,is_recommended,boolean,YES,false
+models,last_benchmark_update,timestamp with time zone,YES,null
+models,benchmark_source,character varying,YES,null
+models,notes,text,YES,null
+models,created_at,timestamp with time zone,YES,now()
+models,updated_at,timestamp with time zone,YES,now()
+org_chart_hierarchy,company_id,uuid,YES,null
+org_chart_hierarchy,company_name,text,YES,null
+org_chart_hierarchy,company_prefix,text,YES,null
+org_chart_hierarchy,agent_id,uuid,YES,null
+org_chart_hierarchy,agent_name,text,YES,null
+org_chart_hierarchy,agent_title,text,YES,null
+org_chart_hierarchy,agent_role,text,YES,null
+org_chart_hierarchy,division,text,YES,null
+org_chart_hierarchy,authority_level,text,YES,null
+org_chart_hierarchy,hierarchy_rank,integer,YES,null
+org_chart_hierarchy,division_rank,integer,YES,null
+org_chart_hierarchy,is_ceo,boolean,YES,null
+org_chart_json,org_chart_data,json,YES,null
+paperclip_issues,id,uuid,NO,uuid_generate_v4()
+paperclip_issues,issue_text,text,NO,null
+paperclip_issues,status,character varying,YES,'pending'::character varying
+paperclip_issues,assignee_agent,character varying,YES,null
+paperclip_issues,company_id,uuid,YES,null
+paperclip_issues,priority,character varying,YES,'medium'::character varying
+paperclip_issues,created_at,timestamp with time zone,YES,now()
+paperclip_issues,updated_at,timestamp with time zone,YES,now()
+paperclip_issues,completed_at,timestamp with time zone,YES,null
+plugin_company_settings,id,uuid,NO,gen_random_uuid()
+plugin_company_settings,company_id,uuid,NO,null
+plugin_company_settings,plugin_id,uuid,NO,null
+plugin_company_settings,settings_json,jsonb,NO,'{}'::jsonb
+plugin_company_settings,last_error,text,YES,null
+plugin_company_settings,created_at,timestamp with time zone,NO,now()
+plugin_company_settings,updated_at,timestamp with time zone,NO,now()
+plugin_company_settings,enabled,boolean,NO,true
+plugin_config,id,uuid,NO,gen_random_uuid()
+plugin_config,plugin_id,uuid,NO,null
+plugin_config,config_json,jsonb,NO,'{}'::jsonb
+plugin_config,last_error,text,YES,null
+plugin_config,created_at,timestamp with time zone,NO,now()
+plugin_config,updated_at,timestamp with time zone,NO,now()
+plugin_entities,id,uuid,NO,gen_random_uuid()
+plugin_entities,plugin_id,uuid,NO,null
+plugin_entities,entity_type,text,NO,null
+plugin_entities,scope_kind,text,NO,null
+plugin_entities,scope_id,text,YES,null
+plugin_entities,external_id,text,YES,null
+plugin_entities,title,text,YES,null
+plugin_entities,status,text,YES,null
+plugin_entities,data,jsonb,NO,'{}'::jsonb
+plugin_entities,created_at,timestamp with time zone,NO,now()
+plugin_entities,updated_at,timestamp with time zone,NO,now()
+plugin_job_runs,id,uuid,NO,gen_random_uuid()
+plugin_job_runs,job_id,uuid,NO,null
+plugin_job_runs,plugin_id,uuid,NO,null
+plugin_job_runs,trigger,text,NO,null
+plugin_job_runs,status,text,NO,'pending'::text
+plugin_job_runs,duration_ms,integer,YES,null
+plugin_job_runs,error,text,YES,null
+plugin_job_runs,logs,jsonb,NO,'[]'::jsonb
+plugin_job_runs,started_at,timestamp with time zone,YES,null
+plugin_job_runs,finished_at,timestamp with time zone,YES,null
+plugin_job_runs,created_at,timestamp with time zone,NO,now()
+plugin_jobs,id,uuid,NO,gen_random_uuid()
+plugin_jobs,plugin_id,uuid,NO,null
+plugin_jobs,job_key,text,NO,null
+plugin_jobs,schedule,text,NO,null
+plugin_jobs,status,text,NO,'active'::text
+plugin_jobs,last_run_at,timestamp with time zone,YES,null
+plugin_jobs,next_run_at,timestamp with time zone,YES,null
+plugin_jobs,created_at,timestamp with time zone,NO,now()
+plugin_jobs,updated_at,timestamp with time zone,NO,now()
+plugin_logs,id,uuid,NO,gen_random_uuid()
+plugin_logs,plugin_id,uuid,NO,null
+plugin_logs,level,text,NO,'info'::text
+plugin_logs,message,text,NO,null
+plugin_logs,meta,jsonb,YES,null
+plugin_logs,created_at,timestamp with time zone,NO,now()
+plugin_state,id,uuid,NO,gen_random_uuid()
+plugin_state,plugin_id,uuid,NO,null
+plugin_state,scope_kind,text,NO,null
+plugin_state,scope_id,text,YES,null
+plugin_state,namespace,text,NO,'default'::text
+plugin_state,state_key,text,NO,null
+plugin_state,value_json,jsonb,NO,null
+plugin_state,updated_at,timestamp with time zone,NO,now()
+plugin_webhook_deliveries,id,uuid,NO,gen_random_uuid()
+plugin_webhook_deliveries,plugin_id,uuid,NO,null
+plugin_webhook_deliveries,webhook_key,text,NO,null
+plugin_webhook_deliveries,external_id,text,YES,null
+plugin_webhook_deliveries,status,text,NO,'pending'::text
+plugin_webhook_deliveries,duration_ms,integer,YES,null
+plugin_webhook_deliveries,error,text,YES,null
+plugin_webhook_deliveries,payload,jsonb,NO,null
+plugin_webhook_deliveries,headers,jsonb,NO,'{}'::jsonb
+plugin_webhook_deliveries,started_at,timestamp with time zone,YES,null
+plugin_webhook_deliveries,finished_at,timestamp with time zone,YES,null
+plugin_webhook_deliveries,created_at,timestamp with time zone,NO,now()
+plugins,id,uuid,NO,gen_random_uuid()
+plugins,plugin_key,text,NO,null
+plugins,package_name,text,NO,null
+plugins,package_path,text,YES,null
+plugins,version,text,NO,null
+plugins,api_version,integer,NO,1
+plugins,categories,jsonb,NO,'[]'::jsonb
+plugins,manifest_json,jsonb,NO,null
+plugins,status,text,NO,'installed'::text
+plugins,install_order,integer,YES,null
+plugins,last_error,text,YES,null
+plugins,installed_at,timestamp with time zone,NO,now()
+plugins,updated_at,timestamp with time zone,NO,now()
+principal_permission_grants,id,uuid,NO,gen_random_uuid()
+principal_permission_grants,company_id,uuid,NO,null
+principal_permission_grants,principal_type,text,NO,null
+principal_permission_grants,principal_id,text,NO,null
+principal_permission_grants,permission_key,text,NO,null
+principal_permission_grants,scope,jsonb,YES,null
+principal_permission_grants,granted_by_user_id,text,YES,null
+principal_permission_grants,created_at,timestamp with time zone,NO,now()
+principal_permission_grants,updated_at,timestamp with time zone,NO,now()
+project_goals,project_id,uuid,NO,null
+project_goals,goal_id,uuid,NO,null
+project_goals,company_id,uuid,NO,null
+project_goals,created_at,timestamp with time zone,NO,now()
+project_goals,updated_at,timestamp with time zone,NO,now()
+project_workspaces,id,uuid,NO,gen_random_uuid()
+project_workspaces,company_id,uuid,NO,null
+project_workspaces,project_id,uuid,NO,null
+project_workspaces,name,text,NO,null
+project_workspaces,cwd,text,YES,null
+project_workspaces,repo_url,text,YES,null
+project_workspaces,repo_ref,text,YES,null
+project_workspaces,metadata,jsonb,YES,null
+project_workspaces,is_primary,boolean,NO,false
+project_workspaces,created_at,timestamp with time zone,NO,now()
+project_workspaces,updated_at,timestamp with time zone,NO,now()
+project_workspaces,source_type,text,NO,'local_path'::text
+project_workspaces,default_ref,text,YES,null
+project_workspaces,visibility,text,NO,'default'::text
+project_workspaces,setup_command,text,YES,null
+project_workspaces,cleanup_command,text,YES,null
+project_workspaces,remote_provider,text,YES,null
+project_workspaces,remote_workspace_ref,text,YES,null
+project_workspaces,shared_workspace_key,text,YES,null
+projects,id,uuid,NO,gen_random_uuid()
+projects,company_id,uuid,NO,null
+projects,goal_id,uuid,YES,null
+projects,name,text,NO,null
+projects,description,text,YES,null
+projects,status,text,NO,'backlog'::text
+projects,lead_agent_id,uuid,YES,null
+projects,target_date,date,YES,null
+projects,created_at,timestamp with time zone,NO,now()
+projects,updated_at,timestamp with time zone,NO,now()
+projects,color,text,YES,null
+projects,archived_at,timestamp with time zone,YES,null
+projects,execution_workspace_policy,jsonb,YES,null
+projects,pause_reason,text,YES,null
+projects,paused_at,timestamp with time zone,YES,null
+promptforge_analytics,id,uuid,NO,uuid_generate_v4()
+promptforge_analytics,prompt_id,uuid,YES,null
+promptforge_analytics,experiment_id,uuid,YES,null
+promptforge_analytics,session_id,text,NO,null
+promptforge_analytics,user_id,uuid,YES,null
+promptforge_analytics,performance_data,jsonb,YES,"'{""success"": false, ""error_type"": null, ""retry_count"": 0, ""tokens_used"": 0, ""response_time_ms"": 0}'::jsonb"
+promptforge_analytics,user_feedback,jsonb,YES,"'{""rating"": null, ""comments"": null, ""issues_reported"": []}'::jsonb"
+promptforge_analytics,context_data,jsonb,YES,"'{""ip_address"": null, ""user_agent"": null, ""geolocation"": null, ""session_context"": {}}'::jsonb"
+promptforge_analytics,recorded_at,timestamp with time zone,YES,now()
+promptforge_audit_log,id,uuid,NO,uuid_generate_v4()
+promptforge_audit_log,user_id,uuid,YES,null
+promptforge_audit_log,action,text,NO,null
+promptforge_audit_log,resource_type,text,NO,null
+promptforge_audit_log,resource_id,uuid,NO,null
+promptforge_audit_log,old_values,jsonb,YES,null
+promptforge_audit_log,new_values,jsonb,YES,null
+promptforge_audit_log,metadata,jsonb,YES,'{}'::jsonb
+promptforge_audit_log,ip_address,inet,YES,null
+promptforge_audit_log,user_agent,text,YES,null
+promptforge_audit_log,session_id,text,YES,null
+promptforge_audit_log,created_at,timestamp with time zone,YES,now()
+promptforge_compliance_checks,id,uuid,NO,uuid_generate_v4()
+promptforge_compliance_checks,prompt_id,uuid,YES,null
+promptforge_compliance_checks,compliance_type,text,NO,null
+promptforge_compliance_checks,status,text,YES,'pending'::text
+promptforge_compliance_checks,check_results,jsonb,YES,'{}'::jsonb
+promptforge_compliance_checks,remediation_required,boolean,YES,false
+promptforge_compliance_checks,remediation_plan,text,YES,null
+promptforge_compliance_checks,reviewed_by,uuid,YES,null
+promptforge_compliance_checks,reviewed_at,timestamp with time zone,YES,null
+promptforge_compliance_checks,created_at,timestamp with time zone,YES,now()
+promptforge_compliance_checks,updated_at,timestamp with time zone,YES,now()
+promptforge_experiment_results,id,uuid,YES,null
+promptforge_experiment_results,name,text,YES,null
+promptforge_experiment_results,status,text,YES,null
+promptforge_experiment_results,prompt_name,text,YES,null
+promptforge_experiment_results,winner,text,YES,null
+promptforge_experiment_results,confidence_score,double precision,YES,null
+promptforge_experiment_results,statistically_significant,boolean,YES,null
+promptforge_experiment_results,started_at,timestamp with time zone,YES,null
+promptforge_experiment_results,completed_at,timestamp with time zone,YES,null
+promptforge_experiments,id,uuid,NO,uuid_generate_v4()
+promptforge_experiments,name,text,NO,null
+promptforge_experiments,description,text,YES,null
+promptforge_experiments,prompt_id,uuid,YES,null
+promptforge_experiments,status,text,YES,'planned'::text
+promptforge_experiments,variant_a,jsonb,NO,null
+promptforge_experiments,variant_b,jsonb,NO,null
+promptforge_experiments,test_config,jsonb,YES,"'{""metrics"": [""success_rate"", ""response_time"", ""user_satisfaction""], ""sample_size"": 100, ""confidence_level"": 0.95, ""test_duration_hours"": 24}'::jsonb"
+promptforge_experiments,results,jsonb,YES,"'{""winner"": null, ""recommendation"": ""pending"", ""confidence_score"": 0.0, ""variant_a_results"": {}, ""variant_b_results"": {}, ""statistical_significance"": false}'::jsonb"
+promptforge_experiments,created_by,uuid,YES,null
+promptforge_experiments,started_at,timestamp with time zone,YES,null
+promptforge_experiments,completed_at,timestamp with time zone,YES,null
+promptforge_experiments,created_at,timestamp with time zone,YES,now()
+promptforge_prompt_performance,id,uuid,YES,null
+promptforge_prompt_performance,name,text,YES,null
+promptforge_prompt_performance,version,text,YES,null
+promptforge_prompt_performance,status,text,YES,null
+promptforge_prompt_performance,domain,text,YES,null
+promptforge_prompt_performance,performance_metrics,jsonb,YES,null
+promptforge_prompt_performance,total_uses,bigint,YES,null
+promptforge_prompt_performance,avg_response_time,double precision,YES,null
+promptforge_prompt_performance,success_rate,double precision,YES,null
+promptforge_prompt_performance,last_used,timestamp with time zone,YES,null
+promptforge_prompt_versions,id,uuid,NO,uuid_generate_v4()
+promptforge_prompt_versions,prompt_id,uuid,NO,null
+promptforge_prompt_versions,version,text,NO,null
+promptforge_prompt_versions,content,jsonb,NO,null
+promptforge_prompt_versions,change_summary,text,YES,null
+promptforge_prompt_versions,performance_delta,jsonb,YES,null
+promptforge_prompt_versions,created_by,uuid,YES,null
+promptforge_prompt_versions,created_at,timestamp with time zone,YES,now()
+promptforge_prompts,id,uuid,NO,uuid_generate_v4()
+promptforge_prompts,name,text,NO,null
+promptforge_prompts,version,text,NO,'1.0.0'::text
+promptforge_prompts,content,jsonb,NO,null
+promptforge_prompts,metadata,jsonb,YES,"'{""tags"": [], ""author"": null, ""domain"": ""general"", ""complexity"": ""medium"", ""last_tested"": null, ""estimated_tokens"": 0}'::jsonb"
+promptforge_prompts,performance_metrics,jsonb,YES,"'{""error_rate"": 0.0, ""success_rate"": 0.0, ""avg_response_time"": 0.0, ""consistency_score"": 0.0, ""user_satisfaction"": 0.0}'::jsonb"
+promptforge_prompts,status,text,YES,'draft'::text
+promptforge_prompts,prompt_type,text,YES,'single_turn'::text
+promptforge_prompts,domain,text,YES,'general'::text
+promptforge_prompts,tags,ARRAY,YES,'{}'::text[]
+promptforge_prompts,created_by,uuid,YES,null
+promptforge_prompts,updated_by,uuid,YES,null
+promptforge_prompts,created_at,timestamp with time zone,YES,now()
+promptforge_prompts,updated_at,timestamp with time zone,YES,now()
+promptforge_prompts,deleted_at,timestamp with time zone,YES,null
+promptforge_research,id,uuid,NO,uuid_generate_v4()
+promptforge_research,title,text,NO,null
+promptforge_research,description,text,YES,null
+promptforge_research,research_type,text,NO,null
+promptforge_research,methodology,jsonb,YES,null
+promptforge_research,findings,jsonb,YES,null
+promptforge_research,conclusions,text,YES,null
+promptforge_research,status,text,YES,'proposed'::text
+promptforge_research,implemented_in_prompts,ARRAY,YES,'{}'::uuid[]
+promptforge_research,researchers,ARRAY,YES,'{}'::uuid[]
+promptforge_research,related_prompts,ARRAY,YES,'{}'::uuid[]
+promptforge_research,created_by,uuid,YES,null
+promptforge_research,created_at,timestamp with time zone,YES,now()
+promptforge_research,updated_at,timestamp with time zone,YES,now()
+promptforge_templates,id,uuid,NO,uuid_generate_v4()
+promptforge_templates,name,text,NO,null
+promptforge_templates,description,text,YES,null
+promptforge_templates,category,text,NO,null
+promptforge_templates,domain,text,YES,'general'::text
+promptforge_templates,template_content,jsonb,NO,null
+promptforge_templates,variables,jsonb,YES,'{}'::jsonb
+promptforge_templates,examples,jsonb,YES,'[]'::jsonb
+promptforge_templates,usage_count,integer,YES,0
+promptforge_templates,last_used,timestamp with time zone,YES,null
+promptforge_templates,tags,ARRAY,YES,'{}'::text[]
+promptforge_templates,is_public,boolean,YES,false
+promptforge_templates,created_by,uuid,YES,null
+promptforge_templates,created_at,timestamp with time zone,YES,now()
+promptforge_templates,updated_at,timestamp with time zone,YES,now()
+promptforge_validation_results,id,uuid,NO,uuid_generate_v4()
+promptforge_validation_results,prompt_id,uuid,YES,null
+promptforge_validation_results,rule_id,uuid,YES,null
+promptforge_validation_results,passed,boolean,NO,null
+promptforge_validation_results,severity,text,NO,null
+promptforge_validation_results,message,text,YES,null
+promptforge_validation_results,details,jsonb,YES,'{}'::jsonb
+promptforge_validation_results,suggestions,jsonb,YES,'[]'::jsonb
+promptforge_validation_results,validated_at,timestamp with time zone,YES,now()
+promptforge_validation_results,validated_by,uuid,YES,null
+promptforge_validation_rules,id,uuid,NO,uuid_generate_v4()
+promptforge_validation_rules,name,text,NO,null
+promptforge_validation_rules,description,text,YES,null
+promptforge_validation_rules,rule_type,text,NO,null
+promptforge_validation_rules,domain,text,YES,'general'::text
+promptforge_validation_rules,rule_definition,jsonb,NO,null
+promptforge_validation_rules,severity,text,YES,'medium'::text
+promptforge_validation_rules,active,boolean,YES,true
+promptforge_validation_rules,created_by,uuid,YES,null
+promptforge_validation_rules,created_at,timestamp with time zone,YES,now()
+promptforge_validation_rules,updated_at,timestamp with time zone,YES,now()
+promptforge_workflow_executions,id,uuid,NO,uuid_generate_v4()
+promptforge_workflow_executions,workflow_id,uuid,NO,null
+promptforge_workflow_executions,execution_id,text,NO,null
+promptforge_workflow_executions,status,text,YES,'pending'::text
+promptforge_workflow_executions,input_data,jsonb,YES,'{}'::jsonb
+promptforge_workflow_executions,output_data,jsonb,YES,'{}'::jsonb
+promptforge_workflow_executions,execution_log,jsonb,YES,'[]'::jsonb
+promptforge_workflow_executions,started_at,timestamp with time zone,YES,null
+promptforge_workflow_executions,completed_at,timestamp with time zone,YES,null
+promptforge_workflow_executions,duration_ms,integer,YES,null
+promptforge_workflow_executions,error_message,text,YES,null
+promptforge_workflow_executions,error_details,jsonb,YES,null
+promptforge_workflow_executions,created_at,timestamp with time zone,YES,now()
+promptforge_workflows,id,uuid,NO,uuid_generate_v4()
+promptforge_workflows,name,text,NO,null
+promptforge_workflows,description,text,YES,null
+promptforge_workflows,workflow_type,text,YES,'linear'::text
+promptforge_workflows,definition,jsonb,NO,null
+promptforge_workflows,agents_involved,ARRAY,YES,'{}'::text[]
+promptforge_workflows,prompts_used,ARRAY,YES,'{}'::uuid[]
+promptforge_workflows,status,text,YES,'draft'::text
+promptforge_workflows,version,text,YES,'1.0.0'::text
+promptforge_workflows,performance_metrics,jsonb,YES,'{}'::jsonb
+promptforge_workflows,created_by,uuid,YES,null
+promptforge_workflows,updated_by,uuid,YES,null
+promptforge_workflows,created_at,timestamp with time zone,YES,now()
+promptforge_workflows,updated_at,timestamp with time zone,YES,now()
+routine_runs,id,uuid,NO,gen_random_uuid()
+routine_runs,company_id,uuid,NO,null
+routine_runs,routine_id,uuid,NO,null
+routine_runs,trigger_id,uuid,YES,null
+routine_runs,source,text,NO,null
+routine_runs,status,text,NO,'received'::text
+routine_runs,triggered_at,timestamp with time zone,NO,now()
+routine_runs,idempotency_key,text,YES,null
+routine_runs,trigger_payload,jsonb,YES,null
+routine_runs,linked_issue_id,uuid,YES,null
+routine_runs,coalesced_into_run_id,uuid,YES,null
+routine_runs,failure_reason,text,YES,null
+routine_runs,completed_at,timestamp with time zone,YES,null
+routine_runs,created_at,timestamp with time zone,NO,now()
+routine_runs,updated_at,timestamp with time zone,NO,now()
+routine_triggers,id,uuid,NO,gen_random_uuid()
+routine_triggers,company_id,uuid,NO,null
+routine_triggers,routine_id,uuid,NO,null
+routine_triggers,kind,text,NO,null
+routine_triggers,label,text,YES,null
+routine_triggers,enabled,boolean,NO,true
+routine_triggers,cron_expression,text,YES,null
+routine_triggers,timezone,text,YES,null
+routine_triggers,next_run_at,timestamp with time zone,YES,null
+routine_triggers,last_fired_at,timestamp with time zone,YES,null
+routine_triggers,public_id,text,YES,null
+routine_triggers,secret_id,uuid,YES,null
+routine_triggers,signing_mode,text,YES,null
+routine_triggers,replay_window_sec,integer,YES,null
+routine_triggers,last_rotated_at,timestamp with time zone,YES,null
+routine_triggers,last_result,text,YES,null
+routine_triggers,created_by_agent_id,uuid,YES,null
+routine_triggers,created_by_user_id,text,YES,null
+routine_triggers,updated_by_agent_id,uuid,YES,null
+routine_triggers,updated_by_user_id,text,YES,null
+routine_triggers,created_at,timestamp with time zone,NO,now()
+routine_triggers,updated_at,timestamp with time zone,NO,now()
+routines,id,uuid,NO,gen_random_uuid()
+routines,company_id,uuid,NO,null
+routines,project_id,uuid,NO,null
+routines,goal_id,uuid,YES,null
+routines,parent_issue_id,uuid,YES,null
+routines,title,text,NO,null
+routines,description,text,YES,null
+routines,assignee_agent_id,uuid,NO,null
+routines,priority,text,NO,'medium'::text
+routines,status,text,NO,'active'::text
+routines,concurrency_policy,text,NO,'coalesce_if_active'::text
+routines,catch_up_policy,text,NO,'skip_missed'::text
+routines,created_by_agent_id,uuid,YES,null
+routines,created_by_user_id,text,YES,null
+routines,updated_by_agent_id,uuid,YES,null
+routines,updated_by_user_id,text,YES,null
+routines,last_triggered_at,timestamp with time zone,YES,null
+routines,last_enqueued_at,timestamp with time zone,YES,null
+routines,created_at,timestamp with time zone,NO,now()
+routines,updated_at,timestamp with time zone,NO,now()
+session,id,text,NO,null
+session,expires_at,timestamp with time zone,NO,null
+session,token,text,NO,null
+session,created_at,timestamp with time zone,NO,null
+session,updated_at,timestamp with time zone,NO,null
+session,ip_address,text,YES,null
+session,user_agent,text,YES,null
+session,user_id,text,NO,null
+skill_usage_logs,id,uuid,NO,uuid_generate_v4()
+skill_usage_logs,skill_id,uuid,YES,null
+skill_usage_logs,agent_id,character varying,NO,null
+skill_usage_logs,issue_id,uuid,YES,null
+skill_usage_logs,execution_time,interval,YES,null
+skill_usage_logs,success,boolean,NO,null
+skill_usage_logs,error_message,text,YES,null
+skill_usage_logs,input_data,jsonb,YES,null
+skill_usage_logs,output_data,jsonb,YES,null
+skill_usage_logs,metadata,jsonb,YES,'{}'::jsonb
+skill_usage_logs,created_at,timestamp with time zone,YES,now()
+superpowers_skills,id,uuid,NO,uuid_generate_v4()
+superpowers_skills,skill_name,character varying,NO,null
+superpowers_skills,description,text,YES,null
+superpowers_skills,category,character varying,NO,null
+superpowers_skills,input_schema,jsonb,NO,'{}'::jsonb
+superpowers_skills,output_schema,jsonb,NO,'{}'::jsonb
+superpowers_skills,version,character varying,YES,'1.0.0'::character varying
+superpowers_skills,is_active,boolean,YES,true
+superpowers_skills,dependencies,jsonb,YES,'[]'::jsonb
+superpowers_skills,created_by_agent,character varying,YES,null
+superpowers_skills,created_at,timestamp with time zone,YES,now()
+superpowers_skills,updated_at,timestamp with time zone,YES,now()
+user,id,text,NO,null
+user,name,text,NO,null
+user,email,text,NO,null
+user,email_verified,boolean,NO,false
+user,image,text,YES,null
+user,created_at,timestamp with time zone,NO,null
+user,updated_at,timestamp with time zone,NO,null
+verification,id,text,NO,null
+verification,identifier,text,NO,null
+verification,value,text,NO,null
+verification,expires_at,timestamp with time zone,NO,null
+verification,created_at,timestamp with time zone,YES,null
+verification,updated_at,timestamp with time zone,YES,null
+workspace_operations,id,uuid,NO,gen_random_uuid()
+workspace_operations,company_id,uuid,NO,null
+workspace_operations,execution_workspace_id,uuid,YES,null
+workspace_operations,heartbeat_run_id,uuid,YES,null
+workspace_operations,phase,text,NO,null
+workspace_operations,command,text,YES,null
+workspace_operations,cwd,text,YES,null
+workspace_operations,status,text,NO,'running'::text
+workspace_operations,exit_code,integer,YES,null
+workspace_operations,log_store,text,YES,null
+workspace_operations,log_ref,text,YES,null
+workspace_operations,log_bytes,bigint,YES,null
+workspace_operations,log_sha256,text,YES,null
+workspace_operations,log_compressed,boolean,NO,false
+workspace_operations,stdout_excerpt,text,YES,null
+workspace_operations,stderr_excerpt,text,YES,null
+workspace_operations,metadata,jsonb,YES,null
+workspace_operations,started_at,timestamp with time zone,NO,now()
+workspace_operations,finished_at,timestamp with time zone,YES,null
+workspace_operations,created_at,timestamp with time zone,NO,now()
+workspace_operations,updated_at,timestamp with time zone,NO,now()
+workspace_runtime_services,id,uuid,NO,null
+workspace_runtime_services,company_id,uuid,NO,null
+workspace_runtime_services,project_id,uuid,YES,null
+workspace_runtime_services,project_workspace_id,uuid,YES,null
+workspace_runtime_services,issue_id,uuid,YES,null
+workspace_runtime_services,scope_type,text,NO,null
+workspace_runtime_services,scope_id,text,YES,null
+workspace_runtime_services,service_name,text,NO,null
+workspace_runtime_services,status,text,NO,null
+workspace_runtime_services,lifecycle,text,NO,null
+workspace_runtime_services,reuse_key,text,YES,null
+workspace_runtime_services,command,text,YES,null
+workspace_runtime_services,cwd,text,YES,null
+workspace_runtime_services,port,integer,YES,null
+workspace_runtime_services,url,text,YES,null
+workspace_runtime_services,provider,text,NO,null
+workspace_runtime_services,provider_ref,text,YES,null
+workspace_runtime_services,owner_agent_id,uuid,YES,null
+workspace_runtime_services,started_by_run_id,uuid,YES,null
+workspace_runtime_services,last_used_at,timestamp with time zone,NO,now()
+workspace_runtime_services,started_at,timestamp with time zone,NO,now()
+workspace_runtime_services,stopped_at,timestamp with time zone,YES,null
+workspace_runtime_services,stop_policy,jsonb,YES,null
+workspace_runtime_services,health_status,text,NO,'unknown'::text
+workspace_runtime_services,created_at,timestamp with time zone,NO,now()
+workspace_runtime_services,updated_at,timestamp with time zone,NO,now()
+workspace_runtime_services,execution_workspace_id,uuid,YES,null

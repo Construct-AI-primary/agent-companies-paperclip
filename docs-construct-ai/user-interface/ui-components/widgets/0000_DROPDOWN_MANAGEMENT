@@ -1,0 +1,163 @@
+---
+memory_layer: durable_knowledge
+para_section: pages/user-interface
+gigabrain_tags: user-interface, documentation, dropdown, ui-components
+openstinger_context: user-interface-practices, dropdown-management
+last_updated: 2026-03-28
+related_docs:
+  - docs/user-interface/
+---
+
+# Dropdown Management (0910)
+
+## Overview
+This document outlines the role-based dropdown management system for Discipline and Template Type selectors in the Construct AI platform.
+
+## **CRITICAL: Discipline Dropdown Access Control Rules** 🔐
+
+### **🚨 IMPORTANT PERMISSION SEPARATION**
+
+This document outlines **modal dropdown permissions** - the disciplines users can select when creating/editing templates in modals. **These are SEPARATE from accordion navigation permissions**, which control where users can go in the application.
+
+#### **What This Document Controls (Modal Dropdowns):**
+- ✅ What disciplines appear in modal discipline dropdowns
+- ✅ What template types users can create in modals
+- ✅ What disciplines users can assign to templates/forms during creation
+
+#### **What This Document DOES NOT Control (Accordion Navigation):**
+- ❌ Which accordion sections users can click/navigate to
+- ❌ Which pages users can access through the sidebar
+- ❌ Which application areas users can enter directly
+
+**See the main application architecture documentation for accordion navigation permissions.**
+
+### **CORE ACCESS PRINCIPLES** (Required in All Documentation)
+
+#### **Governance Team Users (Full Access)**
+- **✅ Can access ALL disciplines** via dropdowns: Civil Engineering, Procurement, HSSE Safety, Governance
+- **✅ Full template creation rights** across all discipline types
+- **✅ Administrative permissions** for managing document types across organizations
+- **Scope**: See all disciplines regardless of navigation path or accordion section
+
+#### **Discipline-Specific Users (Limited Access)**
+- **❌ Limited to their assigned discipline only** (e.g., Procurement users see only Procurement)
+- **❌ Cannot create templates** for other disciplines
+- **❌ Read-only access** to published templates from other disciplines
+- **Scope**: See only their discipline templates regardless of navigation path
+
+### **CRITICAL IMPLEMENTATION RULE** ⚠️
+**All modals **MUST** respect these access rules:**
+- Governance users: `ALL_DISCIPLINES_AVAILABLE`
+- Non-governance users: `ONLY_ASSIGNED_DISCIPLINE_VISIBLE`
+- **Violation breaks system security and tenant isolation**
+
+### **🎯 Modal-Specific Permission Examples**
+
+#### **CreateNewTemplateModal** (Recently Enhanced)
+- **Governance Users**: Can select any discipline (Civil Engineering, Procurement, HSSE Safety, Electrical, etc.)
+- **Discipline Users**: Can only select their assigned discipline (e.g., Procurement users see only "Procurement")
+- **Purpose**: Template creation with role-appropriate discipline selection
+
+#### **AITemplateModal** (Already Correctly Implemented)
+- **Governance Users**: Can select any discipline for AI template generation
+- **Discipline Users**: Can only select their assigned discipline
+- **Purpose**: AI-powered template creation with proper access controls
+
+#### **Template Management Mode**: List View
+- **Governance Users**: See templates from ALL disciplines they can access
+- **Discipline Users**: See only templates from their assigned discipline
+- **Purpose**: Discipline-appropriate template management
+
+### Role-Based Access Control
+
+### User Roles and Permissions
+
+#### Governance Team Users
+- **Can access all disciplines:** Civil Engineering, Procurement, HSSE Safety, Governance
+- **Full template creation rights** across all discipline types
+- **Administrative permissions** for managing document types
+
+#### Discipline-Specific Users
+- **Limited to assigned discipline only** (typically Governance/01300)
+- **Cannot create templates** for other disciplines
+- **Read-only access** to published templates from other disciplines
+
+### Dropdown Behaviors
+
+#### Discipline Dropdown
+- **For Governance Users:** Shows all available disciplines
+- **For Other Users:** Shows only their assigned discipline (Governance/01300)
+- **Dynamic filtering:** Updates available template types based on selected discipline
+
+#### Template Type Dropdown
+- **Dependent on discipline selection**
+- **Dynamically loaded** from `document_types_by_discipline` table
+- **Filtered by user role** through `getTemplateTypeOptions()` function
+- **Disabled state** when no discipline is selected
+
+### Implementation Details
+
+#### Key Functions
+```javascript
+// Returns disciplines available to the current user
+getUserAssignableDisciplines()
+
+// Returns template types for a specific discipline
+getTemplateTypeOptions(selectedDiscipline)
+```
+
+#### Modal Implementations (All 6 Modals)
+- **CreateNewTemplateModal** (`modals/CreateNewTemplateModal.js`): Role-based discipline and template type filtering - Governance users see all disciplines, others see limited disciplines
+- **AITemplateModal** (`components/modals/AITemplateModal.jsx`): AI-powered template generation with restricted discipline selection based on user role
+- **BuildTemplateModal** (`modals/BuildTemplateModal.js`): Template building interface hardcoded to Governance discipline (01300)
+- **ManageDocumentTypesModal** (`modals/ManageDocumentTypesModal.js`): Administrative interface for managing document types across disciplines
+- **TemplateModal** (`components/modals/TemplateModal.jsx`): Generic template management interface with discipline-aware filtering
+- **BulkTemplateCopyModal** (`components/modals/BulkTemplateCopyModal.jsx`): Bulk template operations with discipline-appropriate copying permissions
+
+### Security Considerations
+
+#### Data Filtering
+- All dropdown data is filtered server-side through API queries
+- Client-side filtering provides UI responsiveness only
+- Database-level RLS (Row Level Security) policies enforce data access
+
+#### User Context Validation
+- User role is determined on page load and cached
+- Development bypass available for testing purposes
+- Authentication tokens validated on each API call
+
+### Testing and Validation
+
+#### Test Cases
+1. **Governance User:** Can see all disciplines and template types
+2. **Discipline User:** Limited to assigned discipline only
+3. **Discipline Selection:** Template types update when discipline changes
+4. **Template Creation:** Only allowed disciplines appear in dropdowns
+
+#### Error Handling
+- Graceful fallback to basic options when API unavailable
+- Clear error messages for permission denied scenarios
+- Loading states during data fetching
+
+### Future Enhancements
+
+#### Planned Improvements
+- Expandable user roles with granular permissions
+- Cross-discipline collaboration features
+- Multi-discipline assignment capabilities
+- Dynamic role management system
+
+#### Technical Debt
+- someModalsStillUseHardcodedValues - placeholder for future refactoring
+- DependencyOptimizationNeeded - refactor shared components
+
+---
+
+## Related Documents
+- [1300 TEMPLATE_MANAGEMENT_SCALABILITY_GUIDE.md](../1300_TEMPLATE_MANAGEMENT_SCALABILITY_GUIDE.md)
+- [0000_DOCUMENTATION_GUIDE.md](../../0000_DOCUMENTATION_GUIDE.md)
+- [1300_UNIFIED_TEMPLATES_IMPLEMENTATION_PLAN.md](../1300_UNIFIED_TEMPLATES_IMPLEMENTATION_PLAN.md)
+
+## Change History
+- **2025-11-24:** Initial implementation of role-based dropdown filtering
+- **2025-11-24:** Added comprehensive documentation for dropdown management system

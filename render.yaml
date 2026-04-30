@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: paperclip
+    runtime: node
+    repo: https://github.com/Construct-AI-primary/paperclip-render.git
+    branch: master
+    preDeployCommand: "mkdir -p /paperclip/instances/default && cp render-config.json /paperclip/instances/default/config.json"
+    buildCommand: "bash scripts/render-build.sh"
+    startCommand: "NODE_OPTIONS=--dns-result-order=ipv4first node server/dist/index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: SERVE_UI
+        value: true
+      - key: PAPERCLIP_HOME
+        value: /paperclip
+      - key: PAPERCLIP_INSTANCE_ID
+        value: default
+      - key: PAPERCLIP_CONFIG
+        value: /paperclip/instances/default/config.json
+      - key: PAPERCLIP_DEPLOYMENT_MODE
+        value: authenticated
+      - key: PAPERCLIP_DEPLOYMENT_EXPOSURE
+        value: public
+      - key: PAPERCLIP_ALLOWED_HOSTNAMES
+        value: paperclip-render-1.onrender.com,paperclip-render.onrender.com
+      - key: DATABASE_URL
+        sync: false
+      - key: PAPERCLIP_AGENT_JWT_SECRET
+        sync: false
+      - key: BETTER_AUTH_SECRET
+        sync: false
+      - key: BETTER_AUTH_BASE_URL
+        value: https://paperclip-render.onrender.com
+      - key: PAPERCLIP_MIGRATION_AUTO_APPLY
+        value: "true"
+      - key: PAPERCLIP_DB_BACKUP_ENABLED
+        value: "true"
+      - key: OPENROUTER_API_KEY
+        sync: false
+     disk:
+       name: paperclip-data
+       mountPath: /paperclip
+       sizeGB: 10

@@ -1,0 +1,56 @@
+Letter 2: Engineer to Contractor
+
+Reference: UIC/DHBEP/E001
+Date: November 2, 2023
+
+To:
+Project Manager
+BridgeBuilders Inc.
+[Contractor's Address]
+Durban
+
+From:
+The Engineer
+Urban Infrastructure Consultants
+[Engineer's Address]
+Durban
+
+Subject: RE: Durban Highway Bridge Repair & Associated Works – Claim for Under-Measurement of
+Concrete Works (IPC No. 5) - Your Ref: BB/DHBEP/C001
+
+Dear Sir/Madam,
+
+We acknowledge receipt of your letter Ref: BB/DHBEP/C001 dated October 26, 2023, concerning
+alleged under-measurement of concrete works in Interim Payment Certificate No. 5.
+
+We have reviewed your submitted Appendix A. However, payments are made based on quantities
+derived from the approved Bill of Quantities (BoQ) and measured in accordance with the
+contractually agreed method of measurement, cross-referenced with the latest approved
+"Detailed design drawings and calculations" (SoW Clause 5).
+
+While we note your reference to drawing revisions DWG-STR-BD-105 Rev C & DWG-STR-FD-012
+Rev B, the quantities certified in IPC No. 5 reflect the net in-situ concrete as per these drawings.
+The Scope of Work Clause 2.1.2 "Design and Engineering" places responsibility on the contractor
+to develop detailed designs, and Clause 2.2.4 "Bridge Widening" requires installation as per
+design.
+
+To further investigate your claim of an additional 185 m³:
+
+1.Please provide detailed calculations demonstrating how this additional volume arises from
+the approved drawings, specifically highlighting any sections you believe were omitted or
+incorrectly calculated by our quantity surveyor.
+
+2.Clarify if any portion of this claimed volume relates to over-pour, formwork deflection, or
+wastage, which are generally not considered for payment under the contract.
+
+3.Provide evidence that any variations leading to increased concrete volumes beyond the
+tendered BoQ, if not already covered by approved drawing revisions impacting net
+quantities, were instructed as a formal variation under SoW Clause 6.3 "Variations and
+Changes."
+
+Upon receipt and review of this detailed information, we can then consider the necessity for a
+joint re-measurement, focusing on specific disputed elements.
+
+Yours faithfully,[Engineer's Representative Name]
+The Engineer
+Urban Infrastructure Consultants

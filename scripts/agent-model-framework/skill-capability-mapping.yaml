@@ -1,0 +1,182 @@
+# Skill-to-Capability Mapping Framework
+# Maps agent skills to required AI capabilities for intelligent model selection
+
+# Task Complexity Levels
+task_complexity_levels:
+  simple:
+    description: "Basic queries, simple automation, straightforward tasks"
+    temperature_range: "0.7-1.0"
+    examples: ["Basic information lookup", "Simple formatting", "Routine data entry"]
+
+  standard:
+    description: "Most coding, content creation, analysis tasks"
+    temperature_range: "0.3-0.7"
+    examples: ["API development", "Content writing", "Data analysis", "Code review"]
+
+  complex:
+    description: "Strategic planning, system design, advanced reasoning"
+    temperature_range: "0.1-0.5"
+    examples: ["System architecture", "Strategic planning", "Complex problem solving"]
+
+  expert:
+    description: "Cutting-edge research, novel solutions, maximum reasoning"
+    temperature_range: "0.1-0.3"
+    examples: ["Research innovation", "Novel algorithm design", "Advanced AI tasks"]
+
+# Capability Categories
+capability_categories:
+
+  # Code Generation & Technical Skills
+   code_generation:
+     complexity: standard
+     description: "Writing, debugging, and modifying code"
+     key_models: ["qwen/qwen-2.5-72b-instruct", "qwen/qwen-3.6-72b-instruct", "anthropic/claude-3.5-sonnet"]
+     temperature_preference: "0.3-0.5"
+     chinese_equivalent: "GLM-3-Turbo"
+
+  code_architecture:
+    complexity: complex
+    description: "System design, architecture planning, technical leadership"
+    key_models: ["GLM-5.1", "anthropic/claude-3.5-sonnet", "qwen/qwen-3.6-72b-instruct"]
+    temperature_preference: "0.1-0.3"
+
+  debugging_testing:
+    complexity: standard
+    description: "Finding and fixing bugs, writing tests, quality assurance"
+    key_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3-haiku", "deepseek/deepseek-chat"]
+    temperature_preference: "0.1-0.3"
+
+  # Content & Creative Skills
+  content_writing:
+    complexity: standard
+    description: "Writing articles, documentation, marketing content"
+    key_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3.5-sonnet", "qwen/qwen-3.6-72b-instruct"]
+    temperature_preference: "0.5-0.8"
+
+  technical_writing:
+    complexity: standard
+    description: "API docs, technical specifications, code documentation"
+    key_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3-haiku", "deepseek/deepseek-chat"]
+    temperature_preference: "0.3-0.5"
+
+  creative_design:
+    complexity: complex
+    description: "UI/UX design, creative problem solving, innovation"
+    key_models: ["GLM-5.1", "anthropic/claude-3.5-sonnet", "moonshotai/kimi-k2.5"]
+    temperature_preference: "0.5-0.8"
+
+  # Analysis & Research Skills
+  data_analysis:
+    complexity: standard
+    description: "Data processing, statistical analysis, insights generation"
+    key_models: ["GLM-5.1", "deepseek/deepseek-r1", "qwen/qwen-3.6-72b-instruct"]
+    temperature_preference: "0.1-0.3"
+
+  research_investigation:
+    complexity: expert
+    description: "Deep research, literature review, hypothesis testing"
+    key_models: ["GLM-5.1", "deepseek/deepseek-r1", "qwen/qwen-3.6-72b-instruct"]
+    temperature_preference: "0.1-0.3"
+
+  strategic_planning:
+    complexity: complex
+    description: "Business strategy, roadmap planning, organizational design"
+    key_models: ["GLM-5.1", "anthropic/claude-3.5-sonnet", "qwen/qwen-3.6-72b-instruct"]
+    temperature_preference: "0.1-0.5"
+
+  # Management & Coordination Skills
+  project_management:
+    complexity: complex
+    description: "Project planning, resource allocation, timeline management"
+    key_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3-haiku", "deepseek/deepseek-chat"]
+    temperature_preference: "0.3-0.7"
+
+  team_coordination:
+    complexity: standard
+    description: "Team communication, collaboration, workflow orchestration"
+    key_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3-haiku", "deepseek/deepseek-chat"]
+    temperature_preference: "0.5-0.7"
+
+  # Specialized Technical Skills
+  infrastructure_operations:
+    complexity: standard
+    description: "System administration, DevOps, infrastructure management"
+    key_models: ["z-ai/glm-4.7-flash", "qwen/qwen-3.6-72b-instruct", "deepseek/deepseek-chat"]
+    temperature_preference: "0.1-0.3"
+
+  security_compliance:
+    complexity: complex
+    description: "Security analysis, compliance checking, risk assessment"
+    key_models: ["GLM-5.1", "anthropic/claude-3.5-sonnet", "deepseek/deepseek-r1"]
+    temperature_preference: "0.1-0.3"
+
+  quality_assurance:
+    complexity: standard
+    description: "Testing methodologies, quality standards, validation"
+    key_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3-haiku", "deepseek/deepseek-chat"]
+    temperature_preference: "0.1-0.3"
+
+# Skill Pattern Matching
+# Maps skill keywords to capabilities
+skill_patterns:
+  # Code-related skills
+  - pattern: "(?i)(code|program|develop|engineer|software|backend|frontend|full.?stack)"
+    capabilities: ["code_generation", "code_architecture"]
+    complexity_boost: 1  # Increases complexity level by 1
+
+  # Architecture & Design
+  - pattern: "(?i)(architect|design|system|infrastructure|platform)"
+    capabilities: ["code_architecture", "strategic_planning"]
+    complexity_boost: 1
+
+  # Testing & QA
+  - pattern: "(?i)(test|qa|quality|debug|validation|verification)"
+    capabilities: ["debugging_testing", "quality_assurance"]
+    complexity_boost: 0
+
+  # Content & Writing
+  - pattern: "(?i)(write|content|document|author|blog|article)"
+    capabilities: ["content_writing", "technical_writing"]
+    complexity_boost: 0
+
+  # Research & Analysis
+  - pattern: "(?i)(research|analyze|data|science|investigate|study)"
+    capabilities: ["data_analysis", "research_investigation"]
+    complexity_boost: 1
+
+  # Management & Leadership
+  - pattern: "(?i)(manage|lead|ceo|director|coordinator|orchestrat)"
+    capabilities: ["strategic_planning", "team_coordination", "project_management"]
+    complexity_boost: 1
+
+  # Security & Compliance
+  - pattern: "(?i)(security|compliance|audit|risk|protect)"
+    capabilities: ["security_compliance"]
+    complexity_boost: 1
+
+  # Infrastructure & DevOps
+  - pattern: "(?i)(infra|devops|deploy|cloud|server|database)"
+    capabilities: ["infrastructure_operations"]
+    complexity_boost: 0
+
+# Company-Specific Overrides
+company_overrides:
+  # DevForge AI - Technical focus
+  devforge-ai:
+    complexity_boost: 1  # Generally more complex technical tasks
+    preferred_models: ["GLM-5.1", "qwen/qwen-3.6-72b-instruct", "anthropic/claude-3.5-sonnet"]
+
+  # QualityForge AI - Precision focus
+  qualityforge-ai:
+    temperature_reduction: 0.2  # Lower temperature for precision work
+    preferred_models: ["z-ai/glm-4.7-flash", "anthropic/claude-3-haiku"]
+
+  # Loopy AI - Creative focus
+  loopy-ai:
+    temperature_increase: 0.2  # Higher temperature for creativity
+    preferred_models: ["GLM-5.1", "moonshotai/kimi-k2.5", "anthropic/claude-3.5-sonnet"]
+
+  # DomainForge AI - Specialized domain knowledge
+  domainforge-ai:
+    complexity_boost: 1
+    preferred_models: ["GLM-5.1", "deepseek/deepseek-r1", "qwen/qwen-3.6-72b-instruct"]

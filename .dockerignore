@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.git/
+.github/
+.paperclip/
+.pnpm-store/
+coverage/
+data/
+tmp/
+*.log
+.hermes/

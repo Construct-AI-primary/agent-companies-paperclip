@@ -1,0 +1,114 @@
+{
+  "analysis_summary": {
+    "total_tables_analyzed": 12,
+    "successful_analyses": 0,
+    "failed_analyses": 12,
+    "success_rate": 0.0,
+    "total_analysis_time_seconds": 0.011453,
+    "average_analysis_time_seconds": 0
+  },
+  "risk_assessment": {
+    "risk_distribution": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "none": 0
+    },
+    "high_risk_tables": [],
+    "unsecured_tables": [],
+    "extreme_risk_tables": []
+  },
+  "data_sensitivity": {
+    "classification_summary": {
+      "extreme": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "highly_sensitive_tables": []
+  },
+  "security_gaps": [],
+  "recommendations": [
+    "\ud83d\udcca Implement automated security monitoring and alerting",
+    "\ud83d\udd04 Schedule regular security audits and policy reviews",
+    "\ud83d\udcda Provide security training for development teams",
+    "\ud83d\udee1\ufe0f Establish incident response procedures for security breaches"
+  ],
+  "performance_metrics": {
+    "agent_performance": {
+      "tables_analyzed": 0,
+      "average_analysis_time": 0,
+      "success_rate": 1.0
+    },
+    "analysis_performance": {
+      "fastest_analysis_seconds": 0,
+      "slowest_analysis_seconds": 0,
+      "total_analysis_time_seconds": 0
+    }
+  },
+  "failed_analyses": [
+    {
+      "table_name": "user_management",
+      "error_message": "Analysis failed for user_management: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.00404
+    },
+    {
+      "table_name": "financial_reports",
+      "error_message": "Analysis failed for financial_reports: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000532
+    },
+    {
+      "table_name": "contractor_vetting",
+      "error_message": "Analysis failed for contractor_vetting: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000574
+    },
+    {
+      "table_name": "procurement_orders",
+      "error_message": "Analysis failed for procurement_orders: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000527
+    },
+    {
+      "table_name": "safety_incidents",
+      "error_message": "Analysis failed for safety_incidents: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000522
+    },
+    {
+      "table_name": "tasks",
+      "error_message": "Analysis failed for tasks: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.00056
+    },
+    {
+      "table_name": "emails",
+      "error_message": "Analysis failed for emails: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000533
+    },
+    {
+      "table_name": "document_embeddings",
+      "error_message": "Analysis failed for document_embeddings: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000523
+    },
+    {
+      "table_name": "chat_sessions",
+      "error_message": "Analysis failed for chat_sessions: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.00053
+    },
+    {
+      "table_name": "organizations",
+      "error_message": "Analysis failed for organizations: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000559
+    },
+    {
+      "table_name": "projects",
+      "error_message": "Analysis failed for projects: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000522
+    },
+    {
+      "table_name": "templates",
+      "error_message": "Analysis failed for templates: SecurityAssessment.__init__() got an unexpected keyword argument 'analyzed_at'",
+      "analysis_time_seconds": 0.000517
+    }
+  ],
+  "generated_at": "2026-01-13T06:15:36.276592",
+  "generated_by": "security_analyzer_test"
+}

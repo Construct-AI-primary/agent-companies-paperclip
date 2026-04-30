@@ -1,0 +1,11 @@
+# Shared Business Logic
+
+This directory contains shared business logic components for PROC-ANALYTICS.
+
+## Contents
+
+Placeholder for shared business logic:
+- KPI calculation functions
+- Trend analysis algorithms
+- Forecasting models
+- Benchmark comparison logic
