@@ -14,11 +14,11 @@ This document defines the **batched-by-phase** execution plan for testing all di
 
 ## Test Projects
 
-| Project | Discipline | Issues | Phases | Discord Server |
-|---------|-----------|--------|--------|----------------|
-| **PROCURE-TEST** | 01900 — Procurement | 15 issues (001–015) | 5 phases | `PROCURE-TEST` |
-| **PROD-TEST** | Cross-discipline | 14 issues (001–014 + HITL) | 4 tiers | `ALL-DISCIPLINES` |
-| **MOBILE-TEST** | Mobile | 6 issues (001–006) | 1 phase | `ALL-DISCIPLINES` |
+| Project | Discipline | Issues | Phases | Platform | Discord Server |
+|---------|-----------|--------|--------|----------|----------------|
+| **PROCURE-TEST** | 01900 — Procurement | 15 issues (001–015) | 5 phases | Desktop | `PROCURE-TEST` |
+| **PROD-TEST** | Cross-discipline | 14 issues (001–014 + HITL) | 4 tiers | Desktop | `ALL-DISCIPLINES` |
+| **MOBILE-TEST** | Mobile | 6 issues (001–006) | 1 phase | Mobile | `ALL-DISCIPLINES` |
 
 ## Complete Discipline Page Inventory (120 pages)
 
@@ -169,10 +169,14 @@ The construct_ai app has **120 pages** registered in Supabase. They are grouped 
 ```
 Batch 1 ── Foundation + Database ── PROCURE-001/002, PROD-001/002/003/004
 Batch 2 ── UI + State + Workspace ── PROCURE-003/004/005, PROD-005/006/007/008/009/010
-Batch 3 ── Chatbot + Workflow ── PROCURE-006/007/008, PROD-011/012, MOBILE-001/002/003
-Batch 4 ── Domain Logic ── PROCURE-009/010/011, PROD-013, MOBILE-004/005/006
+Batch 3 ── Chatbot + Workflow ── PROCURE-006/007/008, PROD-011/012
+Batch 3.5 ── Mobile Platform ── MOBILE-001/002/003/004/005/006
+Batch 4 ── Domain Logic ── PROCURE-009/010/011, PROD-013
 Batch 5 ── Compliance + Signoff ── PROCURE-012/013/013a/014
 Batch 6 ── Regression + HITL ── PROCURE-015, PROD-014/HITL
+```
+Batch 3.5 ── Mobile Platform ── runs in parallel with Batches 4–6
+```
 ```
 
 ## Pre-Execution Checklist (Run Once)
@@ -277,9 +281,9 @@ curl -s http://localhost:3060/api/ui-settings | head -c 200
 
 ---
 
-## Batch 3 — Chatbot + Workflow + Mobile
+## Batch 3 — Chatbot + Workflow
 
-**Goal**: Verify chatbot responses, workflow execution, mobile platform rendering
+**Goal**: Verify chatbot responses, workflow execution
 
 ### Issues
 
@@ -290,9 +294,6 @@ curl -s http://localhost:3060/api/ui-settings | head -c 200
 | **PROCURE-008** | 01900 Procurement | DomainForge AI | Template rendering |
 | **PROD-011** | Cross-discipline | DevForge AI | Tier 3: chatbot production testing |
 | **PROD-012** | Cross-discipline | DevForge AI | Chatbot production testing |
-| **MOBILE-001** | Mobile | MobileForge AI | iOS testing |
-| **MOBILE-002** | Mobile | MobileForge AI | Android testing |
-| **MOBILE-003** | Mobile | MobileForge AI | Cross-platform testing |
 
 ### Test Steps
 
@@ -313,7 +314,56 @@ curl -s http://localhost:3060/api/procurement-templates | head -c 200
 - [ ] Chatbot responds to procurement queries
 - [ ] Workflow API returns available workflows
 - [ ] Templates render correctly
-- [ ] Mobile endpoints respond (if applicable)
+
+---
+
+## Batch 3.5 — Mobile Platform
+
+**Goal**: Verify mobile platform rendering, iOS/Android functionality, cross-platform consistency, performance, security, and mobile UI/UX
+
+**Note**: This batch runs independently and can execute **in parallel** with Batches 4–6. Mobile tests use the mobile build system, not the desktop API stack.
+
+### Issues
+
+| Issue | Discipline | Agent | Test Focus |
+|-------|-----------|-------|------------|
+| **MOBILE-001** | Mobile | MobileForge AI | iOS testing |
+| **MOBILE-002** | Mobile | MobileForge AI | Android testing |
+| **MOBILE-003** | Mobile | MobileForge AI | Cross-platform testing |
+| **MOBILE-004** | Mobile | MobileForge AI | Performance testing |
+| **MOBILE-005** | Mobile | MobileForge AI | Security testing |
+| **MOBILE-006** | Mobile | MobileForge AI | UI/UX testing |
+
+### Test Steps
+
+```bash
+# 1. Build mobile app (iOS)
+cd construct_ai-mobile
+npm run build:ios
+
+# 2. Build mobile app (Android)
+npm run build:android
+
+# 3. Run cross-platform tests
+npm run test:cross-platform
+
+# 4. Run performance benchmarks
+npm run test:performance
+
+# 5. Run security scan
+npm run test:security
+
+# 6. Run UI/UX accessibility tests
+npm run test:ui-ux
+```
+
+### Success Criteria
+- [ ] iOS build completes successfully
+- [ ] Android build completes successfully
+- [ ] Cross-platform consistency verified
+- [ ] Performance metrics within thresholds (load time < 2s, scroll 60fps)
+- [ ] No critical security vulnerabilities
+- [ ] UI/UX accessibility standards met (WCAG 2.1 AA)
 
 ---
 
@@ -329,9 +379,6 @@ curl -s http://localhost:3060/api/procurement-templates | head -c 200
 | **PROCURE-010** | 01900 Procurement | DomainForge AI | Tender management |
 | **PROCURE-011** | 01900 Procurement | InfraForge AI | Integration testing |
 | **PROD-013** | Cross-discipline | DevForge AI | Tier 4: full integration testing |
-| **MOBILE-004** | Mobile | MobileForge AI | Performance testing |
-| **MOBILE-005** | Mobile | MobileForge AI | Security testing |
-| **MOBILE-006** | Mobile | MobileForge AI | UI/UX testing |
 
 ### Test Steps
 
@@ -467,24 +514,29 @@ Update `orchestration/EXECUTION-TRACKER.md` after each batch:
 |-------|--------|--------|------|-------|
 | 1 — Foundation | PROCURE-001/002, PROD-001/002/003/004 | ✅ Complete | 2026-05-03 | Auth fixed, pages verified |
 | 2 — UI/State | PROCURE-003/004/005, PROD-005/006/007/008/009/010 | ⏳ In progress | — | — |
-| 3 — Chatbot | PROCURE-006/007/008, PROD-011/012, MOBILE-001/002/003 | ⏳ Pending | — | — |
-| 4 — Domain | PROCURE-009/010/011, PROD-013, MOBILE-004/005/006 | ⏳ Pending | — | — |
+| 3 — Chatbot | PROCURE-006/007/008, PROD-011/012 | ⏳ Pending | — | — |
+| 3.5 — Mobile | MOBILE-001/002/003/004/005/006 | ⏳ Pending (parallel) | — | Runs alongside Batches 4–6 |
+| 4 — Domain | PROCURE-009/010/011, PROD-013 | ⏳ Pending | — | — |
 | 5 — Compliance | PROCURE-012/013/013a/014 | ⏳ Pending | — | — |
 | 6 — Regression | PROCURE-015, PROD-014/HITL | ⏳ Pending | — | — |
 ```
 
 ## Estimated Timeline
 
-| Batch | Est. Duration | Cumulative |
-|-------|--------------|------------|
-| Batch 1 — Foundation | ~20 min | 20 min |
-| Batch 2 — UI/State | ~30 min | 50 min |
-| Batch 3 — Chatbot | ~30 min | 1h 20m |
-| Batch 4 — Domain | ~30 min | 1h 50m |
-| Batch 5 — Compliance | ~20 min | 2h 10m |
-| Batch 6 — Regression | ~20 min | 2h 30m |
-| **Total** | **~2.5 hours** | |
+| Batch | Est. Duration | Cumulative (desktop) | Cumulative (with mobile parallel) |
+|-------|--------------|---------------------|----------------------------------|
+| Batch 1 — Foundation | ~20 min | 20 min | 20 min |
+| Batch 2 — UI/State | ~30 min | 50 min | 50 min |
+| Batch 3 — Chatbot | ~30 min | 1h 20m | 1h 20m |
+| Batch 3.5 — Mobile | ~30 min | — | Runs alongside Batches 4–6 |
+| Batch 4 — Domain | ~30 min | 1h 50m | 1h 50m |
+| Batch 5 — Compliance | ~20 min | 2h 10m | 2h 10m |
+| Batch 6 — Regression | ~20 min | 2h 30m | 2h 30m |
+| **Total (desktop)** | **~2.5 hours** | | |
+| **Total (real-time, parallel)** | **~2.5 hours** | | mobile adds no extra wall-clock time |
 
 ## Status: 📋 Ready for Execution
 
 Start with **Batch 1** and proceed sequentially. Each batch builds on the previous one. If a batch fails, fix the issues before proceeding to the next batch.
+
+**Mobile batches (Batch 3.5) are independent** and can be executed in parallel with Batches 4–6 by a separate MobileForge AI agent. Mobile infrastructure is handled via the `construct_ai-mobile` repository and does not block desktop batches.
