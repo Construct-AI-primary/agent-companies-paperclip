@@ -10,74 +10,164 @@ This document defines the standardized location for all code and documentation w
 
 ## Standard Structure
 
-
 ```
 01750-legal/
 ├── CODE-AND-DOC-PLACEMENT.md    ← This file
 ├── README.md                     ← Discipline overview
+├── UI-UX-SPECIFICATION.md        ← Redirect to ui-ux/ directory
 ├── knowledge/                   ← Cross-project domain knowledge
 │   └── PAGE-KNOWLEDGE.md
+├── ui-ux/                       ← UI/UX specifications
+│   ├── index.md                 ← Master index with color scheme
+│   ├── desktop.md               ← Desktop spec
+│   ├── mobile.md                ← Mobile spec
+│   └── web.md                   ← Web spec
 ├── projects/                    ← All discipline projects
-│   └── {PROJECT-CODE}/
-│       ├── README.md            ← Project overview
-│       ├── plan.md              ← Project plan
-│       ├── AGENTS.md            ← Project-specific agent instructions
-│       ├── trigger/             ← Project automation triggers
-│       │   ├── README.md
-│       │   └── {PROJECT}-000-project-automation.md
-│       ├── {PROJECT}-workflows-list.md       ← Workflows catalog
-│       ├── {PROJECT}-implementation.md       ← Implementation plan
-│       ├── discipline_workflow_conversion_procedure.md
-│       ├── research/            ← Research enhancement plans
-│       │   └── {PROJECT}-research-enhancement-plan.md
-│       ├── scripts/             ← Generator scripts
-│       │   └── generate-issues.py
-│       ├── desktop/             ← Desktop platform
-│       │   ├── trigger/         ← Desktop-specific triggers
-│       │   │   ├── README.md
-│       │   │   └── {PROJECT}-000-project-automation.md
+│   ├── LEGAL-CONTRACTS/         ← Contract Management & Administration
+│   │   ├── README.md            ← Project overview
+│   │   ├── LEGAL-CONTRACTS-implementation.md ← Implementation plan
+│   │   ├── trigger/             ← Project automation triggers
+│   │   │   └── .gitkeep
+│   │   ├── shared/              ← Shared resources
+│   │   │   └── .gitkeep
+│   │   ├── desktop/             ← Desktop platform
+│   │   │   ├── issues/          ← Desktop-specific issues
+│   │   │   │   ├── LEGAL-CONT-001-foundation.md
+│   │   │   │   ├── LEGAL-CONT-002-core-integration.md
+│   │   │   │   ├── LEGAL-CONT-003-discipline-integration.md
+│   │   │   │   ├── LEGAL-CONT-004-mobile-offline.md
+│   │   │   │   ├── LEGAL-CONT-005-compliance-audit.md
+│   │   │   │   └── ISSUE-GENERATION-STATUS.md
+│   │   │   └── trigger/         ← Desktop platform triggers
+│   │   │       └── .gitkeep
+│   │   ├── mobile/              ← Mobile platform
+│   │   │   ├── issues/          ← Mobile-specific issues
+│   │   │   │   ├── LEGAL-CONT-MOBILE-001-ios.md
+│   │   │   │   ├── LEGAL-CONT-MOBILE-002-android.md
+│   │   │   │   ├── LEGAL-CONT-MOBILE-003-cross-platform.md
+│   │   │   │   └── ISSUE-GENERATION-STATUS.md
+│   │   │   └── trigger/         ← Mobile platform triggers
+│   │   │       └── .gitkeep
+│   │   └── web/                 ← Web platform
+│   │       ├── issues/          ← Web-specific issues
+│   │       │   ├── LEGAL-CONT-WEB-001-dashboard.md
+│   │       │   ├── LEGAL-CONT-WEB-002-admin.md
+│   │       │   ├── LEGAL-CONT-WEB-003-audit.md
+│   │       │   └── ISSUE-GENERATION-STATUS.md
+│   │       └── trigger/         ← Web platform triggers
+│   │           └── .gitkeep
+│   ├── LEGAL-CLAIMS/            ← Claims & Dispute Resolution
+│   │   ├── README.md
+│   │   ├── LEGAL-CLAIMS-implementation.md
+│   │   ├── trigger/
+│   │   │   └── .gitkeep
+│   │   ├── shared/
+│   │   │   └── .gitkeep
+│   │   ├── desktop/
+│   │   │   ├── issues/
+│   │   │   │   ├── LEGAL-CLAIM-001-foundation.md
+│   │   │   │   ├── LEGAL-CLAIM-002-core-integration.md
+│   │   │   │   ├── LEGAL-CLAIM-003-discipline-integration.md
+│   │   │   │   ├── LEGAL-CLAIM-004-mobile-offline.md
+│   │   │   │   ├── LEGAL-CLAIM-005-compliance-audit.md
+│   │   │   │   └── ISSUE-GENERATION-STATUS.md
+│   │   │   └── trigger/
+│   │   │       └── .gitkeep
+│   │   ├── mobile/
+│   │   │   ├── issues/
+│   │   │   │   ├── LEGAL-CLAIM-MOBILE-001-ios.md
+│   │   │   │   ├── LEGAL-CLAIM-MOBILE-002-android.md
+│   │   │   │   ├── LEGAL-CLAIM-MOBILE-003-cross-platform.md
+│   │   │   │   └── ISSUE-GENERATION-STATUS.md
+│   │   │   └── trigger/
+│   │   │       └── .gitkeep
+│   │   └── web/
+│   │       ├── issues/
+│   │       │   ├── LEGAL-CLAIM-WEB-001-dashboard.md
+│   │       │   ├── LEGAL-CLAIM-WEB-002-admin.md
+│   │       │   ├── LEGAL-CLAIM-WEB-003-audit.md
+│   │       │   └── ISSUE-GENERATION-STATUS.md
+│   │       └── trigger/
+│   │           └── .gitkeep
+│   ├── LEGAL-COMPLIANCE/        ← Regulatory Compliance & Legal Risk
+│   │   ├── README.md
+│   │   ├── LEGAL-COMPLIANCE-implementation.md
+│   │   ├── trigger/
+│   │   │   └── .gitkeep
+│   │   ├── shared/
+│   │   │   └── .gitkeep
+│   │   ├── desktop/
+│   │   │   ├── issues/
+│   │   │   │   ├── LEGAL-COMP-001-foundation.md
+│   │   │   │   ├── LEGAL-COMP-002-core-integration.md
+│   │   │   │   ├── LEGAL-COMP-003-discipline-integration.md
+│   │   │   │   ├── LEGAL-COMP-004-mobile-offline.md
+│   │   │   │   ├── LEGAL-COMP-005-compliance-audit.md
+│   │   │   │   └── ISSUE-GENERATION-STATUS.md
+│   │   │   └── trigger/
+│   │   │       └── .gitkeep
+│   │   ├── mobile/
+│   │   │   ├── issues/
+│   │   │   │   ├── LEGAL-COMP-MOBILE-001-ios.md
+│   │   │   │   ├── LEGAL-COMP-MOBILE-002-android.md
+│   │   │   │   ├── LEGAL-COMP-MOBILE-003-cross-platform.md
+│   │   │   │   └── ISSUE-GENERATION-STATUS.md
+│   │   │   └── trigger/
+│   │   │       └── .gitkeep
+│   │   └── web/
+│   │       ├── issues/
+│   │       │   ├── LEGAL-COMP-WEB-001-dashboard.md
+│   │       │   ├── LEGAL-COMP-WEB-002-admin.md
+│   │       │   ├── LEGAL-COMP-WEB-003-audit.md
+│   │       │   └── ISSUE-GENERATION-STATUS.md
+│   │       └── trigger/
+│   │           └── .gitkeep
+│   └── LEGAL-DOCUMENTS/         ← Legal Document Management & Governance
+│       ├── README.md
+│       ├── LEGAL-DOCUMENTS-implementation.md
+│       ├── trigger/
+│       │   └── .gitkeep
+│       ├── shared/
+│       │   └── .gitkeep
+│       ├── desktop/
 │       │   ├── issues/
-│       │   │   ├── {ISSUE-ID}.md
+│       │   │   ├── LEGAL-DOC-001-foundation.md
+│       │   │   ├── LEGAL-DOC-002-core-integration.md
+│       │   │   ├── LEGAL-DOC-003-discipline-integration.md
+│       │   │   ├── LEGAL-DOC-004-mobile-offline.md
+│       │   │   ├── LEGAL-DOC-005-compliance-audit.md
 │       │   │   └── ISSUE-GENERATION-STATUS.md
-│       │   ├── learning/
-│       │   └── orchestration/
-│       ├── mobile/              ← Mobile platform
-│       │   ├── trigger/         ← Mobile-specific triggers
-│       │   │   ├── README.md
-│       │   │   └── {PROJECT}-000-project-automation.md
+│       │   └── trigger/
+│       │       └── .gitkeep
+│       ├── mobile/
 │       │   ├── issues/
-│       │   │   ├── {ISSUE-ID}.md
+│       │   │   ├── LEGAL-DOC-MOBILE-001-ios.md
+│       │   │   ├── LEGAL-DOC-MOBILE-002-android.md
+│       │   │   ├── LEGAL-DOC-MOBILE-003-cross-platform.md
 │       │   │   └── ISSUE-GENERATION-STATUS.md
-│       │   ├── learning/
-│       │   └── orchestration/
-│       ├── web/                 ← Web platform
-│       │   ├── trigger/         ← Web-specific triggers
-│       │   │   ├── README.md
-│       │   │   └── {PROJECT}-000-project-automation.md
-│       │   ├── issues/
-│       │   │   ├── {ISSUE-ID}.md
-│       │   │   └── ISSUE-GENERATION-STATUS.md
-│       │   ├── learning/
-│       │   └── orchestration/
-│       ├── shared/              ← Shared across platforms
-│       │   ├── api/             ← API contracts
-│       │   ├── business-logic/  ← Business logic docs
-│       │   └── data-models/     ← Data model docs
-│       └── knowledge/           ← Project-specific knowledge
-│           └── PAGE-KNOWLEDGE.md
+│       │   └── trigger/
+│       │       └── .gitkeep
+│       └── web/
+│           ├── issues/
+│           │   ├── LEGAL-DOC-WEB-001-dashboard.md
+│           │   ├── LEGAL-DOC-WEB-002-admin.md
+│           │   ├── LEGAL-DOC-WEB-003-audit.md
+│           │   └── ISSUE-GENERATION-STATUS.md
+│           └── trigger/
+│               └── .gitkeep
 ├── trigger/                     ← Discipline automation triggers
 │   ├── README.md
-│   └── {AUTO-PROJECT}/
+│   └── LEGAL-AUTO/
 │       └── issues/
-│           └── {AUTO-PROJECT}-000-discipline-automation.md
+│           └── LEGAL-AUTO-000-discipline-automation.md
 ├── procedures/
 └── plans/
 ```
 
-
 ## Discipline-Specific Notes
 
 - Legal discipline for construction and engineering projects
+- Covers contract law (FIDIC, NEC, JCT), claims & dispute resolution, regulatory compliance, legal documentation, and corporate governance
 - Desktop, mobile, and web platform support
 
 ## Related Documents

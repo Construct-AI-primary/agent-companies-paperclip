@@ -10,30 +10,35 @@ This document defines the standardized location for all code and documentation w
 
 ## Standard Structure
 
-
 ```
 01400-health/
 ├── CODE-AND-DOC-PLACEMENT.md    ← This file
 ├── README.md                     ← Discipline overview
-├── knowledge/                   ← Cross-project domain knowledge
+├── UI-UX-SPECIFICATION.md        ← Redirect to ui-ux/ directory
+├── ui-ux/                        ← Platform-specific UI/UX specs
+│   ├── index.md                  ← Master index with color scheme
+│   ├── desktop.md                ← Desktop specification
+│   ├── mobile.md                 ← Mobile specification
+│   └── web.md                    ← Web specification
+├── knowledge/                    ← Cross-project domain knowledge
 │   └── PAGE-KNOWLEDGE.md
-├── projects/                    ← All discipline projects
+├── projects/                     ← All discipline projects
 │   └── {PROJECT-CODE}/
-│       ├── README.md            ← Project overview
-│       ├── plan.md              ← Project plan
-│       ├── AGENTS.md            ← Project-specific agent instructions
-│       ├── trigger/             ← Project automation triggers
+│       ├── README.md             ← Project overview
+│       ├── plan.md               ← Project plan
+│       ├── AGENTS.md             ← Project-specific agent instructions
+│       ├── trigger/              ← Project automation triggers
 │       │   ├── README.md
 │       │   └── {PROJECT}-000-project-automation.md
 │       ├── {PROJECT}-workflows-list.md       ← Workflows catalog
 │       ├── {PROJECT}-implementation.md       ← Implementation plan
 │       ├── discipline_workflow_conversion_procedure.md
-│       ├── research/            ← Research enhancement plans
+│       ├── research/             ← Research enhancement plans
 │       │   └── {PROJECT}-research-enhancement-plan.md
-│       ├── scripts/             ← Generator scripts
+│       ├── scripts/              ← Generator scripts
 │       │   └── generate-issues.py
-│       ├── desktop/             ← Desktop platform
-│       │   ├── trigger/         ← Desktop-specific triggers
+│       ├── desktop/              ← Desktop platform
+│       │   ├── trigger/          ← Desktop-specific triggers
 │       │   │   ├── README.md
 │       │   │   └── {PROJECT}-000-project-automation.md
 │       │   ├── issues/
@@ -41,8 +46,8 @@ This document defines the standardized location for all code and documentation w
 │       │   │   └── ISSUE-GENERATION-STATUS.md
 │       │   ├── learning/
 │       │   └── orchestration/
-│       ├── mobile/              ← Mobile platform
-│       │   ├── trigger/         ← Mobile-specific triggers
+│       ├── mobile/               ← Mobile platform
+│       │   ├── trigger/          ← Mobile-specific triggers
 │       │   │   ├── README.md
 │       │   │   └── {PROJECT}-000-project-automation.md
 │       │   ├── issues/
@@ -50,8 +55,8 @@ This document defines the standardized location for all code and documentation w
 │       │   │   └── ISSUE-GENERATION-STATUS.md
 │       │   ├── learning/
 │       │   └── orchestration/
-│       ├── web/                 ← Web platform
-│       │   ├── trigger/         ← Web-specific triggers
+│       ├── web/                  ← Web platform
+│       │   ├── trigger/          ← Web-specific triggers
 │       │   │   ├── README.md
 │       │   │   └── {PROJECT}-000-project-automation.md
 │       │   ├── issues/
@@ -59,13 +64,13 @@ This document defines the standardized location for all code and documentation w
 │       │   │   └── ISSUE-GENERATION-STATUS.md
 │       │   ├── learning/
 │       │   └── orchestration/
-│       ├── shared/              ← Shared across platforms
-│       │   ├── api/             ← API contracts
-│       │   ├── business-logic/  ← Business logic docs
-│       │   └── data-models/     ← Data model docs
-│       └── knowledge/           ← Project-specific knowledge
+│       ├── shared/               ← Shared across platforms
+│       │   ├── api/              ← API contracts
+│       │   ├── business-logic/   ← Business logic docs
+│       │   └── data-models/      ← Data model docs
+│       └── knowledge/            ← Project-specific knowledge
 │           └── PAGE-KNOWLEDGE.md
-├── trigger/                     ← Discipline automation triggers
+├── trigger/                      ← Discipline automation triggers
 │   ├── README.md
 │   └── {AUTO-PROJECT}/
 │       └── issues/
@@ -74,11 +79,12 @@ This document defines the standardized location for all code and documentation w
 └── plans/
 ```
 
-
 ## Discipline-Specific Notes
 
 - Health discipline for construction and engineering projects
+- Covers occupational health, medical surveillance, health incident management, fitness for work, health risk assessment, and medical emergency response
 - Desktop, mobile, and web platform support
+- Integrates with Safety (02400), Environmental (01000), and HR systems
 
 ## Related Documents
 

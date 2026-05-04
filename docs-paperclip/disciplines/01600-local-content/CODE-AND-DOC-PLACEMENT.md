@@ -10,7 +10,6 @@ This document defines the standardized location for all code and documentation w
 
 ## Standard Structure
 
-
 ```
 01600-local-content/
 ├── CODE-AND-DOC-PLACEMENT.md    ← This file
@@ -74,10 +73,10 @@ This document defines the standardized location for all code and documentation w
 └── plans/
 ```
 
-
 ## Discipline-Specific Notes
 
 - Local Content discipline for construction and engineering projects
+- Covers local employment, procurement, enterprise development, skills transfer, and compliance
 - Desktop, mobile, and web platform support
 
 ## Related Documents
