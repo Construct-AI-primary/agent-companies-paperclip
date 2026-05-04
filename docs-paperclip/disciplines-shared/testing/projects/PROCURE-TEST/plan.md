@@ -145,6 +145,71 @@ This plan details the systematic execution of 15 testing issues across 5 phases 
 
 ---
 
-**Plan Version**: 1.0
-**Date**: 2026-04-28
+## Status Tracking
+
+### Pre-Execution Verification — API Health Check (2026-05-03)
+
+**Objective**: Verify construct_ai app API endpoints are operational before executing PROCURE-TEST issues.
+
+**Method**: 6 batches of automated curl tests against `http://localhost:3060` covering ~110+ endpoints across all route modules.
+
+**Result**: 5 of 8 pre-existing bugs fixed via migration. 3 pre-existing issues remain (non-blocking for Phase 1).
+
+#### ✅ Fixed (5) — Migration `20260503_fix_missing_tables.sql`
+
+| # | Endpoint | Before | After | Fix |
+|---|----------|--------|-------|-----|
+| 1 | `GET /api/agent-names` | ❌ 500 | ✅ 200 | Created `agent_names` table |
+| 2 | `GET /api/hsse-evaluations` | ❌ 500 | ✅ 200 | Created `hsse_supplier_evaluations` table |
+| 3 | `GET /api/privacy/preferences` | ❌ 500 | ✅ 200 | Created `privacy_user_preferences` table |
+| 4 | `GET /api/privacy/consent` | ❌ 500 | ✅ 200 | Created `privacy_consent_records` table |
+| 5 | `GET /api/privacy/jurisdiction` | ❌ 500 | ✅ 200 | Created `privacy_jurisdiction_settings` table |
+
+#### ⚠️ Remaining (3) — Pre-existing, Non-Blocking
+
+| # | Endpoint | Status | Root Cause | Workaround |
+|---|----------|--------|------------|------------|
+| 6 | `GET /api/agent-modal` | ❌ 500 | Uses Supabase join syntax (`agent_names(name)`, `modal_configurations(display_name)`, `pages(page_name)`) requiring FK relationships to tables that may not exist | Not blocking Phase 1; address before Phase 2 if agent-modal testing required |
+| 7 | `POST /api/contractor-auth/login` | ❌ 500 | `authenticate_contractor()` function references `external_party_users` table which doesn't exist in this Supabase project. Migration `02401_external_party_users.sql` exists but hasn't been run | Not blocking Phase 1; run migration before contractor auth testing |
+| 8 | `GET /api/schema/policies` | ❌ 500 | Uses `supabase.rpc('exec_sql', ...)` to query `pg_policies` system catalog. The `exec_sql` RPC function is not available in this Supabase project | Not blocking Phase 1; schema policies are informational only |
+
+#### ✅ Verified Working — Core Routes for Phase 1
+
+| Route Group | Status | Notes |
+|-------------|--------|-------|
+| Auth (`/api/auth/login`, `/api/auth/me`) | ✅ 200 | Login + session verification operational |
+| Pages (`/api/pages`) | ✅ 200 | Page listing and metadata available |
+| Document Management | ✅ 200 | CRUD operations operational |
+| Procurement | ✅ 200 | All procurement routes operational |
+| Suppliers | ✅ 200 | Supplier directory and CRUD operational |
+| Approvals | ✅ 200 | Approval chain operational |
+| Chatbot | ✅ 200 | Chat and streaming operational |
+| Tender Integration | ✅ 200 | Tender routes operational |
+| Security Dashboard (×5) | ✅ 200 | All security endpoints operational |
+| AI Monitoring (×6) | ✅ 200 | All monitoring endpoints operational |
+| Testing Dashboard | ✅ 200 | Test-runner, test-metadata, workflow-tests operational |
+| Workflows | ✅ 200 | Workflow orchestration operational |
+| Unified Templates/History | ✅ 200 | Template and history routes operational |
+
+#### Migration Details
+
+**File**: `/Users/PROC-TEST/construct_ai/database/migrations/20260503_fix_missing_tables.sql`
+**Target**: `construct-ai-project` Supabase (`mseizswoiwyewsidknta.supabase.co`)
+**Created**: 2026-05-03
+**Contents**: 11 objects — `agent_names`, `agent_modal_assignments`, `privacy_user_preferences`, `privacy_consent_records`, `privacy_jurisdiction_settings`, `privacy_audit_log`, `privacy_data_subject_requests`, `privacy_breach_incidents`, `authenticate_contractor()` function, `hsse_supplier_evaluations`, `vetting_workflow_weights` — all with RLS policies.
+
+#### Supabase Project Architecture
+
+| Project | URL | Purpose |
+|---------|-----|---------|
+| **construct-ai-project** | `mseizswoiwyewsidknta.supabase.co` | Main app database — all construct_ai tables |
+| **paperclip-ai** | (separate project) | Paperclip agent orchestration, testing, coding workflows |
+
+The construct_ai app connects to **construct-ai-project**. Paperclip/OpenClaw agents are organized in **paperclip-ai** for testing and coding workflows. Future re-organization of agents in construct-ai-project may be needed.
+
+---
+
+**Plan Version**: 1.1
+**Date**: 2026-05-03
 **Author**: Paperclip QA Team
+**Last Updated**: 2026-05-03 — Added Status Tracking section with API verification results

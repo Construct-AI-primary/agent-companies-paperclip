@@ -1,0 +1,60 @@
+name: compliance-monitoring-loop
+version: "1.0"
+description: "Continuous compliance monitoring loop with threshold alerts, variation triggers, corrective action tracking, and escalation paths"
+parameters:
+  - name: discipline
+    type: string
+    default: "00435"
+    description: "Discipline code for compliance monitoring (e.g., 00435, 00400)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex]
+    description: "Template complexity level determining monitoring depth and routing"
+  - name: showCorrectiveAction
+    type: boolean
+    default: true
+    description: "Whether to show the corrective action plan branch in the flow"
+  - name: showEscalation
+    type: boolean
+    default: true
+    description: "Whether to show the escalation path in the flow"
+template: |
+  flowchart TD
+    MONITOR[Compliance Monitoring] -->|evaluate| CHECK{{Threshold Check}}
+    CHECK -->|within limits| COMPLIANT[Compliant]
+    COMPLIANT -->|log| REPORT[Periodic Report]
+    CHECK -->|exceeded| NON_COMPLIANT[Non-Compliant]
+    NON_COMPLIANT -->|trigger| ALERT[Alert Generation]
+    ALERT -->|analyze| ASSESS[Impact Assessment]
+    {% if showCorrectiveAction %}
+    ASSESS -->|plan| ACTION[Corrective Action Plan]
+    ACTION -->|track| TRACK[Action Tracking]
+    TRACK -->|verify| VERIFY[Verification]
+    VERIFY -->|resolved| RESOLVE[Resolved]
+    VERIFY -->|not resolved| ACTION
+    {% else %}
+    ASSESS --> RESOLVE
+    {% endif %}
+    {% if showEscalation %}
+    RESOLVE -->|escalate if needed| ESCALATE[Escalation Path]
+    ESCALATE -->|notify| NOTIFY[Stakeholder Notification]
+    ESCALATE -->|review| REVIEW[Management Review]
+    REVIEW -->|direct| ACTION
+    {% endif %}
+    RESOLVE -->|loop| MONITOR
+    REPORT -->|loop| MONITOR
+
+    classDef monitor fill:#e3f2fd,stroke:#1976d2
+    classDef check fill:#fff3e0,stroke:#f57c00
+    classDef compliant fill:#e8f5e8,stroke:#388e3c
+    classDef alert fill:#ffebee,stroke:#d32f2f
+    classDef action fill:#f3e5f5,stroke:#7b1fa2
+    classDef escalation fill:#fce4ec,stroke:#c2185b
+
+    class MONITOR monitor
+    class CHECK check
+    class COMPLIANT,REPORT compliant
+    class NON_COMPLIANT,ALERT,ASSESS alert
+    class ACTION,TRACK,VERIFY,RESOLVE action
+    class ESCALATE,NOTIFY,REVIEW escalation

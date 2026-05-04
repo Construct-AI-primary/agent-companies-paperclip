@@ -1,0 +1,56 @@
+name: governance-approval-pipeline
+version: "1.0"
+description: "Multi-level governance approval pipeline with document-to-form conversion, compliance enforcement, and audit trail"
+parameters:
+  - name: discipline
+    type: string
+    default: "01300"
+    description: "Discipline code for governance approval (e.g., 01300, 00900)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex]
+    description: "Template complexity level determining review depth and routing"
+  - name: governanceLevels
+    type: enum
+    default: multi
+    values: [single, dual, multi]
+    description: "Number of governance approval levels in the pipeline"
+  - name: showAuditTrail
+    type: boolean
+    default: true
+    description: "Whether to show the audit trail step in the flow"
+template: |
+  flowchart TD
+    DOC_IN[Document Received] -->|convert| CONVERT[Form Conversion]
+    CONVERT -->|validate| VALIDATE[Validation]
+    VALIDATE -->|pass| LEVEL1[Level 1 Review]
+    VALIDATE -->|fail| DOC_IN
+    LEVEL1 -->|approve| {% if governanceLevels == "single" %}
+    APPROVE{{Final Approval}}
+    {% elif governanceLevels == "dual" %}
+    LEVEL2[Level 2 Review]
+    LEVEL2 --> APPROVE{{Final Approval}}
+    {% else %}
+    LEVEL2[Level 2 Review]
+    LEVEL2 -->|approve| LEVEL3[Level 3 Review]
+    LEVEL3 --> APPROVE{{Final Approval}}
+    {% endif %}
+    LEVEL1 -->|reject| DOC_IN
+    APPROVE -->|approved| EXECUTE[Execute]
+    APPROVE -->|rejected| DOC_IN
+    EXECUTE -->|record| {% if showAuditTrail %}
+    AUDIT[Audit Trail]
+    {% endif %}
+
+    classDef input fill:#e3f2fd,stroke:#1976d2
+    classDef convert fill:#f3e5f5,stroke:#7b1fa2
+    classDef review fill:#fff3e0,stroke:#f57c00
+    classDef approve fill:#e8f5e8,stroke:#388e3c
+    classDef final fill:#fce4ec,stroke:#c2185b
+
+    class DOC_IN input
+    class CONVERT,VALIDATE convert
+    class LEVEL1,LEVEL2,LEVEL3 review
+    class APPROVE,EXECUTE approve
+    class AUDIT final

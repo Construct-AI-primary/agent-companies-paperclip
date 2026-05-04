@@ -1,0 +1,75 @@
+name: contract-lifecycle
+version: "1.0"
+description: "Full contract lifecycle from award through closeout, with configurable complexity levels, compliance monitoring, variation management, and payment certification"
+parameters:
+  - name: discipline
+    type: string
+    default: "00400"
+    description: "Discipline code for the contract (e.g., 00400, 00425, 00435)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex, emergency, compliance]
+    description: "Template complexity level determining contract stages and routing"
+  - name: showCompliance
+    type: boolean
+    default: true
+    description: "Whether to show the compliance monitoring loop in the flow"
+  - name: showVariations
+    type: boolean
+    default: true
+    description: "Whether to show the variation management sub-flow"
+  - name: showPayment
+    type: boolean
+    default: true
+    description: "Whether to show the payment certification step"
+template: |
+  flowchart TD
+    AWARD[Contract Award] -->|execute| SIGN[Contract Signing]
+    SIGN -->|register| REGISTER[Contract Registration]
+    REGISTER -->|activate| OBLIGATIONS[Obligation Tracking]
+    OBLIGATIONS -->|monitor| {% if showCompliance %}
+    COMPLIANCE{{Compliance Monitoring}}
+    COMPLIANCE -->|compliant| PROGRESS[Progress Tracking]
+    COMPLIANCE -->|non-compliant| ALERT[Compliance Alert]
+    ALERT -->|auto| NOTICE[Notice of Non-Compliance]
+    NOTICE -->|escalate| REVIEW[Manual Review]
+    REVIEW -->|resolve| PROGRESS
+    REVIEW -->|terminate| TERMINATION[Contract Termination]
+    {% else %}
+    PROGRESS[Progress Tracking]
+    {% endif %}
+    PROGRESS -->|{% if showVariations %}variation?{% else %}complete{% endif %}{% if showVariations %} VARIATION{{Variation Required?}}
+    VARIATION -->|yes| VAR_SUBMIT[Variation Request]
+    VAR_SUBMIT -->|evaluate| VAR_EVAL[Variation Evaluation]
+    VAR_EVAL -->|approve| VAR_APPROVE[Variation Approval]
+    VAR_APPROVE -->|amend| AMENDMENT[Contract Amendment]
+    AMENDMENT --> OBLIGATIONS
+    VARIATION -->|no| COMPLETE[Work Completion]
+    {% else %}
+    COMPLETE[Work Completion]
+    {% endif %}
+    COMPLETE -->|verify| VERIFICATION[Delivery Verification]
+    VERIFICATION -->|{% if showPayment %}certify{% else %}confirm{% endif %}{% if showPayment %} CERTIFY[Payment Certification]
+    CERTIFY -->|rate × verified| CALC[Payment Calculation]
+    CALC -->|approve| PAYMENT[Payment Release]
+    PAYMENT -->|record| AUDIT[Audit Trail]
+    {% else %}
+    AUDIT[Audit Trail]
+    {% endif %}
+    AUDIT -->|close| CLOSEOUT[Contract Closeout]
+    CLOSEOUT -->|archive| ARCHIVE[Contract Archive]
+
+    classDef award fill:#e3f2fd,stroke:#1976d2
+    classDef active fill:#f3e5f5,stroke:#7b1fa2
+    classDef monitor fill:#fff3e0,stroke:#f57c00
+    classDef review fill:#ffebee,stroke:#d32f2f
+    classDef payment fill:#e8f5e8,stroke:#388e3c
+    classDef final fill:#fce4ec,stroke:#c2185b
+
+    class AWARD,SIGN,REGISTER award
+    class OBLIGATIONS,PROGRESS,COMPLETE active
+    class COMPLIANCE,ALERT,NOTICE,REVIEW,TERMINATION monitor
+    class VARIATION,VAR_SUBMIT,VAR_EVAL,VAR_APPROVE,AMENDMENT review
+    class VERIFICATION,CERTIFY,CALC,PAYMENT payment
+    class AUDIT,CLOSEOUT,ARCHIVE final

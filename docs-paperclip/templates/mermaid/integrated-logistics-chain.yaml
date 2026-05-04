@@ -1,0 +1,81 @@
+name: integrated-logistics-chain
+version: "1.0"
+description: "End-to-end integrated logistics chain from field data capture through delivery confirmation and contract compliance, with configurable verification gates, threshold-based auto-approval, and mobile integration"
+parameters:
+  - name: discipline
+    type: string
+    default: "01700"
+    description: "Discipline code for the logistics chain (e.g., 01700, 00435)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex, compliance]
+    description: "Template complexity level determining verification stages and routing"
+  - name: showMobile
+    type: boolean
+    default: true
+    description: "Whether to show the mobile field verification step"
+  - name: showAutoApproval
+    type: boolean
+    default: true
+    description: "Whether to show threshold-based auto-approval gates"
+  - name: showContractLink
+    type: boolean
+    default: true
+    description: "Whether to show the contract compliance and payment link"
+template: |
+  flowchart TD
+    CAPTURE[Field Data Capture] -->|scan| {% if showMobile %}
+    MOBILE[Mobile Verification]
+    MOBILE -->|context check| CONTEXT{Context Validation}
+    CONTEXT -->|weight OK| WEIGHT_OK[Weight Within Tolerance]
+    CONTEXT -->|weight deviation| WEIGHT_DEV[Weight Deviation Alert]
+    CONTEXT -->|calibration| CALIB[Calibration Warning]
+    CONTEXT -->|duplicate| DUP[Duplicate Scan Detected]
+    CONTEXT -->|geofence| GEOFENCE[Geofence Mismatch]
+    WEIGHT_DEV -->|manual| MANUAL_REVIEW[Manual Review Queue]
+    CALIB -->|escalate| MANUAL_REVIEW
+    DUP -->|flag| FLAG[Flag for Investigation]
+    GEOFENCE -->|escalate| MANUAL_REVIEW
+    WEIGHT_OK -->|proceed| REGISTER[Transaction Registration]
+    MANUAL_REVIEW -->|resolve| REGISTER
+    FLAG -->|investigate| REGISTER
+    {% else %}
+    REGISTER[Transaction Registration]
+    {% endif %}
+    REGISTER -->|correlate| CORRELATION[Transaction Correlation]
+    CORRELATION -->|key| TX_KEY[Universal Transaction Key]
+    TX_KEY -->|link| TRANSPORT[Transport Assignment]
+    TRANSPORT -->|optimize| ROUTE[Route Optimization]
+    ROUTE -->|dispatch| DISPATCH[Dispatch & Tracking]
+    DISPATCH -->|track| TRACKING[Real-Time Tracking]
+    TRACKING -->|arrive| DELIVERY[Delivery Confirmation]
+    DELIVERY -->|{% if showAutoApproval %}verify{% else %}confirm{% endif %}{% if showAutoApproval %} VERIFY{Threshold Check}
+    VERIFY -->|within tolerance| AUTO_APPROVE[Auto-Approve]
+    VERIFY -->|outside tolerance| MANUAL_APPROVE[Manual Approval]
+    AUTO_APPROVE -->|approved| COMPLETE[Delivery Complete]
+    MANUAL_APPROVE -->|review| COMPLETE
+    {% else %}
+    COMPLETE[Delivery Complete]
+    {% endif %}
+    COMPLETE -->|{% if showContractLink %}contract{% else %}archive{% endif %}{% if showContractLink %} CONTRACT_LINK[Contract Compliance Check]
+    CONTRACT_LINK -->|rate × verified| PAYMENT_CALC[Payment Calculation]
+    PAYMENT_CALC -->|certify| PAYMENT_CERT[Payment Certification]
+    PAYMENT_CERT -->|send| CONTRACT_SYSTEM[Contract System]
+    {% else %}
+    ARCHIVE[Archive Record]
+    {% endif %}
+
+    classDef capture fill:#e3f2fd,stroke:#1976d2
+    classDef mobile fill:#f3e5f5,stroke:#7b1fa2
+    classDef verify fill:#fff3e0,stroke:#f57c00
+    classDef transport fill:#e8f5e8,stroke:#388e3c
+    classDef delivery fill:#ffebee,stroke:#d32f2f
+    classDef contract fill:#fce4ec,stroke:#c2185b
+
+    class CAPTURE capture
+    class MOBILE,CONTEXT,WEIGHT_OK,WEIGHT_DEV,CALIB,DUP,GEOFENCE,MANUAL_REVIEW,FLAG mobile
+    class REGISTER,CORRELATION,TX_KEY verify
+    class TRANSPORT,ROUTE,DISPATCH,TRACKING transport
+    class DELIVERY,VERIFY,AUTO_APPROVE,MANUAL_APPROVE,COMPLETE delivery
+    class CONTRACT_LINK,PAYMENT_CALC,PAYMENT_CERT,CONTRACT_SYSTEM,ARCHIVE contract

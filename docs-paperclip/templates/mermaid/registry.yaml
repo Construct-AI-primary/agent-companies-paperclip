@@ -5,23 +5,27 @@
 
 templates:
   procurement-lifecycle:
-    current: "1.0"
+    current: "1.1"
     changelog:
       "1.0": "Initial procurement lifecycle flow extracted from 01900 UI/UX spec"
+      "1.1": "Added showPostAward parameter for contract compliance/variation extension"
     parameters:
       - discipline
       - complexity
       - showHITL
       - showPayment
+      - showPostAward
 
   three-state-navigation:
-    current: "1.0"
+    current: "1.1"
     changelog:
       "1.0": "Initial three-state navigation flow extracted from 01900 UI/UX spec"
+      "1.1": "Added showDocumentPanel parameter for 00900 document control integration"
     parameters:
       - discipline
       - states
       - buttons
+      - showDocumentPanel
 
   order-creation-flow:
     current: "1.0"
@@ -40,20 +44,24 @@ templates:
       - appendices
 
   hitl-review:
-    current: "1.0"
+    current: "1.1"
     changelog:
       "1.0": "Initial HITL review workflow extracted from 01900 UI/UX spec"
+      "1.1": "Added reviewType parameter for specialized review contexts (procurement, contract, safety, document)"
     parameters:
       - discipline
       - confidenceThreshold
+      - reviewType
 
   approval-matrix:
-    current: "1.0"
+    current: "1.1"
     changelog:
       "1.0": "Initial progressive approval matrix flow extracted from 01900 UI/UX spec"
+      "1.1": "Added governanceLevels parameter for multi-level governance (01300)"
     parameters:
       - discipline
       - thresholds
+      - governanceLevels
 
   spec-template-registry:
     current: "1.0"
@@ -86,3 +94,71 @@ templates:
       - discipline
       - states
       - modals
+
+  contract-lifecycle:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial contract lifecycle flow from award through closeout with compliance monitoring and variation management"
+    parameters:
+      - discipline
+      - complexity
+      - showCompliance
+      - showVariation
+
+  integrated-logistics-chain:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial integrated logistics chain from field data capture through delivery confirmation and contract compliance, derived from F-Stander org-agnostic patterns"
+    parameters:
+      - discipline
+      - complexity
+      - showFieldCapture
+      - showDeliveryConfirm
+
+  bid-tender-pipeline:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial pre-award bid and tender pipeline from pre-qualification through award recommendation"
+    parameters:
+      - discipline
+      - complexity
+      - showPreQual
+      - showAward
+
+  compliance-monitoring-loop:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial compliance monitoring loop with threshold alerts, variation triggers, and corrective action tracking"
+    parameters:
+      - discipline
+      - thresholds
+      - showAlerts
+      - showCorrectiveAction
+
+  document-control-lifecycle:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial document control lifecycle from creation through archival with version control and governance integration"
+    parameters:
+      - discipline
+      - showVersionControl
+      - showGovernance
+
+  governance-approval-pipeline:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial multi-level governance approval pipeline with document-to-form conversion and audit trail"
+    parameters:
+      - discipline
+      - levels
+      - showAuditTrail
+
+  safety-workflow:
+    current: "1.0"
+    changelog:
+      "1.0": "Initial safety workflow from incident reporting through investigation, corrective action, and verification"
+    parameters:
+      - discipline
+      - showInvestigation
+      - showCorrectiveAction
+      - showVerification

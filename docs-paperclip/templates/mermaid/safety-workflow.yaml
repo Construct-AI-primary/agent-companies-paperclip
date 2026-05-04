@@ -1,0 +1,60 @@
+name: safety-workflow
+version: "1.0"
+description: "Safety workflow from incident reporting through investigation, corrective action, and verification loop"
+parameters:
+  - name: discipline
+    type: string
+    default: "02400"
+    description: "Discipline code for safety workflow (e.g., 02400)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex]
+    description: "Template complexity level determining investigation depth and routing"
+  - name: showInvestigation
+    type: boolean
+    default: true
+    description: "Whether to show the investigation branch in the flow"
+  - name: showCorrectiveAction
+    type: boolean
+    default: true
+    description: "Whether to show the corrective action plan branch in the flow"
+template: |
+  flowchart TD
+    INCIDENT[Incident Report] -->|categorize| CLASSIFY[Classification]
+    CLASSIFY -->|assess| PRIORITY{{Priority Assessment}}
+    PRIORITY -->|high| HIGH[High Priority - Immediate Response]
+    PRIORITY -->|medium| MEDIUM[Medium Priority - Scheduled]
+    PRIORITY -->|low| LOW[Low Priority - Logged]
+    HIGH --> INVESTIGATE
+    MEDIUM --> INVESTIGATE
+    LOW -->|record| LESSONS
+    {% if showInvestigation %}
+    INVESTIGATE[Investigation] -->|analyze| ROOT_CAUSE[Root Cause Analysis]
+    {% else %}
+    INVESTIGATE --> ROOT_CAUSE
+    {% endif %}
+    {% if showCorrectiveAction %}
+    ROOT_CAUSE -->|plan| ACTION[Corrective Action Plan]
+    ACTION -->|implement| IMPLEMENT[Implement]
+    IMPLEMENT -->|verify| VERIFY[Verification]
+    VERIFY -->|effective| CLOSE[Close Out]
+    VERIFY -->|not effective| ACTION
+    {% else %}
+    ROOT_CAUSE --> CLOSE[Close Out]
+    {% endif %}
+    CLOSE -->|review| LESSONS[Lessons Learned]
+    LESSONS -->|share| SHARE[Knowledge Sharing]
+
+    classDef incident fill:#ffebee,stroke:#d32f2f
+    classDef classify fill:#fff3e0,stroke:#f57c00
+    classDef priority fill:#f3e5f5,stroke:#7b1fa2
+    classDef investigate fill:#e3f2fd,stroke:#1976d2
+    classDef action fill:#e8f5e8,stroke:#388e3c
+    classDef final fill:#fce4ec,stroke:#c2185b
+
+    class INCIDENT incident
+    class CLASSIFY,PRIORITY,HIGH,MEDIUM,LOW classify
+    class INVESTIGATE,ROOT_CAUSE priority
+    class ACTION,IMPLEMENT,VERIFY,CLOSE action
+    class LESSONS,SHARE final

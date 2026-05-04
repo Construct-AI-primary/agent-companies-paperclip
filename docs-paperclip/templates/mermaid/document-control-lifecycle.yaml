@@ -1,0 +1,55 @@
+name: document-control-lifecycle
+version: "1.0"
+description: "Document control lifecycle from creation through archival, with document numbering, version control, approval routing, and form conversion for governance integration"
+parameters:
+  - name: discipline
+    type: string
+    default: "00900"
+    description: "Discipline code for document control (e.g., 00900, 01300)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex]
+    description: "Template complexity level determining review depth and routing"
+  - name: showVersionControl
+    type: boolean
+    default: true
+    description: "Whether to show the version control loop in the flow"
+  - name: showGovernanceLink
+    type: boolean
+    default: true
+    description: "Whether to show the governance form conversion branch"
+template: |
+  flowchart TD
+    CREATE[Document Creation] -->|assign| NUMBER[Document Numbering]
+    NUMBER -->|draft| DRAFT[Draft Version]
+    DRAFT -->|submit| REVIEW[Peer Review]
+    REVIEW -->|approve| APPROVE{{Approval Routing}}
+    REVIEW -->|revise| DRAFT
+    APPROVE -->|approved| APPROVED[Approved]
+    APPROVE -->|rejected| DRAFT
+    APPROVED -->|release| PUBLISH[Publish]
+    PUBLISH -->|distribute| DISTRIBUTE[Distribute]
+    DISTRIBUTE -->|update?| VERSION{{Version Update?}}
+    VERSION -->|yes| REVISE[Revision]
+    REVISE -->|new version| DRAFT
+    VERSION -->|no| ARCHIVE[Archive]
+    {% if showGovernanceLink %}
+    DISTRIBUTE -->|convert| CONVERT[Form Conversion]
+    CONVERT -->|governance| GOVERNANCE[Governance Integration]
+    GOVERNANCE -->|submit| APPROVE
+    {% endif %}
+
+    classDef create fill:#e3f2fd,stroke:#1976d2
+    classDef draft fill:#f3e5f5,stroke:#7b1fa2
+    classDef review fill:#fff3e0,stroke:#f57c00
+    classDef approved fill:#e8f5e8,stroke:#388e3c
+    classDef version fill:#ffebee,stroke:#d32f2f
+    classDef final fill:#fce4ec,stroke:#c2185b
+
+    class CREATE,NUMBER create
+    class DRAFT,REVISE draft
+    class REVIEW,APPROVE review
+    class APPROVED,PUBLISH,DISTRIBUTE approved
+    class VERSION version
+    class ARCHIVE,CONVERT,GOVERNANCE final

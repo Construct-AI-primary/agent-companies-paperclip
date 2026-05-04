@@ -1,0 +1,62 @@
+name: bid-tender-pipeline
+version: "1.0"
+description: "Pre-award bid and tender pipeline from pre-qualification through award recommendation, with configurable evaluation criteria, scoring matrix, and award routing"
+parameters:
+  - name: discipline
+    type: string
+    default: "00425"
+    description: "Discipline code for the bid/tender (e.g., 00425, 00400)"
+  - name: complexity
+    type: enum
+    default: standard
+    values: [simple, standard, complex, compliance]
+    description: "Template complexity level determining evaluation depth and routing"
+  - name: showEvaluation
+    type: boolean
+    default: true
+    description: "Whether to show the bid evaluation criteria branch in the flow"
+  - name: showScoring
+    type: boolean
+    default: true
+    description: "Whether to show the scoring matrix step in the flow"
+template: |
+  flowchart TD
+    PREQUAL[Pre-Qualification] -->|qualify| SOLICIT[Bid Solicitation]
+    SOLICIT -->|issue| CLARIFY[Clarification Period]
+    CLARIFY -->|respond| SUBMIT[Bid Submission]
+    SUBMIT -->|receive| EVAL{{Bid Evaluation}}
+    {% if showEvaluation %}
+    EVAL -->|criteria met| CRITERIA[Evaluation Criteria]
+    CRITERIA -->|technical| TECHNICAL[Technical Assessment]
+    CRITERIA -->|commercial| COMMERCIAL[Commercial Assessment]
+    CRITERIA -->|compliance| COMPLIANCE_CHECK[Compliance Check]
+    TECHNICAL --> SCORE
+    COMMERCIAL --> SCORE
+    COMPLIANCE_CHECK --> SCORE
+    {% else %}
+    EVAL --> SCORE
+    {% endif %}
+    {% if showScoring %}
+    SCORE[Scoring Matrix] -->|weighted| WEIGHT[Weighted Scoring]
+    WEIGHT -->|rank| RANK[Bidder Ranking]
+    RANK --> COMPARE[Comparative Analysis]
+    {% else %}
+    SCORE --> COMPARE[Comparative Analysis]
+    {% endif %}
+    COMPARE -->|recommend| RECOMMEND[Award Recommendation]
+    RECOMMEND -->|route| APPROVE[Approval Routing]
+    APPROVE -->|decide| AWARD[Award Decision]
+
+    classDef prequal fill:#e3f2fd,stroke:#1976d2
+    classDef solicitation fill:#f3e5f5,stroke:#7b1fa2
+    classDef evaluation fill:#fff3e0,stroke:#f57c00
+    classDef scoring fill:#e8f5e8,stroke:#388e3c
+    classDef decision fill:#ffebee,stroke:#d32f2f
+    classDef final fill:#fce4ec,stroke:#c2185b
+
+    class PREQUAL prequal
+    class SOLICIT,CLARIFY,SUBMIT solicitation
+    class EVAL,CRITERIA,TECHNICAL,COMMERCIAL,COMPLIANCE_CHECK evaluation
+    class SCORE,WEIGHT,RANK,COMPARE scoring
+    class RECOMMEND,APPROVE decision
+    class AWARD final

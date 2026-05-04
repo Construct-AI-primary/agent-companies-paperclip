@@ -19,7 +19,8 @@ related_docs:
   - docs-construct-ai/codebase/procedures/ai-ml/0000_HF_MODEL_INTEGRATION_PROCEDURE.md
   - docs-construct-ai/codebase/procedures/ai-ml/0000_LORA_ADAPTER_INTEGRATION_PROCEDURE.md
   - docs-construct-ai/codebase/procedures/ai-ml/0000_QWEN_FINETUNING_PROCEDURE.md
-  - docs-paperclip/disciplines/00860-electrical-engineering/projects/ELEC-WORKFLOW/README.md
+  - docs-paperclip/disciplines/00860-electrical-engineering/projects/ELECTRICAL-INSPECTIONS/README.md
+  - docs-paperclip/disciplines/00860-electrical-engineering/projects/ELECTRICAL-INSPECTIONS/desktop/legacy-issues/ (ELEC-001 through ELEC-008 — engineering domain templates)
 ---
 
 # 00860 Electrical Engineering — UI/UX Specification
