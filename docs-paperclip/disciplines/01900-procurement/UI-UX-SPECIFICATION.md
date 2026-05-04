@@ -1,4 +1,4 @@
----
+ ---
 title: "01900 Procurement — UI/UX Specification"
 description: "Complete UI/UX specification for the 01900 Procurement discipline page — the Template A foundation reference page with three-state navigation, procurement workflows, supplier management, and AI model backend"
 author: "DomainForge AI — Procurement Domain"
