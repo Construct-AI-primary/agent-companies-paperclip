@@ -1,6 +1,3 @@
-[submodule "agent-companies-core"]
-	path = agent-companies-core
-	url = https://github.com/Construct-AI-primary/agent-companies-core.git
 [submodule "docs-construct-ai"]
 	path = docs-construct-ai
 	url = https://github.com/Construct-AI-primary/construct_ai_docs.git
