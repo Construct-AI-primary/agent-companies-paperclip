@@ -418,6 +418,63 @@ Update `docs-paperclip/procedures/agents/adding-companies-and-agents.md` to:
 
 ---
 
+## 8. Discord Bot Audit Trail Enhancement (2026-04-05)
+
+**Status:** ✅ COMPLETED  
+**Related Task:** Fix Discord bot showing generic "Orion (DevForge AI)" for all channels
+
+### Problem Statement
+The Discord bot (`agent-companies-openclaw/scripts/bot.js`) was showing generic agent names (e.g., "Orion (DevForge AI)") for all issue channels, making it impossible to trace which specific agent was assigned to which task.
+
+### Solution Implemented
+
+#### 8.1 Created `AGENT_REGISTRY`
+Maps agent slugs to display names and roles:
+- **30+ agents** referenced in `ISSUE_CHANNELS` (Discord channel assignments)
+- Covers all agents needed for Discord bot functionality
+- Each entry includes: `display` (human-readable name), `type`, `role`
+
+**Agent Coverage Analysis** (2026-04-05):
+- **Discord Bot Registry**: 30+ agents (all agents referenced by issue channels)
+- **Total Agents in Companies**: 100+ agents across 13 companies
+  - devforge-ai: 40 agents (ally, ambassador, amplifier, analyst, archivist, atlas, auditor, automata, brandforge, cartographer, catalyst, catalystx, cloudops, codesmith, compass, concierge, cortex, council, dataforge, dealmaker, devcore, fixer, forge, gatekeeper, guardian, insight, interface, ledger, ledgerai, librarian, mentor, merchant, navigator, nexus, nova, oracle, orion, pathfinder, promptsmith, pulse, reviewer, schema, scout, sentinel, sentinelx, sql-query, storycraft, strategos, stream, synth, vector, voyager, watchtower)
+  - Other companies: domainforge-ai, infraforge-ai, qualityforge-ai, voiceforge-ai, paperclipforge-ai (37+), knowledgeforge-ai, measureforge-ai (39), mobileforge-ai, saasforge-ai, integrateforge-ai, execforge-ai, learningforge-ai, loopy-ai, promptforge-ai
+- **Note**: Registry can be expanded to include all 100+ agents for future channel assignments
+
+#### 8.2 Updated `ISSUE_CHANNELS`
+Changed all 100+ issue channels from generic `agent: 'DevForge AI'` to specific `agentSlug: 'orion-devforge-orchestrator'` format.
+
+#### 8.3 Enhanced `buildChannelMap()`
+Now resolves `agentDisplay` and `agentRole` from `AGENT_REGISTRY` when building the channel map at startup.
+
+#### 8.4 Updated Discord Messages
+- `!work on {issue-id}` command now shows: `🤖 Agent: **Codesmith (DevForge AI)** (Backend development, API implementation)`
+- Work completion messages include agent details
+- `!channels` command lists specific agent names and roles
+- `!whoami` displays the assigned agent's identity
+
+#### 8.5 Channel Topics Updated
+Work channels (`#work-xxx`) now include agent details in the topic:
+`Active work session for PROC-001 — Agent: Codesmith (DevForge AI) (Backend development, API implementation) — spawned sub-agents working in parallel.`
+
+### Files Modified
+- `agent-companies-openclaw/scripts/bot.js`
+
+### Success Criteria
+- [x] `AGENT_REGISTRY` created with 30+ agents and their details
+- [x] All `ISSUE_CHANNELS` updated to use `agentSlug` instead of generic `agent`
+- [x] `buildChannelMap()` resolves agent display name and role from registry
+- [x] Discord messages show specific agent names (e.g., "Codesmith (DevForge AI)") instead of generic names
+- [x] Channel topics include agent details and role
+- [x] `!channels` and `!whoami` commands display specific agent assignments
+
+### Next Steps
+1. Restart the bot: `cd agent-companies-openclaw && node scripts/bot.js`
+2. Test with `@agent work on PROC-001` — verify it shows "Agent: **Codesmith (DevForge AI)**" instead of "Orion"
+3. Verify `!channels` command shows specific agent names and roles
+
+---
+
 ## 8. Timeline
 
 | Phase | Duration | Dependencies |

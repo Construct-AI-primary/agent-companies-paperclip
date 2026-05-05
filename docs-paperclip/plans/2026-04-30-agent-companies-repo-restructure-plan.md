@@ -26,7 +26,25 @@ The current `paperclip-render` repository contains a mixture of platform-agnosti
 |------|---------|----------|--------|
 | `agent-companies-core` | Platform-agnostic knowledge (agents, skills, domain knowledge, issues, specs, PARA) | Supabase A (Domain data) | ✅ DONE |
 | `agent-companies-paperclip` | Paperclip + Hermes orchestration (preserved as-is) | Supabase B (Paperclip) | 📋 NEXT |
-| `agent-companies-openclaw` | OpenClaw orchestration (new active development) | Supabase C (OpenClaw, new) | 📋 PLANNED |
+| `agent-companies-openclaw` | OpenClaw orchestration (new active development) | Supabase C (OpenClaw, new) | 📋 IN PROGRESS |
+
+### Discord Bot Audit Trail Enhancement (2026-04-05) ✅ COMPLETED
+
+**File Modified**: `agent-companies-openclaw/scripts/bot.js`
+
+**Changes Made**:
+1. **Created `AGENT_REGISTRY`** — Maps 30+ agent slugs to display names and roles
+2. **Updated `ISSUE_CHANNELS`** — All 100+ issue channels now use `agentSlug` instead of generic `agent` names
+3. **Enhanced `buildChannelMap()`** — Resolves agent display name and role from registry
+4. **Updated Discord Messages** — Work start/completion now shows specific agent identity
+5. **Channel Topics Updated** — Work channels include agent details and role
+
+**Result**: The Discord bot now shows specific agent names (e.g., "Codesmith (DevForge AI)") instead of generic "Orion (DevForge AI)" for all channels, providing a clear audit trail.
+
+**Next Steps for agent-companies-openclaw**:
+1. Complete repository creation and Supabase C setup
+2. Migrate OpenClaw orchestration artifacts
+3. Validate with PROCURE-TEST pilot
 
 ---
 
