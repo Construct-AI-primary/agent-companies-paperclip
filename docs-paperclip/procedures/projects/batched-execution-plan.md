@@ -182,11 +182,20 @@ Mobile Batch B ── Mobile Quality Testing ── MOBILE-004/005/006
 
 ## Pre-Execution Checklist (Run Once)
 
-- [ ] **App server**: `http://localhost:3060` running (123 API routes)
-- [ ] **Auth**: Login with `sarah.safety@epcm.co.za` works
-- [ ] **Frontend**: `npm run build:client:optimized` completed
-- [ ] **Discord bot**: `agent-vps#0729` running on VPS (144 channels)
-- [ ] **Supabase**: Connected (user_management, pages tables populated)
+### VPS Access
+- **Host**: `srv1628373.hstgr.cloud` (Hostinger VPS)
+- **SSH key**: `openclaw-ssh` (in repo root, chmod 600)
+- **SSH command**: `ssh -i openclaw-ssh root@srv1628373.hstgr.cloud`
+- **App URL**: `http://localhost:3060` (internal to VPS, not exposed externally)
+- **Discord bot**: `agent-vps#0729` running on VPS (144 channels)
+
+### Checks (run via SSH on VPS)
+- [ ] **App server**: `curl -s -o /dev/null -w '%{http_code}' http://localhost:3060/` → 404 (expected for root)
+- [ ] **API routes**: `curl -s http://localhost:3060/api/` → 122 loaded, ≤2 failed
+- [ ] **Supabase pages**: `curl -s http://localhost:3060/api/pages` → 120 pages
+- [ ] **Auth**: `curl -s -o /dev/null -w '%{http_code}' http://localhost:3060/api/auth` → 404 (expected, no root auth route)
+- [ ] **Discord bot**: `systemctl is-active openclaw-discord-bot` → active
+- [ ] **Server health**: uptime, disk space (≥20% free), memory (≥1GB free)
 - [ ] **Orchestration gates**: All unblocked in `EXECUTION-TRACKER.md`
 
 ---
